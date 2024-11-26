@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "590904989880",
+    "project_id": "puntoettoredebug",
+    "storage_bucket": "puntoettoredebug.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590904989880:android:31b072432292390d4d7c4d",
+        "android_client_info": {
+          "package_name": "it.puntoettore.fidelity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh4yv6f8ExJcM_2UvIFtvERiQirbnEOX0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

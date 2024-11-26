@@ -7,6 +7,12 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.googleServices)
+
+    alias(libs.plugins.room)
+    alias(libs.plugins.ksp)
+
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -23,6 +29,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
+            export(project(":kmpnotifier"))
             baseName = "ComposeApp"
             isStatic = true
         }
@@ -34,19 +41,56 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.startup.runtime)
+
+            implementation(libs.compose.ui)
+            // implementation(libs.compose.ui.tooling.preview)
+            implementation(libs.androidx.activity.compose)
+
+            implementation(libs.koin.android)
+            
+            implementation(libs.ktor.client.okhttp)
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material)
+            // implementation(compose.material)
             implementation(compose.ui)
             implementation(compose.components.resources)
+            api(project(":kmpnotifier"))
+            implementation(project(":kmpauth-google"))
+            implementation(project(":kmpauth-firebase"))
+            implementation(project(":kmpauth-uihelper"))
+            implementation(project(":kmpnotifier"))
+            implementation(compose.material3)
+            implementation(compose.ui)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+
+            implementation(libs.compose.navigation)
+            implementation(libs.landscapist.coil3)
+            implementation(libs.room.runtime)
+            implementation(libs.sqlite.bundled)
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
+
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+
+            implementation(libs.bundles.ktor)
+
+            // qrcode
+            implementation(libs.qr.kit)
         }
     }
 }
+
+
 
 android {
     namespace = "it.puntoettore.fidelity"
@@ -63,6 +107,10 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -71,15 +119,37 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
+            isDebuggable = false
+        }
+        getByName("debug") {
+            isDebuggable = true
         }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    dependencies {
+        debugImplementation(libs.compose.ui.tooling)
+        implementation(project.dependencies.platform("com.google.firebase:firebase-bom:33.3.0"))
+    }
+}
+
+
+room {
+    schemaDirectory("$projectDir/schemas")
 }
 
 dependencies {
     debugImplementation(compose.uiTooling)
+    add("kspAndroid", libs.room.compiler)
+    add("kspIosX64", libs.room.compiler)
+    add("kspIosArm64", libs.room.compiler)
+    add("kspIosSimulatorArm64", libs.room.compiler)
 }
 
+compose.resources {
+    publicResClass = true
+    packageOfResClass = "it.puntoettore.fidelity"
+    generateResClass = auto
+}

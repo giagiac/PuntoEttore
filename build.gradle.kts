@@ -8,6 +8,12 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform) apply false
     alias(libs.plugins.kotlinNativeCocoaPods) apply false
 
+
+    alias(libs.plugins.googleServices) apply false
+    alias(libs.plugins.kotlinx.binary.validator)
+
+    alias(libs.plugins.kotlin.serialization) apply false
+
 }
 
 allprojects {

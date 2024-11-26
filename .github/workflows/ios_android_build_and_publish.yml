@@ -12,6 +12,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: import google-services.json & GoogleService-Info.plist
+        env:
+          GOOGLE_SERVICE_JSON_BASE64: ${{ secrets.GOOGLE_SERVICE_JSON }}
+          GOOGLESERVICE_INFO_PLIST_BASE64: ${{ secrets.GOOGLESERVICE_INFO_PLIST }}
+        run: |
+          echo -n "$GOOGLE_SERVICE_JSON_BASE64" | base64 --decode -o composeApp/google-services.json
+          echo -n "$GOOGLESERVICE_INFO_PLIST_BASE64" | base64 --decode -o iosApp/iosApp/GoogleService-Info.plist
       # - name: set up JDK 17
       #   uses: actions/setup-java@v3
       #   with:
