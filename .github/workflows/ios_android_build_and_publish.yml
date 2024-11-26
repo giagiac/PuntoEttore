@@ -55,7 +55,7 @@ jobs:
           security list-keychain -d user -s "$KEYCHAIN_PATH"
           security default-keychain -s "$KEYCHAIN_PATH"
 
-          xcodebuild -allowProvisioningUpdates -workspace iosApp/iosApp.xcodeproj/project.xcworkspace \
+          xcodebuild -allowProvisioningUpdates -project iosApp/iosApp.xcodeproj \
             -scheme iosApp \
             -sdk iphoneos \
             -archivePath $RUNNER_TEMP/iosApp.xcarchive \
