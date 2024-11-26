@@ -6,4 +6,11 @@ plugins {
     alias(libs.plugins.composeMultiplatform) apply false
     alias(libs.plugins.composeCompiler) apply false
     alias(libs.plugins.kotlinMultiplatform) apply false
+    alias(libs.plugins.kotlinNativeCocoaPods) apply false
+
+}
+
+allprojects {
+    group = "io.github.mirzemehdi"
+    version = project.properties["kmpAuthVersion"] as String
 }

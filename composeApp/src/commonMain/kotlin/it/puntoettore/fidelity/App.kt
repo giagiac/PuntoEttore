@@ -10,11 +10,13 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import io.github.mirzemehdi.composeapp.generated.resources.Res
+import io.github.mirzemehdi.composeapp.generated.resources.compose_multiplatform
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
-import puntoettore.composeapp.generated.resources.Res
-import puntoettore.composeapp.generated.resources.compose_multiplatform
+// import puntoettore.composeapp.generated.resources.Res
+// import puntoettore.composeapp.generated.resources.compose_multiplatform
 
 @Composable
 @Preview
