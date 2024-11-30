@@ -1,6 +1,9 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.utils.loadPropertyFromResources
+import java.io.FileInputStream
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -90,9 +93,27 @@ kotlin {
     }
 }
 
-
+var keystorePropertiesFile = rootProject.file("../keystore.properties")
+var keystoreProperties = Properties()
+keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
 android {
+
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file(keystoreProperties["storeFile"] as String)
+            storePassword = keystoreProperties["storePassword"] as String
+            keyAlias = keystoreProperties["keyAlias"] as String
+            keyPassword = keystoreProperties["keyPassword"] as String
+        }
+        create("release") {
+            storeFile = file(keystoreProperties["storeFileRelease"] as String)
+            storePassword = keystoreProperties["storePasswordRelease"] as String
+            keyAlias = keystoreProperties["keyAliasRelease"] as String
+            keyPassword = keystoreProperties["keyPasswordRelease"] as String
+        }
+    }
+
     namespace = "it.puntoettore.fidelity"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
@@ -106,6 +127,7 @@ android {
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
+        signingConfig = signingConfigs.getByName("debug")
     }
     buildFeatures {
         compose = true
@@ -120,6 +142,7 @@ android {
         getByName("release") {
             isMinifyEnabled = false
             isDebuggable = false
+            signingConfig = signingConfigs.getByName("release")
         }
         getByName("debug") {
             isDebuggable = true
@@ -132,6 +155,18 @@ android {
     dependencies {
         debugImplementation(libs.compose.ui.tooling)
         implementation(project.dependencies.platform("com.google.firebase:firebase-bom:33.3.0"))
+    }
+
+    // Release
+    tasks.register("getAppName") {
+        // Set the task"s actions
+        doLast {
+            val versionName = defaultConfig.versionName
+            val versionCode = defaultConfig.versionCode
+            val appName = "APP-v${versionName}-$versionCode"
+            // Print the app name
+            println(appName)
+        }
     }
 }
 

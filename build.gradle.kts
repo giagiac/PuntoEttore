@@ -17,6 +17,6 @@ plugins {
 }
 
 allprojects {
-    group = "io.github.mirzemehdi"
+    // group = "io.github.mirzemehdi"
     version = project.properties["kmpAuthVersion"] as String
 }

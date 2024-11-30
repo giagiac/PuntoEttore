@@ -71,3 +71,8 @@ android {
     }
 }
 
+compose.resources {
+    publicResClass = true
+    packageOfResClass = "io.github.mirzemehdi"
+    generateResClass = auto
+}
