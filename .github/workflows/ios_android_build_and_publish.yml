@@ -29,6 +29,13 @@ jobs:
       # - name: Grant execute permission for gradlew
       #   run: chmod +x gradlew
 
+      - name: Extract keystore.properties
+        env:
+          RELEASE_KEYSTORE_PROPERTIES_BASE64: ${{ secrets.RELEASE_KEYSTORE_PROPERTIES }}
+        run: |
+          echo -n "RELEASE_KEYSTORE_PROPERTIES_BASE64" | base64 --decode -o $GITHUB_WORKSPACE/../keystore.properties
+          ls $GITHUB_WORKSPACE
+          ls $GITHUB_WORKSPACE/../keystore.properties
       - name: Install the Apple certificate and provisioning profile
         env:
           BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
