@@ -82,3 +82,53 @@ public final class com/mmk/kmpauth/uihelper/google/PhoneSignInInputTextKt {
 	public static final fun PhoneSignInInputText (Landroidx/compose/ui/Modifier;Landroidx/compose/ui/graphics/Shape;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class io/github/mirzemehdi/ActualResourceCollectorsKt {
+	public static final fun getAllDrawableResources (Lio/github/mirzemehdi/Res;)Ljava/util/Map;
+	public static final fun getAllFontResources (Lio/github/mirzemehdi/Res;)Ljava/util/Map;
+	public static final fun getAllPluralStringResources (Lio/github/mirzemehdi/Res;)Ljava/util/Map;
+	public static final fun getAllStringArrayResources (Lio/github/mirzemehdi/Res;)Ljava/util/Map;
+	public static final fun getAllStringResources (Lio/github/mirzemehdi/Res;)Ljava/util/Map;
+}
+
+public final class io/github/mirzemehdi/Drawable0_commonMainKt {
+	public static final fun getIc_apple_logo_black (Lio/github/mirzemehdi/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getIc_apple_logo_white (Lio/github/mirzemehdi/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getIc_google (Lio/github/mirzemehdi/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+}
+
+public final class io/github/mirzemehdi/Font0_commonMainKt {
+	public static final fun getRoboto_medium (Lio/github/mirzemehdi/Res$font;)Lorg/jetbrains/compose/resources/FontResource;
+}
+
+public final class io/github/mirzemehdi/Res {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/mirzemehdi/Res;
+	public final fun getUri (Ljava/lang/String;)Ljava/lang/String;
+	public final fun readBytes (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class io/github/mirzemehdi/Res$array {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/mirzemehdi/Res$array;
+}
+
+public final class io/github/mirzemehdi/Res$drawable {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/mirzemehdi/Res$drawable;
+}
+
+public final class io/github/mirzemehdi/Res$font {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/mirzemehdi/Res$font;
+}
+
+public final class io/github/mirzemehdi/Res$plurals {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/mirzemehdi/Res$plurals;
+}
+
+public final class io/github/mirzemehdi/Res$string {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/mirzemehdi/Res$string;
+}
+

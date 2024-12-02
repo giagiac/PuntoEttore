@@ -1,0 +1,30 @@
+<resources>
+    <string name="title_login">Benvenuto</string>
+    <string name="url_endpoint">https://app.erroridiconiazione.com</string>
+    <string name="app_name">KMPAuth</string>
+    <string name="card">Carta Fedeltà</string>
+    <string name="account">Utente</string>
+    <string name="offers">Offerte</string>
+    <string name="name">Nome</string>
+    <string name="hello">Ciao</string>
+    <string name="phone_number">Cellulare</string>
+    <string name="email">Email</string>
+    <string name="score">Punteggio</string>
+    <string name="count_offer">Numero offerte</string>
+    <string name="surname">Cognome</string>
+    <string name="date_of_birth">Data di nascita</string>
+    <string name="detail">Dettaglio</string>
+    <string name="about">Chi siamo</string>
+
+    <string name="error_not_defined">Errore non definito</string>
+    <!-- Connessine internet errors -->
+    <string name="error_request_timeout">Richiesta scaduta. Riprova più tardi.</string>
+    <string name="error_unauthorized">Non sei autorizzato ad accedere a questa risorsa.</string>
+    <string name="error_conflict">Si è verificato un conflitto. Riprova.</string>
+    <string name="error_too_many_requests">Troppe richieste. Riprova più tardi.</string>
+    <string name="error_no_internet">Nessuna connessione Internet. Controlla le impostazioni di rete.</string>
+    <string name="error_payload_too_large">I dati della richiesta sono troppo grandi. Riprova con un payload più piccolo.</string>
+    <string name="error_server_error">Si è verificato un errore del server. Riprova più tardi.</string>
+    <string name="error_serialization">Errore di serializzazione dei dati. Contatta l\'assistenza.</string>
+    <string name="error_unknown">Si è verificato un errore sconosciuto. Riprova più tardi.</string>
+</resources>

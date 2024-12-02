@@ -23,7 +23,7 @@
 
 import SwiftUI
 import FirebaseMessaging
-import composeApp
+import ComposeApp
 import GoogleSignIn
 import FirebaseCore
 import FirebaseAuth

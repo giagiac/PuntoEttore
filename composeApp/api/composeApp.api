@@ -1,0 +1,1446 @@
+public final class it/puntoettore/fidelity/ActualResourceCollectorsKt {
+	public static final fun getAllDrawableResources (Lit/puntoettore/fidelity/Res;)Ljava/util/Map;
+	public static final fun getAllFontResources (Lit/puntoettore/fidelity/Res;)Ljava/util/Map;
+	public static final fun getAllPluralStringResources (Lit/puntoettore/fidelity/Res;)Ljava/util/Map;
+	public static final fun getAllStringArrayResources (Lit/puntoettore/fidelity/Res;)Ljava/util/Map;
+	public static final fun getAllStringResources (Lit/puntoettore/fidelity/Res;)Ljava/util/Map;
+}
+
+public final class it/puntoettore/fidelity/AppInitializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/AppInitializer;
+	public final fun onApplicationStart ()V
+}
+
+public final class it/puntoettore/fidelity/AppKt {
+	public static final fun App (ZZLandroidx/compose/runtime/Composer;II)V
+}
+
+public final class it/puntoettore/fidelity/BuildConfig {
+	public static final field APPLICATION_ID Ljava/lang/String;
+	public static final field BUILD_TYPE Ljava/lang/String;
+	public static final field DEBUG Z
+	public static final field VERSION_CODE I
+	public static final field VERSION_NAME Ljava/lang/String;
+	public fun <init> ()V
+}
+
+public final class it/puntoettore/fidelity/ComposableSingletons$MainActivityKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/ComposableSingletons$MainActivityKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class it/puntoettore/fidelity/Drawable0_commonMainKt {
+	public static final fun getApple_logo (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getBaseline_account_box_24 (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getBaseline_card_membership_24 (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getBaseline_favorite_24 (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getCompose_multiplatform (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getIc_apple_logo_black (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getIc_apple_logo_white (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getIc_google (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getLogo (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getSharp_cell_wifi_24 (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getSharp_error_24 (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getSharp_info_24 (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getSharp_money_bag_24 (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getSharp_question_mark_24 (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getSharp_sentiment_worried_24 (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+	public static final fun getSms (Lit/puntoettore/fidelity/Res$drawable;)Lorg/jetbrains/compose/resources/DrawableResource;
+}
+
+public final class it/puntoettore/fidelity/MainActivity : androidx/activity/ComponentActivity {
+	public static final field $stable I
+	public fun <init> ()V
+}
+
+public final class it/puntoettore/fidelity/MainActivityKt {
+	public static final fun AppAndroidPreview (Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/MainApplication : android/app/Application {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun onCreate ()V
+}
+
+public final class it/puntoettore/fidelity/PlatformKt {
+	public static final fun onApplicationStartPlatformSpecific ()V
+}
+
+public final class it/puntoettore/fidelity/Res {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/Res;
+	public final fun getUri (Ljava/lang/String;)Ljava/lang/String;
+	public final fun readBytes (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class it/puntoettore/fidelity/Res$array {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/Res$array;
+}
+
+public final class it/puntoettore/fidelity/Res$drawable {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/Res$drawable;
+}
+
+public final class it/puntoettore/fidelity/Res$font {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/Res$font;
+}
+
+public final class it/puntoettore/fidelity/Res$plurals {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/Res$plurals;
+}
+
+public final class it/puntoettore/fidelity/Res$string {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/Res$string;
+}
+
+public final class it/puntoettore/fidelity/String0_commonMainKt {
+	public static final fun getAbout (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getAccount (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getApp_name (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getCard (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getCount_offer (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getDate_of_birth (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getDetail (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getEmail (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_conflict (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_no_internet (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_not_defined (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_payload_too_large (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_request_timeout (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_serialization (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_server_error (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_too_many_requests (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_unauthorized (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getError_unknown (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getHello (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getName (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getNo_internet (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getOffers (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getPhone_number (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getScore (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getSurname (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getTitle_login (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+	public static final fun getUrl_endpoint (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
+}
+
+public final class it/puntoettore/fidelity/api/ApiDataClient {
+	public static final field $stable I
+	public fun <init> (Lio/ktor/client/HttpClient;)V
+	public final fun getOffers (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getUserDetail (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun sendData (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class it/puntoettore/fidelity/api/AuthResponse {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/api/AuthResponse$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lit/puntoettore/fidelity/api/AuthResponse;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/AuthResponse;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/AuthResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAccessToken ()Ljava/lang/String;
+	public final fun getRefreshToken ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/api/AuthResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/api/AuthResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/api/AuthResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/api/AuthResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/AuthResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/CreateHttpClient_androidKt {
+	public static final fun createHttpClient ()Lio/ktor/client/HttpClient;
+}
+
+public final class it/puntoettore/fidelity/api/InsultCensorClient {
+	public static final field $stable I
+	public fun <init> (Lio/ktor/client/HttpClient;)V
+	public final fun censorWords (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class it/puntoettore/fidelity/api/RefreshRequest {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/api/RefreshRequest$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lit/puntoettore/fidelity/api/RefreshRequest;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/RefreshRequest;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/RefreshRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRefreshToken ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/api/RefreshRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/api/RefreshRequest$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/api/RefreshRequest;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/api/RefreshRequest;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/RefreshRequest$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/CensoredText {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/api/datamodel/CensoredText$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lit/puntoettore/fidelity/api/datamodel/CensoredText;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/datamodel/CensoredText;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/datamodel/CensoredText;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getResult ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/api/datamodel/CensoredText$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/api/datamodel/CensoredText$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/api/datamodel/CensoredText;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/api/datamodel/CensoredText;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/CensoredText$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/DataUid {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/api/datamodel/DataUid$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lit/puntoettore/fidelity/api/datamodel/DataUid;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/datamodel/DataUid;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/datamodel/DataUid;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getUid ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/api/datamodel/DataUid$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/api/datamodel/DataUid$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/api/datamodel/DataUid;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/api/datamodel/DataUid;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/DataUid$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/DataUser {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/api/datamodel/DataUser$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lit/puntoettore/fidelity/api/datamodel/DataUser;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/datamodel/DataUser;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/datamodel/DataUser;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getToken ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/api/datamodel/DataUser$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/api/datamodel/DataUser$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/api/datamodel/DataUser;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/api/datamodel/DataUser;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/DataUser$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/Offer {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/api/datamodel/Offer$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lit/puntoettore/fidelity/api/datamodel/Offer;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/datamodel/Offer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/datamodel/Offer;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDataExpire ()Ljava/lang/String;
+	public final fun getDetail ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getPoints ()Ljava/lang/String;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/api/datamodel/Offer$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/api/datamodel/Offer$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/api/datamodel/Offer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/api/datamodel/Offer;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/Offer$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/Offers {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/api/datamodel/Offers$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/util/List;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/util/List;)Lit/puntoettore/fidelity/api/datamodel/Offers;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/datamodel/Offers;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/datamodel/Offers;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCount ()Ljava/lang/String;
+	public final fun getListOffers ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/api/datamodel/Offers$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/api/datamodel/Offers$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/api/datamodel/Offers;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/api/datamodel/Offers;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/Offers$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/Score {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/api/datamodel/Score$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lit/puntoettore/fidelity/api/datamodel/Score;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/datamodel/Score;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/datamodel/Score;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDataScan ()Ljava/lang/String;
+	public final fun getPoints ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/api/datamodel/Score$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/api/datamodel/Score$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/api/datamodel/Score;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/api/datamodel/Score;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/Score$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/UserDetail {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/api/datamodel/UserDetail$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lit/puntoettore/fidelity/api/datamodel/UserDetail;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/datamodel/UserDetail;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/datamodel/UserDetail;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDateOfBirth ()Ljava/lang/String;
+	public final fun getEmail ()Ljava/lang/String;
+	public final fun getListScores ()Ljava/util/List;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getScore ()Ljava/lang/String;
+	public final fun getSurname ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/api/datamodel/UserDetail$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/api/datamodel/UserDetail$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/api/datamodel/UserDetail;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/api/datamodel/UserDetail;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/api/datamodel/UserDetail$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public abstract interface class it/puntoettore/fidelity/api/util/EError {
+}
+
+public final class it/puntoettore/fidelity/api/util/NetworkEError : java/lang/Enum, it/puntoettore/fidelity/api/util/EError {
+	public static final field CONFLICT Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static final field NO_INTERNET Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static final field PAYLOAD_TOO_LARGE Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static final field REQUEST_TIMEOUT Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static final field SERIALIZATION Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static final field SERVER_ERROR Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static final field TOO_MANY_REQUESTS Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static final field UNAUTHORIZED Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static final field UNKNOWN Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lit/puntoettore/fidelity/api/util/NetworkEError;
+	public static fun values ()[Lit/puntoettore/fidelity/api/util/NetworkEError;
+}
+
+public abstract interface class it/puntoettore/fidelity/api/util/Result {
+}
+
+public final class it/puntoettore/fidelity/api/util/Result$Error : it/puntoettore/fidelity/api/util/Result {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/api/util/EError;)V
+	public final fun component1 ()Lit/puntoettore/fidelity/api/util/EError;
+	public final fun copy (Lit/puntoettore/fidelity/api/util/EError;)Lit/puntoettore/fidelity/api/util/Result$Error;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/util/Result$Error;Lit/puntoettore/fidelity/api/util/EError;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/util/Result$Error;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getError ()Lit/puntoettore/fidelity/api/util/EError;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/api/util/Result$Success : it/puntoettore/fidelity/api/util/Result {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/Object;)V
+	public final fun component1 ()Ljava/lang/Object;
+	public final fun copy (Ljava/lang/Object;)Lit/puntoettore/fidelity/api/util/Result$Success;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/api/util/Result$Success;Ljava/lang/Object;ILjava/lang/Object;)Lit/puntoettore/fidelity/api/util/Result$Success;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Ljava/lang/Object;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/api/util/ResultKt {
+	public static final fun asEmptyDataResult (Lit/puntoettore/fidelity/api/util/Result;)Lit/puntoettore/fidelity/api/util/Result;
+	public static final fun map (Lit/puntoettore/fidelity/api/util/Result;Lkotlin/jvm/functions/Function1;)Lit/puntoettore/fidelity/api/util/Result;
+	public static final fun onError (Lit/puntoettore/fidelity/api/util/Result;Lkotlin/jvm/functions/Function1;)Lit/puntoettore/fidelity/api/util/Result;
+	public static final fun onSuccess (Lit/puntoettore/fidelity/api/util/Result;Lkotlin/jvm/functions/Function1;)Lit/puntoettore/fidelity/api/util/Result;
+}
+
+public abstract class it/puntoettore/fidelity/data/BookDatabase : androidx/room/RoomDatabase {
+	public static final field $stable I
+	public fun <init> ()V
+	public abstract fun appSettingsDao ()Lit/puntoettore/fidelity/data/dao/AppSettingsDao;
+	public abstract fun bookDao ()Lit/puntoettore/fidelity/data/dao/BookDao;
+	public abstract fun userDao ()Lit/puntoettore/fidelity/data/dao/UserDao;
+}
+
+public final class it/puntoettore/fidelity/data/BookDatabaseConstructor : androidx/room/RoomDatabaseConstructor {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/data/BookDatabaseConstructor;
+	public synthetic fun initialize ()Landroidx/room/RoomDatabase;
+	public fun initialize ()Lit/puntoettore/fidelity/data/BookDatabase;
+}
+
+public final class it/puntoettore/fidelity/data/BookDatabase_Impl : it/puntoettore/fidelity/data/BookDatabase {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun appSettingsDao ()Lit/puntoettore/fidelity/data/dao/AppSettingsDao;
+	public fun bookDao ()Lit/puntoettore/fidelity/data/dao/BookDao;
+	public fun clearAllTables ()V
+	public fun createAutoMigrations (Ljava/util/Map;)Ljava/util/List;
+	public synthetic fun createOpenDelegate ()Landroidx/room/RoomOpenDelegateMarker;
+	public fun getRequiredAutoMigrationSpecClasses ()Ljava/util/Set;
+	public fun userDao ()Lit/puntoettore/fidelity/data/dao/UserDao;
+}
+
+public final class it/puntoettore/fidelity/data/BookTypeConverter {
+	public static final field $stable I
+	public fun <init> ()V
+	public final fun fromList (Ljava/util/List;)Ljava/lang/String;
+	public final fun fromString (Ljava/lang/String;)Ljava/util/List;
+}
+
+public final class it/puntoettore/fidelity/data/GetRoomDatabaseKt {
+	public static final fun getRoomDatabase (Landroidx/room/RoomDatabase$Builder;)Lit/puntoettore/fidelity/data/BookDatabase;
+}
+
+public abstract interface class it/puntoettore/fidelity/data/dao/AppSettingsDao {
+	public abstract fun deleteAppSettingsById (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getAppSettings ()Lkotlinx/coroutines/flow/Flow;
+	public abstract fun insertAppSettings (Lit/puntoettore/fidelity/domain/AppSettings;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun updateAppSettings (Lit/puntoettore/fidelity/domain/AppSettings;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class it/puntoettore/fidelity/data/dao/AppSettingsDao_Impl : it/puntoettore/fidelity/data/dao/AppSettingsDao {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/data/dao/AppSettingsDao_Impl$Companion;
+	public fun <init> (Landroidx/room/RoomDatabase;)V
+	public fun deleteAppSettingsById (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getAppSettings ()Lkotlinx/coroutines/flow/Flow;
+	public fun insertAppSettings (Lit/puntoettore/fidelity/domain/AppSettings;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun updateAppSettings (Lit/puntoettore/fidelity/domain/AppSettings;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class it/puntoettore/fidelity/data/dao/AppSettingsDao_Impl$Companion {
+	public final fun getRequiredConverters ()Ljava/util/List;
+}
+
+public abstract interface class it/puntoettore/fidelity/data/dao/BookDao {
+	public abstract fun deleteBookById (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getBookById (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getBookByIdFlow (I)Lkotlinx/coroutines/flow/Flow;
+	public abstract fun insertBook (Lit/puntoettore/fidelity/domain/Book;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun readAllBooks ()Lkotlinx/coroutines/flow/Flow;
+	public abstract fun readAllBooksSortByFavorite ()Lkotlinx/coroutines/flow/Flow;
+	public abstract fun setFavoriteBook (ZILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun updateBook (Lit/puntoettore/fidelity/domain/Book;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class it/puntoettore/fidelity/data/dao/BookDao_Impl : it/puntoettore/fidelity/data/dao/BookDao {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/data/dao/BookDao_Impl$Companion;
+	public fun <init> (Landroidx/room/RoomDatabase;)V
+	public fun deleteBookById (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getBookById (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getBookByIdFlow (I)Lkotlinx/coroutines/flow/Flow;
+	public fun insertBook (Lit/puntoettore/fidelity/domain/Book;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun readAllBooks ()Lkotlinx/coroutines/flow/Flow;
+	public fun readAllBooksSortByFavorite ()Lkotlinx/coroutines/flow/Flow;
+	public fun setFavoriteBook (ZILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun updateBook (Lit/puntoettore/fidelity/domain/Book;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class it/puntoettore/fidelity/data/dao/BookDao_Impl$Companion {
+	public final fun getRequiredConverters ()Ljava/util/List;
+}
+
+public abstract interface class it/puntoettore/fidelity/data/dao/UserDao {
+	public abstract fun deleteUserById (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getUserById (I)Lkotlinx/coroutines/flow/Flow;
+	public abstract fun insertUser (Lit/puntoettore/fidelity/domain/User;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun updateUser (Lit/puntoettore/fidelity/domain/User;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class it/puntoettore/fidelity/data/dao/UserDao_Impl : it/puntoettore/fidelity/data/dao/UserDao {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/data/dao/UserDao_Impl$Companion;
+	public fun <init> (Landroidx/room/RoomDatabase;)V
+	public fun deleteUserById (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getUserById (I)Lkotlinx/coroutines/flow/Flow;
+	public fun insertUser (Lit/puntoettore/fidelity/domain/User;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun updateUser (Lit/puntoettore/fidelity/domain/User;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class it/puntoettore/fidelity/data/dao/UserDao_Impl$Companion {
+	public final fun getRequiredConverters ()Ljava/util/List;
+}
+
+public final class it/puntoettore/fidelity/database/DatabaseBuilder_androidKt {
+	public static final fun getDatabaseBuilder (Landroid/content/Context;)Landroidx/room/RoomDatabase$Builder;
+}
+
+public final class it/puntoettore/fidelity/di/KoinModuleKt {
+	public static final fun getSharedModule ()Lorg/koin/core/module/Module;
+	public static final fun initializeKoin (Lkotlin/jvm/functions/Function1;)V
+	public static synthetic fun initializeKoin$default (Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+}
+
+public final class it/puntoettore/fidelity/di/KoinModuleNetwork_androidKt {
+	public static final fun getClient ()Lio/ktor/client/HttpClient;
+}
+
+public final class it/puntoettore/fidelity/di/KoinModule_androidKt {
+	public static final fun getTargetModule ()Lorg/koin/core/module/Module;
+}
+
+public final class it/puntoettore/fidelity/domain/AppSettings {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/domain/AppSettings$Companion;
+	public static final field ID I
+	public fun <init> (IIZ)V
+	public synthetic fun <init> (IIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()Z
+	public final fun copy (IIZ)Lit/puntoettore/fidelity/domain/AppSettings;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/domain/AppSettings;IIZILjava/lang/Object;)Lit/puntoettore/fidelity/domain/AppSettings;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDarkMode ()Z
+	public final fun get_id ()I
+	public final fun get_idUser ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/domain/AppSettings$Companion {
+}
+
+public final class it/puntoettore/fidelity/domain/Book {
+	public static final field $stable I
+	public fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/util/List;Ljava/lang/String;)V
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Z
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun copy (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/util/List;Ljava/lang/String;)Lit/puntoettore/fidelity/domain/Book;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/domain/Book;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/util/List;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/domain/Book;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAuthor ()Ljava/lang/String;
+	public final fun getCategory ()Ljava/lang/String;
+	public final fun getImage ()Ljava/lang/String;
+	public final fun getSummary ()Ljava/lang/String;
+	public final fun getTags ()Ljava/util/List;
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun get_id ()I
+	public fun hashCode ()I
+	public final fun isFavorite ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/domain/User {
+	public static final field $stable I
+	public fun <init> (ILjava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V
+	public synthetic fun <init> (ILjava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component10 ()Z
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Z
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Z
+	public final fun copy (ILjava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)Lit/puntoettore/fidelity/domain/User;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/domain/User;ILjava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/domain/User;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDisplayName ()Ljava/lang/String;
+	public final fun getEmail ()Ljava/lang/String;
+	public final fun getNotifierToken ()Ljava/lang/String;
+	public final fun getPhoneNumber ()Ljava/lang/String;
+	public final fun getPhotoURL ()Ljava/lang/String;
+	public final fun getPrivacy ()Z
+	public final fun getProviderId ()Ljava/lang/String;
+	public final fun getUid ()Ljava/lang/String;
+	public final fun get_id ()I
+	public fun hashCode ()I
+	public final fun isAnonymous ()Z
+	public final fun isEmailVerified ()Z
+	public final fun setDisplayName (Ljava/lang/String;)V
+	public final fun setPhoneNumber (Ljava/lang/String;)V
+	public final fun setPhotoURL (Ljava/lang/String;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/BottomBarKt {
+	public static final fun BottomBar (Landroidx/navigation/NavHostController;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/navigation/ComposableSingletons$BottomBarKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/ComposableSingletons$BottomBarKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function2;
+	public static field lambda-3 Lkotlin/jvm/functions/Function2;
+	public static field lambda-4 Lkotlin/jvm/functions/Function2;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class it/puntoettore/fidelity/navigation/NavGraphKt {
+	public static final fun SetupNavGraph (Landroidx/navigation/NavHostController;Ljava/lang/String;Landroidx/compose/runtime/Composer;I)V
+}
+
+public abstract class it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getRoute ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/Screen$About : it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$About;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/Screen$Account : it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$Account;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/Screen$Card : it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$Card;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/Screen$Details : it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$Details;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public final fun passUrl (Ljava/lang/String;)Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/Screen$Home : it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$Home;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/Screen$Login : it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$Login;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/Screen$Manage : it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$Manage;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public final fun passId (I)Ljava/lang/String;
+	public static synthetic fun passId$default (Lit/puntoettore/fidelity/navigation/Screen$Manage;IILjava/lang/Object;)Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/Screen$Offer : it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$Offer;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/navigation/ScreenKt {
+	public static final field BOOK_ID_ARG Ljava/lang/String;
+	public static final field URL_ARG Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/presentation/components/ErrorViewKt {
+	public static final fun ErrorView (Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
+	public static final fun TextRes (Lorg/jetbrains/compose/resources/StringResource;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/components/LoadingViewKt {
+	public static final fun LoadingView (Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/components/TextViewKt {
+	public static final fun TextView (Ljava/lang/String;Lit/puntoettore/fidelity/domain/AppSettings;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/about/AboutScreenKt {
+	public static final fun AboutScreen (Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/about/AboutViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/data/BookDatabase;Lit/puntoettore/fidelity/api/InsultCensorClient;Lit/puntoettore/fidelity/api/ApiDataClient;)V
+	public final fun getBooks ()Landroidx/compose/runtime/State;
+	public final fun getError ()Landroidx/compose/runtime/State;
+	public final fun getSortedByFavorite ()Lkotlinx/coroutines/flow/StateFlow;
+	public final fun getUser ()Landroidx/compose/runtime/State;
+	public final fun getUserDetail ()Landroidx/compose/runtime/State;
+	public final fun sendData (Ljava/lang/String;)V
+	public final fun toggleSortByFavorite ()V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/about/ComposableSingletons$AboutScreenKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/about/ComposableSingletons$AboutScreenKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function2;
+	public static field lambda-3 Lkotlin/jvm/functions/Function3;
+	public static field lambda-4 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/about/ZoomableImageKt {
+	public static final fun ZoomableImage (Ljava/lang/String;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/account/AccountScreenKt {
+	public static final fun AccountScreen (Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/account/AccountViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/data/BookDatabase;Lit/puntoettore/fidelity/api/InsultCensorClient;Lit/puntoettore/fidelity/api/ApiDataClient;)V
+	public final fun getBooks ()Landroidx/compose/runtime/State;
+	public final fun getError ()Landroidx/compose/runtime/State;
+	public final fun getSortedByFavorite ()Lkotlinx/coroutines/flow/StateFlow;
+	public final fun getUser ()Landroidx/compose/runtime/State;
+	public final fun getUserDetail ()Landroidx/compose/runtime/State;
+	public final fun logout ()V
+	public final fun sendData (Ljava/lang/String;)V
+	public final fun toggleSortByFavorite ()V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/account/ComposableSingletons$AccountScreenKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/account/ComposableSingletons$AccountScreenKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function2;
+	public static field lambda-3 Lkotlin/jvm/functions/Function3;
+	public static field lambda-4 Lkotlin/jvm/functions/Function2;
+	public static field lambda-5 Lkotlin/jvm/functions/Function3;
+	public static field lambda-6 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-5$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-6$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/account/ComposableSingletons$UserCardKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/account/ComposableSingletons$UserCardKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function3;
+	public static field lambda-2 Lkotlin/jvm/functions/Function3;
+	public static field lambda-3 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/account/UserCardKt {
+	public static final fun UserCard (Lit/puntoettore/fidelity/domain/User;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/account/UserDetailCardKt {
+	public static final fun UserDetailCard (Lit/puntoettore/fidelity/api/datamodel/UserDetail;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/card/CardScreenKt {
+	public static final fun CardScreen (Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/card/CardViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/data/BookDatabase;Lit/puntoettore/fidelity/api/InsultCensorClient;Lit/puntoettore/fidelity/api/ApiDataClient;)V
+	public final fun getBooks ()Landroidx/compose/runtime/State;
+	public final fun getError ()Landroidx/compose/runtime/State;
+	public final fun getSortedByFavorite ()Lkotlinx/coroutines/flow/StateFlow;
+	public final fun getUser ()Landroidx/compose/runtime/State;
+	public final fun getUserDetail ()Landroidx/compose/runtime/State;
+	public final fun sendData (Ljava/lang/String;)V
+	public final fun toggleSortByFavorite ()V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/card/ComposableSingletons$CardScreenKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/card/ComposableSingletons$CardScreenKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function2;
+	public static field lambda-3 Lkotlin/jvm/functions/Function2;
+	public static field lambda-4 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/component/BookViewKt {
+	public static final fun BookView (Lit/puntoettore/fidelity/domain/Book;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/component/OffertDetailViewKt {
+	public static final fun OfferDetailView (Lit/puntoettore/fidelity/api/datamodel/Offer;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/component/OffertViewKt {
+	public static final fun OfferView (Lit/puntoettore/fidelity/api/datamodel/Offer;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/component/PointViewKt {
+	public static final fun PointView (Lit/puntoettore/fidelity/api/datamodel/Score;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/details/ComposableSingletons$DetailsScreenKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/details/ComposableSingletons$DetailsScreenKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function2;
+	public static field lambda-3 Lkotlin/jvm/functions/Function3;
+	public static field lambda-4 Lkotlin/jvm/functions/Function2;
+	public static field lambda-5 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-5$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/details/DetailsScreenKt {
+	public static final fun DetailsScreen (Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/details/DetailsViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/data/BookDatabase;Lit/puntoettore/fidelity/api/ApiDataClient;)V
+	public final fun getError ()Landroidx/compose/runtime/State;
+	public final fun getOffers ()Landroidx/compose/runtime/State;
+	public final fun getUser ()Landroidx/compose/runtime/State;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/home/ComposableSingletons$HomeScreenKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/home/ComposableSingletons$HomeScreenKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function2;
+	public static field lambda-3 Lkotlin/jvm/functions/Function2;
+	public static field lambda-4 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/home/HomeScreenKt {
+	public static final fun HomeScreen (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/home/HomeViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/data/BookDatabase;Lit/puntoettore/fidelity/api/InsultCensorClient;Lit/puntoettore/fidelity/api/ApiDataClient;)V
+	public final fun getBooks ()Landroidx/compose/runtime/State;
+	public final fun getSortedByFavorite ()Lkotlinx/coroutines/flow/StateFlow;
+	public final fun sendData (Ljava/lang/String;)V
+	public final fun toggleSortByFavorite ()V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/login/ComposableSingletons$LoginScreenKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/login/ComposableSingletons$LoginScreenKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function3;
+	public static field lambda-2 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/login/LoginScreenKt {
+	public static final fun LoginScreen (Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/login/LoginViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/data/BookDatabase;)V
+	public final fun getAppSettings ()Landroidx/compose/runtime/MutableState;
+	public final fun getErrorSignin ()Landroidx/compose/runtime/MutableState;
+	public final fun getLoadComplete ()Landroidx/compose/runtime/MutableState;
+	public final fun getLoginSucced ()Landroidx/compose/runtime/MutableState;
+	public final fun getOnFirebaseResult ()Lkotlin/jvm/functions/Function1;
+	public final fun inserUser (Lkotlin/jvm/functions/Function0;Ldev/gitlive/firebase/auth/FirebaseUser;)V
+	public final fun setAppSettings (Landroidx/compose/runtime/MutableState;)V
+	public final fun setErrorSignin (Landroidx/compose/runtime/MutableState;)V
+	public final fun setLoadComplete (Landroidx/compose/runtime/MutableState;)V
+	public final fun setLoginSucced (Landroidx/compose/runtime/MutableState;)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/login/TestScrollKt {
+	public static final fun ScrollText (Landroidx/compose/runtime/Composer;I)V
+	public static final fun verticalScrollbar-i1HVrS4 (Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/ScrollState;FFJF)Landroidx/compose/ui/Modifier;
+	public static synthetic fun verticalScrollbar-i1HVrS4$default (Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/ScrollState;FFJFILjava/lang/Object;)Landroidx/compose/ui/Modifier;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/manage/ComposableSingletons$ManageScreenKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/manage/ComposableSingletons$ManageScreenKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function2;
+	public static field lambda-3 Lkotlin/jvm/functions/Function2;
+	public static field lambda-4 Lkotlin/jvm/functions/Function2;
+	public static field lambda-5 Lkotlin/jvm/functions/Function2;
+	public static field lambda-6 Lkotlin/jvm/functions/Function2;
+	public static field lambda-7 Lkotlin/jvm/functions/Function2;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-5$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-6$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-7$composeApp_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/manage/ManageScreenKt {
+	public static final fun ManageScreen (ILkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/manage/ManageViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/data/BookDatabase;Landroidx/lifecycle/SavedStateHandle;)V
+	public final fun getAuthorField ()Landroidx/compose/runtime/MutableState;
+	public final fun getCategoryField ()Landroidx/compose/runtime/MutableState;
+	public final fun getImageField ()Landroidx/compose/runtime/MutableState;
+	public final fun getSummaryField ()Landroidx/compose/runtime/MutableState;
+	public final fun getTagsField ()Landroidx/compose/runtime/MutableState;
+	public final fun getTitleField ()Landroidx/compose/runtime/MutableState;
+	public final fun insertBook (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+	public final fun setAuthorField (Landroidx/compose/runtime/MutableState;)V
+	public final fun setCategoryField (Landroidx/compose/runtime/MutableState;)V
+	public final fun setImageField (Landroidx/compose/runtime/MutableState;)V
+	public final fun setSummaryField (Landroidx/compose/runtime/MutableState;)V
+	public final fun setTagsField (Landroidx/compose/runtime/MutableState;)V
+	public final fun setTitleField (Landroidx/compose/runtime/MutableState;)V
+	public final fun updateBook (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/manage/ManageViewModelKt {
+	public static final field IMAGE_URL Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/offer/ComposableSingletons$OfferScreenKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/offer/ComposableSingletons$OfferScreenKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function3;
+	public static field lambda-3 Lkotlin/jvm/functions/Function2;
+	public static field lambda-4 Lkotlin/jvm/functions/Function2;
+	public static field lambda-5 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-5$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/offer/OfferScreenKt {
+	public static final fun OfferScreen (Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/offer/OfferViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/data/BookDatabase;Lit/puntoettore/fidelity/api/InsultCensorClient;Lit/puntoettore/fidelity/api/ApiDataClient;)V
+	public final fun getError ()Landroidx/compose/runtime/State;
+	public final fun getOffers ()Landroidx/compose/runtime/State;
+	public final fun getSortedByFavorite ()Lkotlinx/coroutines/flow/StateFlow;
+	public final fun getUser ()Landroidx/compose/runtime/State;
+	public final fun sendData (Ljava/lang/String;)V
+	public final fun toggleSortByFavorite ()V
+}
+
+public final class it/puntoettore/fidelity/presentation/theme/ColorKt {
+	public static final fun getMd_theme_dark_background ()J
+	public static final fun getMd_theme_dark_error ()J
+	public static final fun getMd_theme_dark_errorContainer ()J
+	public static final fun getMd_theme_dark_inverseOnSurface ()J
+	public static final fun getMd_theme_dark_inversePrimary ()J
+	public static final fun getMd_theme_dark_inverseSurface ()J
+	public static final fun getMd_theme_dark_onBackground ()J
+	public static final fun getMd_theme_dark_onError ()J
+	public static final fun getMd_theme_dark_onErrorContainer ()J
+	public static final fun getMd_theme_dark_onPrimary ()J
+	public static final fun getMd_theme_dark_onPrimaryContainer ()J
+	public static final fun getMd_theme_dark_onSecondary ()J
+	public static final fun getMd_theme_dark_onSecondaryContainer ()J
+	public static final fun getMd_theme_dark_onSurface ()J
+	public static final fun getMd_theme_dark_onSurfaceVariant ()J
+	public static final fun getMd_theme_dark_onTertiary ()J
+	public static final fun getMd_theme_dark_onTertiaryContainer ()J
+	public static final fun getMd_theme_dark_outline ()J
+	public static final fun getMd_theme_dark_outlineVariant ()J
+	public static final fun getMd_theme_dark_primary ()J
+	public static final fun getMd_theme_dark_primaryContainer ()J
+	public static final fun getMd_theme_dark_scrim ()J
+	public static final fun getMd_theme_dark_secondary ()J
+	public static final fun getMd_theme_dark_secondaryContainer ()J
+	public static final fun getMd_theme_dark_shadow ()J
+	public static final fun getMd_theme_dark_surface ()J
+	public static final fun getMd_theme_dark_surfaceTint ()J
+	public static final fun getMd_theme_dark_surfaceVariant ()J
+	public static final fun getMd_theme_dark_tertiary ()J
+	public static final fun getMd_theme_dark_tertiaryContainer ()J
+	public static final fun getMd_theme_light_background ()J
+	public static final fun getMd_theme_light_error ()J
+	public static final fun getMd_theme_light_errorContainer ()J
+	public static final fun getMd_theme_light_inverseOnSurface ()J
+	public static final fun getMd_theme_light_inversePrimary ()J
+	public static final fun getMd_theme_light_inverseSurface ()J
+	public static final fun getMd_theme_light_onBackground ()J
+	public static final fun getMd_theme_light_onError ()J
+	public static final fun getMd_theme_light_onErrorContainer ()J
+	public static final fun getMd_theme_light_onPrimary ()J
+	public static final fun getMd_theme_light_onPrimaryContainer ()J
+	public static final fun getMd_theme_light_onSecondary ()J
+	public static final fun getMd_theme_light_onSecondaryContainer ()J
+	public static final fun getMd_theme_light_onSurface ()J
+	public static final fun getMd_theme_light_onSurfaceVariant ()J
+	public static final fun getMd_theme_light_onTertiary ()J
+	public static final fun getMd_theme_light_onTertiaryContainer ()J
+	public static final fun getMd_theme_light_outline ()J
+	public static final fun getMd_theme_light_outlineVariant ()J
+	public static final fun getMd_theme_light_primary ()J
+	public static final fun getMd_theme_light_primaryContainer ()J
+	public static final fun getMd_theme_light_scrim ()J
+	public static final fun getMd_theme_light_secondary ()J
+	public static final fun getMd_theme_light_secondaryContainer ()J
+	public static final fun getMd_theme_light_shadow ()J
+	public static final fun getMd_theme_light_surface ()J
+	public static final fun getMd_theme_light_surfaceTint ()J
+	public static final fun getMd_theme_light_surfaceVariant ()J
+	public static final fun getMd_theme_light_tertiary ()J
+	public static final fun getMd_theme_light_tertiaryContainer ()J
+	public static final fun getSeed ()J
+}
+
+public final class it/puntoettore/fidelity/theme/ColorKt {
+	public static final fun getBackgroundDark ()J
+	public static final fun getBackgroundDarkHighContrast ()J
+	public static final fun getBackgroundDarkMediumContrast ()J
+	public static final fun getBackgroundLight ()J
+	public static final fun getBackgroundLightHighContrast ()J
+	public static final fun getBackgroundLightMediumContrast ()J
+	public static final fun getErrorContainerDark ()J
+	public static final fun getErrorContainerDarkHighContrast ()J
+	public static final fun getErrorContainerDarkMediumContrast ()J
+	public static final fun getErrorContainerLight ()J
+	public static final fun getErrorContainerLightHighContrast ()J
+	public static final fun getErrorContainerLightMediumContrast ()J
+	public static final fun getErrorDark ()J
+	public static final fun getErrorDarkHighContrast ()J
+	public static final fun getErrorDarkMediumContrast ()J
+	public static final fun getErrorLight ()J
+	public static final fun getErrorLightHighContrast ()J
+	public static final fun getErrorLightMediumContrast ()J
+	public static final fun getInverseOnSurfaceDark ()J
+	public static final fun getInverseOnSurfaceDarkHighContrast ()J
+	public static final fun getInverseOnSurfaceDarkMediumContrast ()J
+	public static final fun getInverseOnSurfaceLight ()J
+	public static final fun getInverseOnSurfaceLightHighContrast ()J
+	public static final fun getInverseOnSurfaceLightMediumContrast ()J
+	public static final fun getInversePrimaryDark ()J
+	public static final fun getInversePrimaryDarkHighContrast ()J
+	public static final fun getInversePrimaryDarkMediumContrast ()J
+	public static final fun getInversePrimaryLight ()J
+	public static final fun getInversePrimaryLightHighContrast ()J
+	public static final fun getInversePrimaryLightMediumContrast ()J
+	public static final fun getInverseSurfaceDark ()J
+	public static final fun getInverseSurfaceDarkHighContrast ()J
+	public static final fun getInverseSurfaceDarkMediumContrast ()J
+	public static final fun getInverseSurfaceLight ()J
+	public static final fun getInverseSurfaceLightHighContrast ()J
+	public static final fun getInverseSurfaceLightMediumContrast ()J
+	public static final fun getOnBackgroundDark ()J
+	public static final fun getOnBackgroundDarkHighContrast ()J
+	public static final fun getOnBackgroundDarkMediumContrast ()J
+	public static final fun getOnBackgroundLight ()J
+	public static final fun getOnBackgroundLightHighContrast ()J
+	public static final fun getOnBackgroundLightMediumContrast ()J
+	public static final fun getOnErrorContainerDark ()J
+	public static final fun getOnErrorContainerDarkHighContrast ()J
+	public static final fun getOnErrorContainerDarkMediumContrast ()J
+	public static final fun getOnErrorContainerLight ()J
+	public static final fun getOnErrorContainerLightHighContrast ()J
+	public static final fun getOnErrorContainerLightMediumContrast ()J
+	public static final fun getOnErrorDark ()J
+	public static final fun getOnErrorDarkHighContrast ()J
+	public static final fun getOnErrorDarkMediumContrast ()J
+	public static final fun getOnErrorLight ()J
+	public static final fun getOnErrorLightHighContrast ()J
+	public static final fun getOnErrorLightMediumContrast ()J
+	public static final fun getOnPrimaryContainerDark ()J
+	public static final fun getOnPrimaryContainerDarkHighContrast ()J
+	public static final fun getOnPrimaryContainerDarkMediumContrast ()J
+	public static final fun getOnPrimaryContainerLight ()J
+	public static final fun getOnPrimaryContainerLightHighContrast ()J
+	public static final fun getOnPrimaryContainerLightMediumContrast ()J
+	public static final fun getOnPrimaryDark ()J
+	public static final fun getOnPrimaryDarkHighContrast ()J
+	public static final fun getOnPrimaryDarkMediumContrast ()J
+	public static final fun getOnPrimaryLight ()J
+	public static final fun getOnPrimaryLightHighContrast ()J
+	public static final fun getOnPrimaryLightMediumContrast ()J
+	public static final fun getOnSecondaryContainerDark ()J
+	public static final fun getOnSecondaryContainerDarkHighContrast ()J
+	public static final fun getOnSecondaryContainerDarkMediumContrast ()J
+	public static final fun getOnSecondaryContainerLight ()J
+	public static final fun getOnSecondaryContainerLightHighContrast ()J
+	public static final fun getOnSecondaryContainerLightMediumContrast ()J
+	public static final fun getOnSecondaryDark ()J
+	public static final fun getOnSecondaryDarkHighContrast ()J
+	public static final fun getOnSecondaryDarkMediumContrast ()J
+	public static final fun getOnSecondaryLight ()J
+	public static final fun getOnSecondaryLightHighContrast ()J
+	public static final fun getOnSecondaryLightMediumContrast ()J
+	public static final fun getOnSurfaceDark ()J
+	public static final fun getOnSurfaceDarkHighContrast ()J
+	public static final fun getOnSurfaceDarkMediumContrast ()J
+	public static final fun getOnSurfaceLight ()J
+	public static final fun getOnSurfaceLightHighContrast ()J
+	public static final fun getOnSurfaceLightMediumContrast ()J
+	public static final fun getOnSurfaceVariantDark ()J
+	public static final fun getOnSurfaceVariantDarkHighContrast ()J
+	public static final fun getOnSurfaceVariantDarkMediumContrast ()J
+	public static final fun getOnSurfaceVariantLight ()J
+	public static final fun getOnSurfaceVariantLightHighContrast ()J
+	public static final fun getOnSurfaceVariantLightMediumContrast ()J
+	public static final fun getOnTertiaryContainerDark ()J
+	public static final fun getOnTertiaryContainerDarkHighContrast ()J
+	public static final fun getOnTertiaryContainerDarkMediumContrast ()J
+	public static final fun getOnTertiaryContainerLight ()J
+	public static final fun getOnTertiaryContainerLightHighContrast ()J
+	public static final fun getOnTertiaryContainerLightMediumContrast ()J
+	public static final fun getOnTertiaryDark ()J
+	public static final fun getOnTertiaryDarkHighContrast ()J
+	public static final fun getOnTertiaryDarkMediumContrast ()J
+	public static final fun getOnTertiaryLight ()J
+	public static final fun getOnTertiaryLightHighContrast ()J
+	public static final fun getOnTertiaryLightMediumContrast ()J
+	public static final fun getOutlineDark ()J
+	public static final fun getOutlineDarkHighContrast ()J
+	public static final fun getOutlineDarkMediumContrast ()J
+	public static final fun getOutlineLight ()J
+	public static final fun getOutlineLightHighContrast ()J
+	public static final fun getOutlineLightMediumContrast ()J
+	public static final fun getOutlineVariantDark ()J
+	public static final fun getOutlineVariantDarkHighContrast ()J
+	public static final fun getOutlineVariantDarkMediumContrast ()J
+	public static final fun getOutlineVariantLight ()J
+	public static final fun getOutlineVariantLightHighContrast ()J
+	public static final fun getOutlineVariantLightMediumContrast ()J
+	public static final fun getPrimaryContainerDark ()J
+	public static final fun getPrimaryContainerDarkHighContrast ()J
+	public static final fun getPrimaryContainerDarkMediumContrast ()J
+	public static final fun getPrimaryContainerLight ()J
+	public static final fun getPrimaryContainerLightHighContrast ()J
+	public static final fun getPrimaryContainerLightMediumContrast ()J
+	public static final fun getPrimaryDark ()J
+	public static final fun getPrimaryDarkHighContrast ()J
+	public static final fun getPrimaryDarkMediumContrast ()J
+	public static final fun getPrimaryLight ()J
+	public static final fun getPrimaryLightHighContrast ()J
+	public static final fun getPrimaryLightMediumContrast ()J
+	public static final fun getScrimDark ()J
+	public static final fun getScrimDarkHighContrast ()J
+	public static final fun getScrimDarkMediumContrast ()J
+	public static final fun getScrimLight ()J
+	public static final fun getScrimLightHighContrast ()J
+	public static final fun getScrimLightMediumContrast ()J
+	public static final fun getSecondaryContainerDark ()J
+	public static final fun getSecondaryContainerDarkHighContrast ()J
+	public static final fun getSecondaryContainerDarkMediumContrast ()J
+	public static final fun getSecondaryContainerLight ()J
+	public static final fun getSecondaryContainerLightHighContrast ()J
+	public static final fun getSecondaryContainerLightMediumContrast ()J
+	public static final fun getSecondaryDark ()J
+	public static final fun getSecondaryDarkHighContrast ()J
+	public static final fun getSecondaryDarkMediumContrast ()J
+	public static final fun getSecondaryLight ()J
+	public static final fun getSecondaryLightHighContrast ()J
+	public static final fun getSecondaryLightMediumContrast ()J
+	public static final fun getSurfaceBrightDark ()J
+	public static final fun getSurfaceBrightDarkHighContrast ()J
+	public static final fun getSurfaceBrightDarkMediumContrast ()J
+	public static final fun getSurfaceBrightLight ()J
+	public static final fun getSurfaceBrightLightHighContrast ()J
+	public static final fun getSurfaceBrightLightMediumContrast ()J
+	public static final fun getSurfaceContainerDark ()J
+	public static final fun getSurfaceContainerDarkHighContrast ()J
+	public static final fun getSurfaceContainerDarkMediumContrast ()J
+	public static final fun getSurfaceContainerHighDark ()J
+	public static final fun getSurfaceContainerHighDarkHighContrast ()J
+	public static final fun getSurfaceContainerHighDarkMediumContrast ()J
+	public static final fun getSurfaceContainerHighLight ()J
+	public static final fun getSurfaceContainerHighLightHighContrast ()J
+	public static final fun getSurfaceContainerHighLightMediumContrast ()J
+	public static final fun getSurfaceContainerHighestDark ()J
+	public static final fun getSurfaceContainerHighestDarkHighContrast ()J
+	public static final fun getSurfaceContainerHighestDarkMediumContrast ()J
+	public static final fun getSurfaceContainerHighestLight ()J
+	public static final fun getSurfaceContainerHighestLightHighContrast ()J
+	public static final fun getSurfaceContainerHighestLightMediumContrast ()J
+	public static final fun getSurfaceContainerLight ()J
+	public static final fun getSurfaceContainerLightHighContrast ()J
+	public static final fun getSurfaceContainerLightMediumContrast ()J
+	public static final fun getSurfaceContainerLowDark ()J
+	public static final fun getSurfaceContainerLowDarkHighContrast ()J
+	public static final fun getSurfaceContainerLowDarkMediumContrast ()J
+	public static final fun getSurfaceContainerLowLight ()J
+	public static final fun getSurfaceContainerLowLightHighContrast ()J
+	public static final fun getSurfaceContainerLowLightMediumContrast ()J
+	public static final fun getSurfaceContainerLowestDark ()J
+	public static final fun getSurfaceContainerLowestDarkHighContrast ()J
+	public static final fun getSurfaceContainerLowestDarkMediumContrast ()J
+	public static final fun getSurfaceContainerLowestLight ()J
+	public static final fun getSurfaceContainerLowestLightHighContrast ()J
+	public static final fun getSurfaceContainerLowestLightMediumContrast ()J
+	public static final fun getSurfaceDark ()J
+	public static final fun getSurfaceDarkHighContrast ()J
+	public static final fun getSurfaceDarkMediumContrast ()J
+	public static final fun getSurfaceDimDark ()J
+	public static final fun getSurfaceDimDarkHighContrast ()J
+	public static final fun getSurfaceDimDarkMediumContrast ()J
+	public static final fun getSurfaceDimLight ()J
+	public static final fun getSurfaceDimLightHighContrast ()J
+	public static final fun getSurfaceDimLightMediumContrast ()J
+	public static final fun getSurfaceLight ()J
+	public static final fun getSurfaceLightHighContrast ()J
+	public static final fun getSurfaceLightMediumContrast ()J
+	public static final fun getSurfaceVariantDark ()J
+	public static final fun getSurfaceVariantDarkHighContrast ()J
+	public static final fun getSurfaceVariantDarkMediumContrast ()J
+	public static final fun getSurfaceVariantLight ()J
+	public static final fun getSurfaceVariantLightHighContrast ()J
+	public static final fun getSurfaceVariantLightMediumContrast ()J
+	public static final fun getTertiaryContainerDark ()J
+	public static final fun getTertiaryContainerDarkHighContrast ()J
+	public static final fun getTertiaryContainerDarkMediumContrast ()J
+	public static final fun getTertiaryContainerLight ()J
+	public static final fun getTertiaryContainerLightHighContrast ()J
+	public static final fun getTertiaryContainerLightMediumContrast ()J
+	public static final fun getTertiaryDark ()J
+	public static final fun getTertiaryDarkHighContrast ()J
+	public static final fun getTertiaryDarkMediumContrast ()J
+	public static final fun getTertiaryLight ()J
+	public static final fun getTertiaryLightHighContrast ()J
+	public static final fun getTertiaryLightMediumContrast ()J
+}
+
+public final class it/puntoettore/fidelity/theme/ThemeKt {
+	public static final fun getDarkScheme ()Landroidx/compose/material3/ColorScheme;
+	public static final fun getHighContrastDarkColorScheme ()Landroidx/compose/material3/ColorScheme;
+	public static final fun getHighContrastLightColorScheme ()Landroidx/compose/material3/ColorScheme;
+	public static final fun getLightScheme ()Landroidx/compose/material3/ColorScheme;
+	public static final fun getMediumContrastDarkColorScheme ()Landroidx/compose/material3/ColorScheme;
+	public static final fun getMediumContrastLightColorScheme ()Landroidx/compose/material3/ColorScheme;
+}
+
+public abstract class it/puntoettore/fidelity/util/RequestState {
+	public static final field $stable I
+	public final fun getErrorMessage ()Ljava/lang/String;
+	public final fun getSuccessData ()Ljava/lang/Object;
+	public final fun isError ()Z
+	public final fun isLoading ()Z
+	public final fun isSuccess ()Z
+}
+
+public final class it/puntoettore/fidelity/util/RequestState$Error : it/puntoettore/fidelity/util/RequestState {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lit/puntoettore/fidelity/util/RequestState$Error;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/util/RequestState$Error;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/util/RequestState$Error;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMessage ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/util/RequestState$Idle : it/puntoettore/fidelity/util/RequestState {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/util/RequestState$Idle;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/util/RequestState$Loading : it/puntoettore/fidelity/util/RequestState {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/util/RequestState$Loading;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/util/RequestState$Success : it/puntoettore/fidelity/util/RequestState {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/Object;)V
+	public final fun component1 ()Ljava/lang/Object;
+	public final fun copy (Ljava/lang/Object;)Lit/puntoettore/fidelity/util/RequestState$Success;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/util/RequestState$Success;Ljava/lang/Object;ILjava/lang/Object;)Lit/puntoettore/fidelity/util/RequestState$Success;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Ljava/lang/Object;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class it/puntoettore/fidelity/util/RequestStateKt {
+	public static final fun DisplayResult-AAXhOkM (Lit/puntoettore/fidelity/util/RequestState;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Landroidx/compose/animation/ContentTransform;Landroidx/compose/ui/graphics/Color;Landroidx/compose/runtime/Composer;II)V
+}
+

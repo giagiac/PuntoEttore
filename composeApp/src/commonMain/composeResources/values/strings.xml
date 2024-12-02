@@ -1,0 +1,31 @@
+<resources>
+    <string name="title_login">Welcome</string>
+    <string name="url_endpoint">https://app.erroridiconiazione.com</string>
+    <string name="app_name">KMPAuth</string>
+    <string name="card">Fidelity Card</string>
+    <string name="account">Account</string>
+    <string name="offers">Offer</string>
+    <string name="name">Name</string>
+    <string name="hello">Ciao</string>
+    <string name="phone_number">Phone number</string>
+    <string name="email">Email</string>
+    <string name="score">Score</string>
+    <string name="count_offer">Count offers</string>
+    <string name="surname">Surname</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="detail">Detail</string>
+    <string name="about">About us</string>
+
+    <string name="error_not_defined">Error not defined</string>
+    <!-- Connessine internet errors -->
+    <string name="no_internet">No internet connection</string>
+    <string name="error_request_timeout">Request timed out. Please try again later.</string>
+    <string name="error_unauthorized">You are not authorized to access this resource.</string>
+    <string name="error_conflict">There was a conflict. Please try again.</string>
+    <string name="error_too_many_requests">Too many requests. Please try again later.</string>
+    <string name="error_no_internet">No internet connection. Please check your network settings.</string>
+    <string name="error_payload_too_large">The request data is too large. Please try again with a smaller payload.</string>
+    <string name="error_server_error">There was a server error. Please try again later.</string>
+    <string name="error_serialization">Data serialization error. Please contact support.</string>
+    <string name="error_unknown">An unknown error occurred. Please try again later.</string>
+</resources>
