@@ -16,12 +16,9 @@ jobs:
         env:
           GOOGLE_SERVICE_JSON_BASE64: ${{ secrets.GOOGLE_SERVICE_JSON }}
           GOOGLESERVICE_INFO_PLIST_BASE64: ${{ secrets.GOOGLESERVICE_INFO_PLIST }}
-          RELEASE_KEYSTORE_PROPERTIES_BASE64: ${{ secrets.RELEASE_KEYSTORE_PROPERTIES }}
         run: |
           echo -n "$GOOGLE_SERVICE_JSON_BASE64" | base64 --decode -o composeApp/google-services.json
           echo -n "$GOOGLESERVICE_INFO_PLIST_BASE64" | base64 --decode -o iosApp/iosApp/GoogleService-Info.plist
-          echo $GITHUB_WORKSPACE/keystore.properties
-          echo -n "RELEASE_KEYSTORE_PROPERTIES_BASE64" | base64 --decode -o $GITHUB_WORKSPACE/keystore.properties
       # - name: set up JDK 17
       #   uses: actions/setup-java@v3
       #   with:
@@ -41,6 +38,7 @@ jobs:
           P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
           BUILD_PROVISION_PROFILE_BASE64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          RELEASE_KEYSTORE_PROPERTIES_BASE64: ${{ secrets.RELEASE_KEYSTORE_PROPERTIES }}
         run: |
           # create variables
           CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
@@ -50,6 +48,7 @@ jobs:
           # import certificate, provisioning profile and apikey from secrets
           echo -n "$BUILD_CERTIFICATE_BASE64" | base64 --decode -o $CERTIFICATE_PATH
           echo -n "$BUILD_PROVISION_PROFILE_BASE64" | base64 --decode -o $PP_PATH
+          echo -n "RELEASE_KEYSTORE_PROPERTIES_BASE64" | base64 --decode -o keystore.properties
           ls $PP_PATH
           # echo -n "$APPSTORE_CONNECT_API_KEY_BASE64" | base64 --decode -o ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
 
@@ -92,4 +91,4 @@ jobs:
           
           security delete-keychain $KEYCHAIN_PATH
           rm $PP_PATH
-          rm $GITHUB_WORKSPACE/keystore.properties
+          rm keystore.properties
