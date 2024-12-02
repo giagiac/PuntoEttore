@@ -45,7 +45,7 @@ jobs:
           # import certificate, provisioning profile and apikey from secrets
           echo -n "$BUILD_CERTIFICATE_BASE64" | base64 --decode -o $CERTIFICATE_PATH
           echo -n "$BUILD_PROVISION_PROFILE_BASE64" | base64 --decode -o $PP_PATH
-          echo -n "RELEASE_KEYSTORE_PROPERTIES_BASE64" | base64 --decode -o keystore.properties
+          echo -n "RELEASE_KEYSTORE_PROPERTIES_BASE64" | base64 --decode -o $GITHUB_WORKSPACE/../keystore.properties
           ls $PP_PATH
           # echo -n "$APPSTORE_CONNECT_API_KEY_BASE64" | base64 --decode -o ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
 
