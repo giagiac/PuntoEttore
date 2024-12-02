@@ -1,9 +1,6 @@
 name: App build
 on:
   push:
-    # tags:        
-    #   - 'v*'
-      
 jobs:
   build_with_signing:
     runs-on: macos-14
