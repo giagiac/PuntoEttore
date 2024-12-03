@@ -47,14 +47,17 @@ jobs:
         run: |
           appName=$(./gradlew -q getAppName)
           echo "APP_NAME=${appName}" >> $GITHUB_ENV
-          echo "APK_PATH=androidApp/build/outputs/apk/release/${appName}.apk" >> $GITHUB_ENV
+          echo "APK_PATH=composeApp/build/outputs/apk/release/${appName}.apk" >> $GITHUB_ENV
 
       - name: Rename APK
         run: |
-          mv androidApp/build/outputs/apk/release/androidApp-release.apk ${{ env.APK_PATH }}
+          mv composeApp/build/outputs/apk/release/composeApp-release.apk ${{ env.APK_PATH }}
 
       - name: Build Release Android app bundle with Gradle
         run: ./gradlew bundleRelease
+
+        # IOS
+
       - name: Install the Apple certificate and provisioning profile
         env:
           BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
