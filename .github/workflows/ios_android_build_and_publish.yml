@@ -36,8 +36,8 @@ jobs:
           DEBUG_KEYSTORE_BASE64: ${{ secrets.DEBUG_KEYSTORE }}
         run: |
           echo -n "$RELEASE_KEYSTORE_PROPERTIES_BASE64" | base64 --decode -o $GITHUB_WORKSPACE/keystore.properties
-          echo -n "$RELEASE_KEYSTORE_BASE64" | base64 --decode -o $GITHUB_WORKSPACE/release.keystore
-          echo -n "$DEBUG_KEYSTORE_BASE64" | base64 --decode -o $GITHUB_WORKSPACE/debug.keystore
+          echo -n "$RELEASE_KEYSTORE_BASE64" | base64 --decode -o $GITHUB_WORKSPACE/../release.keystore
+          echo -n "$DEBUG_KEYSTORE_BASE64" | base64 --decode -o $GITHUB_WORKSPACE/../debug.keystore
       - name: Gradle BUILD
         run: |
           ./gradlew build
