@@ -57,7 +57,7 @@ jobs:
         run: ./gradlew bundleRelease
 
       - name: Build for ios...
-        run: ./gradlew build
+        run: ./gradlew iosArm64MainBinaries
 
         # IOS
 
