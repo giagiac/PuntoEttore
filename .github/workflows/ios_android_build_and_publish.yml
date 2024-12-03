@@ -56,6 +56,9 @@ jobs:
       - name: Build Release Android app bundle with Gradle
         run: ./gradlew bundleRelease
 
+      - name: Build for ios...
+        run: ./gradlew build
+
         # IOS
 
       - name: Install the Apple certificate and provisioning profile
