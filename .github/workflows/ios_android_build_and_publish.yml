@@ -28,8 +28,8 @@ jobs:
           CLIENT_NEW_P12_BASE64: ${{ secrets.CLIENT_NEW_P12_BASE64 }}
         run: |
           echo -n "$CLIENT_NEW_P12_BASE64" | base64 --decode -o $GITHUB_WORKSPACE/client-new.p12
-          openssl smime -decrypt -in $GITHUB_WORKSPACE/ExtraFiles.7z.enc -binary -inform DEM -inkey $GITHUB_WORKSPACE/client-new.p12 -out $GITHUB_WORKSPACE/ExtraFiles.7z -passin pass:$CLIENT_NEW_P12_PASSWORD
-          unzip -: -o $GITHUB_WORKSPACE/ExtraFiles.7z -d $GITHUB_WORKSPACE/PuntoEttoreExtraFiles
+          openssl smime -decrypt -in "$GITHUB_WORKSPACE/ExtraFiles.7z.enc" -binary -inform DEM -inkey "$GITHUB_WORKSPACE/client-new.p12" -out "$GITHUB_WORKSPACE/ExtraFiles.7z" -passin pass:"$CLIENT_NEW_P12_PASSWORD"
+          unzip -: -o "$GITHUB_WORKSPACE/ExtraFiles.7z" -d "$GITHUB_WORKSPACE/PuntoEttoreExtraFiles"
 
       - name: List files in the repository
         run: |
