@@ -53,7 +53,7 @@ jobs:
           mv composeApp/build/outputs/apk/release/composeApp-release.apk ${{ env.APK_PATH }}
 
       - name: Carica l'artefatto
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: $APP_NAME # Nome dell'artefatto
           path: ${{ env.APK_PATH }} # Percorso del file da caricare
