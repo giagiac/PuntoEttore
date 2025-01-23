@@ -52,19 +52,11 @@ jobs:
         run: |
           mv composeApp/build/outputs/apk/release/composeApp-release.apk ${{ env.APK_PATH }}
 
-      - name: Carica l'Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Carica l'artefatto
+        uses: actions/upload-artifact@v3
         with:
-          asset_path: ${{ env.APK_PATH }} # Percorso del file da caricare
-          asset_name: $APP_NAME # Nome del file nella release
-          asset_content_type: application/vnd.android.package-archive # Tipo di contenuto del file
-
-#      - name: Scarica l'artefatto
-#        uses: actions/download-artifact@v4
-#        with:
-#          name: ${{ env.APK_PATH }}
+          name: $APP_NAME # Nome dell'artefatto
+          path: ${{ env.APK_PATH }} # Percorso del file da caricare
 
       - name: Build Release Android app bundle with Gradle
         run: ./gradlew bundleRelease
