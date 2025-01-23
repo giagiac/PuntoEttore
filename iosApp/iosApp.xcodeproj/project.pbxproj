@@ -7,23 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
-		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
-		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
-		7D58CDDE2CA6BB47005D9883 /* custom_notification_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */; };
-		7DC2087D2C85EAC7004512A3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7DC2087C2C85EAC7004512A3 /* FirebaseMessaging */; };
-		7DC2087F2C85FD30004512A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2087E2C85FD29004512A3 /* AppDelegate.swift */; };
-		A615958B2B479F2A008C86AE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A615958A2B479F2A008C86AE /* FirebaseAuth */; };
-		A61AEE982B3D018A00E17BA4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A61AEE972B3D018A00E17BA4 /* GoogleSignIn */; };
-		A61AEE9A2B3D018A00E17BA4 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A61AEE992B3D018A00E17BA4 /* GoogleSignInSwift */; };
-		A62229A72B479D28001B39BD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A62229A62B479D28001B39BD /* FirebaseAnalytics */; };
-		A62229AF2B479D28001B39BD /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = A62229AE2B479D28001B39BD /* FirebaseAppCheck */; };
-		A62229B12B479D39001B39BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A62229B02B479D39001B39BD /* GoogleService-Info.plist */; };
+		7DAF495C2D3EB027005A4413 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		7DAF495D2D3EB027005A4413 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		7DAF49672D3EB027005A4413 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
+		7DAF49682D3EB027005A4413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C3CFD2D3AD189000AA406 /* GoogleService-Info.plist */; };
+		7DAF49692D3EB027005A4413 /* custom_notification_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */; };
+		7DAF496A2D3EB027005A4413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
+		7DAF49722D3EB10C005A4413 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49712D3EB10C005A4413 /* FirebaseAnalytics */; };
+		7DAF49742D3EB10C005A4413 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49732D3EB10C005A4413 /* FirebaseAppCheck */; };
+		7DAF49762D3EB10C005A4413 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49752D3EB10C005A4413 /* FirebaseAuth */; };
+		7DAF49782D3EB10C005A4413 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49772D3EB10C005A4413 /* FirebaseCore */; };
+		7DAF497A2D3EB10C005A4413 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49792D3EB10C005A4413 /* FirebaseMessaging */; };
+		7DAF497C2D3EB10C005A4413 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF497B2D3EB10C005A4413 /* GoogleSignInSwift */; };
+		7DAF497F2D3EB662005A4413 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF497E2D3EB662005A4413 /* FirebaseAnalytics */; };
+		7DAF49812D3EB662005A4413 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49802D3EB662005A4413 /* FirebaseAppCheck */; };
+		7DAF49832D3EB662005A4413 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49822D3EB662005A4413 /* FirebaseAuth */; };
+		7DAF49852D3EB662005A4413 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49842D3EB662005A4413 /* FirebaseCore */; };
+		7DAF49872D3EB662005A4413 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49862D3EB662005A4413 /* FirebaseMessaging */; };
+		7DAF49892D3EB662005A4413 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49882D3EB662005A4413 /* GoogleSignInSwift */; };
+		7DD47D3A2D3EACAF009FD50D /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		7DD47D3B2D3EACAF009FD50D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		7DD47D452D3EACAF009FD50D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
+		7DD47D462D3EACAF009FD50D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C3CFD2D3AD189000AA406 /* GoogleService-Info.plist */; };
+		7DD47D472D3EACAF009FD50D /* custom_notification_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */; };
+		7DD47D482D3EACAF009FD50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7555FFB4242A642300829871 /* Embed Frameworks */ = {
+		7DAF496B2D3EB027005A4413 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DD47D492D3EACAF009FD50D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -39,26 +60,39 @@
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
-		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D1C3CFD2D3AD189000AA406 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = custom_notification_sound.wav; sourceTree = "<group>"; };
-		7DC2087E2C85FD29004512A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A62229B02B479D39001B39BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7DAF496F2D3EB027005A4413 /* Punto Ettore test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Punto Ettore test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD47D4D2D3EACAF009FD50D /* Punto Ettore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Punto Ettore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD641362D3686510029F2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A679C57A2B02E91A008F0522 /* iosApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iosApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7555FF78242A565900829871 /* Frameworks */ = {
+		7DAF495E2D3EB027005A4413 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DC2087D2C85EAC7004512A3 /* FirebaseMessaging in Frameworks */,
-				A61AEE982B3D018A00E17BA4 /* GoogleSignIn in Frameworks */,
-				A61AEE9A2B3D018A00E17BA4 /* GoogleSignInSwift in Frameworks */,
-				A62229A72B479D28001B39BD /* FirebaseAnalytics in Frameworks */,
-				A62229AF2B479D28001B39BD /* FirebaseAppCheck in Frameworks */,
-				A615958B2B479F2A008C86AE /* FirebaseAuth in Frameworks */,
+				7DAF497A2D3EB10C005A4413 /* FirebaseMessaging in Frameworks */,
+				7DAF49762D3EB10C005A4413 /* FirebaseAuth in Frameworks */,
+				7DAF49782D3EB10C005A4413 /* FirebaseCore in Frameworks */,
+				7DAF497C2D3EB10C005A4413 /* GoogleSignInSwift in Frameworks */,
+				7DAF49722D3EB10C005A4413 /* FirebaseAnalytics in Frameworks */,
+				7DAF49742D3EB10C005A4413 /* FirebaseAppCheck in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DD47D3C2D3EACAF009FD50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DAF49812D3EB662005A4413 /* FirebaseAppCheck in Frameworks */,
+				7DAF49832D3EB662005A4413 /* FirebaseAuth in Frameworks */,
+				7DAF49872D3EB662005A4413 /* FirebaseMessaging in Frameworks */,
+				7DAF49892D3EB662005A4413 /* GoogleSignInSwift in Frameworks */,
+				7DAF49852D3EB662005A4413 /* FirebaseCore in Frameworks */,
+				7DAF497F2D3EB662005A4413 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,15 +111,16 @@
 			isa = PBXGroup;
 			children = (
 				7555FF7D242A565900829871 /* iosApp */,
+				7DAF49702D3EB10C005A4413 /* Frameworks */,
 				7555FF7C242A565900829871 /* Products */,
-				7555FFB0242A642200829871 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		7555FF7C242A565900829871 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7555FF7B242A565900829871 /* iosApp.app */,
+				7DD47D4D2D3EACAF009FD50D /* Punto Ettore.app */,
+				7DAF496F2D3EB027005A4413 /* Punto Ettore test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,19 +129,18 @@
 			isa = PBXGroup;
 			children = (
 				7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */,
-				7DC2087E2C85FD29004512A3 /* AppDelegate.swift */,
 				A679C57A2B02E91A008F0522 /* iosApp.entitlements */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
-				7555FF8C242A565B00829871 /* Info.plist */,
-				A62229B02B479D39001B39BD /* GoogleService-Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
+				7DD641362D3686510029F2DD /* Info.plist */,
+				7D1C3CFD2D3AD189000AA406 /* GoogleService-Info.plist */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
 		};
-		7555FFB0242A642200829871 /* Frameworks */ = {
+		7DAF49702D3EB10C005A4413 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -116,31 +150,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7555FF7A242A565900829871 /* iosApp */ = {
+		7DAF49592D3EB027005A4413 /* Punto Ettore test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "iosApp" */;
+			buildConfigurationList = 7DAF496C2D3EB027005A4413 /* Build configuration list for PBXNativeTarget "Punto Ettore test" */;
 			buildPhases = (
-				7555FFB5242A651A00829871 /* Compile Kotlin Framework */,
-				7555FF77242A565900829871 /* Sources */,
-				7555FF78242A565900829871 /* Frameworks */,
-				7555FF79242A565900829871 /* Resources */,
-				7555FFB4242A642300829871 /* Embed Frameworks */,
+				7DAF495A2D3EB027005A4413 /* Compile Kotlin Framework */,
+				7DAF495B2D3EB027005A4413 /* Sources */,
+				7DAF495E2D3EB027005A4413 /* Frameworks */,
+				7DAF49662D3EB027005A4413 /* Resources */,
+				7DAF496B2D3EB027005A4413 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = iosApp;
-			packageProductDependencies = (
-				A61AEE972B3D018A00E17BA4 /* GoogleSignIn */,
-				A61AEE992B3D018A00E17BA4 /* GoogleSignInSwift */,
-				A62229A62B479D28001B39BD /* FirebaseAnalytics */,
-				A62229AE2B479D28001B39BD /* FirebaseAppCheck */,
-				A615958A2B479F2A008C86AE /* FirebaseAuth */,
-				7DC2087C2C85EAC7004512A3 /* FirebaseMessaging */,
-			);
+			name = "Punto Ettore test";
 			productName = iosApp;
-			productReference = 7555FF7B242A565900829871 /* iosApp.app */;
+			productReference = 7DAF496F2D3EB027005A4413 /* Punto Ettore test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DD47D372D3EACAF009FD50D /* Punto Ettore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DD47D4A2D3EACAF009FD50D /* Build configuration list for PBXNativeTarget "Punto Ettore" */;
+			buildPhases = (
+				7DD47D382D3EACAF009FD50D /* Compile Kotlin Framework */,
+				7DD47D392D3EACAF009FD50D /* Sources */,
+				7DD47D3C2D3EACAF009FD50D /* Frameworks */,
+				7DD47D442D3EACAF009FD50D /* Resources */,
+				7DD47D492D3EACAF009FD50D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Punto Ettore";
+			productName = iosApp;
+			productReference = 7DD47D4D2D3EACAF009FD50D /* Punto Ettore.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -153,11 +198,6 @@
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = orgName;
-				TargetAttributes = {
-					7555FF7A242A565900829871 = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
-				};
 			};
 			buildConfigurationList = 7555FF76242A565900829871 /* Build configuration list for PBXProject "iosApp" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -169,34 +209,46 @@
 			);
 			mainGroup = 7555FF72242A565900829871;
 			packageReferences = (
-				A61AEE962B3D018A00E17BA4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
-				A62229A52B479D28001B39BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7DFBD6532D232B4B0029410A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7555FF7A242A565900829871 /* iosApp */,
+				7DAF49592D3EB027005A4413 /* Punto Ettore test */,
+				7DD47D372D3EACAF009FD50D /* Punto Ettore */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7555FF79242A565900829871 /* Resources */ = {
+		7DAF49662D3EB027005A4413 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A62229B12B479D39001B39BD /* GoogleService-Info.plist in Resources */,
-				058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */,
-				7D58CDDE2CA6BB47005D9883 /* custom_notification_sound.wav in Resources */,
-				058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */,
+				7DAF49672D3EB027005A4413 /* Preview Assets.xcassets in Resources */,
+				7DAF49682D3EB027005A4413 /* GoogleService-Info.plist in Resources */,
+				7DAF49692D3EB027005A4413 /* custom_notification_sound.wav in Resources */,
+				7DAF496A2D3EB027005A4413 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DD47D442D3EACAF009FD50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD47D452D3EACAF009FD50D /* Preview Assets.xcassets in Resources */,
+				7DD47D462D3EACAF009FD50D /* GoogleService-Info.plist in Resources */,
+				7DD47D472D3EACAF009FD50D /* custom_notification_sound.wav in Resources */,
+				7DD47D482D3EACAF009FD50D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7555FFB5242A651A00829871 /* Compile Kotlin Framework */ = {
+		7DAF495A2D3EB027005A4413 /* Compile Kotlin Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,18 +264,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :composeApp:embedAndSignAppleFrameworkForXcode\n";
+			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :composeApp:embedAndSignAppleFrameworkForXcode Debug\n";
+		};
+		7DD47D382D3EACAF009FD50D /* Compile Kotlin Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Kotlin Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :composeApp:embedAndSignAppleFrameworkForXcode Release\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7555FF77242A565900829871 /* Sources */ = {
+		7DAF495B2D3EB027005A4413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DC2087F2C85FD30004512A3 /* AppDelegate.swift in Sources */,
-				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				7DAF495C2D3EB027005A4413 /* iOSApp.swift in Sources */,
+				7DAF495D2D3EB027005A4413 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DD47D392D3EACAF009FD50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD47D3A2D3EACAF009FD50D /* iOSApp.swift in Sources */,
+				7DD47D3B2D3EACAF009FD50D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +426,7 @@
 			};
 			name = Release;
 		};
-		7555FFA6242A565B00829871 /* Debug */ = {
+		7DAF496D2D3EB027005A4413 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "";
@@ -369,6 +447,7 @@
 					"$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,16 +458,16 @@
 					"-framework",
 					composeApp,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = it.puntoettore.fidelity;
+				PRODUCT_BUNDLE_IDENTIFIER = it.puntoettore.fidelity.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ProvisioningProfilePuntoEttoreFidelity;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ProvisioningProfileDevelopmentPuntoEttoreFidelityT;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7555FFA7242A565B00829871 /* Release */ = {
+		7DAF496E2D3EB027005A4413 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "";
@@ -409,6 +488,7 @@
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\n$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -419,10 +499,92 @@
 					"-framework",
 					composeApp,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = it.puntoettore.fidelity;
+				PRODUCT_BUNDLE_IDENTIFIER = it.puntoettore.fidelity.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ProvisioningProfilePuntoEttoreFidelity;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ProvisioningProfileDevelopmentPuntoEttoreFidelityT;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7DD47D4B2D3EACAF009FD50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = iosApp/iosApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J87ZH9VBKQ;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+				);
+				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					composeApp,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.puntoettore.fidelity.prod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ProvisioningProfileDistributionPuntoEttoreFidelity;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7DD47D4C2D3EACAF009FD50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = iosApp/iosApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J87ZH9VBKQ;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\n$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+				);
+				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					composeApp,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.puntoettore.fidelity.prod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ProvisioningProfileDistributionPuntoEttoreFidelity;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,11 +602,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "iosApp" */ = {
+		7DAF496C2D3EB027005A4413 /* Build configuration list for PBXNativeTarget "Punto Ettore test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7555FFA6242A565B00829871 /* Debug */,
-				7555FFA7242A565B00829871 /* Release */,
+				7DAF496D2D3EB027005A4413 /* Debug */,
+				7DAF496E2D3EB027005A4413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DD47D4A2D3EACAF009FD50D /* Build configuration list for PBXNativeTarget "Punto Ettore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DD47D4B2D3EACAF009FD50D /* Debug */,
+				7DD47D4C2D3EACAF009FD50D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -452,54 +623,84 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A61AEE962B3D018A00E17BA4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
-			requirement = {
-				kind = exactVersion;
-				version = 8.0.0;
-			};
-		};
-		A62229A52B479D28001B39BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				kind = exactVersion;
-				version = 11.2.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
+		7DFBD6532D232B4B0029410A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7DC2087C2C85EAC7004512A3 /* FirebaseMessaging */ = {
+		7DAF49712D3EB10C005A4413 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A62229A52B479D28001B39BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-		A615958A2B479F2A008C86AE /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A62229A52B479D28001B39BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		A61AEE972B3D018A00E17BA4 /* GoogleSignIn */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A61AEE962B3D018A00E17BA4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignIn;
-		};
-		A61AEE992B3D018A00E17BA4 /* GoogleSignInSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A61AEE962B3D018A00E17BA4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignInSwift;
-		};
-		A62229A62B479D28001B39BD /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A62229A52B479D28001B39BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		A62229AE2B479D28001B39BD /* FirebaseAppCheck */ = {
+		7DAF49732D3EB10C005A4413 /* FirebaseAppCheck */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A62229A52B479D28001B39BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAppCheck;
+		};
+		7DAF49752D3EB10C005A4413 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7DAF49772D3EB10C005A4413 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		7DAF49792D3EB10C005A4413 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		7DAF497B2D3EB10C005A4413 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6532D232B4B0029410A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		7DAF497E2D3EB662005A4413 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		7DAF49802D3EB662005A4413 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		7DAF49822D3EB662005A4413 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7DAF49842D3EB662005A4413 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		7DAF49862D3EB662005A4413 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		7DAF49882D3EB662005A4413 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6532D232B4B0029410A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

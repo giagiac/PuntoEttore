@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KMPAuth</string>
+    <string name="app_name" translatable="false">Punto Ettore Fidelity</string>
     <string name="card">Fidelity Card</string>
     <string name="account">Account</string>
     <string name="offers">Offer</string>

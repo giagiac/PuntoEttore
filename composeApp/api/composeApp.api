@@ -105,7 +105,6 @@ public final class it/puntoettore/fidelity/Res$string {
 public final class it/puntoettore/fidelity/String0_commonMainKt {
 	public static final fun getAbout (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
 	public static final fun getAccount (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
-	public static final fun getApp_name (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
 	public static final fun getCard (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
 	public static final fun getCount_offer (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
 	public static final fun getDate_of_birth (Lit/puntoettore/fidelity/Res$string;)Lorg/jetbrains/compose/resources/StringResource;
@@ -716,6 +715,35 @@ public final class it/puntoettore/fidelity/navigation/ComposableSingletons$Botto
 	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function2;
 }
 
+public final class it/puntoettore/fidelity/navigation/MyModel {
+	public static final field $stable I
+	public static final field Companion Lit/puntoettore/fidelity/navigation/MyModel$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lit/puntoettore/fidelity/navigation/MyModel;
+	public static synthetic fun copy$default (Lit/puntoettore/fidelity/navigation/MyModel;Ljava/lang/String;ILjava/lang/Object;)Lit/puntoettore/fidelity/navigation/MyModel;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAlert ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class it/puntoettore/fidelity/navigation/MyModel$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/MyModel$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lit/puntoettore/fidelity/navigation/MyModel;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lit/puntoettore/fidelity/navigation/MyModel;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class it/puntoettore/fidelity/navigation/MyModel$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class it/puntoettore/fidelity/navigation/NavGraphKt {
 	public static final fun SetupNavGraph (Landroidx/navigation/NavHostController;Ljava/lang/String;Landroidx/compose/runtime/Composer;I)V
 }
@@ -785,6 +813,14 @@ public final class it/puntoettore/fidelity/navigation/Screen$Manage : it/puntoet
 	public fun toString ()Ljava/lang/String;
 }
 
+public final class it/puntoettore/fidelity/navigation/Screen$Notifications : it/puntoettore/fidelity/navigation/Screen {
+	public static final field $stable I
+	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$Notifications;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
 public final class it/puntoettore/fidelity/navigation/Screen$Offer : it/puntoettore/fidelity/navigation/Screen {
 	public static final field $stable I
 	public static final field INSTANCE Lit/puntoettore/fidelity/navigation/Screen$Offer;
@@ -833,11 +869,50 @@ public final class it/puntoettore/fidelity/presentation/screen/about/ComposableS
 	public static field lambda-2 Lkotlin/jvm/functions/Function2;
 	public static field lambda-3 Lkotlin/jvm/functions/Function3;
 	public static field lambda-4 Lkotlin/jvm/functions/Function3;
+	public static field lambda-5 Lkotlin/jvm/functions/Function3;
+	public static field lambda-6 Lkotlin/jvm/functions/Function3;
+	public static field lambda-7 Lkotlin/jvm/functions/Function3;
 	public fun <init> ()V
 	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function3;
 	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-5$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-6$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-7$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/about/ComposableSingletons$NotificationsScreenKt {
+	public static final field INSTANCE Lit/puntoettore/fidelity/presentation/screen/about/ComposableSingletons$NotificationsScreenKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function2;
+	public static field lambda-3 Lkotlin/jvm/functions/Function3;
+	public static field lambda-4 Lkotlin/jvm/functions/Function3;
+	public static field lambda-5 Lkotlin/jvm/functions/Function3;
+	public static field lambda-6 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-5$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-6$composeApp_release ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/about/NotificationsScreenKt {
+	public static final fun NotificationsScreen (Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class it/puntoettore/fidelity/presentation/screen/about/NotificationsViewModel : androidx/lifecycle/ViewModel {
+	public static final field $stable I
+	public fun <init> (Lit/puntoettore/fidelity/data/BookDatabase;Lit/puntoettore/fidelity/api/InsultCensorClient;Lit/puntoettore/fidelity/api/ApiDataClient;)V
+	public final fun getBooks ()Landroidx/compose/runtime/State;
+	public final fun getError ()Landroidx/compose/runtime/State;
+	public final fun getSortedByFavorite ()Lkotlinx/coroutines/flow/StateFlow;
+	public final fun getUser ()Landroidx/compose/runtime/State;
+	public final fun getUserDetail ()Landroidx/compose/runtime/State;
+	public final fun sendData (Ljava/lang/String;)V
+	public final fun toggleSortByFavorite ()V
 }
 
 public final class it/puntoettore/fidelity/presentation/screen/about/ZoomableImageKt {
@@ -845,7 +920,7 @@ public final class it/puntoettore/fidelity/presentation/screen/about/ZoomableIma
 }
 
 public final class it/puntoettore/fidelity/presentation/screen/account/AccountScreenKt {
-	public static final fun AccountScreen (Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
+	public static final fun AccountScreen (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
 }
 
 public final class it/puntoettore/fidelity/presentation/screen/account/AccountViewModel : androidx/lifecycle/ViewModel {
@@ -866,16 +941,18 @@ public final class it/puntoettore/fidelity/presentation/screen/account/Composabl
 	public static field lambda-1 Lkotlin/jvm/functions/Function2;
 	public static field lambda-2 Lkotlin/jvm/functions/Function2;
 	public static field lambda-3 Lkotlin/jvm/functions/Function3;
-	public static field lambda-4 Lkotlin/jvm/functions/Function2;
-	public static field lambda-5 Lkotlin/jvm/functions/Function3;
+	public static field lambda-4 Lkotlin/jvm/functions/Function3;
+	public static field lambda-5 Lkotlin/jvm/functions/Function2;
 	public static field lambda-6 Lkotlin/jvm/functions/Function3;
+	public static field lambda-7 Lkotlin/jvm/functions/Function3;
 	public fun <init> ()V
 	public final fun getLambda-1$composeApp_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda-2$composeApp_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda-3$composeApp_release ()Lkotlin/jvm/functions/Function3;
-	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function2;
-	public final fun getLambda-5$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-4$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-5$composeApp_release ()Lkotlin/jvm/functions/Function2;
 	public final fun getLambda-6$composeApp_release ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda-7$composeApp_release ()Lkotlin/jvm/functions/Function3;
 }
 
 public final class it/puntoettore/fidelity/presentation/screen/account/ComposableSingletons$UserCardKt {
@@ -898,7 +975,7 @@ public final class it/puntoettore/fidelity/presentation/screen/account/UserDetai
 }
 
 public final class it/puntoettore/fidelity/presentation/screen/card/CardScreenKt {
-	public static final fun CardScreen (Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;I)V
+	public static final fun CardScreen (Lkotlin/jvm/functions/Function2;Landroidx/compose/material3/SnackbarHostState;Landroidx/compose/runtime/Composer;I)V
 }
 
 public final class it/puntoettore/fidelity/presentation/screen/card/CardViewModel : androidx/lifecycle/ViewModel {

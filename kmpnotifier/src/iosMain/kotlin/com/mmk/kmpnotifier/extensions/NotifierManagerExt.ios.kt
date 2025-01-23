@@ -5,6 +5,7 @@ import com.mmk.kmpnotifier.notification.NotifierManager
 import com.mmk.kmpnotifier.notification.NotifierManagerImpl
 import com.mmk.kmpnotifier.notification.PayloadData
 import com.mmk.kmpnotifier.notification.configuration.NotificationPlatformConfiguration
+import platform.UserNotifications.UNMutableNotificationContent
 import platform.UserNotifications.UNNotificationContent
 
 /***
@@ -28,8 +29,8 @@ public fun NotifierManager.onApplicationDidReceiveRemoteNotification(userInfo: M
 
 internal fun NotifierManager.onUserNotification(notificationContent: UNNotificationContent) {
     val userInfo = notificationContent.userInfo
-    val hasNotification = notificationContent.title != null || notificationContent.body != null
-    if (notificationContent.isPushNotification() && hasNotification) NotifierManagerImpl.onPushNotification(
+    //val hasNotification = notificationContent.title != null || notificationContent.body != null
+    if (notificationContent.isPushNotification()) NotifierManagerImpl.onPushNotification(// && hasNotification) NotifierManagerImpl.onPushNotification(
         title = notificationContent.title,
         body = notificationContent.body
     )

@@ -7,16 +7,14 @@ import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.util.network.UnresolvedAddressException
-import it.puntoettore.fidelity.Res
 import it.puntoettore.fidelity.api.datamodel.DataUid
 import it.puntoettore.fidelity.api.datamodel.DataUser
 import it.puntoettore.fidelity.api.datamodel.Offers
 import it.puntoettore.fidelity.api.datamodel.UserDetail
 import it.puntoettore.fidelity.api.util.NetworkEError
 import it.puntoettore.fidelity.api.util.Result
-import it.puntoettore.fidelity.url_endpoint
+import it.puntoettore.fidelity.custom.BuildConfig
 import kotlinx.serialization.SerializationException
-import org.jetbrains.compose.resources.getString
 
 class ApiDataClient(
     private val httpClient: HttpClient
@@ -24,7 +22,7 @@ class ApiDataClient(
 
     suspend fun sendData(token: String): Result<String, NetworkEError> {
         val response = try {
-            httpClient.post(urlString = "${getString(Res.string.url_endpoint)}/data") {
+            httpClient.post(urlString = "${BuildConfig.END_POINT}/data") {
                 contentType(ContentType.Application.Json)
                 setBody(DataUser(token = token))
             }
@@ -54,7 +52,7 @@ class ApiDataClient(
 
     suspend fun getUserDetail(uid: String): Result<UserDetail, NetworkEError> {
         val response = try {
-            httpClient.post(urlString = "${getString(Res.string.url_endpoint)}/userDetail") {
+            httpClient.post(urlString = "${BuildConfig.END_POINT}/userDetail") {
                 contentType(ContentType.Application.Json)
                 setBody(DataUid(uid = uid))
             }
@@ -83,7 +81,7 @@ class ApiDataClient(
 
     suspend fun getOffers(uid: String): Result<Offers, NetworkEError> {
         val response = try {
-            httpClient.post(urlString = "${getString(Res.string.url_endpoint)}/offers") {
+            httpClient.post(urlString = "${BuildConfig.END_POINT}/offers") {
                 contentType(ContentType.Application.Json)
                 setBody(DataUid(uid = uid))
             }

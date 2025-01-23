@@ -10,6 +10,7 @@ sealed class Screen(val route: String) {
     data object Account : Screen(route = "account_screen")
     data object Offer : Screen(route = "offer_screen")
     data object About : Screen(route = "about_screen")
+    data object Notifications : Screen(route = "notifications_screen")
     data object Details : Screen(route = "details_screen/{$URL_ARG}") {
         fun passUrl(url: String) = "details_screen/$url"
     }

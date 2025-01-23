@@ -29,7 +29,7 @@ abstract class BookDatabase : RoomDatabase() {
     abstract fun appSettingsDao(): AppSettingsDao
 }
 
-@Suppress("NO_ACTUAL_FOR_EXPECT")
+@Suppress("NO_ACTUAL_FOR_EXPECT", "EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 expect object BookDatabaseConstructor : RoomDatabaseConstructor<BookDatabase> {
     override fun initialize(): BookDatabase
 }

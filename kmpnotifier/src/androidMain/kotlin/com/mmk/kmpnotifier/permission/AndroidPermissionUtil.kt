@@ -28,10 +28,10 @@ public class AndroidPermissionUtil(private val activity: ComponentActivity)  {
 
     private var mOnResult: ((Boolean) -> Unit)? = null
 
-//    private val requestPermissionLauncher =
-//        activity.registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
-//            mOnResult?.invoke(isGranted)
-//        }
+    private val requestPermissionLauncher =
+        activity.registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
+            mOnResult?.invoke(isGranted)
+        }
 
     /**
      * Asks notification permission from user
@@ -49,7 +49,7 @@ public class AndroidPermissionUtil(private val activity: ComponentActivity)  {
             onResult(true)
         } else {
             mOnResult = onResult
-            // requestPermissionLauncher.launch(permission)
+            requestPermissionLauncher.launch(permission)
         }
     }
 

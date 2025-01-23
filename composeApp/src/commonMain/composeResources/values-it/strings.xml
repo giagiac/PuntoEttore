@@ -1,7 +1,5 @@
 <resources>
     <string name="title_login">Benvenuto</string>
-    <string name="url_endpoint">https://app.erroridiconiazione.com</string>
-    <string name="app_name">KMPAuth</string>
     <string name="card">Carta Fedeltà</string>
     <string name="account">Utente</string>
     <string name="offers">Offerte</string>

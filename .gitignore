@@ -22,3 +22,4 @@ captures
 ./iosApp/iosApp/GoogleService-Info.plist
 iosApp/iosApp/Info.plist
 composeApp/google-services.json
+composeApp/release

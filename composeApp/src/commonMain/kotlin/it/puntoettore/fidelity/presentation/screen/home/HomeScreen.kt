@@ -31,7 +31,7 @@ import com.mmk.kmpnotifier.notification.NotifierManager
 import it.puntoettore.fidelity.api.util.NetworkEError
 import it.puntoettore.fidelity.presentation.components.ErrorView
 import it.puntoettore.fidelity.presentation.components.LoadingView
-import it.puntoettore.fidelity.presentation.screen.about.AboutViewModel
+import it.puntoettore.fidelity.presentation.screen.about.NotificationsViewModel
 import it.puntoettore.fidelity.presentation.screen.component.BookView
 import it.puntoettore.fidelity.util.DisplayResult
 import kotlinx.coroutines.delay
@@ -47,7 +47,7 @@ fun HomeScreen(
 ) {
     val scope = rememberCoroutineScope()
     val listState = rememberLazyListState()
-    val viewModel = koinViewModel<AboutViewModel>()
+    val viewModel = koinViewModel<NotificationsViewModel>()
     val books by viewModel.books
     val sortedByFavorite by viewModel.sortedByFavorite.collectAsStateWithLifecycle()
 

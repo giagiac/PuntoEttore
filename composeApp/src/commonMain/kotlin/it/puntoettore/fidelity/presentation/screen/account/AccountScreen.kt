@@ -33,6 +33,7 @@ import org.koin.compose.viewmodel.koinViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AccountScreen(
+    onNotificationsSelect: () -> Unit,
     bottomBar: @Composable () -> Unit, onLogout: () -> Unit
 ) {
     val viewModel = koinViewModel<AccountViewModel>()
@@ -88,6 +89,11 @@ fun AccountScreen(
                     }
                 }
                 Row {
+                    Button(onClick={
+onNotificationsSelect()
+                    }){
+                        Text("GO NOTIF!!!")
+                    }
                     userDetail.DisplayResult(onLoading = { LoadingView() },
                         onError = { ErrorView(it) },
                         onSuccess = { data ->

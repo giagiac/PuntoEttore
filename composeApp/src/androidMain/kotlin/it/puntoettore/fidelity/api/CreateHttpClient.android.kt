@@ -17,6 +17,7 @@ import io.ktor.client.request.header
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.serialization.kotlinx.json.json
+import it.puntoettore.fidelity.custom.BuildConfig
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -24,24 +25,29 @@ import kotlinx.serialization.json.Json
 //In shared/androidMain
 @OptIn(ExperimentalSerializationApi::class)
 actual fun createHttpClient(): HttpClient = HttpClient(OkHttp) {
-    var accessToken: String = "ACCESS_NOT_DEFINED"
-    var refreshToken: String = "REFRESH_NOT_DEFINED"
+    val accessToken = "ACCESS_NOT_DEFINED"
+    val refreshToken = "REFRESH_NOT_DEFINED"
 
     //Timeout plugin for timeouts
     install(HttpTimeout) {
-        socketTimeoutMillis = 60_000
-        requestTimeoutMillis = 60_000
+        socketTimeoutMillis = 15_000
+        requestTimeoutMillis = 15_000
     }
     //Logging plugin combined with kermit(KMP Logger library)
-    install(Logging) {
-        logger = Logger.DEFAULT
-        level = LogLevel.ALL
+    if(BuildConfig.IS_DEBUG){
+        install(Logging) {
+            logger = Logger.DEFAULT
+            level = LogLevel.ALL
+        }
     }
     //We can configure the BASE_URL and also
     //the deafult headers by defaultRequest builder
     defaultRequest {
         header("Content-Type", "application/json")
-        header("Authorization", "Bearer ${"TEST"}")
+        // header("Authorization", "Bearer ${accessToken}")
+        header("APP_VERSION", BuildConfig.APP_VERSION)
+        header("BUILD_TIME", BuildConfig.BUILD_TIME)
+        header("FEATURE_ENABLED", BuildConfig.FEATURE_ENABLED)
         // url("https://api.openai.com/v1/")
     }
     //ContentNegotiation plugin for negotiationing media types between the client and server
@@ -69,7 +75,8 @@ actual fun createHttpClient(): HttpClient = HttpClient(OkHttp) {
             refreshTokens {
                 // Esegui una richiesta al tuo endpoint di autenticazione
                 // usando il refresh token.
-                val response = client.post("https://app.erroridiconiazione.com/auth/refresh") {
+
+                val response = client.post("${BuildConfig.END_POINT}/auth/refresh") {
                     setBody(
                         // Invia il refresh token nel body della richiesta
                         RefreshRequest(refreshToken = refreshToken)
@@ -86,13 +93,13 @@ actual fun createHttpClient(): HttpClient = HttpClient(OkHttp) {
                 // Restituisci i nuovi token a Ktor
                 BearerTokens(
                     accessToken = tokens.accessToken,
-                    refreshToken = tokens.refreshToken
+                    refreshToken = tokens.refreshToken,
                 )
             }
 
             // Configura l'header di autorizzazione
             sendWithoutRequest { request ->
-                !request.url.toString().contains("https://app.erroridiconiazione.com/auth/refresh")
+                !request.url.toString().contains("${BuildConfig.END_POINT}/auth/refresh")
             }
         }
     }

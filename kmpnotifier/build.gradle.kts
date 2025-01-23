@@ -1,4 +1,4 @@
-// import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -17,7 +17,18 @@ kotlin {
             }
         }
     }
-    
+
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
+        browser()
+    }
+    js(IR) {
+        nodejs()
+        browser()
+        binaries.library()
+    }
+
+    jvm()
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -48,6 +59,9 @@ kotlin {
             implementation(libs.koin.core)
             implementation(libs.kotlinx.coroutine)
         }
+        //wasmJsMain.dependencies {
+        //    implementation(libs.kotlinx.browser)
+        //}
 
         commonTest.dependencies {
             implementation(libs.kotlin.test)

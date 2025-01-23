@@ -7,8 +7,8 @@ import android.media.AudioAttributes
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RequiresApi
-import com.mmk.kmpnotifier.extensions.notificationManager
 import com.mmk.kmpnotifier.notification.configuration.NotificationPlatformConfiguration
+import com.mmk.kmpnotifier.extensions.notificationManager
 
 internal class NotificationChannelFactory(
     private val context: Context,

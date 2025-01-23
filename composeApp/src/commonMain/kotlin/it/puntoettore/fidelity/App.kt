@@ -8,10 +8,8 @@ import androidx.navigation.compose.rememberNavController
 import it.puntoettore.fidelity.navigation.Screen
 import it.puntoettore.fidelity.navigation.SetupNavGraph
 import it.puntoettore.fidelity.presentation.screen.login.LoginViewModel
-import it.puntoettore.fidelity.theme.darkScheme
 import it.puntoettore.fidelity.theme.highContrastDarkColorScheme
 import it.puntoettore.fidelity.theme.lightScheme
-import it.puntoettore.fidelity.theme.mediumContrastDarkColorScheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 
