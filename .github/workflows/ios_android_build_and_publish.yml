@@ -28,7 +28,8 @@ jobs:
         run: |
           echo -n $SYMMETRIC_KEYFILE_BASE64 | base64 --decode -o $GITHUB_WORKSPACE/.github/workspace/symmetric_keyfile.key
           chmod +x $GITHUB_WORKSPACE/.github/workspace/decompress.sh
-          $GITHUB_WORKSPACE/.github/workspace/decompress.sh
+          cd $GITHUB_WORKSPACE/.github/workspace/
+          ./decompress.sh
 
       - name: List files in the repository
         run: |
