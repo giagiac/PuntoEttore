@@ -17,3 +17,8 @@ captures
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 **/*.aab
+.github/workflows/symmetric_keyfile.key
+.github/workflows/symmetric_keyfile.key.base64
+./iosApp/iosApp/GoogleService-Info.plist
+iosApp/iosApp/Info.plist
+composeApp/google-services.json
