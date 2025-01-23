@@ -58,13 +58,16 @@ jobs:
 #          name: $APP_NAME # Nome dell'artefatto
 #          path: ${{ env.APK_PATH }} # Percorso del file da caricare
 
-      - name: '📦 Package release'
-        run: |
-          cd ${{github.workspace}}
-          gh release upload ${{ env.APP_NAME }} ${{ env.APK_PATH }}
+      - name: Carica file nella Release
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ github.TOKEN }}
-        shell: bash
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ env.APK_PATH }} # Percorso del file DA CARICARE
+          asset_name: ${{ env.APP_NAME }} # Nome del file nella release
+          asset_content_type: application/zip # Tipo MIME del file (importante!)
 
       - name: Build Release Android app bundle with Gradle
         run: ./gradlew bundleRelease
