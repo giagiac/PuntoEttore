@@ -52,11 +52,19 @@ jobs:
         run: |
           mv composeApp/build/outputs/apk/release/composeApp-release.apk ${{ env.APK_PATH }}
 
-      - name: Carica l'artefatto
-        uses: actions/upload-artifact@v4
-        with:
-          name: $APP_NAME # Nome dell'artefatto
-          path: ${{ env.APK_PATH }} # Percorso del file da caricare
+#      - name: Carica l'artefatto
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: $APP_NAME # Nome dell'artefatto
+#          path: ${{ env.APK_PATH }} # Percorso del file da caricare
+
+      - name: '📦 Package release'
+        run: |
+          cd ${{github.workspace}}
+          gh release upload ${{ env.APP_NAME }} ${{ env.APK_PATH }}
+        env:
+          GITHUB_TOKEN: ${{ github.TOKEN }}
+        shell: bash
 
       - name: Build Release Android app bundle with Gradle
         run: ./gradlew bundleRelease
