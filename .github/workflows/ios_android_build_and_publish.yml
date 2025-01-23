@@ -35,7 +35,7 @@ jobs:
       - name: List files in the repository
         run: |
           cd "$GITHUB_WORKSPACE"
-          ls ../PuntoEttoreExtraFiles
+          ls -al
           rm -rf ../PuntoEttoreExtraFiles
 
 #      - name: Extract keystore.properties
