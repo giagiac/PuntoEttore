@@ -126,9 +126,10 @@ jobs:
 #            -authenticationKeyIssuerID $IOS_APPSTORE_API_KEY_ISSUER_ID \
 #            -authenticationKeyPath $AUTHENTICATION_KEY_PATH
 #
-      - name: Clean up keychain and provisioning profile
-        if: ${{ always() }}
-        run: |
-          cd "$GITHUB_WORKSPACE"
-          rm -rf ../*
-          la -al ../
+
+#      - name: Clean up keychain and provisioning profile
+#        if: ${{ always() }}
+#        run: |
+#          cd "$GITHUB_WORKSPACE"
+#          rm -rf ../*
+#          la -al ../
