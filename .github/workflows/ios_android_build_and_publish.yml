@@ -43,9 +43,10 @@ jobs:
 
       - name: Get Android App Name With Version semantics
         run: |
-          appName=$(./gradlew -q getAppName Release)
+          appName=$(./gradlew -q getAppName Release | tail -n 1)
           echo "APP_NAME=${appName}" >> $GITHUB_ENV
           echo "APK_PATH=composeApp/build/outputs/apk/release/${appName}.apk" >> $GITHUB_ENV
+          echo $$GITHUB_ENV
 
       - name: Rename APK
         run: |
