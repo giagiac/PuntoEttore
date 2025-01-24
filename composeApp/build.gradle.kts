@@ -97,7 +97,7 @@ if (gradle.startParameter.taskNames.any { it.contains("Release") }){
         from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/composeApp/google-services.json")
         into(project.rootDir.absolutePath + "/composeApp")
         // rename("google-services.json", "google-services.json")
-        println("Copy google-services.json to ${project.rootDir.absolutePath}/composeApp")
+        println("Copy Release to ComposeApp " + project.rootDir.absolutePath)
     }
     copy {
         from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/iosApp/iosApp/GoogleService-Info.plist")
