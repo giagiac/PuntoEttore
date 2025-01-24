@@ -41,7 +41,7 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           cd ../
           ls -al
-          cp PuntoEttoreExtraFilesProd/composeApp/google-service.json "$GITHUB_WORKSPACE"/composeApp/google-service.json 
+          cp ./PuntoEttoreExtraFilesProd/composeApp/google-service.json "$GITHUB_WORKSPACE"/composeApp/google-service.json 
 
       - name: Build Release apk with Gradle
         run: |
