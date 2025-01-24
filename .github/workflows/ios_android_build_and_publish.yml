@@ -13,10 +13,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-      - name: Checkout HEAD
-        run: git checkout HEAD^
 
       - name: set up JDK 21
         uses: actions/setup-java@v4
@@ -40,6 +36,7 @@ jobs:
           ls -al
           chmod +x ./decompress.sh
           ./decompress.sh
+          cp "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/composeApp/google-service.json "$GITHUB_WORKSPACE"/composeApp/google-service.json 
 
       - name: Build Release apk with Gradle
         run: |
