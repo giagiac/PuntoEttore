@@ -109,6 +109,8 @@ if (gradle.startParameter.taskNames.any { it.contains("Release") }){
         into(project.rootDir.absolutePath + "/iosApp/iosApp")
         println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
     }
+
+    File(project.projectDir.absolutePath + "/google-services.json").useLines { lines -> lines.forEach { println(it) }}
 } else {
     println("DEBUG")
     val keystorePropertiesFile = rootProject.file("../PuntoEttoreExtraFilesTest/keystore-debug.properties")
