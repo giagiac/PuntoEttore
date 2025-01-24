@@ -48,10 +48,13 @@ jobs:
           cat google-services.json
           pwd
           cp google-services.json "$GITHUB_WORKSPACE"/composeApp
+          cat "$GITHUB_WORKSPACE"/composeApp/google-services.json
 
       - name: Build Release apk with Gradle
         run: |
+          cat "$GITHUB_WORKSPACE"/composeApp/google-services.json
           ./gradlew assembleRelease
+          cat "$GITHUB_WORKSPACE"/composeApp/google-services.json
 
       - name: List files in the repository
         run: |
