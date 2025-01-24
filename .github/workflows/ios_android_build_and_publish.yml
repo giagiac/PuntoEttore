@@ -53,7 +53,7 @@ jobs:
       - name: Build Release apk with Gradle
         run: |
           cat "$GITHUB_WORKSPACE"/composeApp/google-services.json
-          ./gradlew assembleDebug
+          ./gradlew assembleRelease
           cat "$GITHUB_WORKSPACE"/composeApp/google-services.json
 
       - name: List files in the repository
@@ -76,7 +76,7 @@ jobs:
 
       - name: Rename APK
         run: |
-          mv composeApp/build/outputs/apk/debug/composeApp-debug.apk ${{ env.APK_PATH }}
+          mv composeApp/build/outputs/apk/release/composeApp-release.apk ${{ env.APK_PATH }}
 
       - name: Create Release
         id: create_release
