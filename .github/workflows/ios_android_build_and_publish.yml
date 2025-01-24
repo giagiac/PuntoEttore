@@ -53,7 +53,7 @@ jobs:
       - name: Build Release apk with Gradle
         run: |
           cat "$GITHUB_WORKSPACE"/composeApp/google-services.json
-          ./gradlew assembleRelease Release
+          ./gradlew assembleRelease
           cat "$GITHUB_WORKSPACE"/composeApp/google-services.json
 
       - name: List files in the repository
