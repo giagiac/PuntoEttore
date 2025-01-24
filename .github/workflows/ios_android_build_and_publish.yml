@@ -45,9 +45,9 @@ jobs:
           ls -al
           cd composeApp
           ls -al
-          cat google-service.json
+          cat google-services.json
           pwd
-          cp google-service.json "$GITHUB_WORKSPACE"/composeApp
+          cp google-services.json "$GITHUB_WORKSPACE"/composeApp
 
       - name: Build Release apk with Gradle
         run: |
