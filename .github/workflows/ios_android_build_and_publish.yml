@@ -42,7 +42,8 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           ls -al ../
           cd "$GITHUB_WORKSPACE"/iosApp/iosApp
-          ls -al ../
+          ls -al
+          cat GoogleService-Info.plist
 
       - name: Build Release apk with Gradle
         run: |
