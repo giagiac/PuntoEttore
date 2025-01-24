@@ -36,6 +36,10 @@ jobs:
           chmod +x ./decompress.sh
           ./decompress.sh
 
+      - name: Build Release apk with Gradle
+        run: |
+          ./gradlew assembleRelease
+
       - name: List files in the repository
         run: |
           echo "$GITHUB_WORKSPACE"
@@ -44,10 +48,6 @@ jobs:
           cd "$GITHUB_WORKSPACE"/iosApp/iosApp
           ls -al
           cat GoogleService-Info.plist
-
-      - name: Build Release apk with Gradle
-        run: |
-          ./gradlew assembleRelease
 
       - name: Get Android App Name With Version semantics
         run: |
