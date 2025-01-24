@@ -36,6 +36,8 @@ jobs:
           ls -al
           chmod +x ./decompress.sh
           ./decompress.sh
+      - name: Move file manually
+        run: |
           cp "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/composeApp/google-service.json "$GITHUB_WORKSPACE"/composeApp/google-service.json 
 
       - name: Build Release apk with Gradle
