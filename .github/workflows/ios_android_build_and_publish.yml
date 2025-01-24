@@ -41,7 +41,7 @@ jobs:
           echo "$GITHUB_WORKSPACE"
           cd "$GITHUB_WORKSPACE"
           ls -al ../
-          cd "$GITHUB_WORKSPACE"/PuntoEttore
+          cd "$GITHUB_WORKSPACE"/iosApp/iosApp
           ls -al ../
 
       - name: Build Release apk with Gradle
