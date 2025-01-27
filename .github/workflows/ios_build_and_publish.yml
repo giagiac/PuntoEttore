@@ -39,11 +39,11 @@ jobs:
 
       - name: Move file manually
         run: |
-          cd "$GITHUB_WORKSPACE"
-          cd ../
-          cd PuntoEttoreExtraFilesProd
-          cd composeApp
-          cp google-services.json "$GITHUB_WORKSPACE"/composeApp
+          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd
+          cp composeApp "$GITHUB_WORKSPACE"/composeApp
+          cp iosApp "$GITHUB_WORKSPACE"/iosApp
+          ls "$GITHUB_WORKSPACE"/composeApp
+          ls "$GITHUB_WORKSPACE"/iosApp
       
       - name: Clean Archive IOS
         run: |
