@@ -5,6 +5,7 @@ permissions:
 
 on:
   push:
+    tags : ['èèè']
 jobs:
   build_with_signing:
     runs-on: macos-14
