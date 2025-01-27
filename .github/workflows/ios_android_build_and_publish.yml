@@ -33,37 +33,20 @@ jobs:
         run: |
           cd "$GITHUB_WORKSPACE"/.github/workflows
           echo -n $SYMMETRIC_KEYFILE_BASE64 | base64 --decode -o ./symmetric_keyfile.key
-          ls -al
           chmod +x ./decompress.sh
           ./decompress.sh
+
       - name: Move file manually
         run: |
           cd "$GITHUB_WORKSPACE"
           cd ../
-          ls -al
           cd PuntoEttoreExtraFilesProd
-          ls -al
           cd composeApp
-          ls -al
-          cat google-services.json
-          pwd
           cp google-services.json "$GITHUB_WORKSPACE"/composeApp
-          cat "$GITHUB_WORKSPACE"/composeApp/google-services.json
 
       - name: Build Release apk with Gradle
         run: |
           ./gradlew assembleRelease
-
-      - name: List files in the repository
-        run: |
-          echo "$GITHUB_WORKSPACE"
-          cd "$GITHUB_WORKSPACE"
-          ls -al ../
-          cd "$GITHUB_WORKSPACE"/iosApp/iosApp
-          ls -al
-          cat GoogleService-Info.plist
-          cd "$GITHUB_WORKSPACE"/composeApp
-          cat google-services.json
 
       - name: Get Android App Name With Version semantics
         run: |
@@ -97,6 +80,18 @@ jobs:
           asset_path: ${{ env.APK_PATH }} # Percorso del file DA CARICARE
           asset_name: ${{ env.APP_NAME }}.apk # Nome del file nella release
           asset_content_type: application/zip # Tipo MIME del file (importante!)
+      
+      - name: Clean Archive IOS
+        run: |
+          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
+          chmod +x export_clean_archive.sh
+          ./export_clean_archive.sh
+
+      - name: Upload Archive IOS
+        run: |
+          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
+          chmod +x export_archive.sh
+          ./export_archive.sh
 
       - name: Clean up keychain and provisioning profile
         if: ${{ always() }}
