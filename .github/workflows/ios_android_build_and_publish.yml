@@ -42,6 +42,8 @@ jobs:
           cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd
           cp composeApp "$GITHUB_WORKSPACE"/composeApp
           cp iosApp "$GITHUB_WORKSPACE"/iosApp
+          ls "$GITHUB_WORKSPACE"/composeApp
+          ls "$GITHUB_WORKSPACE"/iosApp
 
       - name: Build Release apk with Gradle
         run: |
