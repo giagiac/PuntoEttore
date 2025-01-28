@@ -44,20 +44,20 @@ jobs:
           cp -r "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/iosApp/iosApp "$GITHUB_WORKSPACE"/iosApp/iosApp
           ls "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/iosApp/iosApp
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          cp "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/ProvisioningProfileDistributionPuntoEttoreFidelity.mobileprovision "~/Library/MobileDevice/Provisioning\ Profiles" \
-          ls ~/Library/MobileDevice/Provisioning\ Profiles
+          cp "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/ProvisioningProfileDistributionPuntoEttoreFidelity.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles"
+          ls "~/Library/MobileDevice/Provisioning\ Profiles"
       
       - name: Clean Archive IOS
         run: |
-#          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
-#          chmod +x export_clean_archive.sh
-#          ./export_clean_archive.sh
           cd "$GITHUB_WORKSPACE" \
           xcodebuild clean archive -project "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj \
           -scheme iosAppProd \
           -archivePath "$RUNNER_TEMP"/iosApp.xcarchive \
           -destination generic/platform=iOS \
           -configuration Release
+#          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
+#          chmod +x export_clean_archive.sh
+#          ./export_clean_archive.sh
 
       - name: Upload Archive IOS
         run: |
