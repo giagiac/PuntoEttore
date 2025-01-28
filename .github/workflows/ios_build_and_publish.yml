@@ -49,9 +49,15 @@ jobs:
       
       - name: Clean Archive IOS
         run: |
-          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
-          chmod +x export_clean_archive.sh
-          ./export_clean_archive.sh
+#          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
+#          chmod +x export_clean_archive.sh
+#          ./export_clean_archive.sh
+          cd "$GITHUB_WORKSPACE" \
+          xcodebuild clean archive -project "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj \
+          -scheme iosAppProd \
+          -archivePath "$RUNNER_TEMP"/iosApp.xcarchive \
+          -destination generic/platform=iOS \
+          -configuration Release
 
       - name: Upload Archive IOS
         run: |
