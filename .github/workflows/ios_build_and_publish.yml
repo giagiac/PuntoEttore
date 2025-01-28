@@ -43,6 +43,8 @@ jobs:
           ls "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/composeApp/
           cp -r "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/iosApp/iosApp "$GITHUB_WORKSPACE"/iosApp/iosApp
           ls "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/iosApp/iosApp
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          cp "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/ProvisioningProfileDistributionPuntoEttoreFidelity.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles
       
       - name: Clean Archive IOS
         run: |
@@ -56,10 +58,10 @@ jobs:
           chmod +x export_archive.sh
           ./export_archive.sh
 
-      - name: Clean up keychain and provisioning profile
-        if: ${{ always() }}
-        run: |
-          cd "$GITHUB_WORKSPACE"
-          rm iosApp/iosApp/GoogleService-Info.plist
-          rm iosApp/iosApp/Info.plist
-          rm composeApp/google-services.json
+#      - name: Clean up keychain and provisioning profile
+#        if: ${{ always() }}
+#        run: |
+#          cd "$GITHUB_WORKSPACE"
+#          rm iosApp/iosApp/GoogleService-Info.plist
+#          rm iosApp/iosApp/Info.plist
+#          rm composeApp/google-services.json
