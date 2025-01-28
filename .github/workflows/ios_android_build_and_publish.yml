@@ -39,11 +39,7 @@ jobs:
 
       - name: Move file manually
         run: |
-          cd "$GITHUB_WORKSPACE"
-          cd ../
-          cd PuntoEttoreExtraFilesProd
-          cd composeApp
-          cp google-services.json "$GITHUB_WORKSPACE"/composeApp
+          cp "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/composeApp/google-services.json "$GITHUB_WORKSPACE"/composeApp
 
       - name: Build Release apk with Gradle
         run: |
