@@ -59,11 +59,11 @@ jobs:
 #          chmod +x export_clean_archive.sh
 #          ./export_clean_archive.sh
 
-      - name: Upload Archive IOS
-        run: |
-          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
-          chmod +x export_archive.sh
-          ./export_archive.sh
+#      - name: Upload Archive IOS
+#        run: |
+#          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
+#          chmod +x export_archive.sh
+#          ./export_archive.sh
 
 #      - name: Clean up keychain and provisioning profile
 #        if: ${{ always() }}
