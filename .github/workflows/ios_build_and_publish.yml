@@ -28,9 +28,6 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Grant execute permission for gradlew
-        run: ./gradlew buildRelease
-
       - name: decrypt archive
         env:
           SYMMETRIC_KEYFILE_BASE64: ${{ secrets.SYMMETRIC_KEYFILE_BASE64 }}
@@ -70,6 +67,8 @@ jobs:
           security set-key-partition-list -S apple-tool:,apple: -k "$IOS_KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
           security list-keychain -d user -s "$KEYCHAIN_PATH"
           security default-keychain -s "$KEYCHAIN_PATH"
+          
+          ./gradlew buildRelease
 
           xcodebuild -allowProvisioningUpdates -project iosApp/iosApp.xcodeproj \
             -scheme PuntoEttore \
