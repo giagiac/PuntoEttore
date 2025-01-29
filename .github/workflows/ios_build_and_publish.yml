@@ -49,6 +49,8 @@ jobs:
       
       - name: Clean Archive IOS
         run: |
+          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/
+          ./export_archive.sh
           cd "$GITHUB_WORKSPACE"
           xcodebuild clean archive -project "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj \
           -scheme PuntoEttore \
