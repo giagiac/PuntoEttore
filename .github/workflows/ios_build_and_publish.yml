@@ -76,6 +76,7 @@ jobs:
             -archivePath $RUNNER_TEMP/iosApp.xcarchive \
             -configuration Release \
             -destination generic/platform=iOS \
+            -verbose \
             clean archive
 
 #      - name: Script Export Clean Archive
