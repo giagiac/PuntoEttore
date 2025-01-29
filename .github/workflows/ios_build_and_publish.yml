@@ -77,13 +77,15 @@ jobs:
       - name: Clean Archive IOS
         run: |
           cd "$GITHUB_WORKSPACE"
-          xcodebuild clean archive -project iosApp/iosApp.xcodeproj \
-          -verbose \
+          xcodebuild -allowProvisioningUpdates -workspace iosApp/iosApp.xcworkspace \
           -scheme PuntoEttore \
-          -archivePath "$RUNNER_TEMP"/iosApp.xcarchive \
-          -destination generic/platform=iOS \
+          -sdk iphoneos \
+          -archivePath $RUNNER_TEMP/iosApp.xcarchive \
           -configuration Release \
-          -sdk iphoneos
+          -destination generic/platform=iOS \
+          clean archive 
+#          -verbose \
+#          -sdk iphoneos
 
 #      - name: Upload Archive IOS
 #        run: |
