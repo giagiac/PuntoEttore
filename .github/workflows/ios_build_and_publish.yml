@@ -52,11 +52,13 @@ jobs:
           cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/
           ./export_archive.sh
           cd "$GITHUB_WORKSPACE"
-          xcodebuild clean archive -project "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj \
+          xcodebuild clean archive -project iosApp/iosApp.xcodeproj \
+          -verbose \
           -scheme PuntoEttore \
           -archivePath "$RUNNER_TEMP"/iosApp.xcarchive \
           -destination generic/platform=iOS \
-          -configuration Release
+          -configuration Release \
+          -signingStyle "iOS Distribution"
 #          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
 #          chmod +x export_clean_archive.sh
 #          ./export_clean_archive.sh
