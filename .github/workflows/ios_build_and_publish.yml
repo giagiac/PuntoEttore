@@ -58,6 +58,7 @@ jobs:
           -archivePath "$RUNNER_TEMP"/iosApp.xcarchive \
           -destination generic/platform=iOS \
           -configuration Release \
+          -sdk iphoneos \
           -signingStyle "iOS Distribution"
 #          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd \
 #          chmod +x export_clean_archive.sh
