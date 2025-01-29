@@ -83,8 +83,7 @@ jobs:
           -archivePath "$RUNNER_TEMP"/iosApp.xcarchive \
           -destination generic/platform=iOS \
           -configuration Release \
-          -sdk iphoneos \
-          -signingStyle "iOS Distribution"
+          -sdk iphoneos
 
 #      - name: Upload Archive IOS
 #        run: |
