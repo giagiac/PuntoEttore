@@ -51,7 +51,7 @@ jobs:
         run: |
           cd "$GITHUB_WORKSPACE"
           xcodebuild clean archive -project "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj \
-          -scheme iosAppProd \
+          -scheme PuntoEttore \
           -archivePath "$RUNNER_TEMP"/iosApp.xcarchive \
           -destination generic/platform=iOS \
           -configuration Release

@@ -7,18 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7DAF495C2D3EB027005A4413 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		7DAF495D2D3EB027005A4413 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
-		7DAF49672D3EB027005A4413 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
-		7DAF49682D3EB027005A4413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C3CFD2D3AD189000AA406 /* GoogleService-Info.plist */; };
-		7DAF49692D3EB027005A4413 /* custom_notification_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */; };
-		7DAF496A2D3EB027005A4413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
-		7DAF49722D3EB10C005A4413 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49712D3EB10C005A4413 /* FirebaseAnalytics */; };
-		7DAF49742D3EB10C005A4413 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49732D3EB10C005A4413 /* FirebaseAppCheck */; };
-		7DAF49762D3EB10C005A4413 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49752D3EB10C005A4413 /* FirebaseAuth */; };
-		7DAF49782D3EB10C005A4413 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49772D3EB10C005A4413 /* FirebaseCore */; };
-		7DAF497A2D3EB10C005A4413 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49792D3EB10C005A4413 /* FirebaseMessaging */; };
-		7DAF497C2D3EB10C005A4413 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF497B2D3EB10C005A4413 /* GoogleSignInSwift */; };
 		7DAF497F2D3EB662005A4413 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF497E2D3EB662005A4413 /* FirebaseAnalytics */; };
 		7DAF49812D3EB662005A4413 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49802D3EB662005A4413 /* FirebaseAppCheck */; };
 		7DAF49832D3EB662005A4413 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7DAF49822D3EB662005A4413 /* FirebaseAuth */; };
@@ -34,16 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7DAF496B2D3EB027005A4413 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DD47D492D3EACAF009FD50D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,26 +41,12 @@
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D1C3CFD2D3AD189000AA406 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = custom_notification_sound.wav; sourceTree = "<group>"; };
-		7DAF496F2D3EB027005A4413 /* Punto Ettore test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Punto Ettore test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DD47D4D2D3EACAF009FD50D /* Punto Ettore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Punto Ettore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD47D4D2D3EACAF009FD50D /* PuntoEttore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuntoEttore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD641362D3686510029F2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A679C57A2B02E91A008F0522 /* iosApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iosApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7DAF495E2D3EB027005A4413 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DAF497A2D3EB10C005A4413 /* FirebaseMessaging in Frameworks */,
-				7DAF49762D3EB10C005A4413 /* FirebaseAuth in Frameworks */,
-				7DAF49782D3EB10C005A4413 /* FirebaseCore in Frameworks */,
-				7DAF497C2D3EB10C005A4413 /* GoogleSignInSwift in Frameworks */,
-				7DAF49722D3EB10C005A4413 /* FirebaseAnalytics in Frameworks */,
-				7DAF49742D3EB10C005A4413 /* FirebaseAppCheck in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DD47D3C2D3EACAF009FD50D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -119,8 +83,7 @@
 		7555FF7C242A565900829871 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DD47D4D2D3EACAF009FD50D /* Punto Ettore.app */,
-				7DAF496F2D3EB027005A4413 /* Punto Ettore test.app */,
+				7DD47D4D2D3EACAF009FD50D /* PuntoEttore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,28 +113,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7DAF49592D3EB027005A4413 /* Punto Ettore test */ = {
+		7DD47D372D3EACAF009FD50D /* PuntoEttore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DAF496C2D3EB027005A4413 /* Build configuration list for PBXNativeTarget "Punto Ettore test" */;
-			buildPhases = (
-				7DAF495A2D3EB027005A4413 /* Compile Kotlin Framework */,
-				7DAF495B2D3EB027005A4413 /* Sources */,
-				7DAF495E2D3EB027005A4413 /* Frameworks */,
-				7DAF49662D3EB027005A4413 /* Resources */,
-				7DAF496B2D3EB027005A4413 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Punto Ettore test";
-			productName = iosApp;
-			productReference = 7DAF496F2D3EB027005A4413 /* Punto Ettore test.app */;
-			productType = "com.apple.product-type.application";
-		};
-		7DD47D372D3EACAF009FD50D /* Punto Ettore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7DD47D4A2D3EACAF009FD50D /* Build configuration list for PBXNativeTarget "Punto Ettore" */;
+			buildConfigurationList = 7DD47D4A2D3EACAF009FD50D /* Build configuration list for PBXNativeTarget "PuntoEttore" */;
 			buildPhases = (
 				7DD47D382D3EACAF009FD50D /* Compile Kotlin Framework */,
 				7DD47D392D3EACAF009FD50D /* Sources */,
@@ -183,9 +127,9 @@
 			);
 			dependencies = (
 			);
-			name = "Punto Ettore";
+			name = PuntoEttore;
 			productName = iosApp;
-			productReference = 7DD47D4D2D3EACAF009FD50D /* Punto Ettore.app */;
+			productReference = 7DD47D4D2D3EACAF009FD50D /* PuntoEttore.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,24 +160,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7DAF49592D3EB027005A4413 /* Punto Ettore test */,
-				7DD47D372D3EACAF009FD50D /* Punto Ettore */,
+				7DD47D372D3EACAF009FD50D /* PuntoEttore */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7DAF49662D3EB027005A4413 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DAF49672D3EB027005A4413 /* Preview Assets.xcassets in Resources */,
-				7DAF49682D3EB027005A4413 /* GoogleService-Info.plist in Resources */,
-				7DAF49692D3EB027005A4413 /* custom_notification_sound.wav in Resources */,
-				7DAF496A2D3EB027005A4413 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DD47D442D3EACAF009FD50D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,24 +180,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7DAF495A2D3EB027005A4413 /* Compile Kotlin Framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Compile Kotlin Framework";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :composeApp:embedAndSignAppleFrameworkForXcode Debug\n";
-		};
 		7DD47D382D3EACAF009FD50D /* Compile Kotlin Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,15 +201,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7DAF495B2D3EB027005A4413 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DAF495C2D3EB027005A4413 /* iOSApp.swift in Sources */,
-				7DAF495D2D3EB027005A4413 /* ContentView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DD47D392D3EACAF009FD50D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,88 +331,6 @@
 			};
 			name = Release;
 		};
-		7DAF496D2D3EB027005A4413 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
-				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CLANG_USE_OPTIMIZATION_PROFILE = YES;
-				CODE_SIGN_ENTITLEMENTS = iosApp/iosApp.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J87ZH9VBKQ;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
-				);
-				INFOPLIST_FILE = iosApp/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					composeApp,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = it.puntoettore.fidelity.test;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PPDPuntoEttoreFidelityTest;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		7DAF496E2D3EB027005A4413 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
-				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CLANG_USE_OPTIMIZATION_PROFILE = YES;
-				CODE_SIGN_ENTITLEMENTS = iosApp/iosApp.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J87ZH9VBKQ;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\n$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
-				);
-				INFOPLIST_FILE = iosApp/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					composeApp,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = it.puntoettore.fidelity.test;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PPDPuntoEttoreFidelityTest;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		7DD47D4B2D3EACAF009FD50D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -602,16 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DAF496C2D3EB027005A4413 /* Build configuration list for PBXNativeTarget "Punto Ettore test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7DAF496D2D3EB027005A4413 /* Debug */,
-				7DAF496E2D3EB027005A4413 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7DD47D4A2D3EACAF009FD50D /* Build configuration list for PBXNativeTarget "Punto Ettore" */ = {
+		7DD47D4A2D3EACAF009FD50D /* Build configuration list for PBXNativeTarget "PuntoEttore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DD47D4B2D3EACAF009FD50D /* Debug */,
@@ -642,36 +456,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7DAF49712D3EB10C005A4413 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		7DAF49732D3EB10C005A4413 /* FirebaseAppCheck */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAppCheck;
-		};
-		7DAF49752D3EB10C005A4413 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		7DAF49772D3EB10C005A4413 /* FirebaseCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCore;
-		};
-		7DAF49792D3EB10C005A4413 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-		7DAF497B2D3EB10C005A4413 /* GoogleSignInSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DFBD6532D232B4B0029410A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignInSwift;
-		};
 		7DAF497E2D3EB662005A4413 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7DFBD6482D232AEE0029410A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
