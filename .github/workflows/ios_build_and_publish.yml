@@ -67,6 +67,7 @@ jobs:
           security set-key-partition-list -S apple-tool:,apple: -k "$IOS_KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
           security list-keychain -d user -s "$KEYCHAIN_PATH"
           security default-keychain -s "$KEYCHAIN_PATH"
+          security find-identity -v -p codesigning
           
           ./gradlew buildRelease
 
@@ -77,6 +78,7 @@ jobs:
             -configuration Release \
             -destination generic/platform=iOS \
             -verbose \
+            CODE_SIGN_IDENTITY="Apple Distribution: Helinext Srl (J87ZH9VBKQ)"
             clean archive
 
 #      - name: Script Export Clean Archive
