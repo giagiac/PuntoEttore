@@ -54,7 +54,8 @@ jobs:
           IOS_KEYCHAIN_PASSWORD: ${{ secrets.IOS_KEYCHAIN_PASSWORD }}
         run: |
           # create variables
-          CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
+          # CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
+          CERTIFICATE_PATH=$RUNNER_TEMP/Catena.p12
           KEYCHAIN_PATH=$RUNNER_TEMP/app-signin.keychain-db
           # KEYCHAIN_PATH=~/Library/Keychains/login.keychain-db
           # CA_PATH="$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/AppleWWDRCAG3.cer
