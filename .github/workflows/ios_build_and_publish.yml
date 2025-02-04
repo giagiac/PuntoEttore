@@ -68,9 +68,6 @@ jobs:
           
           KEYCHAIN_PATH=~/Library/Keychains/login.keychain-db
           
-          open "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj
-          sleep 10s
-          
           # security create-keychain -p "$IOS_KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
           security default-keychain -s "$KEYCHAIN_PATH"
           security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
@@ -82,6 +79,7 @@ jobs:
           # security add-trusted-cert -d -r trustAsRoot -k "$KEYCHAIN_PATH" "$CA_PATH"
           security find-identity -v -p codesigning
           
+          open "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj
           ./gradlew buildRelease
 
           xcodebuild -allowProvisioningUpdates -project iosApp/iosApp.xcodeproj \
