@@ -12,6 +12,9 @@ jobs:
     environment: IOS_ANDROID_PUBLISH_V1
 
     steps:
+      - name: Begin
+        run: echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -76,6 +79,7 @@ jobs:
           echo "xcode version"
           xcodebuild -version
           ls /Applications | grep Xcode
+          open /Applications/Xcode.app
           # sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
           
           # open "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj
