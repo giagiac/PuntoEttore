@@ -55,8 +55,8 @@ jobs:
         run: |
           # create variables
           CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
-          # KEYCHAIN_PATH=$RUNNER_TEMP/login.keychain-db
-          KEYCHAIN_PATH=~/Library/Keychains/login.keychain-db
+          KEYCHAIN_PATH=$RUNNER_TEMP/app-signin.keychain-db
+          # KEYCHAIN_PATH=~/Library/Keychains/login.keychain-db
           # CA_PATH="$GITHUB_WORKSPACE"/../PuntoEttoreExtraFilesProd/AppleWWDRCAG3.cer
 
           # import certificate, provisioning profile and apikey from secrets
