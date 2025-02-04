@@ -72,13 +72,13 @@ jobs:
           
           security find-identity -v -p codesigning
           
-          # open "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj
-          ./gradlew buildRelease
-
           echo "xcode version"
           xcodebuild -version
-          # ls /Applications | grep Xcode
+          ls /Applications | grep Xcode
           # sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
+          
+          # open "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj
+          ./gradlew buildRelease
           
           xcodebuild -allowProvisioningUpdates -project iosApp/iosApp.xcodeproj \
             -scheme PuntoEttore \
