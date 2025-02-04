@@ -96,7 +96,6 @@ jobs:
             -verbose \
             CODE_SIGN_IDENTITY="Apple Distribution: Helinext Srl (J87ZH9VBKQ)"
             clean archive
-            
 
 #      - name: Script Export Clean Archive
 #        run: |
