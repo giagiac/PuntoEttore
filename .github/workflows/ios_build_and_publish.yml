@@ -24,6 +24,7 @@ jobs:
          java-version: 21
          distribution: jetbrains
          cache: gradle
+         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
