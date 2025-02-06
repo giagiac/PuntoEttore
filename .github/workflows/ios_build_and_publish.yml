@@ -8,7 +8,7 @@ on:
 
 jobs:
   build_with_signing:
-    runs-on: self-hosted
+    runs-on: macos-latest # self-hosted
     environment: IOS_ANDROID_PUBLISH_V1
 
     steps:
