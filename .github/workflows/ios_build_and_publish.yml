@@ -84,6 +84,9 @@ jobs:
           open /Applications/Xcode.app "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj
           # sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
           
+          ls -al "$GITHUB_WORKSPACE"
+          ls -al "$GITHUB_WORKSPACE"/PuntoEttore
+          
           # open "$GITHUB_WORKSPACE"/iosApp/iosApp.xcodeproj
           ./gradlew buildRelease
           
