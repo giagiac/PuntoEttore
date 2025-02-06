@@ -59,6 +59,9 @@ jobs:
         run: |
           ./cleanup.sh
           
+          KEYCHAIN_PATH=~/Library/Keychains/login.keychain-db
+          security find-identity -v -p codesigning -s $KEYCHAIN_PATH
+          
           ./gradlew buildRelease
           
           xcodebuild -allowProvisioningUpdates -project iosApp/iosApp.xcodeproj \
