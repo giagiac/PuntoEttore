@@ -58,6 +58,7 @@ jobs:
           IOS_KEYCHAIN_PASSWORD: ${{ secrets.IOS_KEYCHAIN_PASSWORD }}
         run: |
           ./cleanup.sh
+          
           ./gradlew buildRelease
           
           xcodebuild -allowProvisioningUpdates -project iosApp/iosApp.xcodeproj \
