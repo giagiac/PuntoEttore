@@ -136,13 +136,13 @@ if (gradle.startParameter.taskNames.any { it.contains("Release") }){
 android {
 
     signingConfigs {
-        getByName("debug") {
-            println(keystoreProperties["storeFile"] as String)
-            storeFile = file(keystoreProperties["storeFile"] as String)
-            storePassword = keystoreProperties["storePassword"] as String
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
-        }
+//        getByName("debug") {
+//            println(keystoreProperties["storeFile"] as String)
+//            storeFile = file(keystoreProperties["storeFile"] as String)
+//            storePassword = keystoreProperties["storePassword"] as String
+//            keyAlias = keystoreProperties["keyAlias"] as String
+//            keyPassword = keystoreProperties["keyPassword"] as String
+//        }
         create("release") {
             println(keystoreProperties["storeFile"] as String)
             storeFile = file(keystoreProperties["storeFile"] as String)
@@ -160,12 +160,12 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/resources") //, "src/commonMain/composeResources"
 
     defaultConfig {
-        applicationId = "it.puntoettore.fidelity"
+        applicationId = "it.puntoettore.fidelity.prod"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
-        signingConfig = signingConfigs.getByName("debug")
+        signingConfig = signingConfigs.getByName("release")
     }
     buildFeatures {
         compose = true
@@ -218,17 +218,17 @@ android {
 //    }
 
     buildTypes {
-        getByName("debug") {
-            isDebuggable = true
-            isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("debug")
-            applicationIdSuffix = ".test"
-            resValue("string", "app_name", "** Punto Ettore Fidelity Test **")
-        }
+//        getByName("debug") {
+//            isDebuggable = true
+//            isMinifyEnabled = false
+//            signingConfig = signingConfigs.getByName("debug")
+//            applicationIdSuffix = ".test"
+//            resValue("string", "app_name", "** Punto Ettore Fidelity Test **")
+//        }
         getByName("release") {
             isMinifyEnabled = false
             isDebuggable = false
-            applicationIdSuffix = ".prod"
+            // applicationIdSuffix = ".prod"
             signingConfig = signingConfigs.getByName("release")
         }
     }

@@ -22,7 +22,7 @@ kotlin {
 
 
     cocoapods {
-        ios.deploymentTarget = "11.0"
+        ios.deploymentTarget = "12.0"
         framework {
             baseName = "KMPAuthCore"
             isStatic = true
