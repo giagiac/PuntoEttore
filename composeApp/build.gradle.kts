@@ -89,49 +89,69 @@ kotlin {
 var keystoreProperties = Properties()
 println("BEGIN")
 
-if (gradle.startParameter.taskNames.any { it.contains("Release") }){
-    println("RELEASE")
-    val keystorePropertiesFile = rootProject.file("../PuntoEttoreExtraFilesProd/keystore-release.properties")
-    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
-    copy {
-        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/composeApp/google-services.json")
-        into(project.rootDir.absolutePath + "/composeApp")
-        // rename("google-services.json", "google-services.json")
-        println("Copy Release to ComposeApp " + project.rootDir.absolutePath)
-    }
-    copy {
-        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/iosApp/iosApp/GoogleService-Info.plist")
-        into(project.rootDir.absolutePath + "/iosApp/iosApp")
-        println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-    }
-    copy {
-        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/iosApp/iosApp/Info.plist")
-        into(project.rootDir.absolutePath + "/iosApp/iosApp")
-        println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-    }
-
-    // File(project.projectDir.absolutePath + "/google-services.json").useLines { lines -> lines.forEach { println(it) }}
-} else {
-    println("DEBUG")
-    val keystorePropertiesFile = rootProject.file("../PuntoEttoreExtraFilesTest/keystore-debug.properties")
-    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
-    copy {
-        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesTest/composeApp/google-services.json")
-        into(project.rootDir.absolutePath + "/composeApp")
-        // rename("google-services.json", "google-services.json")
-        println("Copy Debug to ComposeApp " + project.rootDir.absolutePath)
-    }
-    copy {
-        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesTest/iosApp/iosApp/GoogleService-Info.plist")
-        into(project.rootDir.absolutePath + "/iosApp/iosApp")
-        println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-    }
-    copy {
-        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesTest/iosApp/iosApp/Info.plist")
-        into(project.rootDir.absolutePath + "/iosApp/iosApp")
-        println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-    }
+println("RELEASE")
+val keystorePropertiesFile = rootProject.file("../PuntoEttoreExtraFilesProd/keystore-release.properties")
+keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+copy {
+    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/composeApp/google-services.json")
+    into(project.rootDir.absolutePath + "/composeApp")
+    // rename("google-services.json", "google-services.json")
+    println("Copy Release to ComposeApp " + project.rootDir.absolutePath)
 }
+copy {
+    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/iosApp/iosApp/GoogleService-Info.plist")
+    into(project.rootDir.absolutePath + "/iosApp/iosApp")
+    println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+}
+copy {
+    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/iosApp/iosApp/Info.plist")
+    into(project.rootDir.absolutePath + "/iosApp/iosApp")
+    println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+}
+
+//if (gradle.startParameter.taskNames.any { it.contains("Release") }){
+//    println("RELEASE")
+//    val keystorePropertiesFile = rootProject.file("../PuntoEttoreExtraFilesProd/keystore-release.properties")
+//    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+//    copy {
+//        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/composeApp/google-services.json")
+//        into(project.rootDir.absolutePath + "/composeApp")
+//        // rename("google-services.json", "google-services.json")
+//        println("Copy Release to ComposeApp " + project.rootDir.absolutePath)
+//    }
+//    copy {
+//        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/iosApp/iosApp/GoogleService-Info.plist")
+//        into(project.rootDir.absolutePath + "/iosApp/iosApp")
+//        println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+//    }
+//    copy {
+//        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesProd/iosApp/iosApp/Info.plist")
+//        into(project.rootDir.absolutePath + "/iosApp/iosApp")
+//        println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+//    }
+//
+//    // File(project.projectDir.absolutePath + "/google-services.json").useLines { lines -> lines.forEach { println(it) }}
+//} else {
+//    println("DEBUG")
+//    val keystorePropertiesFile = rootProject.file("../PuntoEttoreExtraFilesTest/keystore-debug.properties")
+//    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+//    copy {
+//        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesTest/composeApp/google-services.json")
+//        into(project.rootDir.absolutePath + "/composeApp")
+//        // rename("google-services.json", "google-services.json")
+//        println("Copy Debug to ComposeApp " + project.rootDir.absolutePath)
+//    }
+//    copy {
+//        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesTest/iosApp/iosApp/GoogleService-Info.plist")
+//        into(project.rootDir.absolutePath + "/iosApp/iosApp")
+//        println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+//    }
+//    copy {
+//        from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFilesTest/iosApp/iosApp/Info.plist")
+//        into(project.rootDir.absolutePath + "/iosApp/iosApp")
+//        println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+//    }
+//}
 
 android {
 

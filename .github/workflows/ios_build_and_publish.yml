@@ -8,7 +8,7 @@ on:
 
 jobs:
   build_with_signing:
-    runs-on: self-hosted   # macos-latest # self-hosted
+    runs-on: macos-latest   # macos-latest # self-hosted
     environment: IOS_ANDROID_PUBLISH_V1
 
     steps:
@@ -62,7 +62,8 @@ jobs:
           KEYCHAIN_PATH=~/Library/Keychains/login.keychain-db
           security find-identity -v -p codesigning -s $KEYCHAIN_PATH
           
-          ./gradlew buildRelease
+          ./gradlew build Release
+          ./gradlew :kmpauth-google:podBuildGoogleSignInIphoneos
           
           xcodebuild -allowProvisioningUpdates -project iosApp/iosApp.xcodeproj \
             -scheme PuntoEttore \
