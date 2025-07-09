@@ -15,10 +15,10 @@ function decriptFileCriptato() {
     echo "File decriptato correttamente 💪"
 }
 
-cartella=../../../
+cartella=../../../../
 
 function unzipArchive() {
-    # Comprimi la cartella mantenendo la struttura delle directory
+    # Decomprimi la cartella mantenendo la struttura delle directory
     unzip -: -o $archivio.dec.7z -d $cartella
 
     echo "Cartella decompressa con successo in $cartella"
