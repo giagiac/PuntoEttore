@@ -37,7 +37,7 @@ jobs:
           echo -n $SYMMETRIC_KEYFILE_BASE64 | base64 --decode -o ./symmetric_keyfile.key
           chmod +x ./decompress.sh
           ./decompress.sh
-      - name: Clean Archive IOS
+      - name: Install Certificate and Compile
         run: |
           mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/installCertificareAndCompile.sh "$GITHUB_WORKSPACE"/..
           cd "$GITHUB_WORKSPACE"/..
