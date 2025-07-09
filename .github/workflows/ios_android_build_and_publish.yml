@@ -43,7 +43,11 @@ jobs:
           mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/Certificati.p12 "$GITHUB_WORKSPACE"/..
           mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/AuthKey_* "$GITHUB_WORKSPACE"/..
           
-          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision "$HOME/Library/MobileDevice/Provisioning Profiles/PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision"
+          DEST_DIR="/Users/runner/Library/MobileDevice/Provisioning Profiles"
+          # 1. Create the destination directory if it doesn't exist
+          mkdir -p "$DEST_DIR"
+          
+          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision "$DEST_DIR/PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision"
           echo "Profilo di provisioning '$PROFILE_PATH' installato come 'PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision'"
   
           cd "$GITHUB_WORKSPACE"/..
