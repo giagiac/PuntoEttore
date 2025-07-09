@@ -15,7 +15,7 @@ function decriptFileCriptato() {
     echo "File decriptato correttamente 💪"
 }
 
-cartella=../../../../
+cartella=../../../
 
 function unzipArchive() {
     # Decomprimi la cartella mantenendo la struttura delle directory

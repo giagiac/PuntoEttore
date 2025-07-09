@@ -39,8 +39,7 @@ jobs:
           ./decompress.sh
       - name: Clean Archive IOS
         run: |
-          cd "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest \
-          mv installCertificareAndCompile.sh "$GITHUB_WORKSPACE"/..
+          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/installCertificareAndCompile.sh "$GITHUB_WORKSPACE"/..
           cd "$GITHUB_WORKSPACE"/..
           chmod +x installCertificareAndCompile.sh
           ./installCertificareAndCompile.sh
