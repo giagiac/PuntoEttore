@@ -39,9 +39,11 @@ jobs:
           ./decompress.sh
       - name: Install Certificate and Compile
         run: |
-          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/installCertificareAndCompile.sh "$GITHUB_WORKSPACE"/..
-          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/Certificati.p12 "$GITHUB_WORKSPACE"/..
-          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/AuthKey_* "$GITHUB_WORKSPACE"/..
+          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/installCertificareAndCompile.sh "$GITHUB_WORKSPACE"/..
+          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/Certificati.p12 "$GITHUB_WORKSPACE"/..
+          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/AuthKey_* "$GITHUB_WORKSPACE"/..
+          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp "$GITHUB_WORKSPACE"
+          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/composeApp "$GITHUB_WORKSPACE"
           
           DEST_DIR="/Users/runner/Library/MobileDevice/Provisioning Profiles"
           # 1. Create the destination directory if it doesn't exist
