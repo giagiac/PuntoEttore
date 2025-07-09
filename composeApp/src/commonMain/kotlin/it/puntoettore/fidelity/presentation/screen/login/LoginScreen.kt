@@ -120,7 +120,12 @@ fun LoginScreen(
                             }
                         }
                         Row(modifier = Modifier.padding(bottom = 16.dp)) {
-                            GoogleButtonUiContainerFirebase(onResult = viewModelAppSettings.onFirebaseResult) {
+                            GoogleButtonUiContainerFirebase(
+                                scopes = listOf("email", "profile"),
+                                filterByAuthorizedAccounts = true,
+                                linkAccount = false,
+                                onResult = viewModelAppSettings.onFirebaseResult
+                            ) {
                                 GoogleSignInButton(
                                     modifier = Modifier.fillMaxWidth().height(44.dp),
                                     fontSize = 19.sp
@@ -128,7 +133,11 @@ fun LoginScreen(
                             }
                         }
                         Row(modifier = Modifier.padding(bottom = 16.dp)) {
-                            AppleButtonUiContainer(onResult = viewModelAppSettings.onFirebaseResult) {
+                            AppleButtonUiContainer(
+                                linkAccount = false,
+                                onResult = viewModelAppSettings.onFirebaseResult
+                            ) {
+
                                 AppleSignInButton(
                                     modifier = Modifier.fillMaxWidth().height(44.dp)
                                 ) { this.onClick() }

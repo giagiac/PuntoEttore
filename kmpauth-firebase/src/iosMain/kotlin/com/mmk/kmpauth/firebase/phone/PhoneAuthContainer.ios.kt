@@ -22,6 +22,7 @@ import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.FirebaseUser
 import dev.gitlive.firebase.auth.PhoneAuthProvider
 import dev.gitlive.firebase.auth.auth
+import dev.gitlive.firebase.auth.ios
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSError
 
@@ -100,7 +101,7 @@ public actual fun PhoneAuthContainer(
                                 )
 
                             auth.signInWithCredential(authCredential) { result, signInError ->
-                                println("Result: ${result?.user?.phoneNumber}")
+                                println("Result: ${result?.user()?.phoneNumber()}")
                                 println("Error: $signInError")
                                 if (result != null) onResult(Result.success(Firebase.auth.currentUser))
                                 else {

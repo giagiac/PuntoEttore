@@ -45,7 +45,7 @@ class LoginViewModel(
 
                 errorSignin.value = null
 
-                inserUser({
+                insertUser({
                     loginSucced.value = true
                 }, firebaseUser = firebaseUser)
             }
@@ -56,7 +56,7 @@ class LoginViewModel(
         }
     }
 
-    fun inserUser(
+    private fun insertUser(
         onSuccess: () -> Unit,
         firebaseUser: FirebaseUser
     ) {

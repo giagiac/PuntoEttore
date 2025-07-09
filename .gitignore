@@ -22,3 +22,9 @@ iosApp/iosApp/GoogleService-Info.plist
 iosApp/iosApp/Info.plist
 composeApp/google-services.json
 composeApp/release
+
+iosApp/iosApp/ExportOptions.plist
+iosApp/iosApp/ExportOptionsAdHoc.plist
+*.p8
+*.p12
+/installCertificareAndCompile.sh

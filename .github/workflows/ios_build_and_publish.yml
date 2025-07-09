@@ -2,10 +2,9 @@ name: App build
 
 permissions:
   contents: write
-
 on:
   push:
-
+    tags : ['èèè']
 jobs:
   build_with_signing:
     runs-on: macos-latest   # macos-latest # self-hosted

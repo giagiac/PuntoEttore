@@ -19,17 +19,17 @@ firebase-messaging = "24.0.2"
 koin = "4.0.0"
 kotlinx-coroutine = "1.9.0"
 
-compose = "1.7.3"
+compose = "1.7.4"
 
 androidxCredential = "1.3.0"
 googleIdIdentity = "1.1.1"
 androidLegacyPlayServices = "21.2.0"
 
 firebaseAuthKtx = "23.0.0"
-firebaseGitLiveAuth = "1.12.0"
+firebaseGitLiveAuth = "2.1.0"
 
 # ktor
-ktor = "3.0.0-rc-1"
+ktor = "3.0.0"
 
 # GoogleService
 googleServices = "4.4.2"
