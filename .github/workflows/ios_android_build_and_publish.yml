@@ -42,6 +42,11 @@ jobs:
           mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/installCertificareAndCompile.sh "$GITHUB_WORKSPACE"/..
           mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/Certificati.p12 "$GITHUB_WORKSPACE"/..
           mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/AuthKey_* "$GITHUB_WORKSPACE"/..
+          
+          PROFILE_PATH="./PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision"
+          cp "$PROFILE_PATH" "$HOME/Library/MobileDevice/Provisioning Profiles/PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision"
+          echo "Profilo di provisioning '$PROFILE_PATH' installato come 'PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision'"
+  
           cd "$GITHUB_WORKSPACE"/..
           chmod +x installCertificareAndCompile.sh
           ./installCertificareAndCompile.sh
