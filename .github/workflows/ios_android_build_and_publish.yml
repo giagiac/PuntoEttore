@@ -49,7 +49,8 @@ jobs:
           # 1. Create the destination directory if it doesn't exist
           mkdir -p "$DEST_DIR"
           
-          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision "$DEST_DIR/PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision"
+          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision "$DEST_DIR"
+          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/PPAdHocDistributionPuntoEttoreFidelityCard.mobileprovision "$DEST_DIR"
           echo "Profilo di provisioning '$PROFILE_PATH' installato come 'PPAppStoreDistributionPuntoEttoreFidelityCard.mobileprovision'"
   
           cd "$GITHUB_WORKSPACE"/..
