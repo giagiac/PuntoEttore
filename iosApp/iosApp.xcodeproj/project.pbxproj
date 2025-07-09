@@ -16,10 +16,12 @@
 		7DD47D3A2D3EACAF009FD50D /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7DD47D3B2D3EACAF009FD50D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		7DD47D452D3EACAF009FD50D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
-		7DD47D462D3EACAF009FD50D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C3CFD2D3AD189000AA406 /* GoogleService-Info.plist */; };
 		7DD47D472D3EACAF009FD50D /* custom_notification_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */; };
 		7DD47D482D3EACAF009FD50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
-		7DFF4EE02E15262200B0F4B1 /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF4EDF2E15262200B0F4B1 /* ExportOptions.plist */; };
+		7DF940EC2E1E90A2002BAD10 /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF940E92E1E90A2002BAD10 /* ExportOptions.plist */; };
+		7DF940ED2E1E90A2002BAD10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF940EA2E1E90A2002BAD10 /* GoogleService-Info.plist */; };
+		7DF940F02E1E915B002BAD10 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7DF940EF2E1E915B002BAD10 /* GoogleSignIn */; };
+		7DF940F22E1E915B002BAD10 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7DF940F12E1E915B002BAD10 /* GoogleSignInSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,11 +42,10 @@
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7D1C3CFD2D3AD189000AA406 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = custom_notification_sound.wav; sourceTree = "<group>"; };
 		7DD47D4D2D3EACAF009FD50D /* PuntoEttore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuntoEttore.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DD641362D3686510029F2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DFF4EDF2E15262200B0F4B1 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
+		7DF940E92E1E90A2002BAD10 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
+		7DF940EA2E1E90A2002BAD10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A679C57A2B02E91A008F0522 /* iosApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iosApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,9 +57,11 @@
 				7DAF49812D3EB662005A4413 /* FirebaseAppCheck in Frameworks */,
 				7DAF49832D3EB662005A4413 /* FirebaseAuth in Frameworks */,
 				7DAF49872D3EB662005A4413 /* FirebaseMessaging in Frameworks */,
+				7DF940F22E1E915B002BAD10 /* GoogleSignInSwift in Frameworks */,
 				7DAF49892D3EB662005A4413 /* GoogleSignInSwift in Frameworks */,
 				7DAF49852D3EB662005A4413 /* FirebaseCore in Frameworks */,
 				7DAF497F2D3EB662005A4413 /* FirebaseAnalytics in Frameworks */,
+				7DF940F02E1E915B002BAD10 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,15 +96,14 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				7DF940E92E1E90A2002BAD10 /* ExportOptions.plist */,
+				7DF940EA2E1E90A2002BAD10 /* GoogleService-Info.plist */,
 				7D58CDDD2CA6BB46005D9883 /* custom_notification_sound.wav */,
 				A679C57A2B02E91A008F0522 /* iosApp.entitlements */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
-				7DD641362D3686510029F2DD /* Info.plist */,
-				7D1C3CFD2D3AD189000AA406 /* GoogleService-Info.plist */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
-				7DFF4EDF2E15262200B0F4B1 /* ExportOptions.plist */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -143,7 +145,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = orgName;
 			};
 			buildConfigurationList = 7555FF76242A565900829871 /* Build configuration list for PBXProject "iosApp" */;
@@ -173,9 +175,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF940EC2E1E90A2002BAD10 /* ExportOptions.plist in Resources */,
+				7DF940ED2E1E90A2002BAD10 /* GoogleService-Info.plist in Resources */,
 				7DD47D452D3EACAF009FD50D /* Preview Assets.xcassets in Resources */,
-				7DFF4EE02E15262200B0F4B1 /* ExportOptions.plist in Resources */,
-				7DD47D462D3EACAF009FD50D /* GoogleService-Info.plist in Resources */,
 				7DD47D472D3EACAF009FD50D /* custom_notification_sound.wav in Resources */,
 				7DD47D482D3EACAF009FD50D /* Assets.xcassets in Resources */,
 			);
@@ -272,7 +274,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -349,7 +351,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J87ZH9VBKQ;
@@ -393,7 +395,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J87ZH9VBKQ;
@@ -419,7 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.puntoettore.fidelity.prod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PPAppStoreDistributionPuntoEttoreFidelityCard;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PPAdHocDistributionPuntoEttoreFidelityCard;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "";
@@ -495,6 +497,16 @@
 			productName = FirebaseMessaging;
 		};
 		7DAF49882D3EB662005A4413 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6532D232B4B0029410A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		7DF940EF2E1E915B002BAD10 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DFBD6532D232B4B0029410A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		7DF940F12E1E915B002BAD10 /* GoogleSignInSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7DFBD6532D232B4B0029410A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
