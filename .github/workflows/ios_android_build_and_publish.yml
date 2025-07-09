@@ -39,10 +39,10 @@ jobs:
           ./decompress.sh
       - name: Install Certificate and Compile
         run: |
-          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/installCertificareAndCompile.sh "$GITHUB_WORKSPACE"/..
-          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/Certificati.p12 "$GITHUB_WORKSPACE"/..
-          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/AuthKey_* "$GITHUB_WORKSPACE"/..
-          mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/* "$GITHUB_WORKSPACE"
+          #mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/installCertificareAndCompile.sh "$GITHUB_WORKSPACE"/..
+          #mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/Certificati.p12 "$GITHUB_WORKSPACE"/..
+          #mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/AuthKey_* "$GITHUB_WORKSPACE"/..
+          cp -rf "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/* "$GITHUB_WORKSPACE"
           #mv "$GITHUB_WORKSPACE"/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/composeApp/* "$GITHUB_WORKSPACE"/composeApp
           
           DEST_DIR="/Users/runner/Library/MobileDevice/Provisioning Profiles"
