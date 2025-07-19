@@ -8,7 +8,7 @@ on:
     tags : ['èèè']
 jobs:
   build_with_signing:
-    runs-on: macos-15-xlarge
+    runs-on: macos-15
     environment: IOS_ANDROID_PUBLISH_V1
 
     steps:
