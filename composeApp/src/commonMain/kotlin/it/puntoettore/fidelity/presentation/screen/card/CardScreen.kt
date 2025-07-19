@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -39,16 +40,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mmk.kmpnotifier.notification.NotifierManager
 import it.puntoettore.fidelity.Res
+import it.puntoettore.fidelity.api.datamodel.CreditiFidelity
 import it.puntoettore.fidelity.card
 import it.puntoettore.fidelity.presentation.components.ErrorView
 import it.puntoettore.fidelity.presentation.components.LoadingView
-import it.puntoettore.fidelity.presentation.screen.component.PointView
-import it.puntoettore.fidelity.score
+import it.puntoettore.fidelity.presentation.screen.component.CreditiFidelityView
 import it.puntoettore.fidelity.util.DisplayResult
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
@@ -58,6 +58,7 @@ import qrgenerator.QRCodeImage
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardScreen(
+    onCreditiSelect: (CreditiFidelity) -> Unit,
     bottomBar: @Composable () -> Unit,
     snackbarHostState: SnackbarHostState,
 ) {
@@ -65,6 +66,7 @@ fun CardScreen(
     val listState = rememberLazyListState()
     val viewModel = koinViewModel<CardViewModel>()
     val userDetail by viewModel.userDetail
+    val creditiFidelity by viewModel.creditiFidelity
 
     val sortedByFavorite by viewModel.sortedByFavorite.collectAsStateWithLifecycle()
 
@@ -76,7 +78,7 @@ fun CardScreen(
             override fun onNewToken(token: String) {
                 myPushNotificationToken = token
                 println("onNewToken: $token")
-                viewModel.sendData(token)
+                // viewModel.sendData(token)
             }
         })
         myPushNotificationToken = NotifierManager.getPushNotifier().getToken() ?: ""
@@ -91,127 +93,90 @@ fun CardScreen(
 
     val brush = Brush.horizontalGradient(listOf(Color.Red, Color.Blue))
 
-    Scaffold(
-        snackbarHost = {
-            SnackbarHost(snackbarHostState)
-        },
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = stringResource(Res.string.card),
-                        style = MaterialTheme.typography.headlineLarge
-                    )
-                }
+    Scaffold(snackbarHost = {
+        SnackbarHost(snackbarHostState)
+    }, topBar = {
+        TopAppBar(title = {
+            Text(
+                text = stringResource(Res.string.card),
+                style = MaterialTheme.typography.headlineLarge
             )
-        },
-        bottomBar = bottomBar,
-        content = { it ->
-            Scaffold(
-                modifier = Modifier.padding(it).padding(start = 8.dp, end = 8.dp),
-                topBar = {
-                    viewModel.user.value?.let {
-                        Row(
-                            horizontalArrangement = Arrangement.Center,
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Card(
-                                elevation = CardDefaults.cardElevation(
-                                    defaultElevation = 12.dp
-                                ),
-                                border = BorderStroke(1.dp, Color.Black),
-                                modifier = Modifier.padding(12.dp).drawBehind {
-                                    rotate(rotationAnimation.value) {
-                                        drawCircle(brush, style = Stroke(50.dp.value))
-                                    }
-                                }
-                            ) {
-                                QRCodeImage(
-                                    url = it.uid,
-                                    contentScale = ContentScale.Fit,
-                                    contentDescription = it.uid,
-                                    modifier = Modifier
-                                        .align(Alignment.CenterHorizontally)
-                                        .size(150.dp).padding(16.dp),
-                                    onSuccess = { qrImage ->
-
-                                    },
-                                    onFailure = {
-                                        scope.launch {
-                                            // TODO: handle error
-                                        }
-                                    }
-                                )
-                            }
-                        }
-                    }
-                },
-                content = {
-                    userDetail.DisplayResult(
-                        onLoading = { LoadingView() },
-                        onError = { ErrorView(it) },
-                        onSuccess = { data ->
-                            if (data.listScores.isNotEmpty()) {
-                                Column(
-                                    modifier = Modifier
-                                        .padding(
-                                            top = it.calculateTopPadding(),
-                                            bottom = it.calculateBottomPadding()
-                                        )
-                                ) {
-                                    Row {
-                                        Text(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            textAlign = TextAlign.Center,
-                                            text = data.score,
-                                            style = MaterialTheme.typography.displayMedium
-                                        )
-                                    }
-                                    Row {
-                                        Text(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            textAlign = TextAlign.Center,
-                                            text = stringResource(Res.string.score),
-                                            style = MaterialTheme.typography.labelSmall
-                                        )
-                                    }
-                                    Row {
-                                        LazyColumn(
-                                            verticalArrangement = Arrangement.spacedBy(12.dp)
-                                        ) {
-                                            items(
-                                                items = data.listScores,
-                                                key = { it.dataScan }
-                                            ) {
-                                                PointView(
-                                                    score = it,
-                                                    onClick = {
-                                                        //onBookSelect(it._id)
-                                                    }
-                                                )
-                                            }
-                                        }
-                                    }
-                                }
-
-
-                            } else {
-                                ErrorView()
-                            }
-                        }
-                    )
-                },
-                bottomBar = {
-                    viewModel.error.value?.let { error ->
-                        Row {
-                            Text(
-                                text = error,
-                                color = Color.Red
-                            )
-                        }
-                    }
-                }
-            )
-
         })
+    }, bottomBar = bottomBar, content = { it ->
+        Scaffold(modifier = Modifier.padding(it).padding(start = 8.dp, end = 8.dp), topBar = {
+            viewModel.user.value?.let {
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Card(elevation = CardDefaults.cardElevation(
+                        defaultElevation = 12.dp
+                    ),
+                        border = BorderStroke(1.dp, Color.Black),
+                        modifier = Modifier.padding(12.dp).drawBehind {
+                            rotate(rotationAnimation.value) {
+                                drawCircle(brush, style = Stroke(50.dp.value))
+                            }
+                        }) {
+                        QRCodeImage(url = it.uid,
+                            contentScale = ContentScale.Fit,
+                            contentDescription = it.uid,
+                            modifier = Modifier.align(Alignment.CenterHorizontally).size(150.dp)
+                                .padding(16.dp),
+                            onSuccess = { qrImage ->
+
+                            },
+                            onFailure = {
+                                scope.launch {
+                                    // TODO: handle error
+                                }
+                            })
+                    }
+                }
+            }
+        }, content = {
+            Column {
+                Button(onClick = { viewModel.loginData() }) {
+                    Text("ACCESS")
+                }
+                Button(onClick = { viewModel.sendData() }) {
+                    Text("TEST")
+                }
+                Button(onClick = { viewModel.invalidRefreshToken() }) {
+                    Text("INVALID")
+                }
+
+                creditiFidelity.DisplayResult(onLoading = { LoadingView() },
+                    onError = { ErrorView(it) },
+                    onSuccess = { data ->
+                        if (data.isNotEmpty()) {
+                            LazyColumn(
+                                modifier = Modifier.padding(all = 12.dp).padding(
+                                    top = it.calculateTopPadding(),
+                                    bottom = it.calculateBottomPadding()
+                                ), verticalArrangement = Arrangement.spacedBy(12.dp)
+                            ) {
+                                items(items = data, key = { it.data_inserimento!! }) {
+                                    CreditiFidelityView(
+                                        item = it,
+                                        onClick = { onCreditiSelect(it) })
+                                }
+                            }
+                        } else {
+                            ErrorView()
+                        }
+                    })
+            }
+
+        }, bottomBar = {
+            viewModel.error.value?.let { error ->
+                Row {
+                    Text(
+                        text = error, color = Color.Red
+                    )
+                }
+            }
+        })
+
+    })
 }

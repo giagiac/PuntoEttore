@@ -26,21 +26,13 @@ import it.puntoettore.fidelity.custom.BuildConfig
 import kotlinx.serialization.SerializationException
 import kotlin.coroutines.cancellation.CancellationException
 
-class ApiDataClient(
+class ApiDataClientNextLogin(
     private val httpClient: HttpClient
 ) {
     private lateinit var uid: String
-    private lateinit var accessToken: String
-    private lateinit var refreshToken: String
 
     fun setUid(_uid: String) {
         uid = _uid
-    }
-    fun setAccessToken(_accessToken: String) {
-        accessToken = _accessToken
-    }
-    fun setRefreshToken(_refreshToken: String) {
-        refreshToken = _refreshToken
     }
 
     suspend fun getAccess(uid: String): Result<AuthDetail, NetworkEError> {

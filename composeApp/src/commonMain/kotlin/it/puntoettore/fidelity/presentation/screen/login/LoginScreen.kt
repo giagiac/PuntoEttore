@@ -63,14 +63,6 @@ fun LoginScreen(
 
     Scaffold(
         content = {
-//            CoilImage(
-//                imageModel = { "https://app.erroridiconiazione.com/public/logo.png" },
-//                imageOptions = ImageOptions(
-//                    contentScale = ContentScale.FillHeight,
-//                    alignment = Alignment.Center,
-//                ),
-//                modifier = Modifier.fillMaxHeight().blur(radiusX = 8.dp, radiusY = 8.dp)
-//            )
             Image(
                 painter = painterResource(Res.drawable.logo),
                 contentScale = ContentScale.FillHeight,

@@ -69,8 +69,8 @@ class AccountViewModel(
                 }
             }
 
-            NotifierManager.getPushNotifier().getToken()
-                ?.let { apiDataClient.sendData(it) }
+//            NotifierManager.getPushNotifier().getToken()
+//                ?.let { apiDataClient.getAccess(it) }
 
             _sortedByFavorite.collectLatest { favorite ->
                 if (favorite) {
@@ -100,7 +100,7 @@ class AccountViewModel(
 
     fun sendData(token: String) {
         viewModelScope.launch {
-            apiDataClient.sendData(token)
+            // apiDataClient.getAccess(token)
         }
     }
 

@@ -28,7 +28,7 @@ import kotlinx.serialization.json.Json
 
 //In shared/androidMain
 @OptIn(ExperimentalSerializationApi::class)
-actual fun createHttpClient(bookDatabase: BookDatabase):HttpClient = HttpClient(Darwin) {
+actual fun createHttpClientNextLogin(bookDatabase: BookDatabase):HttpClient = HttpClient(Darwin) {
     val accessToken = "ACCESS_NOT_DEFINED"
     val refreshToken = "REFRESH_NOT_DEFINED"
 

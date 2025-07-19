@@ -1,0 +1,2874 @@
+Ignoring init script 'gradle-actions.inject-develocity.init.gradle' as requested name 'null' does not match
+BEGIN
+DEBUG
+Copy Debug to ComposeApp /Users/giacomolavermicocca/Documents/_GIT/PuntoEttore
+Copy GoogleService-Info.plist to /Users/giacomolavermicocca/Documents/_GIT/PuntoEttore/iosApp/iosApp
+Copy Info.plist to /Users/giacomolavermicocca/Documents/_GIT/PuntoEttore/iosApp/iosApp
+../../PuntoEttoreExtraFilesTest/debug.keystore
+SEI IN DEBUG
+SEI IN ROOT
+
+------------------------------------------------------------
+Tasks runnable from root project 'PuntoEttore'
+------------------------------------------------------------
+
+Android tasks
+-------------
+composeApp:androidDependencies - Displays the Android dependencies of the project.
+kmpauth-core:androidDependencies - Displays the Android dependencies of the project.
+kmpauth-firebase:androidDependencies - Displays the Android dependencies of the project.
+kmpauth-google:androidDependencies - Displays the Android dependencies of the project.
+kmpauth-uihelper:androidDependencies - Displays the Android dependencies of the project.
+kmpnotifier:androidDependencies - Displays the Android dependencies of the project.
+composeApp:signingReport - Displays the signing info for the base and test modules
+kmpauth-core:signingReport - Displays the signing info for the base and test modules
+kmpauth-firebase:signingReport - Displays the signing info for the base and test modules
+kmpauth-google:signingReport - Displays the signing info for the base and test modules
+kmpauth-uihelper:signingReport - Displays the signing info for the base and test modules
+kmpnotifier:signingReport - Displays the signing info for the base and test modules
+composeApp:sourceSets - Prints out all the source sets defined in this project.
+kmpauth-core:sourceSets - Prints out all the source sets defined in this project.
+kmpauth-firebase:sourceSets - Prints out all the source sets defined in this project.
+kmpauth-google:sourceSets - Prints out all the source sets defined in this project.
+kmpauth-uihelper:sourceSets - Prints out all the source sets defined in this project.
+kmpnotifier:sourceSets - Prints out all the source sets defined in this project.
+
+Binaryen tasks
+--------------
+binaryenKotlinClean - Clean unused local binaryen version
+kotlinBinaryenSetup - Download and install a binaryen
+
+Build tasks
+-----------
+composeApp:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+kmpauth-core:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+kmpauth-firebase:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+kmpauth-google:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+kmpauth-uihelper:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+kmpnotifier:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+kmpauth-core:androidDebugSourcesJar - Assembles a jar archive containing the sources of target 'androidDebug'.
+kmpauth-firebase:androidDebugSourcesJar - Assembles a jar archive containing the sources of target 'androidDebug'.
+kmpauth-google:androidDebugSourcesJar - Assembles a jar archive containing the sources of target 'androidDebug'.
+kmpauth-uihelper:androidDebugSourcesJar - Assembles a jar archive containing the sources of target 'androidDebug'.
+kmpnotifier:androidDebugSourcesJar - Assembles a jar archive containing the sources of target 'androidDebug'.
+kmpauth-core:androidReleaseSourcesJar - Assembles a jar archive containing the sources of target 'androidRelease'.
+kmpauth-firebase:androidReleaseSourcesJar - Assembles a jar archive containing the sources of target 'androidRelease'.
+kmpauth-google:androidReleaseSourcesJar - Assembles a jar archive containing the sources of target 'androidRelease'.
+kmpauth-uihelper:androidReleaseSourcesJar - Assembles a jar archive containing the sources of target 'androidRelease'.
+kmpnotifier:androidReleaseSourcesJar - Assembles a jar archive containing the sources of target 'androidRelease'.
+assemble - Assembles the outputs of this project.
+composeApp:assemble - Assemble main outputs for all the variants.
+kmpauth-core:assemble - Assemble main outputs for all the variants.
+kmpauth-firebase:assemble - Assemble main outputs for all the variants.
+kmpauth-google:assemble - Assemble main outputs for all the variants.
+kmpauth-uihelper:assemble - Assemble main outputs for all the variants.
+kmpnotifier:assemble - Assemble main outputs for all the variants.
+composeApp:assembleAndroidTest - Assembles all the Test applications.
+kmpauth-core:assembleAndroidTest - Assembles all the Test applications.
+kmpauth-firebase:assembleAndroidTest - Assembles all the Test applications.
+kmpauth-google:assembleAndroidTest - Assembles all the Test applications.
+kmpauth-uihelper:assembleAndroidTest - Assembles all the Test applications.
+kmpnotifier:assembleAndroidTest - Assembles all the Test applications.
+composeApp:assembleUnitTest - Assembles all the unit test applications.
+kmpauth-core:assembleUnitTest - Assembles all the unit test applications.
+kmpauth-firebase:assembleUnitTest - Assembles all the unit test applications.
+kmpauth-google:assembleUnitTest - Assembles all the unit test applications.
+kmpauth-uihelper:assembleUnitTest - Assembles all the unit test applications.
+kmpnotifier:assembleUnitTest - Assembles all the unit test applications.
+build - Assembles and tests this project.
+composeApp:build - Assembles and tests this project.
+kmpauth-core:build - Assembles and tests this project.
+kmpauth-firebase:build - Assembles and tests this project.
+kmpauth-google:build - Assembles and tests this project.
+kmpauth-uihelper:build - Assembles and tests this project.
+kmpnotifier:build - Assembles and tests this project.
+composeApp:buildDependents - Assembles and tests this project and all projects that depend on it.
+kmpauth-core:buildDependents - Assembles and tests this project and all projects that depend on it.
+kmpauth-firebase:buildDependents - Assembles and tests this project and all projects that depend on it.
+kmpauth-google:buildDependents - Assembles and tests this project and all projects that depend on it.
+kmpauth-uihelper:buildDependents - Assembles and tests this project and all projects that depend on it.
+kmpnotifier:buildDependents - Assembles and tests this project and all projects that depend on it.
+composeApp:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+kmpauth-core:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+kmpauth-firebase:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+kmpauth-google:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+kmpauth-uihelper:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+kmpnotifier:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+composeApp:buildNeeded - Assembles and tests this project and all projects it depends on.
+kmpauth-core:buildNeeded - Assembles and tests this project and all projects it depends on.
+kmpauth-firebase:buildNeeded - Assembles and tests this project and all projects it depends on.
+kmpauth-google:buildNeeded - Assembles and tests this project and all projects it depends on.
+kmpauth-uihelper:buildNeeded - Assembles and tests this project and all projects it depends on.
+kmpnotifier:buildNeeded - Assembles and tests this project and all projects it depends on.
+composeApp:bundle - Assemble bundles for all the variants.
+clean - Deletes the build directory.
+composeApp:clean - Deletes the build directory.
+kmpauth-core:clean - Deletes the build directory.
+kmpauth-firebase:clean - Deletes the build directory.
+kmpauth-google:clean - Deletes the build directory.
+kmpauth-uihelper:clean - Deletes the build directory.
+kmpnotifier:clean - Deletes the build directory.
+composeApp:cleanAllTests - Deletes all the test results.
+kmpauth-core:cleanAllTests - Deletes all the test results.
+kmpauth-firebase:cleanAllTests - Deletes all the test results.
+kmpauth-google:cleanAllTests - Deletes all the test results.
+kmpauth-uihelper:cleanAllTests - Deletes all the test results.
+kmpnotifier:cleanAllTests - Deletes all the test results.
+composeApp:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+kmpauth-core:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+kmpauth-firebase:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+kmpauth-google:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+kmpauth-uihelper:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+kmpnotifier:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+composeApp:compileDebugAndroidTestSources
+kmpauth-core:compileDebugAndroidTestSources
+kmpauth-firebase:compileDebugAndroidTestSources
+kmpauth-google:compileDebugAndroidTestSources
+kmpauth-uihelper:compileDebugAndroidTestSources
+kmpnotifier:compileDebugAndroidTestSources
+composeApp:compileDebugSources
+kmpauth-core:compileDebugSources
+kmpauth-firebase:compileDebugSources
+kmpauth-google:compileDebugSources
+kmpauth-uihelper:compileDebugSources
+kmpnotifier:compileDebugSources
+composeApp:compileDebugUnitTestSources
+kmpauth-core:compileDebugUnitTestSources
+kmpauth-firebase:compileDebugUnitTestSources
+kmpauth-google:compileDebugUnitTestSources
+kmpauth-uihelper:compileDebugUnitTestSources
+kmpnotifier:compileDebugUnitTestSources
+composeApp:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+kmpauth-core:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+kmpauth-firebase:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+kmpauth-google:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+kmpauth-uihelper:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+kmpnotifier:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+composeApp:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+kmpauth-core:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+kmpauth-firebase:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+kmpauth-google:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+kmpauth-uihelper:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+kmpnotifier:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+composeApp:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+kmpauth-core:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+kmpauth-firebase:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+kmpauth-google:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+kmpauth-uihelper:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+kmpnotifier:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+composeApp:compileKotlinIosX64 - Compiles a klibrary from the 'main' compilation in target 'iosX64'.
+kmpauth-core:compileKotlinIosX64 - Compiles a klibrary from the 'main' compilation in target 'iosX64'.
+kmpauth-firebase:compileKotlinIosX64 - Compiles a klibrary from the 'main' compilation in target 'iosX64'.
+kmpauth-google:compileKotlinIosX64 - Compiles a klibrary from the 'main' compilation in target 'iosX64'.
+kmpauth-uihelper:compileKotlinIosX64 - Compiles a klibrary from the 'main' compilation in target 'iosX64'.
+kmpnotifier:compileKotlinIosX64 - Compiles a klibrary from the 'main' compilation in target 'iosX64'.
+composeApp:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+kmpauth-core:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+kmpauth-firebase:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+kmpauth-google:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+kmpauth-uihelper:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+kmpnotifier:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+composeApp:compileReleaseSources
+kmpauth-core:compileReleaseSources
+kmpauth-firebase:compileReleaseSources
+kmpauth-google:compileReleaseSources
+kmpauth-uihelper:compileReleaseSources
+kmpnotifier:compileReleaseSources
+composeApp:compileReleaseUnitTestSources
+kmpauth-core:compileReleaseUnitTestSources
+kmpauth-firebase:compileReleaseUnitTestSources
+kmpauth-google:compileReleaseUnitTestSources
+kmpauth-uihelper:compileReleaseUnitTestSources
+kmpnotifier:compileReleaseUnitTestSources
+composeApp:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+kmpauth-core:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+kmpauth-firebase:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+kmpauth-google:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+kmpauth-uihelper:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+kmpnotifier:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+composeApp:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+kmpauth-core:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+kmpauth-firebase:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+kmpauth-google:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+kmpauth-uihelper:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+kmpnotifier:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+composeApp:compileTestKotlinIosX64 - Compiles a klibrary from the 'test' compilation in target 'iosX64'.
+kmpauth-core:compileTestKotlinIosX64 - Compiles a klibrary from the 'test' compilation in target 'iosX64'.
+kmpauth-firebase:compileTestKotlinIosX64 - Compiles a klibrary from the 'test' compilation in target 'iosX64'.
+kmpauth-google:compileTestKotlinIosX64 - Compiles a klibrary from the 'test' compilation in target 'iosX64'.
+kmpauth-uihelper:compileTestKotlinIosX64 - Compiles a klibrary from the 'test' compilation in target 'iosX64'.
+kmpnotifier:compileTestKotlinIosX64 - Compiles a klibrary from the 'test' compilation in target 'iosX64'.
+composeApp:embedAndSignAppleFrameworkForXcode - Embed and sign  framework as requested by Xcode's environment variables
+kmpauth-core:embedAndSignPodAppleFrameworkForXcode - Embed and sign pod framework as requested by Xcode's environment variables
+kmpauth-firebase:embedAndSignPodAppleFrameworkForXcode - Embed and sign pod framework as requested by Xcode's environment variables
+kmpauth-google:embedAndSignPodAppleFrameworkForXcode - Embed and sign pod framework as requested by Xcode's environment variables
+kmpauth-uihelper:embedAndSignPodAppleFrameworkForXcode - Embed and sign pod framework as requested by Xcode's environment variables
+kmpnotifier:embedAndSignPodAppleFrameworkForXcode - Embed and sign pod framework as requested by Xcode's environment variables
+kmpauth-core:extractDebugAnnotations - Extracts Android annotations for the debug variant into the archive file
+kmpauth-firebase:extractDebugAnnotations - Extracts Android annotations for the debug variant into the archive file
+kmpauth-google:extractDebugAnnotations - Extracts Android annotations for the debug variant into the archive file
+kmpauth-uihelper:extractDebugAnnotations - Extracts Android annotations for the debug variant into the archive file
+kmpnotifier:extractDebugAnnotations - Extracts Android annotations for the debug variant into the archive file
+kmpauth-core:extractReleaseAnnotations - Extracts Android annotations for the release variant into the archive file
+kmpauth-firebase:extractReleaseAnnotations - Extracts Android annotations for the release variant into the archive file
+kmpauth-google:extractReleaseAnnotations - Extracts Android annotations for the release variant into the archive file
+kmpauth-uihelper:extractReleaseAnnotations - Extracts Android annotations for the release variant into the archive file
+kmpnotifier:extractReleaseAnnotations - Extracts Android annotations for the release variant into the archive file
+composeApp:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+kmpauth-core:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+kmpauth-firebase:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+kmpauth-google:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+kmpauth-uihelper:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+kmpnotifier:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+composeApp:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+kmpauth-core:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+kmpauth-firebase:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+kmpauth-google:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+kmpauth-uihelper:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+kmpnotifier:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+composeApp:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+kmpauth-core:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+kmpauth-firebase:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+kmpauth-google:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+kmpauth-uihelper:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+kmpnotifier:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+composeApp:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+kmpauth-core:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+kmpauth-firebase:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+kmpauth-google:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+kmpauth-uihelper:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+kmpnotifier:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+composeApp:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+kmpauth-core:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+kmpauth-firebase:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+kmpauth-google:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+kmpauth-uihelper:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+kmpnotifier:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+composeApp:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+kmpauth-core:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+kmpauth-firebase:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+kmpauth-google:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+kmpauth-uihelper:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+kmpnotifier:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+composeApp:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+kmpauth-core:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+kmpauth-firebase:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+kmpauth-google:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+kmpauth-uihelper:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+kmpnotifier:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+composeApp:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+kmpauth-core:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+kmpauth-firebase:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+kmpauth-google:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+kmpauth-uihelper:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+kmpnotifier:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+kmpauth-core:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+kmpauth-firebase:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+kmpauth-google:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+kmpauth-uihelper:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+kmpnotifier:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+kmpauth-core:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+kmpauth-firebase:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+kmpauth-google:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+kmpauth-uihelper:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+kmpnotifier:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+composeApp:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+kmpauth-core:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+kmpauth-firebase:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+kmpauth-google:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+kmpauth-uihelper:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+kmpnotifier:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+kmpauth-core:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+kmpauth-firebase:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+kmpauth-google:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+kmpauth-uihelper:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+kmpnotifier:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+kmpauth-core:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+kmpauth-firebase:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+kmpauth-google:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+kmpauth-uihelper:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+kmpnotifier:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+kmpauth-core:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+kmpauth-firebase:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+kmpauth-google:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+kmpauth-uihelper:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+kmpnotifier:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+composeApp:iosX64Binaries - Assembles outputs for target 'iosX64'.
+kmpauth-core:iosX64Binaries - Assembles outputs for target 'iosX64'.
+kmpauth-firebase:iosX64Binaries - Assembles outputs for target 'iosX64'.
+kmpauth-google:iosX64Binaries - Assembles outputs for target 'iosX64'.
+kmpauth-uihelper:iosX64Binaries - Assembles outputs for target 'iosX64'.
+kmpnotifier:iosX64Binaries - Assembles outputs for target 'iosX64'.
+composeApp:iosX64MainBinaries - Links all binaries for compilation 'main' of target 'iosX64'.
+kmpauth-core:iosX64MainBinaries - Links all binaries for compilation 'main' of target 'iosX64'.
+kmpauth-firebase:iosX64MainBinaries - Links all binaries for compilation 'main' of target 'iosX64'.
+kmpauth-google:iosX64MainBinaries - Links all binaries for compilation 'main' of target 'iosX64'.
+kmpauth-uihelper:iosX64MainBinaries - Links all binaries for compilation 'main' of target 'iosX64'.
+kmpnotifier:iosX64MainBinaries - Links all binaries for compilation 'main' of target 'iosX64'.
+composeApp:iosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosX64'
+kmpauth-core:iosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosX64'
+kmpauth-firebase:iosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosX64'
+kmpauth-google:iosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosX64'
+kmpauth-uihelper:iosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosX64'
+kmpnotifier:iosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosX64'
+composeApp:iosX64MetadataElements - Assembles Kotlin metadata of target 'iosX64'.
+kmpauth-core:iosX64MetadataElements - Assembles Kotlin metadata of target 'iosX64'.
+kmpauth-firebase:iosX64MetadataElements - Assembles Kotlin metadata of target 'iosX64'.
+kmpauth-google:iosX64MetadataElements - Assembles Kotlin metadata of target 'iosX64'.
+kmpauth-uihelper:iosX64MetadataElements - Assembles Kotlin metadata of target 'iosX64'.
+kmpnotifier:iosX64MetadataElements - Assembles Kotlin metadata of target 'iosX64'.
+composeApp:iosX64SourcesJar - Assembles a jar archive containing the sources of target 'iosX64'.
+kmpauth-core:iosX64SourcesJar - Assembles a jar archive containing the sources of target 'iosX64'.
+kmpauth-firebase:iosX64SourcesJar - Assembles a jar archive containing the sources of target 'iosX64'.
+kmpauth-google:iosX64SourcesJar - Assembles a jar archive containing the sources of target 'iosX64'.
+kmpauth-uihelper:iosX64SourcesJar - Assembles a jar archive containing the sources of target 'iosX64'.
+kmpnotifier:iosX64SourcesJar - Assembles a jar archive containing the sources of target 'iosX64'.
+composeApp:iosX64TestBinaries - Links all binaries for compilation 'test' of target 'iosX64'.
+kmpauth-core:iosX64TestBinaries - Links all binaries for compilation 'test' of target 'iosX64'.
+kmpauth-firebase:iosX64TestBinaries - Links all binaries for compilation 'test' of target 'iosX64'.
+kmpauth-google:iosX64TestBinaries - Links all binaries for compilation 'test' of target 'iosX64'.
+kmpauth-uihelper:iosX64TestBinaries - Links all binaries for compilation 'test' of target 'iosX64'.
+kmpnotifier:iosX64TestBinaries - Links all binaries for compilation 'test' of target 'iosX64'.
+composeApp:iosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosX64'
+kmpauth-core:iosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosX64'
+kmpauth-firebase:iosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosX64'
+kmpauth-google:iosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosX64'
+kmpauth-uihelper:iosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosX64'
+kmpnotifier:iosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosX64'
+kmpnotifier:jsJar - Assembles an archive containing the main classes.
+kmpnotifier:jsMainClasses - Assembles outputs for compilation 'main' of target 'js'
+kmpnotifier:jsSourcesJar - Assembles a jar archive containing the sources of target 'js'.
+kmpnotifier:jsTestClasses - Assembles outputs for compilation 'test' of target 'js'
+kmpnotifier:jvmJar - Assembles an archive containing the main classes.
+kmpnotifier:jvmMainClasses - Assembles outputs for compilation 'main' of target 'jvm'
+kmpnotifier:jvmSourcesJar - Assembles a jar archive containing the sources of target 'jvm'.
+kmpnotifier:jvmTestClasses - Assembles outputs for compilation 'test' of target 'jvm'
+composeApp:linkDebugFrameworkIosArm64 - Links a framework 'debugFramework' for a target 'iosArm64'.
+composeApp:linkDebugFrameworkIosSimulatorArm64 - Links a framework 'debugFramework' for a target 'iosSimulatorArm64'.
+composeApp:linkDebugFrameworkIosX64 - Links a framework 'debugFramework' for a target 'iosX64'.
+composeApp:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+kmpauth-core:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+kmpauth-firebase:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+kmpauth-google:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+kmpauth-uihelper:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+kmpnotifier:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+composeApp:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+kmpauth-core:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+kmpauth-firebase:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+kmpauth-google:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+kmpauth-uihelper:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+kmpnotifier:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+composeApp:linkDebugTestIosX64 - Links a test executable 'debugTest' for a target 'iosX64'.
+kmpauth-core:linkDebugTestIosX64 - Links a test executable 'debugTest' for a target 'iosX64'.
+kmpauth-firebase:linkDebugTestIosX64 - Links a test executable 'debugTest' for a target 'iosX64'.
+kmpauth-google:linkDebugTestIosX64 - Links a test executable 'debugTest' for a target 'iosX64'.
+kmpauth-uihelper:linkDebugTestIosX64 - Links a test executable 'debugTest' for a target 'iosX64'.
+kmpnotifier:linkDebugTestIosX64 - Links a test executable 'debugTest' for a target 'iosX64'.
+composeApp:linkIosArm64 - Links all binaries for target 'iosArm64'.
+kmpauth-core:linkIosArm64 - Links all binaries for target 'iosArm64'.
+kmpauth-firebase:linkIosArm64 - Links all binaries for target 'iosArm64'.
+kmpauth-google:linkIosArm64 - Links all binaries for target 'iosArm64'.
+kmpauth-uihelper:linkIosArm64 - Links all binaries for target 'iosArm64'.
+kmpnotifier:linkIosArm64 - Links all binaries for target 'iosArm64'.
+composeApp:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpauth-core:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpauth-firebase:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpauth-google:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpauth-uihelper:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpnotifier:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+composeApp:linkIosX64 - Links all binaries for target 'iosX64'.
+kmpauth-core:linkIosX64 - Links all binaries for target 'iosX64'.
+kmpauth-firebase:linkIosX64 - Links all binaries for target 'iosX64'.
+kmpauth-google:linkIosX64 - Links all binaries for target 'iosX64'.
+kmpauth-uihelper:linkIosX64 - Links all binaries for target 'iosX64'.
+kmpnotifier:linkIosX64 - Links all binaries for target 'iosX64'.
+kmpauth-core:linkPodDebugFrameworkIosArm64 - Links a framework 'podDebugFramework' for a target 'iosArm64'.
+kmpauth-firebase:linkPodDebugFrameworkIosArm64 - Links a framework 'podDebugFramework' for a target 'iosArm64'.
+kmpauth-google:linkPodDebugFrameworkIosArm64 - Links a framework 'podDebugFramework' for a target 'iosArm64'.
+kmpauth-uihelper:linkPodDebugFrameworkIosArm64 - Links a framework 'podDebugFramework' for a target 'iosArm64'.
+kmpnotifier:linkPodDebugFrameworkIosArm64 - Links a framework 'podDebugFramework' for a target 'iosArm64'.
+kmpauth-core:linkPodDebugFrameworkIosSimulatorArm64 - Links a framework 'podDebugFramework' for a target 'iosSimulatorArm64'.
+kmpauth-firebase:linkPodDebugFrameworkIosSimulatorArm64 - Links a framework 'podDebugFramework' for a target 'iosSimulatorArm64'.
+kmpauth-google:linkPodDebugFrameworkIosSimulatorArm64 - Links a framework 'podDebugFramework' for a target 'iosSimulatorArm64'.
+kmpauth-uihelper:linkPodDebugFrameworkIosSimulatorArm64 - Links a framework 'podDebugFramework' for a target 'iosSimulatorArm64'.
+kmpnotifier:linkPodDebugFrameworkIosSimulatorArm64 - Links a framework 'podDebugFramework' for a target 'iosSimulatorArm64'.
+kmpauth-core:linkPodDebugFrameworkIosX64 - Links a framework 'podDebugFramework' for a target 'iosX64'.
+kmpauth-firebase:linkPodDebugFrameworkIosX64 - Links a framework 'podDebugFramework' for a target 'iosX64'.
+kmpauth-google:linkPodDebugFrameworkIosX64 - Links a framework 'podDebugFramework' for a target 'iosX64'.
+kmpauth-uihelper:linkPodDebugFrameworkIosX64 - Links a framework 'podDebugFramework' for a target 'iosX64'.
+kmpnotifier:linkPodDebugFrameworkIosX64 - Links a framework 'podDebugFramework' for a target 'iosX64'.
+kmpauth-core:linkPodIosArm64 - Links all binaries for target 'iosArm64'.
+kmpauth-firebase:linkPodIosArm64 - Links all binaries for target 'iosArm64'.
+kmpauth-google:linkPodIosArm64 - Links all binaries for target 'iosArm64'.
+kmpauth-uihelper:linkPodIosArm64 - Links all binaries for target 'iosArm64'.
+kmpnotifier:linkPodIosArm64 - Links all binaries for target 'iosArm64'.
+kmpauth-core:linkPodIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpauth-firebase:linkPodIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpauth-google:linkPodIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpauth-uihelper:linkPodIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpnotifier:linkPodIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+kmpauth-core:linkPodIosX64 - Links all binaries for target 'iosX64'.
+kmpauth-firebase:linkPodIosX64 - Links all binaries for target 'iosX64'.
+kmpauth-google:linkPodIosX64 - Links all binaries for target 'iosX64'.
+kmpauth-uihelper:linkPodIosX64 - Links all binaries for target 'iosX64'.
+kmpnotifier:linkPodIosX64 - Links all binaries for target 'iosX64'.
+kmpauth-core:linkPodReleaseFrameworkIosArm64 - Links a framework 'podReleaseFramework' for a target 'iosArm64'.
+kmpauth-firebase:linkPodReleaseFrameworkIosArm64 - Links a framework 'podReleaseFramework' for a target 'iosArm64'.
+kmpauth-google:linkPodReleaseFrameworkIosArm64 - Links a framework 'podReleaseFramework' for a target 'iosArm64'.
+kmpauth-uihelper:linkPodReleaseFrameworkIosArm64 - Links a framework 'podReleaseFramework' for a target 'iosArm64'.
+kmpnotifier:linkPodReleaseFrameworkIosArm64 - Links a framework 'podReleaseFramework' for a target 'iosArm64'.
+kmpauth-core:linkPodReleaseFrameworkIosSimulatorArm64 - Links a framework 'podReleaseFramework' for a target 'iosSimulatorArm64'.
+kmpauth-firebase:linkPodReleaseFrameworkIosSimulatorArm64 - Links a framework 'podReleaseFramework' for a target 'iosSimulatorArm64'.
+kmpauth-google:linkPodReleaseFrameworkIosSimulatorArm64 - Links a framework 'podReleaseFramework' for a target 'iosSimulatorArm64'.
+kmpauth-uihelper:linkPodReleaseFrameworkIosSimulatorArm64 - Links a framework 'podReleaseFramework' for a target 'iosSimulatorArm64'.
+kmpnotifier:linkPodReleaseFrameworkIosSimulatorArm64 - Links a framework 'podReleaseFramework' for a target 'iosSimulatorArm64'.
+kmpauth-core:linkPodReleaseFrameworkIosX64 - Links a framework 'podReleaseFramework' for a target 'iosX64'.
+kmpauth-firebase:linkPodReleaseFrameworkIosX64 - Links a framework 'podReleaseFramework' for a target 'iosX64'.
+kmpauth-google:linkPodReleaseFrameworkIosX64 - Links a framework 'podReleaseFramework' for a target 'iosX64'.
+kmpauth-uihelper:linkPodReleaseFrameworkIosX64 - Links a framework 'podReleaseFramework' for a target 'iosX64'.
+kmpnotifier:linkPodReleaseFrameworkIosX64 - Links a framework 'podReleaseFramework' for a target 'iosX64'.
+composeApp:linkReleaseFrameworkIosArm64 - Links a framework 'releaseFramework' for a target 'iosArm64'.
+composeApp:linkReleaseFrameworkIosSimulatorArm64 - Links a framework 'releaseFramework' for a target 'iosSimulatorArm64'.
+composeApp:linkReleaseFrameworkIosX64 - Links a framework 'releaseFramework' for a target 'iosX64'.
+composeApp:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+kmpauth-core:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+kmpauth-firebase:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+kmpauth-google:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+kmpauth-uihelper:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+kmpnotifier:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+composeApp:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+kmpauth-core:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+kmpauth-firebase:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+kmpauth-google:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+kmpauth-uihelper:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+kmpnotifier:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+composeApp:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+kmpauth-core:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+kmpauth-firebase:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+kmpauth-google:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+kmpauth-uihelper:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+kmpnotifier:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+composeApp:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+kmpauth-core:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+kmpauth-firebase:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+kmpauth-google:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+kmpauth-uihelper:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+kmpnotifier:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+composeApp:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+kmpauth-core:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+kmpauth-firebase:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+kmpauth-google:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+kmpauth-uihelper:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+kmpnotifier:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+composeApp:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+kmpauth-core:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+kmpauth-firebase:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+kmpauth-google:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+kmpauth-uihelper:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+kmpnotifier:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+kmpnotifier:wasmJsJar - Assembles an archive containing the main classes.
+kmpnotifier:wasmJsMainClasses - Assembles outputs for compilation 'main' of target 'wasmJs'
+kmpnotifier:wasmJsSourcesJar - Assembles a jar archive containing the sources of target 'wasmJs'.
+kmpnotifier:wasmJsTestClasses - Assembles outputs for compilation 'test' of target 'wasmJs'
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+updateDaemonJvm - Generates or updates the Gradle Daemon JVM criteria.
+wrapper - Generates Gradle wrapper files.
+
+BuildConfig tasks
+-----------------
+composeApp:generateAndroidDebugNonAndroidBuildConfig - Generates the build constants class for 'androidDebug' source
+composeApp:generateAndroidInstrumentedTestDebugNonAndroidBuildConfig - Generates the build constants class for 'androidInstrumentedTestDebug' source
+composeApp:generateAndroidInstrumentedTestNonAndroidBuildConfig - Generates the build constants class for 'androidInstrumentedTest' source
+composeApp:generateAndroidMainNonAndroidBuildConfig - Generates the build constants class for 'androidMain' source
+composeApp:generateAndroidReleaseNonAndroidBuildConfig - Generates the build constants class for 'androidRelease' source
+composeApp:generateAndroidUnitTestDebugNonAndroidBuildConfig - Generates the build constants class for 'androidUnitTestDebug' source
+composeApp:generateAndroidUnitTestNonAndroidBuildConfig - Generates the build constants class for 'androidUnitTest' source
+composeApp:generateAndroidUnitTestReleaseNonAndroidBuildConfig - Generates the build constants class for 'androidUnitTestRelease' source
+composeApp:generateAppleMainNonAndroidBuildConfig - Generates the build constants class for 'appleMain' source
+composeApp:generateAppleTestNonAndroidBuildConfig - Generates the build constants class for 'appleTest' source
+composeApp:generateIosArm64MainNonAndroidBuildConfig - Generates the build constants class for 'iosArm64Main' source
+composeApp:generateIosArm64TestNonAndroidBuildConfig - Generates the build constants class for 'iosArm64Test' source
+composeApp:generateIosMainNonAndroidBuildConfig - Generates the build constants class for 'iosMain' source
+composeApp:generateIosSimulatorArm64MainNonAndroidBuildConfig - Generates the build constants class for 'iosSimulatorArm64Main' source
+composeApp:generateIosSimulatorArm64TestNonAndroidBuildConfig - Generates the build constants class for 'iosSimulatorArm64Test' source
+composeApp:generateIosTestNonAndroidBuildConfig - Generates the build constants class for 'iosTest' source
+composeApp:generateIosX64MainNonAndroidBuildConfig - Generates the build constants class for 'iosX64Main' source
+composeApp:generateIosX64TestNonAndroidBuildConfig - Generates the build constants class for 'iosX64Test' source
+composeApp:generateNativeMainNonAndroidBuildConfig - Generates the build constants class for 'nativeMain' source
+composeApp:generateNativeTestNonAndroidBuildConfig - Generates the build constants class for 'nativeTest' source
+composeApp:generateNonAndroidBuildConfig - Generates the build constants class for 'main' source
+composeApp:generateTestNonAndroidBuildConfig - Generates the build constants class for 'test' source
+
+CocoaPods tasks
+---------------
+kmpnotifier:podBuildFirebaseMessagingIphoneos - Calls `xcodebuild` on xcworkspace for the pod scheme
+kmpnotifier:podBuildFirebaseMessagingIphonesimulator - Calls `xcodebuild` on xcworkspace for the pod scheme
+kmpauth-google:podBuildGoogleSignInIphoneos - Calls `xcodebuild` on xcworkspace for the pod scheme
+kmpauth-google:podBuildGoogleSignInIphonesimulator - Calls `xcodebuild` on xcworkspace for the pod scheme
+kmpauth-core:podImport - Called on Gradle sync, depends on Cinterop tasks for every used pod
+kmpauth-firebase:podImport - Called on Gradle sync, depends on Cinterop tasks for every used pod
+kmpauth-google:podImport - Called on Gradle sync, depends on Cinterop tasks for every used pod
+kmpauth-uihelper:podImport - Called on Gradle sync, depends on Cinterop tasks for every used pod
+kmpnotifier:podImport - Called on Gradle sync, depends on Cinterop tasks for every used pod
+kmpauth-core:podInstall - Invokes `pod install` call within Podfile location directory
+kmpauth-firebase:podInstall - Invokes `pod install` call within Podfile location directory
+kmpauth-google:podInstall - Invokes `pod install` call within Podfile location directory
+kmpauth-uihelper:podInstall - Invokes `pod install` call within Podfile location directory
+kmpnotifier:podInstall - Invokes `pod install` call within Podfile location directory
+kmpauth-core:podPublishDebugXCFramework - Produces Debug XCFramework for all requested targets
+kmpauth-firebase:podPublishDebugXCFramework - Produces Debug XCFramework for all requested targets
+kmpauth-google:podPublishDebugXCFramework - Produces Debug XCFramework for all requested targets
+kmpauth-uihelper:podPublishDebugXCFramework - Produces Debug XCFramework for all requested targets
+kmpnotifier:podPublishDebugXCFramework - Produces Debug XCFramework for all requested targets
+kmpauth-core:podPublishReleaseXCFramework - Produces Release XCFramework for all requested targets
+kmpauth-firebase:podPublishReleaseXCFramework - Produces Release XCFramework for all requested targets
+kmpauth-google:podPublishReleaseXCFramework - Produces Release XCFramework for all requested targets
+kmpauth-uihelper:podPublishReleaseXCFramework - Produces Release XCFramework for all requested targets
+kmpnotifier:podPublishReleaseXCFramework - Produces Release XCFramework for all requested targets
+kmpauth-core:podPublishXCFramework - Produces Release and Debug XCFrameworks with respective podspecs
+kmpauth-firebase:podPublishXCFramework - Produces Release and Debug XCFrameworks with respective podspecs
+kmpauth-google:podPublishXCFramework - Produces Release and Debug XCFrameworks with respective podspecs
+kmpauth-uihelper:podPublishXCFramework - Produces Release and Debug XCFrameworks with respective podspecs
+kmpnotifier:podPublishXCFramework - Produces Release and Debug XCFrameworks with respective podspecs
+kmpnotifier:podSetupBuildFirebaseMessagingIphoneos - Collect environment variables from .xcworkspace file
+kmpnotifier:podSetupBuildFirebaseMessagingIphonesimulator - Collect environment variables from .xcworkspace file
+kmpauth-google:podSetupBuildGoogleSignInIphoneos - Collect environment variables from .xcworkspace file
+kmpauth-google:podSetupBuildGoogleSignInIphonesimulator - Collect environment variables from .xcworkspace file
+kmpauth-core:podspec - Generates a podspec file for CocoaPods import
+kmpauth-firebase:podspec - Generates a podspec file for CocoaPods import
+kmpauth-google:podspec - Generates a podspec file for CocoaPods import
+kmpauth-uihelper:podspec - Generates a podspec file for CocoaPods import
+kmpnotifier:podspec - Generates a podspec file for CocoaPods import
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'PuntoEttore'.
+composeApp:buildEnvironment - Displays all buildscript dependencies declared in project ':composeApp'.
+kmpauth-core:buildEnvironment - Displays all buildscript dependencies declared in project ':kmpauth-core'.
+kmpauth-firebase:buildEnvironment - Displays all buildscript dependencies declared in project ':kmpauth-firebase'.
+kmpauth-google:buildEnvironment - Displays all buildscript dependencies declared in project ':kmpauth-google'.
+kmpauth-uihelper:buildEnvironment - Displays all buildscript dependencies declared in project ':kmpauth-uihelper'.
+kmpnotifier:buildEnvironment - Displays all buildscript dependencies declared in project ':kmpnotifier'.
+dependencies - Displays all dependencies declared in root project 'PuntoEttore'.
+composeApp:dependencies - Displays all dependencies declared in project ':composeApp'.
+kmpauth-core:dependencies - Displays all dependencies declared in project ':kmpauth-core'.
+kmpauth-firebase:dependencies - Displays all dependencies declared in project ':kmpauth-firebase'.
+kmpauth-google:dependencies - Displays all dependencies declared in project ':kmpauth-google'.
+kmpauth-uihelper:dependencies - Displays all dependencies declared in project ':kmpauth-uihelper'.
+kmpnotifier:dependencies - Displays all dependencies declared in project ':kmpnotifier'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'PuntoEttore'.
+composeApp:dependencyInsight - Displays the insight into a specific dependency in project ':composeApp'.
+kmpauth-core:dependencyInsight - Displays the insight into a specific dependency in project ':kmpauth-core'.
+kmpauth-firebase:dependencyInsight - Displays the insight into a specific dependency in project ':kmpauth-firebase'.
+kmpauth-google:dependencyInsight - Displays the insight into a specific dependency in project ':kmpauth-google'.
+kmpauth-uihelper:dependencyInsight - Displays the insight into a specific dependency in project ':kmpauth-uihelper'.
+kmpnotifier:dependencyInsight - Displays the insight into a specific dependency in project ':kmpnotifier'.
+help - Displays a help message.
+composeApp:help - Displays a help message.
+kmpauth-core:help - Displays a help message.
+kmpauth-firebase:help - Displays a help message.
+kmpauth-google:help - Displays a help message.
+kmpauth-uihelper:help - Displays a help message.
+kmpnotifier:help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+composeApp:javaToolchains - Displays the detected java toolchains.
+kmpauth-core:javaToolchains - Displays the detected java toolchains.
+kmpauth-firebase:javaToolchains - Displays the detected java toolchains.
+kmpauth-google:javaToolchains - Displays the detected java toolchains.
+kmpauth-uihelper:javaToolchains - Displays the detected java toolchains.
+kmpnotifier:javaToolchains - Displays the detected java toolchains.
+kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+composeApp:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+kmpauth-core:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+kmpauth-firebase:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+kmpauth-google:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+kmpauth-uihelper:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+kmpnotifier:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+outgoingVariants - Displays the outgoing variants of root project 'PuntoEttore'.
+composeApp:outgoingVariants - Displays the outgoing variants of project ':composeApp'.
+kmpauth-core:outgoingVariants - Displays the outgoing variants of project ':kmpauth-core'.
+kmpauth-firebase:outgoingVariants - Displays the outgoing variants of project ':kmpauth-firebase'.
+kmpauth-google:outgoingVariants - Displays the outgoing variants of project ':kmpauth-google'.
+kmpauth-uihelper:outgoingVariants - Displays the outgoing variants of project ':kmpauth-uihelper'.
+kmpnotifier:outgoingVariants - Displays the outgoing variants of project ':kmpnotifier'.
+projects - Displays the sub-projects of root project 'PuntoEttore'.
+composeApp:projects - Displays the sub-projects of project ':composeApp'.
+kmpauth-core:projects - Displays the sub-projects of project ':kmpauth-core'.
+kmpauth-firebase:projects - Displays the sub-projects of project ':kmpauth-firebase'.
+kmpauth-google:projects - Displays the sub-projects of project ':kmpauth-google'.
+kmpauth-uihelper:projects - Displays the sub-projects of project ':kmpauth-uihelper'.
+kmpnotifier:projects - Displays the sub-projects of project ':kmpnotifier'.
+properties - Displays the properties of root project 'PuntoEttore'.
+composeApp:properties - Displays the properties of project ':composeApp'.
+kmpauth-core:properties - Displays the properties of project ':kmpauth-core'.
+kmpauth-firebase:properties - Displays the properties of project ':kmpauth-firebase'.
+kmpauth-google:properties - Displays the properties of project ':kmpauth-google'.
+kmpauth-uihelper:properties - Displays the properties of project ':kmpauth-uihelper'.
+kmpnotifier:properties - Displays the properties of project ':kmpnotifier'.
+resolvableConfigurations - Displays the configurations that can be resolved in root project 'PuntoEttore'.
+composeApp:resolvableConfigurations - Displays the configurations that can be resolved in project ':composeApp'.
+kmpauth-core:resolvableConfigurations - Displays the configurations that can be resolved in project ':kmpauth-core'.
+kmpauth-firebase:resolvableConfigurations - Displays the configurations that can be resolved in project ':kmpauth-firebase'.
+kmpauth-google:resolvableConfigurations - Displays the configurations that can be resolved in project ':kmpauth-google'.
+kmpauth-uihelper:resolvableConfigurations - Displays the configurations that can be resolved in project ':kmpauth-uihelper'.
+kmpnotifier:resolvableConfigurations - Displays the configurations that can be resolved in project ':kmpnotifier'.
+tasks - Displays the tasks runnable from root project 'PuntoEttore' (some of the displayed tasks may belong to subprojects).
+composeApp:tasks - Displays the tasks runnable from project ':composeApp'.
+kmpauth-core:tasks - Displays the tasks runnable from project ':kmpauth-core'.
+kmpauth-firebase:tasks - Displays the tasks runnable from project ':kmpauth-firebase'.
+kmpauth-google:tasks - Displays the tasks runnable from project ':kmpauth-google'.
+kmpauth-uihelper:tasks - Displays the tasks runnable from project ':kmpauth-uihelper'.
+kmpnotifier:tasks - Displays the tasks runnable from project ':kmpnotifier'.
+
+Ide tasks
+---------
+composeApp:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+kmpauth-core:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+kmpauth-firebase:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+kmpauth-google:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+kmpauth-uihelper:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+kmpnotifier:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+
+Install tasks
+-------------
+composeApp:installDebug - Installs the Debug build.
+composeApp:installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+kmpauth-core:installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+kmpauth-firebase:installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+kmpauth-google:installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+kmpauth-uihelper:installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+kmpnotifier:installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+composeApp:installRelease - Installs the Release build.
+composeApp:uninstallAll - Uninstall all applications.
+kmpauth-core:uninstallAll - Uninstall all applications.
+kmpauth-firebase:uninstallAll - Uninstall all applications.
+kmpauth-google:uninstallAll - Uninstall all applications.
+kmpauth-uihelper:uninstallAll - Uninstall all applications.
+kmpnotifier:uninstallAll - Uninstall all applications.
+composeApp:uninstallDebug - Uninstalls the Debug build.
+composeApp:uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+kmpauth-core:uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+kmpauth-firebase:uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+kmpauth-google:uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+kmpauth-uihelper:uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+kmpnotifier:uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+composeApp:uninstallRelease - Uninstalls the Release build.
+
+Interop tasks
+-------------
+kmpnotifier:cinteropFirebaseMessagingIosArm64 - Generates Kotlin/Native interop library 'FirebaseMessaging' for compilation 'main'of target 'ios_arm64'.
+kmpnotifier:cinteropFirebaseMessagingIosSimulatorArm64 - Generates Kotlin/Native interop library 'FirebaseMessaging' for compilation 'main'of target 'ios_simulator_arm64'.
+kmpnotifier:cinteropFirebaseMessagingIosX64 - Generates Kotlin/Native interop library 'FirebaseMessaging' for compilation 'main'of target 'ios_x64'.
+kmpauth-google:cinteropGoogleSignInIosArm64 - Generates Kotlin/Native interop library 'GoogleSignIn' for compilation 'main'of target 'ios_arm64'.
+kmpauth-google:cinteropGoogleSignInIosSimulatorArm64 - Generates Kotlin/Native interop library 'GoogleSignIn' for compilation 'main'of target 'ios_simulator_arm64'.
+kmpauth-google:cinteropGoogleSignInIosX64 - Generates Kotlin/Native interop library 'GoogleSignIn' for compilation 'main'of target 'ios_x64'.
+cleanNativeDistributionCommonization - Deletes all previously commonized klib's from the Kotlin/Native distribution
+commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+composeApp:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+kmpauth-core:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+kmpauth-firebase:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+kmpauth-google:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+kmpauth-uihelper:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+kmpnotifier:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+composeApp:commonizeCInterop - Invokes the commonizer on c-interop bindings of the project
+kmpauth-core:commonizeCInterop - Invokes the commonizer on c-interop bindings of the project
+kmpauth-firebase:commonizeCInterop - Invokes the commonizer on c-interop bindings of the project
+kmpauth-google:commonizeCInterop - Invokes the commonizer on c-interop bindings of the project
+kmpauth-uihelper:commonizeCInterop - Invokes the commonizer on c-interop bindings of the project
+kmpnotifier:commonizeCInterop - Invokes the commonizer on c-interop bindings of the project
+commonizeNativeDistribution - Invokes the commonizer on platform libraries provided by the Kotlin/Native distribution
+kmpauth-google:copyCommonizeCInteropForIde - Copies the output of commonizeCInterop into the root projects .gradle folder for the IDE
+kmpnotifier:copyCommonizeCInteropForIde - Copies the output of commonizeCInterop into the root projects .gradle folder for the IDE
+runCommonizer - [Deprecated: Use 'commonize' instead]
+composeApp:runCommonizer - [Deprecated: Use 'commonize' instead]
+kmpauth-core:runCommonizer - [Deprecated: Use 'commonize' instead]
+kmpauth-firebase:runCommonizer - [Deprecated: Use 'commonize' instead]
+kmpauth-google:runCommonizer - [Deprecated: Use 'commonize' instead]
+kmpauth-uihelper:runCommonizer - [Deprecated: Use 'commonize' instead]
+kmpnotifier:runCommonizer - [Deprecated: Use 'commonize' instead]
+
+Kotlin browser tasks
+--------------------
+kmpnotifier:jsBrowserDevelopmentLibraryDistribution
+kmpnotifier:jsBrowserProductionLibraryDistribution
+
+Kotlin node tasks
+-----------------
+kmpnotifier:jsNodeDevelopmentLibraryDistribution
+kmpnotifier:jsNodeDevelopmentRun
+kmpnotifier:jsNodeProductionLibraryDistribution
+kmpnotifier:jsNodeProductionRun
+kmpnotifier:jsNodeRun
+
+NodeJs tasks
+------------
+kmpnotifier:jsPackageJson - Create package.json file for compilation 'main' (target js (js))
+kmpnotifier:jsTestPackageJson - Create package.json file for compilation 'test' (target js (js))
+kotlinNodeJsSetup - Download and install a local node/npm version
+kotlinNpmInstall - Find, download and link NPM dependencies and projects
+kotlinYarnSetup - Download and install a local yarn version
+nodeKotlinClean - Clean unused local node version
+rootPackageJson - Create root package.json
+kmpnotifier:wasmJsPackageJson - Create package.json file for compilation 'main' (target wasmJs (wasm))
+kmpnotifier:wasmJsTestPackageJson - Create package.json file for compilation 'test' (target wasmJs (wasm))
+
+Run tasks
+---------
+kmpnotifier:jvmRun - Jvm Run task for target 'jvm' and compilation 'main'. This task can act as carrier for the IDE to execute jvm based code
+
+Verification tasks
+------------------
+composeApp:allTests - Runs the tests for all targets and create aggregated report
+kmpauth-core:allTests - Runs the tests for all targets and create aggregated report
+kmpauth-firebase:allTests - Runs the tests for all targets and create aggregated report
+kmpauth-google:allTests - Runs the tests for all targets and create aggregated report
+kmpauth-uihelper:allTests - Runs the tests for all targets and create aggregated report
+kmpnotifier:allTests - Runs the tests for all targets and create aggregated report
+composeApp:androidApiCheck - Checks signatures of public API against the golden value in API folder for composeApp
+kmpauth-core:androidApiCheck - Checks signatures of public API against the golden value in API folder for kmpauth-core
+kmpauth-firebase:androidApiCheck - Checks signatures of public API against the golden value in API folder for kmpauth-firebase
+kmpauth-google:androidApiCheck - Checks signatures of public API against the golden value in API folder for kmpauth-google
+kmpauth-uihelper:androidApiCheck - Checks signatures of public API against the golden value in API folder for kmpauth-uihelper
+kmpnotifier:androidApiCheck - Checks signatures of public API against the golden value in API folder for kmpnotifier
+composeApp:apiCheck - Shortcut task that depends on all specific check tasks
+kmpauth-core:apiCheck - Shortcut task that depends on all specific check tasks
+kmpauth-firebase:apiCheck - Shortcut task that depends on all specific check tasks
+kmpauth-google:apiCheck - Shortcut task that depends on all specific check tasks
+kmpauth-uihelper:apiCheck - Shortcut task that depends on all specific check tasks
+kmpnotifier:apiCheck - Shortcut task that depends on all specific check tasks
+check - Runs all checks.
+composeApp:check - Runs all checks.
+kmpauth-core:check - Runs all checks.
+kmpauth-firebase:check - Runs all checks.
+kmpauth-google:check - Runs all checks.
+kmpauth-uihelper:check - Runs all checks.
+kmpnotifier:check - Runs all checks.
+composeApp:checkJetifier - Checks whether Jetifier is needed for the current project
+kmpauth-core:checkJetifier - Checks whether Jetifier is needed for the current project
+kmpauth-firebase:checkJetifier - Checks whether Jetifier is needed for the current project
+kmpauth-google:checkJetifier - Checks whether Jetifier is needed for the current project
+kmpauth-uihelper:checkJetifier - Checks whether Jetifier is needed for the current project
+kmpnotifier:checkJetifier - Checks whether Jetifier is needed for the current project
+composeApp:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+kmpauth-core:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+kmpauth-firebase:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+kmpauth-google:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+kmpauth-uihelper:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+kmpnotifier:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+composeApp:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+kmpauth-core:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+kmpauth-firebase:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+kmpauth-google:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+kmpauth-uihelper:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+kmpnotifier:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+composeApp:connectedCheck - Runs all device checks on currently connected devices.
+kmpauth-core:connectedCheck - Runs all device checks on currently connected devices.
+kmpauth-firebase:connectedCheck - Runs all device checks on currently connected devices.
+kmpauth-google:connectedCheck - Runs all device checks on currently connected devices.
+kmpauth-uihelper:connectedCheck - Runs all device checks on currently connected devices.
+kmpnotifier:connectedCheck - Runs all device checks on currently connected devices.
+composeApp:connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+kmpauth-core:connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+kmpauth-firebase:connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+kmpauth-google:connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+kmpauth-uihelper:connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+kmpnotifier:connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+composeApp:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+kmpauth-core:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+kmpauth-firebase:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+kmpauth-google:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+kmpauth-uihelper:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+kmpnotifier:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+composeApp:deviceCheck - Runs all device checks using Device Providers and Test Servers.
+kmpauth-core:deviceCheck - Runs all device checks using Device Providers and Test Servers.
+kmpauth-firebase:deviceCheck - Runs all device checks using Device Providers and Test Servers.
+kmpauth-google:deviceCheck - Runs all device checks using Device Providers and Test Servers.
+kmpauth-uihelper:deviceCheck - Runs all device checks using Device Providers and Test Servers.
+kmpnotifier:deviceCheck - Runs all device checks using Device Providers and Test Servers.
+composeApp:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+kmpauth-core:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+kmpauth-firebase:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+kmpauth-google:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+kmpauth-uihelper:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+kmpnotifier:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+composeApp:iosX64Test - Executes Kotlin/Native unit tests for target iosX64.
+kmpauth-core:iosX64Test - Executes Kotlin/Native unit tests for target iosX64.
+kmpauth-firebase:iosX64Test - Executes Kotlin/Native unit tests for target iosX64.
+kmpauth-google:iosX64Test - Executes Kotlin/Native unit tests for target iosX64.
+kmpauth-uihelper:iosX64Test - Executes Kotlin/Native unit tests for target iosX64.
+kmpnotifier:iosX64Test - Executes Kotlin/Native unit tests for target iosX64.
+kmpnotifier:jsBrowserTest - Run all js tests inside browser using karma and webpack
+kmpnotifier:jsNodeTest - Run all js tests inside nodejs using the builtin test framework
+kmpnotifier:jsTest - Run JS tests for all platforms
+kmpnotifier:jvmApiCheck - Checks signatures of public API against the golden value in API folder for kmpnotifier
+kmpnotifier:jvmTest - Runs the tests of the test test run.
+composeApp:lint - Runs lint on the default variant.
+kmpauth-core:lint - Runs lint on the default variant.
+kmpauth-firebase:lint - Runs lint on the default variant.
+kmpauth-google:lint - Runs lint on the default variant.
+kmpauth-uihelper:lint - Runs lint on the default variant.
+kmpnotifier:lint - Runs lint on the default variant.
+composeApp:lintDebug - Print text output from the corresponding lint report task
+kmpauth-core:lintDebug - Print text output from the corresponding lint report task
+kmpauth-firebase:lintDebug - Print text output from the corresponding lint report task
+kmpauth-google:lintDebug - Print text output from the corresponding lint report task
+kmpauth-uihelper:lintDebug - Print text output from the corresponding lint report task
+kmpnotifier:lintDebug - Print text output from the corresponding lint report task
+composeApp:lintFix - Runs lint on the default variant and applies any safe suggestions to the source code.
+kmpauth-core:lintFix - Runs lint on the default variant and applies any safe suggestions to the source code.
+kmpauth-firebase:lintFix - Runs lint on the default variant and applies any safe suggestions to the source code.
+kmpauth-google:lintFix - Runs lint on the default variant and applies any safe suggestions to the source code.
+kmpauth-uihelper:lintFix - Runs lint on the default variant and applies any safe suggestions to the source code.
+kmpnotifier:lintFix - Runs lint on the default variant and applies any safe suggestions to the source code.
+composeApp:lintRelease - Print text output from the corresponding lint report task
+kmpauth-core:lintRelease - Print text output from the corresponding lint report task
+kmpauth-firebase:lintRelease - Print text output from the corresponding lint report task
+kmpauth-google:lintRelease - Print text output from the corresponding lint report task
+kmpauth-uihelper:lintRelease - Print text output from the corresponding lint report task
+kmpnotifier:lintRelease - Print text output from the corresponding lint report task
+composeApp:lintVitalRelease - Print text output from the corresponding lint report task
+composeApp:test - Run unit tests for all variants.
+kmpauth-core:test - Run unit tests for all variants.
+kmpauth-firebase:test - Run unit tests for all variants.
+kmpauth-google:test - Run unit tests for all variants.
+kmpauth-uihelper:test - Run unit tests for all variants.
+kmpnotifier:test - Run unit tests for all variants.
+composeApp:testDebugUnitTest - Run unit tests for the debug build.
+kmpauth-core:testDebugUnitTest - Run unit tests for the debug build.
+kmpauth-firebase:testDebugUnitTest - Run unit tests for the debug build.
+kmpauth-google:testDebugUnitTest - Run unit tests for the debug build.
+kmpauth-uihelper:testDebugUnitTest - Run unit tests for the debug build.
+kmpnotifier:testDebugUnitTest - Run unit tests for the debug build.
+composeApp:testReleaseUnitTest - Run unit tests for the release build.
+kmpauth-core:testReleaseUnitTest - Run unit tests for the release build.
+kmpauth-firebase:testReleaseUnitTest - Run unit tests for the release build.
+kmpauth-google:testReleaseUnitTest - Run unit tests for the release build.
+kmpauth-uihelper:testReleaseUnitTest - Run unit tests for the release build.
+kmpnotifier:testReleaseUnitTest - Run unit tests for the release build.
+composeApp:updateLintBaseline - Updates the lint baseline using the default variant.
+kmpauth-core:updateLintBaseline - Updates the lint baseline using the default variant.
+kmpauth-firebase:updateLintBaseline - Updates the lint baseline using the default variant.
+kmpauth-google:updateLintBaseline - Updates the lint baseline using the default variant.
+kmpauth-uihelper:updateLintBaseline - Updates the lint baseline using the default variant.
+kmpnotifier:updateLintBaseline - Updates the lint baseline using the default variant.
+kmpnotifier:wasmJsBrowserTest - Run all wasmJs tests inside browser using karma and webpack
+kmpnotifier:wasmJsTest - Run JS tests for all platforms
+
+Other tasks
+-----------
+composeApp:analyzeDebugAndroidTestDependencies
+kmpauth-core:analyzeDebugAndroidTestDependencies
+kmpauth-firebase:analyzeDebugAndroidTestDependencies
+kmpauth-google:analyzeDebugAndroidTestDependencies
+kmpauth-uihelper:analyzeDebugAndroidTestDependencies
+kmpnotifier:analyzeDebugAndroidTestDependencies
+composeApp:analyzeDebugDependencies
+kmpauth-core:analyzeDebugDependencies
+kmpauth-firebase:analyzeDebugDependencies
+kmpauth-google:analyzeDebugDependencies
+kmpauth-uihelper:analyzeDebugDependencies
+kmpnotifier:analyzeDebugDependencies
+composeApp:analyzeDebugUnitTestDependencies
+kmpauth-core:analyzeDebugUnitTestDependencies
+kmpauth-firebase:analyzeDebugUnitTestDependencies
+kmpauth-google:analyzeDebugUnitTestDependencies
+kmpauth-uihelper:analyzeDebugUnitTestDependencies
+kmpnotifier:analyzeDebugUnitTestDependencies
+composeApp:analyzeReleaseDependencies
+kmpauth-core:analyzeReleaseDependencies
+kmpauth-firebase:analyzeReleaseDependencies
+kmpauth-google:analyzeReleaseDependencies
+kmpauth-uihelper:analyzeReleaseDependencies
+kmpnotifier:analyzeReleaseDependencies
+composeApp:analyzeReleaseUnitTestDependencies
+kmpauth-core:analyzeReleaseUnitTestDependencies
+kmpauth-firebase:analyzeReleaseUnitTestDependencies
+kmpauth-google:analyzeReleaseUnitTestDependencies
+kmpauth-uihelper:analyzeReleaseUnitTestDependencies
+kmpnotifier:analyzeReleaseUnitTestDependencies
+composeApp:androidApiBuild - Builds Kotlin API for 'main' compilations of composeApp. Complementary task and shouldn't be called manually
+kmpauth-core:androidApiBuild - Builds Kotlin API for 'main' compilations of kmpauth-core. Complementary task and shouldn't be called manually
+kmpauth-firebase:androidApiBuild - Builds Kotlin API for 'main' compilations of kmpauth-firebase. Complementary task and shouldn't be called manually
+kmpauth-google:androidApiBuild - Builds Kotlin API for 'main' compilations of kmpauth-google. Complementary task and shouldn't be called manually
+kmpauth-uihelper:androidApiBuild - Builds Kotlin API for 'main' compilations of kmpauth-uihelper. Complementary task and shouldn't be called manually
+kmpnotifier:androidApiBuild - Builds Kotlin API for 'main' compilations of kmpnotifier. Complementary task and shouldn't be called manually
+composeApp:androidApiDump - Syncs API from build dir to map(map(provider(?))) dir for composeApp
+kmpauth-core:androidApiDump - Syncs API from build dir to map(map(provider(?))) dir for kmpauth-core
+kmpauth-firebase:androidApiDump - Syncs API from build dir to map(map(provider(?))) dir for kmpauth-firebase
+kmpauth-google:androidApiDump - Syncs API from build dir to map(map(provider(?))) dir for kmpauth-google
+kmpauth-uihelper:androidApiDump - Syncs API from build dir to map(map(provider(?))) dir for kmpauth-uihelper
+kmpnotifier:androidApiDump - Syncs API from build dir to map(map(provider(?))) dir for kmpnotifier
+composeApp:apiDump - Task that collects all target specific dump tasks
+kmpauth-core:apiDump - Task that collects all target specific dump tasks
+kmpauth-firebase:apiDump - Task that collects all target specific dump tasks
+kmpauth-google:apiDump - Task that collects all target specific dump tasks
+kmpauth-uihelper:apiDump - Task that collects all target specific dump tasks
+kmpnotifier:apiDump - Task that collects all target specific dump tasks
+composeApp:asarToCompatSplitsForDebug
+composeApp:asarToCompatSplitsForRelease
+composeApp:assembleDebug - Assembles main output for variant debug
+kmpauth-core:assembleDebug - Assembles main output for variant debug
+kmpauth-firebase:assembleDebug - Assembles main output for variant debug
+kmpauth-google:assembleDebug - Assembles main output for variant debug
+kmpauth-uihelper:assembleDebug - Assembles main output for variant debug
+kmpnotifier:assembleDebug - Assembles main output for variant debug
+composeApp:assembleDebugAndroidTest - Assembles main output for variant debugAndroidTest
+kmpauth-core:assembleDebugAndroidTest - Assembles main output for variant debugAndroidTest
+kmpauth-firebase:assembleDebugAndroidTest - Assembles main output for variant debugAndroidTest
+kmpauth-google:assembleDebugAndroidTest - Assembles main output for variant debugAndroidTest
+kmpauth-uihelper:assembleDebugAndroidTest - Assembles main output for variant debugAndroidTest
+kmpnotifier:assembleDebugAndroidTest - Assembles main output for variant debugAndroidTest
+composeApp:assembleDebugUnitTest - Assembles main output for variant debugUnitTest
+kmpauth-core:assembleDebugUnitTest - Assembles main output for variant debugUnitTest
+kmpauth-firebase:assembleDebugUnitTest - Assembles main output for variant debugUnitTest
+kmpauth-google:assembleDebugUnitTest - Assembles main output for variant debugUnitTest
+kmpauth-uihelper:assembleDebugUnitTest - Assembles main output for variant debugUnitTest
+kmpnotifier:assembleDebugUnitTest - Assembles main output for variant debugUnitTest
+composeApp:assembleIosArm64MainResources
+kmpauth-firebase:assembleIosArm64MainResources
+kmpauth-google:assembleIosArm64MainResources
+kmpauth-uihelper:assembleIosArm64MainResources
+composeApp:assembleIosArm64TestResources
+kmpauth-firebase:assembleIosArm64TestResources
+kmpauth-google:assembleIosArm64TestResources
+kmpauth-uihelper:assembleIosArm64TestResources
+composeApp:assembleIosSimulatorArm64MainResources
+kmpauth-firebase:assembleIosSimulatorArm64MainResources
+kmpauth-google:assembleIosSimulatorArm64MainResources
+kmpauth-uihelper:assembleIosSimulatorArm64MainResources
+composeApp:assembleIosSimulatorArm64TestResources
+kmpauth-firebase:assembleIosSimulatorArm64TestResources
+kmpauth-google:assembleIosSimulatorArm64TestResources
+kmpauth-uihelper:assembleIosSimulatorArm64TestResources
+composeApp:assembleIosX64MainResources
+kmpauth-firebase:assembleIosX64MainResources
+kmpauth-google:assembleIosX64MainResources
+kmpauth-uihelper:assembleIosX64MainResources
+composeApp:assembleIosX64TestResources
+kmpauth-firebase:assembleIosX64TestResources
+kmpauth-google:assembleIosX64TestResources
+kmpauth-uihelper:assembleIosX64TestResources
+composeApp:assembleRelease - Assembles main output for variant release
+kmpauth-core:assembleRelease - Assembles main output for variant release
+kmpauth-firebase:assembleRelease - Assembles main output for variant release
+kmpauth-google:assembleRelease - Assembles main output for variant release
+kmpauth-uihelper:assembleRelease - Assembles main output for variant release
+kmpnotifier:assembleRelease - Assembles main output for variant release
+composeApp:assembleReleaseUnitTest - Assembles main output for variant releaseUnitTest
+kmpauth-core:assembleReleaseUnitTest - Assembles main output for variant releaseUnitTest
+kmpauth-firebase:assembleReleaseUnitTest - Assembles main output for variant releaseUnitTest
+kmpauth-google:assembleReleaseUnitTest - Assembles main output for variant releaseUnitTest
+kmpauth-uihelper:assembleReleaseUnitTest - Assembles main output for variant releaseUnitTest
+kmpnotifier:assembleReleaseUnitTest - Assembles main output for variant releaseUnitTest
+composeApp:buildDebugPreBundle
+composeApp:buildReleasePreBundle
+composeApp:bundleDebug - Assembles bundle for variant debug
+kmpauth-core:bundleDebugAar - Assembles a bundle containing the library in debug.
+kmpauth-firebase:bundleDebugAar - Assembles a bundle containing the library in debug.
+kmpauth-google:bundleDebugAar - Assembles a bundle containing the library in debug.
+kmpauth-uihelper:bundleDebugAar - Assembles a bundle containing the library in debug.
+kmpnotifier:bundleDebugAar - Assembles a bundle containing the library in debug.
+composeApp:bundleDebugClassesToCompileJar
+composeApp:bundleDebugClassesToRuntimeJar
+kmpauth-core:bundleDebugLocalLintAar - Assembles a bundle containing the library in debug.
+kmpauth-firebase:bundleDebugLocalLintAar - Assembles a bundle containing the library in debug.
+kmpauth-google:bundleDebugLocalLintAar - Assembles a bundle containing the library in debug.
+kmpauth-uihelper:bundleDebugLocalLintAar - Assembles a bundle containing the library in debug.
+kmpnotifier:bundleDebugLocalLintAar - Assembles a bundle containing the library in debug.
+composeApp:bundleDebugResources
+kmpauth-core:bundleLibCompileToJarDebug
+kmpauth-firebase:bundleLibCompileToJarDebug
+kmpauth-google:bundleLibCompileToJarDebug
+kmpauth-uihelper:bundleLibCompileToJarDebug
+kmpnotifier:bundleLibCompileToJarDebug
+kmpauth-core:bundleLibCompileToJarRelease
+kmpauth-firebase:bundleLibCompileToJarRelease
+kmpauth-google:bundleLibCompileToJarRelease
+kmpauth-uihelper:bundleLibCompileToJarRelease
+kmpnotifier:bundleLibCompileToJarRelease
+kmpauth-core:bundleLibRuntimeToDirDebug
+kmpauth-firebase:bundleLibRuntimeToDirDebug
+kmpauth-google:bundleLibRuntimeToDirDebug
+kmpauth-uihelper:bundleLibRuntimeToDirDebug
+kmpnotifier:bundleLibRuntimeToDirDebug
+kmpauth-core:bundleLibRuntimeToDirRelease
+kmpauth-firebase:bundleLibRuntimeToDirRelease
+kmpauth-google:bundleLibRuntimeToDirRelease
+kmpauth-uihelper:bundleLibRuntimeToDirRelease
+kmpnotifier:bundleLibRuntimeToDirRelease
+kmpauth-core:bundleLibRuntimeToJarDebug
+kmpauth-firebase:bundleLibRuntimeToJarDebug
+kmpauth-google:bundleLibRuntimeToJarDebug
+kmpauth-uihelper:bundleLibRuntimeToJarDebug
+kmpnotifier:bundleLibRuntimeToJarDebug
+kmpauth-core:bundleLibRuntimeToJarRelease
+kmpauth-firebase:bundleLibRuntimeToJarRelease
+kmpauth-google:bundleLibRuntimeToJarRelease
+kmpauth-uihelper:bundleLibRuntimeToJarRelease
+kmpnotifier:bundleLibRuntimeToJarRelease
+composeApp:bundleRelease - Assembles bundle for variant release
+kmpauth-core:bundleReleaseAar - Assembles a bundle containing the library in release.
+kmpauth-firebase:bundleReleaseAar - Assembles a bundle containing the library in release.
+kmpauth-google:bundleReleaseAar - Assembles a bundle containing the library in release.
+kmpauth-uihelper:bundleReleaseAar - Assembles a bundle containing the library in release.
+kmpnotifier:bundleReleaseAar - Assembles a bundle containing the library in release.
+composeApp:bundleReleaseClassesToCompileJar
+composeApp:bundleReleaseClassesToRuntimeJar
+kmpauth-core:bundleReleaseLocalLintAar - Assembles a bundle containing the library in release.
+kmpauth-firebase:bundleReleaseLocalLintAar - Assembles a bundle containing the library in release.
+kmpauth-google:bundleReleaseLocalLintAar - Assembles a bundle containing the library in release.
+kmpauth-uihelper:bundleReleaseLocalLintAar - Assembles a bundle containing the library in release.
+kmpnotifier:bundleReleaseLocalLintAar - Assembles a bundle containing the library in release.
+composeApp:bundleReleaseResources
+composeApp:checkCanSyncComposeResourcesForIos
+kmpauth-firebase:checkCanSyncPodComposeResourcesForIos
+kmpauth-google:checkCanSyncPodComposeResourcesForIos
+kmpauth-uihelper:checkCanSyncPodComposeResourcesForIos
+composeApp:checkDebugAarMetadata
+composeApp:checkDebugAndroidTestAarMetadata
+kmpauth-core:checkDebugAndroidTestAarMetadata
+kmpauth-firebase:checkDebugAndroidTestAarMetadata
+kmpauth-google:checkDebugAndroidTestAarMetadata
+kmpauth-uihelper:checkDebugAndroidTestAarMetadata
+kmpnotifier:checkDebugAndroidTestAarMetadata
+composeApp:checkDebugAndroidTestDuplicateClasses
+kmpauth-core:checkDebugAndroidTestDuplicateClasses
+kmpauth-firebase:checkDebugAndroidTestDuplicateClasses
+kmpauth-google:checkDebugAndroidTestDuplicateClasses
+kmpauth-uihelper:checkDebugAndroidTestDuplicateClasses
+kmpnotifier:checkDebugAndroidTestDuplicateClasses
+composeApp:checkDebugDuplicateClasses
+composeApp:checkDebugManifest
+kmpauth-core:checkDebugManifest
+kmpauth-firebase:checkDebugManifest
+kmpauth-google:checkDebugManifest
+kmpauth-uihelper:checkDebugManifest
+kmpnotifier:checkDebugManifest
+composeApp:checkReleaseAarMetadata
+composeApp:checkReleaseDuplicateClasses
+composeApp:checkReleaseManifest
+kmpauth-core:checkReleaseManifest
+kmpauth-firebase:checkReleaseManifest
+kmpauth-google:checkReleaseManifest
+kmpauth-uihelper:checkReleaseManifest
+kmpnotifier:checkReleaseManifest
+composeApp:collectReleaseDependencies
+composeApp:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+kmpauth-core:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+kmpauth-firebase:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+kmpauth-google:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+kmpauth-uihelper:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+kmpnotifier:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+composeApp:compileDebugAndroidTestJavaWithJavac
+kmpauth-core:compileDebugAndroidTestJavaWithJavac
+kmpauth-firebase:compileDebugAndroidTestJavaWithJavac
+kmpauth-google:compileDebugAndroidTestJavaWithJavac
+kmpauth-uihelper:compileDebugAndroidTestJavaWithJavac
+kmpnotifier:compileDebugAndroidTestJavaWithJavac
+composeApp:compileDebugAndroidTestKotlinAndroid - Compiles the debugAndroidTest kotlin.
+kmpauth-core:compileDebugAndroidTestKotlinAndroid - Compiles the debugAndroidTest kotlin.
+kmpauth-firebase:compileDebugAndroidTestKotlinAndroid - Compiles the debugAndroidTest kotlin.
+kmpauth-google:compileDebugAndroidTestKotlinAndroid - Compiles the debugAndroidTest kotlin.
+kmpauth-uihelper:compileDebugAndroidTestKotlinAndroid - Compiles the debugAndroidTest kotlin.
+kmpnotifier:compileDebugAndroidTestKotlinAndroid - Compiles the debugAndroidTest kotlin.
+composeApp:compileDebugAndroidTestShaders
+kmpauth-core:compileDebugAndroidTestShaders
+kmpauth-firebase:compileDebugAndroidTestShaders
+kmpauth-google:compileDebugAndroidTestShaders
+kmpauth-uihelper:compileDebugAndroidTestShaders
+kmpnotifier:compileDebugAndroidTestShaders
+composeApp:compileDebugArtProfile
+composeApp:compileDebugJavaWithJavac
+kmpauth-core:compileDebugJavaWithJavac
+kmpauth-firebase:compileDebugJavaWithJavac
+kmpauth-google:compileDebugJavaWithJavac
+kmpauth-uihelper:compileDebugJavaWithJavac
+kmpnotifier:compileDebugJavaWithJavac
+composeApp:compileDebugKotlinAndroid - Compiles the debug kotlin.
+kmpauth-core:compileDebugKotlinAndroid - Compiles the debug kotlin.
+kmpauth-firebase:compileDebugKotlinAndroid - Compiles the debug kotlin.
+kmpauth-google:compileDebugKotlinAndroid - Compiles the debug kotlin.
+kmpauth-uihelper:compileDebugKotlinAndroid - Compiles the debug kotlin.
+kmpnotifier:compileDebugKotlinAndroid - Compiles the debug kotlin.
+kmpauth-core:compileDebugLibraryResources
+kmpauth-firebase:compileDebugLibraryResources
+kmpauth-google:compileDebugLibraryResources
+kmpauth-uihelper:compileDebugLibraryResources
+kmpnotifier:compileDebugLibraryResources
+composeApp:compileDebugShaders
+kmpauth-core:compileDebugShaders
+kmpauth-firebase:compileDebugShaders
+kmpauth-google:compileDebugShaders
+kmpauth-uihelper:compileDebugShaders
+kmpnotifier:compileDebugShaders
+composeApp:compileDebugUnitTestJavaWithJavac
+kmpauth-core:compileDebugUnitTestJavaWithJavac
+kmpauth-firebase:compileDebugUnitTestJavaWithJavac
+kmpauth-google:compileDebugUnitTestJavaWithJavac
+kmpauth-uihelper:compileDebugUnitTestJavaWithJavac
+kmpnotifier:compileDebugUnitTestJavaWithJavac
+composeApp:compileDebugUnitTestKotlinAndroid - Compiles the debugUnitTest kotlin.
+kmpauth-core:compileDebugUnitTestKotlinAndroid - Compiles the debugUnitTest kotlin.
+kmpauth-firebase:compileDebugUnitTestKotlinAndroid - Compiles the debugUnitTest kotlin.
+kmpauth-google:compileDebugUnitTestKotlinAndroid - Compiles the debugUnitTest kotlin.
+kmpauth-uihelper:compileDebugUnitTestKotlinAndroid - Compiles the debugUnitTest kotlin.
+kmpnotifier:compileDebugUnitTestKotlinAndroid - Compiles the debugUnitTest kotlin.
+kmpnotifier:compileDevelopmentLibraryKotlinJs
+kmpnotifier:compileKotlinJs - Compiles the Kotlin sources in compilation 'main' in target 'js' to JavaScript.
+kmpnotifier:compileKotlinJvm - Compiles the compilation 'main' in target 'jvm'.
+composeApp:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+kmpauth-core:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+kmpauth-firebase:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+kmpauth-google:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+kmpauth-uihelper:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+kmpnotifier:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+kmpnotifier:compileKotlinWasmJs - Compiles the Kotlin sources in compilation 'main' in target 'wasmJs' to JavaScript.
+composeApp:compileLint
+kmpauth-core:compileLint
+kmpauth-firebase:compileLint
+kmpauth-google:compileLint
+kmpauth-uihelper:compileLint
+kmpnotifier:compileLint
+composeApp:compileLintChecks
+kmpauth-core:compileLintChecks
+kmpauth-firebase:compileLintChecks
+kmpauth-google:compileLintChecks
+kmpauth-uihelper:compileLintChecks
+kmpnotifier:compileLintChecks
+kmpnotifier:compileProductionLibraryKotlinJs
+composeApp:compileReleaseArtProfile
+composeApp:compileReleaseJavaWithJavac
+kmpauth-core:compileReleaseJavaWithJavac
+kmpauth-firebase:compileReleaseJavaWithJavac
+kmpauth-google:compileReleaseJavaWithJavac
+kmpauth-uihelper:compileReleaseJavaWithJavac
+kmpnotifier:compileReleaseJavaWithJavac
+composeApp:compileReleaseKotlinAndroid - Compiles the release kotlin.
+kmpauth-core:compileReleaseKotlinAndroid - Compiles the release kotlin.
+kmpauth-firebase:compileReleaseKotlinAndroid - Compiles the release kotlin.
+kmpauth-google:compileReleaseKotlinAndroid - Compiles the release kotlin.
+kmpauth-uihelper:compileReleaseKotlinAndroid - Compiles the release kotlin.
+kmpnotifier:compileReleaseKotlinAndroid - Compiles the release kotlin.
+kmpauth-core:compileReleaseLibraryResources
+kmpauth-firebase:compileReleaseLibraryResources
+kmpauth-google:compileReleaseLibraryResources
+kmpauth-uihelper:compileReleaseLibraryResources
+kmpnotifier:compileReleaseLibraryResources
+composeApp:compileReleaseShaders
+kmpauth-core:compileReleaseShaders
+kmpauth-firebase:compileReleaseShaders
+kmpauth-google:compileReleaseShaders
+kmpauth-uihelper:compileReleaseShaders
+kmpnotifier:compileReleaseShaders
+composeApp:compileReleaseUnitTestJavaWithJavac
+kmpauth-core:compileReleaseUnitTestJavaWithJavac
+kmpauth-firebase:compileReleaseUnitTestJavaWithJavac
+kmpauth-google:compileReleaseUnitTestJavaWithJavac
+kmpauth-uihelper:compileReleaseUnitTestJavaWithJavac
+kmpnotifier:compileReleaseUnitTestJavaWithJavac
+composeApp:compileReleaseUnitTestKotlinAndroid - Compiles the releaseUnitTest kotlin.
+kmpauth-core:compileReleaseUnitTestKotlinAndroid - Compiles the releaseUnitTest kotlin.
+kmpauth-firebase:compileReleaseUnitTestKotlinAndroid - Compiles the releaseUnitTest kotlin.
+kmpauth-google:compileReleaseUnitTestKotlinAndroid - Compiles the releaseUnitTest kotlin.
+kmpauth-uihelper:compileReleaseUnitTestKotlinAndroid - Compiles the releaseUnitTest kotlin.
+kmpnotifier:compileReleaseUnitTestKotlinAndroid - Compiles the releaseUnitTest kotlin.
+kmpnotifier:compileTestDevelopmentExecutableKotlinJs
+kmpnotifier:compileTestDevelopmentExecutableKotlinWasmJs
+kmpnotifier:compileTestDevelopmentExecutableKotlinWasmJsOptimize
+kmpnotifier:compileTestKotlinJs - Compiles the Kotlin sources in compilation 'test' in target 'js' to JavaScript.
+kmpnotifier:compileTestKotlinJvm - Compiles the compilation 'test' in target 'jvm'.
+kmpnotifier:compileTestKotlinWasmJs - Compiles the Kotlin sources in compilation 'test' in target 'wasmJs' to JavaScript.
+kmpnotifier:compileTestProductionExecutableKotlinJs
+kmpnotifier:compileTestProductionExecutableKotlinWasmJs
+kmpnotifier:compileTestProductionExecutableKotlinWasmJsOptimize
+components - Displays the components produced by root project 'PuntoEttore'. [deprecated]
+composeApp:components - Displays the components produced by project ':composeApp'. [deprecated]
+kmpauth-core:components - Displays the components produced by project ':kmpauth-core'. [deprecated]
+kmpauth-firebase:components - Displays the components produced by project ':kmpauth-firebase'. [deprecated]
+kmpauth-google:components - Displays the components produced by project ':kmpauth-google'. [deprecated]
+kmpauth-uihelper:components - Displays the components produced by project ':kmpauth-uihelper'. [deprecated]
+kmpnotifier:components - Displays the components produced by project ':kmpnotifier'. [deprecated]
+composeApp:compressDebugAndroidTestAssets
+kmpauth-core:compressDebugAndroidTestAssets
+kmpauth-firebase:compressDebugAndroidTestAssets
+kmpauth-google:compressDebugAndroidTestAssets
+kmpauth-uihelper:compressDebugAndroidTestAssets
+kmpnotifier:compressDebugAndroidTestAssets
+composeApp:compressDebugAssets
+composeApp:compressReleaseAssets
+composeApp:configureReleaseDependencies
+composeApp:consumeConfigAttr
+kmpauth-core:consumeConfigAttr
+kmpauth-firebase:consumeConfigAttr
+kmpauth-google:consumeConfigAttr
+kmpauth-uihelper:consumeConfigAttr
+kmpnotifier:consumeConfigAttr
+composeApp:convertXmlValueResourcesForAndroidDebug
+kmpauth-firebase:convertXmlValueResourcesForAndroidDebug
+kmpauth-google:convertXmlValueResourcesForAndroidDebug
+kmpauth-uihelper:convertXmlValueResourcesForAndroidDebug
+composeApp:convertXmlValueResourcesForAndroidInstrumentedTest
+kmpauth-firebase:convertXmlValueResourcesForAndroidInstrumentedTest
+kmpauth-google:convertXmlValueResourcesForAndroidInstrumentedTest
+kmpauth-uihelper:convertXmlValueResourcesForAndroidInstrumentedTest
+composeApp:convertXmlValueResourcesForAndroidInstrumentedTestDebug
+kmpauth-firebase:convertXmlValueResourcesForAndroidInstrumentedTestDebug
+kmpauth-google:convertXmlValueResourcesForAndroidInstrumentedTestDebug
+kmpauth-uihelper:convertXmlValueResourcesForAndroidInstrumentedTestDebug
+composeApp:convertXmlValueResourcesForAndroidMain
+kmpauth-firebase:convertXmlValueResourcesForAndroidMain
+kmpauth-google:convertXmlValueResourcesForAndroidMain
+kmpauth-uihelper:convertXmlValueResourcesForAndroidMain
+composeApp:convertXmlValueResourcesForAndroidRelease
+kmpauth-firebase:convertXmlValueResourcesForAndroidRelease
+kmpauth-google:convertXmlValueResourcesForAndroidRelease
+kmpauth-uihelper:convertXmlValueResourcesForAndroidRelease
+composeApp:convertXmlValueResourcesForAndroidUnitTest
+kmpauth-firebase:convertXmlValueResourcesForAndroidUnitTest
+kmpauth-google:convertXmlValueResourcesForAndroidUnitTest
+kmpauth-uihelper:convertXmlValueResourcesForAndroidUnitTest
+composeApp:convertXmlValueResourcesForAndroidUnitTestDebug
+kmpauth-firebase:convertXmlValueResourcesForAndroidUnitTestDebug
+kmpauth-google:convertXmlValueResourcesForAndroidUnitTestDebug
+kmpauth-uihelper:convertXmlValueResourcesForAndroidUnitTestDebug
+composeApp:convertXmlValueResourcesForAndroidUnitTestRelease
+kmpauth-firebase:convertXmlValueResourcesForAndroidUnitTestRelease
+kmpauth-google:convertXmlValueResourcesForAndroidUnitTestRelease
+kmpauth-uihelper:convertXmlValueResourcesForAndroidUnitTestRelease
+composeApp:convertXmlValueResourcesForAppleMain
+kmpauth-firebase:convertXmlValueResourcesForAppleMain
+kmpauth-google:convertXmlValueResourcesForAppleMain
+kmpauth-uihelper:convertXmlValueResourcesForAppleMain
+composeApp:convertXmlValueResourcesForAppleTest
+kmpauth-firebase:convertXmlValueResourcesForAppleTest
+kmpauth-google:convertXmlValueResourcesForAppleTest
+kmpauth-uihelper:convertXmlValueResourcesForAppleTest
+composeApp:convertXmlValueResourcesForCommonMain
+kmpauth-firebase:convertXmlValueResourcesForCommonMain
+kmpauth-google:convertXmlValueResourcesForCommonMain
+kmpauth-uihelper:convertXmlValueResourcesForCommonMain
+composeApp:convertXmlValueResourcesForCommonTest
+kmpauth-firebase:convertXmlValueResourcesForCommonTest
+kmpauth-google:convertXmlValueResourcesForCommonTest
+kmpauth-uihelper:convertXmlValueResourcesForCommonTest
+composeApp:convertXmlValueResourcesForIosArm64Main
+kmpauth-firebase:convertXmlValueResourcesForIosArm64Main
+kmpauth-google:convertXmlValueResourcesForIosArm64Main
+kmpauth-uihelper:convertXmlValueResourcesForIosArm64Main
+composeApp:convertXmlValueResourcesForIosArm64Test
+kmpauth-firebase:convertXmlValueResourcesForIosArm64Test
+kmpauth-google:convertXmlValueResourcesForIosArm64Test
+kmpauth-uihelper:convertXmlValueResourcesForIosArm64Test
+composeApp:convertXmlValueResourcesForIosMain
+kmpauth-firebase:convertXmlValueResourcesForIosMain
+kmpauth-google:convertXmlValueResourcesForIosMain
+kmpauth-uihelper:convertXmlValueResourcesForIosMain
+composeApp:convertXmlValueResourcesForIosSimulatorArm64Main
+kmpauth-firebase:convertXmlValueResourcesForIosSimulatorArm64Main
+kmpauth-google:convertXmlValueResourcesForIosSimulatorArm64Main
+kmpauth-uihelper:convertXmlValueResourcesForIosSimulatorArm64Main
+composeApp:convertXmlValueResourcesForIosSimulatorArm64Test
+kmpauth-firebase:convertXmlValueResourcesForIosSimulatorArm64Test
+kmpauth-google:convertXmlValueResourcesForIosSimulatorArm64Test
+kmpauth-uihelper:convertXmlValueResourcesForIosSimulatorArm64Test
+composeApp:convertXmlValueResourcesForIosTest
+kmpauth-firebase:convertXmlValueResourcesForIosTest
+kmpauth-google:convertXmlValueResourcesForIosTest
+kmpauth-uihelper:convertXmlValueResourcesForIosTest
+composeApp:convertXmlValueResourcesForIosX64Main
+kmpauth-firebase:convertXmlValueResourcesForIosX64Main
+kmpauth-google:convertXmlValueResourcesForIosX64Main
+kmpauth-uihelper:convertXmlValueResourcesForIosX64Main
+composeApp:convertXmlValueResourcesForIosX64Test
+kmpauth-firebase:convertXmlValueResourcesForIosX64Test
+kmpauth-google:convertXmlValueResourcesForIosX64Test
+kmpauth-uihelper:convertXmlValueResourcesForIosX64Test
+composeApp:convertXmlValueResourcesForNativeMain
+kmpauth-firebase:convertXmlValueResourcesForNativeMain
+kmpauth-google:convertXmlValueResourcesForNativeMain
+kmpauth-uihelper:convertXmlValueResourcesForNativeMain
+composeApp:convertXmlValueResourcesForNativeTest
+kmpauth-firebase:convertXmlValueResourcesForNativeTest
+kmpauth-google:convertXmlValueResourcesForNativeTest
+kmpauth-uihelper:convertXmlValueResourcesForNativeTest
+composeApp:copyDebugAndroidTestComposeResourcesToAndroidAssets
+kmpauth-firebase:copyDebugAndroidTestComposeResourcesToAndroidAssets
+kmpauth-google:copyDebugAndroidTestComposeResourcesToAndroidAssets
+kmpauth-uihelper:copyDebugAndroidTestComposeResourcesToAndroidAssets
+composeApp:copyDebugComposeResourcesToAndroidAssets
+kmpauth-firebase:copyDebugComposeResourcesToAndroidAssets
+kmpauth-google:copyDebugComposeResourcesToAndroidAssets
+kmpauth-uihelper:copyDebugComposeResourcesToAndroidAssets
+kmpauth-core:copyDebugJniLibsProjectAndLocalJars
+kmpauth-firebase:copyDebugJniLibsProjectAndLocalJars
+kmpauth-google:copyDebugJniLibsProjectAndLocalJars
+kmpauth-uihelper:copyDebugJniLibsProjectAndLocalJars
+kmpnotifier:copyDebugJniLibsProjectAndLocalJars
+kmpauth-core:copyDebugJniLibsProjectOnly
+kmpauth-firebase:copyDebugJniLibsProjectOnly
+kmpauth-google:copyDebugJniLibsProjectOnly
+kmpauth-uihelper:copyDebugJniLibsProjectOnly
+kmpnotifier:copyDebugJniLibsProjectOnly
+composeApp:copyNonXmlValueResourcesForAndroidDebug
+kmpauth-firebase:copyNonXmlValueResourcesForAndroidDebug
+kmpauth-google:copyNonXmlValueResourcesForAndroidDebug
+kmpauth-uihelper:copyNonXmlValueResourcesForAndroidDebug
+composeApp:copyNonXmlValueResourcesForAndroidInstrumentedTest
+kmpauth-firebase:copyNonXmlValueResourcesForAndroidInstrumentedTest
+kmpauth-google:copyNonXmlValueResourcesForAndroidInstrumentedTest
+kmpauth-uihelper:copyNonXmlValueResourcesForAndroidInstrumentedTest
+composeApp:copyNonXmlValueResourcesForAndroidInstrumentedTestDebug
+kmpauth-firebase:copyNonXmlValueResourcesForAndroidInstrumentedTestDebug
+kmpauth-google:copyNonXmlValueResourcesForAndroidInstrumentedTestDebug
+kmpauth-uihelper:copyNonXmlValueResourcesForAndroidInstrumentedTestDebug
+composeApp:copyNonXmlValueResourcesForAndroidMain
+kmpauth-firebase:copyNonXmlValueResourcesForAndroidMain
+kmpauth-google:copyNonXmlValueResourcesForAndroidMain
+kmpauth-uihelper:copyNonXmlValueResourcesForAndroidMain
+composeApp:copyNonXmlValueResourcesForAndroidRelease
+kmpauth-firebase:copyNonXmlValueResourcesForAndroidRelease
+kmpauth-google:copyNonXmlValueResourcesForAndroidRelease
+kmpauth-uihelper:copyNonXmlValueResourcesForAndroidRelease
+composeApp:copyNonXmlValueResourcesForAndroidUnitTest
+kmpauth-firebase:copyNonXmlValueResourcesForAndroidUnitTest
+kmpauth-google:copyNonXmlValueResourcesForAndroidUnitTest
+kmpauth-uihelper:copyNonXmlValueResourcesForAndroidUnitTest
+composeApp:copyNonXmlValueResourcesForAndroidUnitTestDebug
+kmpauth-firebase:copyNonXmlValueResourcesForAndroidUnitTestDebug
+kmpauth-google:copyNonXmlValueResourcesForAndroidUnitTestDebug
+kmpauth-uihelper:copyNonXmlValueResourcesForAndroidUnitTestDebug
+composeApp:copyNonXmlValueResourcesForAndroidUnitTestRelease
+kmpauth-firebase:copyNonXmlValueResourcesForAndroidUnitTestRelease
+kmpauth-google:copyNonXmlValueResourcesForAndroidUnitTestRelease
+kmpauth-uihelper:copyNonXmlValueResourcesForAndroidUnitTestRelease
+composeApp:copyNonXmlValueResourcesForAppleMain
+kmpauth-firebase:copyNonXmlValueResourcesForAppleMain
+kmpauth-google:copyNonXmlValueResourcesForAppleMain
+kmpauth-uihelper:copyNonXmlValueResourcesForAppleMain
+composeApp:copyNonXmlValueResourcesForAppleTest
+kmpauth-firebase:copyNonXmlValueResourcesForAppleTest
+kmpauth-google:copyNonXmlValueResourcesForAppleTest
+kmpauth-uihelper:copyNonXmlValueResourcesForAppleTest
+composeApp:copyNonXmlValueResourcesForCommonMain
+kmpauth-firebase:copyNonXmlValueResourcesForCommonMain
+kmpauth-google:copyNonXmlValueResourcesForCommonMain
+kmpauth-uihelper:copyNonXmlValueResourcesForCommonMain
+composeApp:copyNonXmlValueResourcesForCommonTest
+kmpauth-firebase:copyNonXmlValueResourcesForCommonTest
+kmpauth-google:copyNonXmlValueResourcesForCommonTest
+kmpauth-uihelper:copyNonXmlValueResourcesForCommonTest
+composeApp:copyNonXmlValueResourcesForIosArm64Main
+kmpauth-firebase:copyNonXmlValueResourcesForIosArm64Main
+kmpauth-google:copyNonXmlValueResourcesForIosArm64Main
+kmpauth-uihelper:copyNonXmlValueResourcesForIosArm64Main
+composeApp:copyNonXmlValueResourcesForIosArm64Test
+kmpauth-firebase:copyNonXmlValueResourcesForIosArm64Test
+kmpauth-google:copyNonXmlValueResourcesForIosArm64Test
+kmpauth-uihelper:copyNonXmlValueResourcesForIosArm64Test
+composeApp:copyNonXmlValueResourcesForIosMain
+kmpauth-firebase:copyNonXmlValueResourcesForIosMain
+kmpauth-google:copyNonXmlValueResourcesForIosMain
+kmpauth-uihelper:copyNonXmlValueResourcesForIosMain
+composeApp:copyNonXmlValueResourcesForIosSimulatorArm64Main
+kmpauth-firebase:copyNonXmlValueResourcesForIosSimulatorArm64Main
+kmpauth-google:copyNonXmlValueResourcesForIosSimulatorArm64Main
+kmpauth-uihelper:copyNonXmlValueResourcesForIosSimulatorArm64Main
+composeApp:copyNonXmlValueResourcesForIosSimulatorArm64Test
+kmpauth-firebase:copyNonXmlValueResourcesForIosSimulatorArm64Test
+kmpauth-google:copyNonXmlValueResourcesForIosSimulatorArm64Test
+kmpauth-uihelper:copyNonXmlValueResourcesForIosSimulatorArm64Test
+composeApp:copyNonXmlValueResourcesForIosTest
+kmpauth-firebase:copyNonXmlValueResourcesForIosTest
+kmpauth-google:copyNonXmlValueResourcesForIosTest
+kmpauth-uihelper:copyNonXmlValueResourcesForIosTest
+composeApp:copyNonXmlValueResourcesForIosX64Main
+kmpauth-firebase:copyNonXmlValueResourcesForIosX64Main
+kmpauth-google:copyNonXmlValueResourcesForIosX64Main
+kmpauth-uihelper:copyNonXmlValueResourcesForIosX64Main
+composeApp:copyNonXmlValueResourcesForIosX64Test
+kmpauth-firebase:copyNonXmlValueResourcesForIosX64Test
+kmpauth-google:copyNonXmlValueResourcesForIosX64Test
+kmpauth-uihelper:copyNonXmlValueResourcesForIosX64Test
+composeApp:copyNonXmlValueResourcesForNativeMain
+kmpauth-firebase:copyNonXmlValueResourcesForNativeMain
+kmpauth-google:copyNonXmlValueResourcesForNativeMain
+kmpauth-uihelper:copyNonXmlValueResourcesForNativeMain
+composeApp:copyNonXmlValueResourcesForNativeTest
+kmpauth-firebase:copyNonXmlValueResourcesForNativeTest
+kmpauth-google:copyNonXmlValueResourcesForNativeTest
+kmpauth-uihelper:copyNonXmlValueResourcesForNativeTest
+composeApp:copyReleaseComposeResourcesToAndroidAssets
+kmpauth-firebase:copyReleaseComposeResourcesToAndroidAssets
+kmpauth-google:copyReleaseComposeResourcesToAndroidAssets
+kmpauth-uihelper:copyReleaseComposeResourcesToAndroidAssets
+kmpauth-core:copyReleaseJniLibsProjectAndLocalJars
+kmpauth-firebase:copyReleaseJniLibsProjectAndLocalJars
+kmpauth-google:copyReleaseJniLibsProjectAndLocalJars
+kmpauth-uihelper:copyReleaseJniLibsProjectAndLocalJars
+kmpnotifier:copyReleaseJniLibsProjectAndLocalJars
+kmpauth-core:copyReleaseJniLibsProjectOnly
+kmpauth-firebase:copyReleaseJniLibsProjectOnly
+kmpauth-google:copyReleaseJniLibsProjectOnly
+kmpauth-uihelper:copyReleaseJniLibsProjectOnly
+kmpnotifier:copyReleaseJniLibsProjectOnly
+composeApp:copyRoomSchemas
+composeApp:copyRoomSchemasToAndroidTestAssetsDebugAndroidTest
+composeApp:copyTestComposeResourcesForIosArm64
+kmpauth-firebase:copyTestComposeResourcesForIosArm64
+kmpauth-google:copyTestComposeResourcesForIosArm64
+kmpauth-uihelper:copyTestComposeResourcesForIosArm64
+composeApp:copyTestComposeResourcesForIosSimulatorArm64
+kmpauth-firebase:copyTestComposeResourcesForIosSimulatorArm64
+kmpauth-google:copyTestComposeResourcesForIosSimulatorArm64
+kmpauth-uihelper:copyTestComposeResourcesForIosSimulatorArm64
+composeApp:copyTestComposeResourcesForIosX64
+kmpauth-firebase:copyTestComposeResourcesForIosX64
+kmpauth-google:copyTestComposeResourcesForIosX64
+kmpauth-uihelper:copyTestComposeResourcesForIosX64
+composeApp:createDebugAndroidTestApkListingFileRedirect
+kmpauth-core:createDebugAndroidTestApkListingFileRedirect
+kmpauth-firebase:createDebugAndroidTestApkListingFileRedirect
+kmpauth-google:createDebugAndroidTestApkListingFileRedirect
+kmpauth-uihelper:createDebugAndroidTestApkListingFileRedirect
+kmpnotifier:createDebugAndroidTestApkListingFileRedirect
+composeApp:createDebugApkListingFileRedirect
+composeApp:createDebugApksFromBundleListingFileRedirect
+composeApp:createDebugBundleListingFileRedirect
+composeApp:createDebugCompatibleScreenManifests
+kmpauth-core:createFullJarDebug
+kmpauth-firebase:createFullJarDebug
+kmpauth-google:createFullJarDebug
+kmpauth-uihelper:createFullJarDebug
+kmpnotifier:createFullJarDebug
+kmpauth-core:createFullJarRelease
+kmpauth-firebase:createFullJarRelease
+kmpauth-google:createFullJarRelease
+kmpauth-uihelper:createFullJarRelease
+kmpnotifier:createFullJarRelease
+composeApp:createMockableJar
+kmpauth-core:createMockableJar
+kmpauth-firebase:createMockableJar
+kmpauth-google:createMockableJar
+kmpauth-uihelper:createMockableJar
+kmpnotifier:createMockableJar
+composeApp:createReleaseApkListingFileRedirect
+composeApp:createReleaseApksFromBundleListingFileRedirect
+composeApp:createReleaseBundleListingFileRedirect
+composeApp:createReleaseCompatibleScreenManifests
+composeApp:debugAssetsCopyForAGP
+kmpauth-core:debugAssetsCopyForAGP
+kmpauth-firebase:debugAssetsCopyForAGP
+kmpauth-google:debugAssetsCopyForAGP
+kmpauth-uihelper:debugAssetsCopyForAGP
+kmpnotifier:debugAssetsCopyForAGP
+dependentComponents - Displays the dependent components of components in root project 'PuntoEttore'. [deprecated]
+composeApp:dependentComponents - Displays the dependent components of components in project ':composeApp'. [deprecated]
+kmpauth-core:dependentComponents - Displays the dependent components of components in project ':kmpauth-core'. [deprecated]
+kmpauth-firebase:dependentComponents - Displays the dependent components of components in project ':kmpauth-firebase'. [deprecated]
+kmpauth-google:dependentComponents - Displays the dependent components of components in project ':kmpauth-google'. [deprecated]
+kmpauth-uihelper:dependentComponents - Displays the dependent components of components in project ':kmpauth-uihelper'. [deprecated]
+kmpnotifier:dependentComponents - Displays the dependent components of components in project ':kmpnotifier'. [deprecated]
+composeApp:desugarDebugAndroidTestFileDependencies
+kmpauth-core:desugarDebugAndroidTestFileDependencies
+kmpauth-firebase:desugarDebugAndroidTestFileDependencies
+kmpauth-google:desugarDebugAndroidTestFileDependencies
+kmpauth-uihelper:desugarDebugAndroidTestFileDependencies
+kmpnotifier:desugarDebugAndroidTestFileDependencies
+composeApp:desugarDebugFileDependencies
+composeApp:desugarReleaseFileDependencies
+composeApp:dexBuilderDebug
+composeApp:dexBuilderDebugAndroidTest
+kmpauth-core:dexBuilderDebugAndroidTest
+kmpauth-firebase:dexBuilderDebugAndroidTest
+kmpauth-google:dexBuilderDebugAndroidTest
+kmpauth-uihelper:dexBuilderDebugAndroidTest
+kmpnotifier:dexBuilderDebugAndroidTest
+composeApp:dexBuilderRelease
+kmpauth-core:exportDebugConsumerProguardFiles
+kmpauth-firebase:exportDebugConsumerProguardFiles
+kmpauth-google:exportDebugConsumerProguardFiles
+kmpauth-uihelper:exportDebugConsumerProguardFiles
+kmpnotifier:exportDebugConsumerProguardFiles
+kmpauth-core:exportReleaseConsumerProguardFiles
+kmpauth-firebase:exportReleaseConsumerProguardFiles
+kmpauth-google:exportReleaseConsumerProguardFiles
+kmpauth-uihelper:exportReleaseConsumerProguardFiles
+kmpnotifier:exportReleaseConsumerProguardFiles
+composeApp:extractApksForDebug
+composeApp:extractApksForRelease
+composeApp:extractApksFromBundleForDebug
+composeApp:extractApksFromBundleForRelease
+composeApp:extractDebugNativeDebugMetadata
+composeApp:extractDebugNativeSymbolTables
+kmpauth-core:extractDebugSupportedLocales
+kmpauth-firebase:extractDebugSupportedLocales
+kmpauth-google:extractDebugSupportedLocales
+kmpauth-uihelper:extractDebugSupportedLocales
+kmpnotifier:extractDebugSupportedLocales
+composeApp:extractDeepLinksDebug
+kmpauth-core:extractDeepLinksDebug
+kmpauth-firebase:extractDeepLinksDebug
+kmpauth-google:extractDeepLinksDebug
+kmpauth-uihelper:extractDeepLinksDebug
+kmpnotifier:extractDeepLinksDebug
+kmpauth-core:extractDeepLinksForAarDebug
+kmpauth-firebase:extractDeepLinksForAarDebug
+kmpauth-google:extractDeepLinksForAarDebug
+kmpauth-uihelper:extractDeepLinksForAarDebug
+kmpnotifier:extractDeepLinksForAarDebug
+kmpauth-core:extractDeepLinksForAarRelease
+kmpauth-firebase:extractDeepLinksForAarRelease
+kmpauth-google:extractDeepLinksForAarRelease
+kmpauth-uihelper:extractDeepLinksForAarRelease
+kmpnotifier:extractDeepLinksForAarRelease
+composeApp:extractDeepLinksRelease
+kmpauth-core:extractDeepLinksRelease
+kmpauth-firebase:extractDeepLinksRelease
+kmpauth-google:extractDeepLinksRelease
+kmpauth-uihelper:extractDeepLinksRelease
+kmpnotifier:extractDeepLinksRelease
+composeApp:extractProguardFiles
+kmpauth-core:extractProguardFiles
+kmpauth-firebase:extractProguardFiles
+kmpauth-google:extractProguardFiles
+kmpauth-uihelper:extractProguardFiles
+kmpnotifier:extractProguardFiles
+composeApp:extractReleaseNativeDebugMetadata
+composeApp:extractReleaseNativeSymbolTables
+kmpauth-core:extractReleaseSupportedLocales
+kmpauth-firebase:extractReleaseSupportedLocales
+kmpauth-google:extractReleaseSupportedLocales
+kmpauth-uihelper:extractReleaseSupportedLocales
+kmpnotifier:extractReleaseSupportedLocales
+composeApp:extractReleaseVersionControlInfo
+composeApp:generateActualResourceCollectorsForAndroidMain
+kmpauth-firebase:generateActualResourceCollectorsForAndroidMain
+kmpauth-google:generateActualResourceCollectorsForAndroidMain
+kmpauth-uihelper:generateActualResourceCollectorsForAndroidMain
+composeApp:generateActualResourceCollectorsForIosArm64Main
+kmpauth-firebase:generateActualResourceCollectorsForIosArm64Main
+kmpauth-google:generateActualResourceCollectorsForIosArm64Main
+kmpauth-uihelper:generateActualResourceCollectorsForIosArm64Main
+composeApp:generateActualResourceCollectorsForIosSimulatorArm64Main
+kmpauth-firebase:generateActualResourceCollectorsForIosSimulatorArm64Main
+kmpauth-google:generateActualResourceCollectorsForIosSimulatorArm64Main
+kmpauth-uihelper:generateActualResourceCollectorsForIosSimulatorArm64Main
+composeApp:generateActualResourceCollectorsForIosX64Main
+kmpauth-firebase:generateActualResourceCollectorsForIosX64Main
+kmpauth-google:generateActualResourceCollectorsForIosX64Main
+kmpauth-uihelper:generateActualResourceCollectorsForIosX64Main
+composeApp:generateComposeResClass
+kmpauth-firebase:generateComposeResClass
+kmpauth-google:generateComposeResClass
+kmpauth-uihelper:generateComposeResClass
+composeApp:generateDebugAndroidTestAssets
+kmpauth-core:generateDebugAndroidTestAssets
+kmpauth-firebase:generateDebugAndroidTestAssets
+kmpauth-google:generateDebugAndroidTestAssets
+kmpauth-uihelper:generateDebugAndroidTestAssets
+kmpnotifier:generateDebugAndroidTestAssets
+composeApp:generateDebugAndroidTestBuildConfig
+kmpauth-firebase:generateDebugAndroidTestBuildConfig
+composeApp:generateDebugAndroidTestLintModel
+kmpauth-core:generateDebugAndroidTestLintModel
+kmpauth-firebase:generateDebugAndroidTestLintModel
+kmpauth-google:generateDebugAndroidTestLintModel
+kmpauth-uihelper:generateDebugAndroidTestLintModel
+kmpnotifier:generateDebugAndroidTestLintModel
+composeApp:generateDebugAndroidTestResources
+kmpauth-core:generateDebugAndroidTestResources
+kmpauth-firebase:generateDebugAndroidTestResources
+kmpauth-google:generateDebugAndroidTestResources
+kmpauth-uihelper:generateDebugAndroidTestResources
+kmpnotifier:generateDebugAndroidTestResources
+composeApp:generateDebugAndroidTestResValues
+kmpauth-core:generateDebugAndroidTestResValues
+kmpauth-firebase:generateDebugAndroidTestResValues
+kmpauth-google:generateDebugAndroidTestResValues
+kmpauth-uihelper:generateDebugAndroidTestResValues
+kmpnotifier:generateDebugAndroidTestResValues
+composeApp:generateDebugAndroidTestSources
+kmpauth-core:generateDebugAndroidTestSources
+kmpauth-firebase:generateDebugAndroidTestSources
+kmpauth-google:generateDebugAndroidTestSources
+kmpauth-uihelper:generateDebugAndroidTestSources
+kmpnotifier:generateDebugAndroidTestSources
+composeApp:generateDebugAssets
+kmpauth-core:generateDebugAssets
+kmpauth-firebase:generateDebugAssets
+kmpauth-google:generateDebugAssets
+kmpauth-uihelper:generateDebugAssets
+kmpnotifier:generateDebugAssets
+composeApp:generateDebugBuildConfig
+kmpauth-firebase:generateDebugBuildConfig
+kmpauth-core:generateDebugExternalPublicTxt
+kmpauth-firebase:generateDebugExternalPublicTxt
+kmpauth-google:generateDebugExternalPublicTxt
+kmpauth-uihelper:generateDebugExternalPublicTxt
+kmpnotifier:generateDebugExternalPublicTxt
+composeApp:generateDebugFeatureMetadata
+composeApp:generateDebugFeatureTransitiveDeps
+composeApp:generateDebugLintModel
+kmpauth-core:generateDebugLintModel
+kmpauth-firebase:generateDebugLintModel
+kmpauth-google:generateDebugLintModel
+kmpauth-uihelper:generateDebugLintModel
+kmpnotifier:generateDebugLintModel
+composeApp:generateDebugLintReportModel
+kmpauth-core:generateDebugLintReportModel
+kmpauth-firebase:generateDebugLintReportModel
+kmpauth-google:generateDebugLintReportModel
+kmpauth-uihelper:generateDebugLintReportModel
+kmpnotifier:generateDebugLintReportModel
+kmpauth-core:generateDebugLintVitalModel
+kmpauth-firebase:generateDebugLintVitalModel
+kmpauth-google:generateDebugLintVitalModel
+kmpauth-uihelper:generateDebugLintVitalModel
+kmpnotifier:generateDebugLintVitalModel
+composeApp:generateDebugManifestClass
+composeApp:generateDebugResources
+kmpauth-core:generateDebugResources
+kmpauth-firebase:generateDebugResources
+kmpauth-google:generateDebugResources
+kmpauth-uihelper:generateDebugResources
+kmpnotifier:generateDebugResources
+composeApp:generateDebugResValues
+kmpauth-core:generateDebugResValues
+kmpauth-firebase:generateDebugResValues
+kmpauth-google:generateDebugResValues
+kmpauth-uihelper:generateDebugResValues
+kmpnotifier:generateDebugResValues
+kmpauth-core:generateDebugRFile
+kmpauth-firebase:generateDebugRFile
+kmpauth-google:generateDebugRFile
+kmpauth-uihelper:generateDebugRFile
+kmpnotifier:generateDebugRFile
+composeApp:generateDebugSources
+kmpauth-core:generateDebugSources
+kmpauth-firebase:generateDebugSources
+kmpauth-google:generateDebugSources
+kmpauth-uihelper:generateDebugSources
+kmpnotifier:generateDebugSources
+composeApp:generateDebugUnitTestAssets
+kmpauth-core:generateDebugUnitTestAssets
+kmpauth-firebase:generateDebugUnitTestAssets
+kmpauth-google:generateDebugUnitTestAssets
+kmpauth-uihelper:generateDebugUnitTestAssets
+kmpnotifier:generateDebugUnitTestAssets
+composeApp:generateDebugUnitTestLintModel
+kmpauth-core:generateDebugUnitTestLintModel
+kmpauth-firebase:generateDebugUnitTestLintModel
+kmpauth-google:generateDebugUnitTestLintModel
+kmpauth-uihelper:generateDebugUnitTestLintModel
+kmpnotifier:generateDebugUnitTestLintModel
+composeApp:generateDebugUnitTestResources
+kmpauth-core:generateDebugUnitTestResources
+kmpauth-firebase:generateDebugUnitTestResources
+kmpauth-google:generateDebugUnitTestResources
+kmpauth-uihelper:generateDebugUnitTestResources
+kmpnotifier:generateDebugUnitTestResources
+composeApp:generateDebugUnitTestSources
+kmpauth-core:generateDebugUnitTestSources
+kmpauth-firebase:generateDebugUnitTestSources
+kmpauth-google:generateDebugUnitTestSources
+kmpauth-uihelper:generateDebugUnitTestSources
+kmpnotifier:generateDebugUnitTestSources
+kmpauth-core:generateDebugUnitTestStubRFile
+kmpauth-firebase:generateDebugUnitTestStubRFile
+kmpauth-google:generateDebugUnitTestStubRFile
+kmpauth-uihelper:generateDebugUnitTestStubRFile
+kmpnotifier:generateDebugUnitTestStubRFile
+kmpnotifier:generateDefFirebaseMessaging - Generates a def file for CocoaPods dependencies with module FirebaseMessaging
+kmpauth-google:generateDefGoogleSignIn - Generates a def file for CocoaPods dependencies with module GoogleSignIn
+kmpauth-core:generateDummyFramework
+kmpauth-firebase:generateDummyFramework
+kmpauth-google:generateDummyFramework
+kmpauth-uihelper:generateDummyFramework
+kmpnotifier:generateDummyFramework
+composeApp:generateExpectResourceCollectorsForCommonMain
+kmpauth-firebase:generateExpectResourceCollectorsForCommonMain
+kmpauth-google:generateExpectResourceCollectorsForCommonMain
+kmpauth-uihelper:generateExpectResourceCollectorsForCommonMain
+composeApp:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+kmpauth-core:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+kmpauth-firebase:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+kmpauth-google:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+kmpauth-uihelper:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+kmpnotifier:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+composeApp:generateReleaseAssets
+kmpauth-core:generateReleaseAssets
+kmpauth-firebase:generateReleaseAssets
+kmpauth-google:generateReleaseAssets
+kmpauth-uihelper:generateReleaseAssets
+kmpnotifier:generateReleaseAssets
+composeApp:generateReleaseBuildConfig
+kmpauth-firebase:generateReleaseBuildConfig
+kmpauth-core:generateReleaseExternalPublicTxt
+kmpauth-firebase:generateReleaseExternalPublicTxt
+kmpauth-google:generateReleaseExternalPublicTxt
+kmpauth-uihelper:generateReleaseExternalPublicTxt
+kmpnotifier:generateReleaseExternalPublicTxt
+composeApp:generateReleaseFeatureMetadata
+composeApp:generateReleaseFeatureTransitiveDeps
+composeApp:generateReleaseLintModel
+kmpauth-core:generateReleaseLintModel
+kmpauth-firebase:generateReleaseLintModel
+kmpauth-google:generateReleaseLintModel
+kmpauth-uihelper:generateReleaseLintModel
+kmpnotifier:generateReleaseLintModel
+composeApp:generateReleaseLintReportModel
+kmpauth-core:generateReleaseLintReportModel
+kmpauth-firebase:generateReleaseLintReportModel
+kmpauth-google:generateReleaseLintReportModel
+kmpauth-uihelper:generateReleaseLintReportModel
+kmpnotifier:generateReleaseLintReportModel
+kmpauth-core:generateReleaseLintVitalModel
+kmpauth-firebase:generateReleaseLintVitalModel
+kmpauth-google:generateReleaseLintVitalModel
+kmpauth-uihelper:generateReleaseLintVitalModel
+kmpnotifier:generateReleaseLintVitalModel
+composeApp:generateReleaseLintVitalReportModel
+composeApp:generateReleaseManifestClass
+composeApp:generateReleaseResources
+kmpauth-core:generateReleaseResources
+kmpauth-firebase:generateReleaseResources
+kmpauth-google:generateReleaseResources
+kmpauth-uihelper:generateReleaseResources
+kmpnotifier:generateReleaseResources
+composeApp:generateReleaseResValues
+kmpauth-core:generateReleaseResValues
+kmpauth-firebase:generateReleaseResValues
+kmpauth-google:generateReleaseResValues
+kmpauth-uihelper:generateReleaseResValues
+kmpnotifier:generateReleaseResValues
+kmpauth-core:generateReleaseRFile
+kmpauth-firebase:generateReleaseRFile
+kmpauth-google:generateReleaseRFile
+kmpauth-uihelper:generateReleaseRFile
+kmpnotifier:generateReleaseRFile
+composeApp:generateReleaseSources
+kmpauth-core:generateReleaseSources
+kmpauth-firebase:generateReleaseSources
+kmpauth-google:generateReleaseSources
+kmpauth-uihelper:generateReleaseSources
+kmpnotifier:generateReleaseSources
+composeApp:generateReleaseUnitTestAssets
+kmpauth-core:generateReleaseUnitTestAssets
+kmpauth-firebase:generateReleaseUnitTestAssets
+kmpauth-google:generateReleaseUnitTestAssets
+kmpauth-uihelper:generateReleaseUnitTestAssets
+kmpnotifier:generateReleaseUnitTestAssets
+composeApp:generateReleaseUnitTestLintModel
+kmpauth-core:generateReleaseUnitTestLintModel
+kmpauth-firebase:generateReleaseUnitTestLintModel
+kmpauth-google:generateReleaseUnitTestLintModel
+kmpauth-uihelper:generateReleaseUnitTestLintModel
+kmpnotifier:generateReleaseUnitTestLintModel
+composeApp:generateReleaseUnitTestResources
+kmpauth-core:generateReleaseUnitTestResources
+kmpauth-firebase:generateReleaseUnitTestResources
+kmpauth-google:generateReleaseUnitTestResources
+kmpauth-uihelper:generateReleaseUnitTestResources
+kmpnotifier:generateReleaseUnitTestResources
+composeApp:generateReleaseUnitTestSources
+kmpauth-core:generateReleaseUnitTestSources
+kmpauth-firebase:generateReleaseUnitTestSources
+kmpauth-google:generateReleaseUnitTestSources
+kmpauth-uihelper:generateReleaseUnitTestSources
+kmpnotifier:generateReleaseUnitTestSources
+kmpauth-core:generateReleaseUnitTestStubRFile
+kmpauth-firebase:generateReleaseUnitTestStubRFile
+kmpauth-google:generateReleaseUnitTestStubRFile
+kmpauth-uihelper:generateReleaseUnitTestStubRFile
+kmpnotifier:generateReleaseUnitTestStubRFile
+composeApp:generateResourceAccessorsForAndroidDebug
+kmpauth-firebase:generateResourceAccessorsForAndroidDebug
+kmpauth-google:generateResourceAccessorsForAndroidDebug
+kmpauth-uihelper:generateResourceAccessorsForAndroidDebug
+composeApp:generateResourceAccessorsForAndroidInstrumentedTest
+kmpauth-firebase:generateResourceAccessorsForAndroidInstrumentedTest
+kmpauth-google:generateResourceAccessorsForAndroidInstrumentedTest
+kmpauth-uihelper:generateResourceAccessorsForAndroidInstrumentedTest
+composeApp:generateResourceAccessorsForAndroidInstrumentedTestDebug
+kmpauth-firebase:generateResourceAccessorsForAndroidInstrumentedTestDebug
+kmpauth-google:generateResourceAccessorsForAndroidInstrumentedTestDebug
+kmpauth-uihelper:generateResourceAccessorsForAndroidInstrumentedTestDebug
+composeApp:generateResourceAccessorsForAndroidMain
+kmpauth-firebase:generateResourceAccessorsForAndroidMain
+kmpauth-google:generateResourceAccessorsForAndroidMain
+kmpauth-uihelper:generateResourceAccessorsForAndroidMain
+composeApp:generateResourceAccessorsForAndroidRelease
+kmpauth-firebase:generateResourceAccessorsForAndroidRelease
+kmpauth-google:generateResourceAccessorsForAndroidRelease
+kmpauth-uihelper:generateResourceAccessorsForAndroidRelease
+composeApp:generateResourceAccessorsForAndroidUnitTest
+kmpauth-firebase:generateResourceAccessorsForAndroidUnitTest
+kmpauth-google:generateResourceAccessorsForAndroidUnitTest
+kmpauth-uihelper:generateResourceAccessorsForAndroidUnitTest
+composeApp:generateResourceAccessorsForAndroidUnitTestDebug
+kmpauth-firebase:generateResourceAccessorsForAndroidUnitTestDebug
+kmpauth-google:generateResourceAccessorsForAndroidUnitTestDebug
+kmpauth-uihelper:generateResourceAccessorsForAndroidUnitTestDebug
+composeApp:generateResourceAccessorsForAndroidUnitTestRelease
+kmpauth-firebase:generateResourceAccessorsForAndroidUnitTestRelease
+kmpauth-google:generateResourceAccessorsForAndroidUnitTestRelease
+kmpauth-uihelper:generateResourceAccessorsForAndroidUnitTestRelease
+composeApp:generateResourceAccessorsForAppleMain
+kmpauth-firebase:generateResourceAccessorsForAppleMain
+kmpauth-google:generateResourceAccessorsForAppleMain
+kmpauth-uihelper:generateResourceAccessorsForAppleMain
+composeApp:generateResourceAccessorsForAppleTest
+kmpauth-firebase:generateResourceAccessorsForAppleTest
+kmpauth-google:generateResourceAccessorsForAppleTest
+kmpauth-uihelper:generateResourceAccessorsForAppleTest
+composeApp:generateResourceAccessorsForCommonMain
+kmpauth-firebase:generateResourceAccessorsForCommonMain
+kmpauth-google:generateResourceAccessorsForCommonMain
+kmpauth-uihelper:generateResourceAccessorsForCommonMain
+composeApp:generateResourceAccessorsForCommonTest
+kmpauth-firebase:generateResourceAccessorsForCommonTest
+kmpauth-google:generateResourceAccessorsForCommonTest
+kmpauth-uihelper:generateResourceAccessorsForCommonTest
+composeApp:generateResourceAccessorsForIosArm64Main
+kmpauth-firebase:generateResourceAccessorsForIosArm64Main
+kmpauth-google:generateResourceAccessorsForIosArm64Main
+kmpauth-uihelper:generateResourceAccessorsForIosArm64Main
+composeApp:generateResourceAccessorsForIosArm64Test
+kmpauth-firebase:generateResourceAccessorsForIosArm64Test
+kmpauth-google:generateResourceAccessorsForIosArm64Test
+kmpauth-uihelper:generateResourceAccessorsForIosArm64Test
+composeApp:generateResourceAccessorsForIosMain
+kmpauth-firebase:generateResourceAccessorsForIosMain
+kmpauth-google:generateResourceAccessorsForIosMain
+kmpauth-uihelper:generateResourceAccessorsForIosMain
+composeApp:generateResourceAccessorsForIosSimulatorArm64Main
+kmpauth-firebase:generateResourceAccessorsForIosSimulatorArm64Main
+kmpauth-google:generateResourceAccessorsForIosSimulatorArm64Main
+kmpauth-uihelper:generateResourceAccessorsForIosSimulatorArm64Main
+composeApp:generateResourceAccessorsForIosSimulatorArm64Test
+kmpauth-firebase:generateResourceAccessorsForIosSimulatorArm64Test
+kmpauth-google:generateResourceAccessorsForIosSimulatorArm64Test
+kmpauth-uihelper:generateResourceAccessorsForIosSimulatorArm64Test
+composeApp:generateResourceAccessorsForIosTest
+kmpauth-firebase:generateResourceAccessorsForIosTest
+kmpauth-google:generateResourceAccessorsForIosTest
+kmpauth-uihelper:generateResourceAccessorsForIosTest
+composeApp:generateResourceAccessorsForIosX64Main
+kmpauth-firebase:generateResourceAccessorsForIosX64Main
+kmpauth-google:generateResourceAccessorsForIosX64Main
+kmpauth-uihelper:generateResourceAccessorsForIosX64Main
+composeApp:generateResourceAccessorsForIosX64Test
+kmpauth-firebase:generateResourceAccessorsForIosX64Test
+kmpauth-google:generateResourceAccessorsForIosX64Test
+kmpauth-uihelper:generateResourceAccessorsForIosX64Test
+composeApp:generateResourceAccessorsForNativeMain
+kmpauth-firebase:generateResourceAccessorsForNativeMain
+kmpauth-google:generateResourceAccessorsForNativeMain
+kmpauth-uihelper:generateResourceAccessorsForNativeMain
+composeApp:generateResourceAccessorsForNativeTest
+kmpauth-firebase:generateResourceAccessorsForNativeTest
+kmpauth-google:generateResourceAccessorsForNativeTest
+kmpauth-uihelper:generateResourceAccessorsForNativeTest
+composeApp:getAppName
+composeApp:iosArm64AggregateResources
+kmpauth-firebase:iosArm64AggregateResources
+kmpauth-google:iosArm64AggregateResources
+kmpauth-uihelper:iosArm64AggregateResources
+composeApp:iosArm64CopyHierarchicalMultiplatformResources
+kmpauth-firebase:iosArm64CopyHierarchicalMultiplatformResources
+kmpauth-google:iosArm64CopyHierarchicalMultiplatformResources
+kmpauth-uihelper:iosArm64CopyHierarchicalMultiplatformResources
+composeApp:iosArm64ProcessResources - Processes file collection.
+kmpauth-core:iosArm64ProcessResources - Processes file collection.
+kmpauth-firebase:iosArm64ProcessResources - Processes file collection.
+kmpauth-google:iosArm64ProcessResources - Processes file collection.
+kmpauth-uihelper:iosArm64ProcessResources - Processes file collection.
+kmpnotifier:iosArm64ProcessResources - Processes file collection.
+composeApp:iosArm64ResolveResourcesFromDependencies
+kmpauth-firebase:iosArm64ResolveResourcesFromDependencies
+kmpauth-google:iosArm64ResolveResourcesFromDependencies
+kmpauth-uihelper:iosArm64ResolveResourcesFromDependencies
+composeApp:iosArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+kmpauth-firebase:iosArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+kmpauth-google:iosArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+kmpauth-uihelper:iosArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+composeApp:iosArm64TestProcessResources - Processes file collection.
+kmpauth-core:iosArm64TestProcessResources - Processes file collection.
+kmpauth-firebase:iosArm64TestProcessResources - Processes file collection.
+kmpauth-google:iosArm64TestProcessResources - Processes file collection.
+kmpauth-uihelper:iosArm64TestProcessResources - Processes file collection.
+kmpnotifier:iosArm64TestProcessResources - Processes file collection.
+composeApp:iosArm64ZipMultiplatformResourcesForPublication
+kmpauth-firebase:iosArm64ZipMultiplatformResourcesForPublication
+kmpauth-google:iosArm64ZipMultiplatformResourcesForPublication
+kmpauth-uihelper:iosArm64ZipMultiplatformResourcesForPublication
+composeApp:iosSimulatorArm64AggregateResources
+kmpauth-firebase:iosSimulatorArm64AggregateResources
+kmpauth-google:iosSimulatorArm64AggregateResources
+kmpauth-uihelper:iosSimulatorArm64AggregateResources
+composeApp:iosSimulatorArm64CopyHierarchicalMultiplatformResources
+kmpauth-firebase:iosSimulatorArm64CopyHierarchicalMultiplatformResources
+kmpauth-google:iosSimulatorArm64CopyHierarchicalMultiplatformResources
+kmpauth-uihelper:iosSimulatorArm64CopyHierarchicalMultiplatformResources
+composeApp:iosSimulatorArm64ProcessResources - Processes file collection.
+kmpauth-core:iosSimulatorArm64ProcessResources - Processes file collection.
+kmpauth-firebase:iosSimulatorArm64ProcessResources - Processes file collection.
+kmpauth-google:iosSimulatorArm64ProcessResources - Processes file collection.
+kmpauth-uihelper:iosSimulatorArm64ProcessResources - Processes file collection.
+kmpnotifier:iosSimulatorArm64ProcessResources - Processes file collection.
+composeApp:iosSimulatorArm64ResolveResourcesFromDependencies
+kmpauth-firebase:iosSimulatorArm64ResolveResourcesFromDependencies
+kmpauth-google:iosSimulatorArm64ResolveResourcesFromDependencies
+kmpauth-uihelper:iosSimulatorArm64ResolveResourcesFromDependencies
+composeApp:iosSimulatorArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+kmpauth-firebase:iosSimulatorArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+kmpauth-google:iosSimulatorArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+kmpauth-uihelper:iosSimulatorArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+composeApp:iosSimulatorArm64TestProcessResources - Processes file collection.
+kmpauth-core:iosSimulatorArm64TestProcessResources - Processes file collection.
+kmpauth-firebase:iosSimulatorArm64TestProcessResources - Processes file collection.
+kmpauth-google:iosSimulatorArm64TestProcessResources - Processes file collection.
+kmpauth-uihelper:iosSimulatorArm64TestProcessResources - Processes file collection.
+kmpnotifier:iosSimulatorArm64TestProcessResources - Processes file collection.
+composeApp:iosSimulatorArm64ZipMultiplatformResourcesForPublication
+kmpauth-firebase:iosSimulatorArm64ZipMultiplatformResourcesForPublication
+kmpauth-google:iosSimulatorArm64ZipMultiplatformResourcesForPublication
+kmpauth-uihelper:iosSimulatorArm64ZipMultiplatformResourcesForPublication
+composeApp:iosX64AggregateResources
+kmpauth-firebase:iosX64AggregateResources
+kmpauth-google:iosX64AggregateResources
+kmpauth-uihelper:iosX64AggregateResources
+composeApp:iosX64CopyHierarchicalMultiplatformResources
+kmpauth-firebase:iosX64CopyHierarchicalMultiplatformResources
+kmpauth-google:iosX64CopyHierarchicalMultiplatformResources
+kmpauth-uihelper:iosX64CopyHierarchicalMultiplatformResources
+composeApp:iosX64ProcessResources - Processes file collection.
+kmpauth-core:iosX64ProcessResources - Processes file collection.
+kmpauth-firebase:iosX64ProcessResources - Processes file collection.
+kmpauth-google:iosX64ProcessResources - Processes file collection.
+kmpauth-uihelper:iosX64ProcessResources - Processes file collection.
+kmpnotifier:iosX64ProcessResources - Processes file collection.
+composeApp:iosX64ResolveResourcesFromDependencies
+kmpauth-firebase:iosX64ResolveResourcesFromDependencies
+kmpauth-google:iosX64ResolveResourcesFromDependencies
+kmpauth-uihelper:iosX64ResolveResourcesFromDependencies
+composeApp:iosX64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+kmpauth-firebase:iosX64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+kmpauth-google:iosX64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+kmpauth-uihelper:iosX64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+composeApp:iosX64TestProcessResources - Processes file collection.
+kmpauth-core:iosX64TestProcessResources - Processes file collection.
+kmpauth-firebase:iosX64TestProcessResources - Processes file collection.
+kmpauth-google:iosX64TestProcessResources - Processes file collection.
+kmpauth-uihelper:iosX64TestProcessResources - Processes file collection.
+kmpnotifier:iosX64TestProcessResources - Processes file collection.
+composeApp:iosX64ZipMultiplatformResourcesForPublication
+kmpauth-firebase:iosX64ZipMultiplatformResourcesForPublication
+kmpauth-google:iosX64ZipMultiplatformResourcesForPublication
+kmpauth-uihelper:iosX64ZipMultiplatformResourcesForPublication
+composeApp:javaPreCompileDebug
+kmpauth-core:javaPreCompileDebug
+kmpauth-firebase:javaPreCompileDebug
+kmpauth-google:javaPreCompileDebug
+kmpauth-uihelper:javaPreCompileDebug
+kmpnotifier:javaPreCompileDebug
+composeApp:javaPreCompileDebugAndroidTest
+kmpauth-core:javaPreCompileDebugAndroidTest
+kmpauth-firebase:javaPreCompileDebugAndroidTest
+kmpauth-google:javaPreCompileDebugAndroidTest
+kmpauth-uihelper:javaPreCompileDebugAndroidTest
+kmpnotifier:javaPreCompileDebugAndroidTest
+composeApp:javaPreCompileDebugUnitTest
+kmpauth-core:javaPreCompileDebugUnitTest
+kmpauth-firebase:javaPreCompileDebugUnitTest
+kmpauth-google:javaPreCompileDebugUnitTest
+kmpauth-uihelper:javaPreCompileDebugUnitTest
+kmpnotifier:javaPreCompileDebugUnitTest
+composeApp:javaPreCompileRelease
+kmpauth-core:javaPreCompileRelease
+kmpauth-firebase:javaPreCompileRelease
+kmpauth-google:javaPreCompileRelease
+kmpauth-uihelper:javaPreCompileRelease
+kmpnotifier:javaPreCompileRelease
+composeApp:javaPreCompileReleaseUnitTest
+kmpauth-core:javaPreCompileReleaseUnitTest
+kmpauth-firebase:javaPreCompileReleaseUnitTest
+kmpauth-google:javaPreCompileReleaseUnitTest
+kmpauth-uihelper:javaPreCompileReleaseUnitTest
+kmpnotifier:javaPreCompileReleaseUnitTest
+kmpnotifier:jsDevelopmentLibraryCompileSync
+kmpnotifier:jsDevelopmentLibraryValidateGeneratedByCompilerTypeScript
+kmpnotifier:jsProcessResources - Processes file collection.
+kmpnotifier:jsProductionLibraryCompileSync
+kmpnotifier:jsProductionLibraryValidateGeneratedByCompilerTypeScript
+kmpnotifier:jsPublicPackageJson
+kmpnotifier:jsRun - Run js on all configured platforms
+kmpnotifier:jsTestProcessResources - Processes file collection.
+kmpnotifier:jsTestPublicPackageJson
+kmpnotifier:jsTestTestDevelopmentExecutableCompileSync
+kmpnotifier:jsTestTestDevelopmentExecutableValidateGeneratedByCompilerTypeScript
+kmpnotifier:jsTestTestProductionExecutableCompileSync
+kmpnotifier:jsTestTestProductionExecutableValidateGeneratedByCompilerTypeScript
+kmpnotifier:jvmApiBuild - Builds Kotlin API for 'main' compilations of kmpnotifier. Complementary task and shouldn't be called manually
+kmpnotifier:jvmApiDump - Syncs API from build dir to map(map(provider(?))) dir for kmpnotifier
+kmpnotifier:jvmProcessResources - Processes file collection.
+kmpnotifier:jvmTestProcessResources - Processes file collection.
+kotlinNpmCachesSetup - Setup file hasher for caches
+kotlinRestorePackageLock
+kotlinRestoreYarnLock
+kotlinStorePackageLock
+kotlinStoreYarnLock
+kotlinUpgradePackageLock
+kotlinUpgradeYarnLock
+composeApp:kspDebugKotlinAndroid
+composeApp:kspKotlinIosArm64
+composeApp:kspKotlinIosSimulatorArm64
+composeApp:kspKotlinIosX64
+composeApp:kspReleaseKotlinAndroid
+composeApp:linkDebugFrameworkIosFat
+kmpauth-core:linkPodDebugFrameworkIosFat
+kmpauth-firebase:linkPodDebugFrameworkIosFat
+kmpauth-google:linkPodDebugFrameworkIosFat
+kmpauth-uihelper:linkPodDebugFrameworkIosFat
+kmpnotifier:linkPodDebugFrameworkIosFat
+kmpauth-core:linkPodReleaseFrameworkIosFat
+kmpauth-firebase:linkPodReleaseFrameworkIosFat
+kmpauth-google:linkPodReleaseFrameworkIosFat
+kmpauth-uihelper:linkPodReleaseFrameworkIosFat
+kmpnotifier:linkPodReleaseFrameworkIosFat
+composeApp:linkReleaseFrameworkIosFat
+composeApp:lintAnalyzeDebug - Run lint analysis on the debug component
+kmpauth-core:lintAnalyzeDebug - Run lint analysis on the debug component
+kmpauth-firebase:lintAnalyzeDebug - Run lint analysis on the debug component
+kmpauth-google:lintAnalyzeDebug - Run lint analysis on the debug component
+kmpauth-uihelper:lintAnalyzeDebug - Run lint analysis on the debug component
+kmpnotifier:lintAnalyzeDebug - Run lint analysis on the debug component
+composeApp:lintAnalyzeDebugAndroidTest - Run lint analysis on the debugAndroidTest component
+kmpauth-core:lintAnalyzeDebugAndroidTest - Run lint analysis on the debugAndroidTest component
+kmpauth-firebase:lintAnalyzeDebugAndroidTest - Run lint analysis on the debugAndroidTest component
+kmpauth-google:lintAnalyzeDebugAndroidTest - Run lint analysis on the debugAndroidTest component
+kmpauth-uihelper:lintAnalyzeDebugAndroidTest - Run lint analysis on the debugAndroidTest component
+kmpnotifier:lintAnalyzeDebugAndroidTest - Run lint analysis on the debugAndroidTest component
+composeApp:lintAnalyzeDebugUnitTest - Run lint analysis on the debugUnitTest component
+kmpauth-core:lintAnalyzeDebugUnitTest - Run lint analysis on the debugUnitTest component
+kmpauth-firebase:lintAnalyzeDebugUnitTest - Run lint analysis on the debugUnitTest component
+kmpauth-google:lintAnalyzeDebugUnitTest - Run lint analysis on the debugUnitTest component
+kmpauth-uihelper:lintAnalyzeDebugUnitTest - Run lint analysis on the debugUnitTest component
+kmpnotifier:lintAnalyzeDebugUnitTest - Run lint analysis on the debugUnitTest component
+composeApp:lintAnalyzeRelease - Run lint analysis on the release component
+kmpauth-core:lintAnalyzeRelease - Run lint analysis on the release component
+kmpauth-firebase:lintAnalyzeRelease - Run lint analysis on the release component
+kmpauth-google:lintAnalyzeRelease - Run lint analysis on the release component
+kmpauth-uihelper:lintAnalyzeRelease - Run lint analysis on the release component
+kmpnotifier:lintAnalyzeRelease - Run lint analysis on the release component
+composeApp:lintAnalyzeReleaseUnitTest - Run lint analysis on the releaseUnitTest component
+kmpauth-core:lintAnalyzeReleaseUnitTest - Run lint analysis on the releaseUnitTest component
+kmpauth-firebase:lintAnalyzeReleaseUnitTest - Run lint analysis on the releaseUnitTest component
+kmpauth-google:lintAnalyzeReleaseUnitTest - Run lint analysis on the releaseUnitTest component
+kmpauth-uihelper:lintAnalyzeReleaseUnitTest - Run lint analysis on the releaseUnitTest component
+kmpnotifier:lintAnalyzeReleaseUnitTest - Run lint analysis on the releaseUnitTest component
+composeApp:lintFixDebug - Fix lint on the debug variant
+kmpauth-core:lintFixDebug - Fix lint on the debug variant
+kmpauth-firebase:lintFixDebug - Fix lint on the debug variant
+kmpauth-google:lintFixDebug - Fix lint on the debug variant
+kmpauth-uihelper:lintFixDebug - Fix lint on the debug variant
+kmpnotifier:lintFixDebug - Fix lint on the debug variant
+composeApp:lintFixRelease - Fix lint on the release variant
+kmpauth-core:lintFixRelease - Fix lint on the release variant
+kmpauth-firebase:lintFixRelease - Fix lint on the release variant
+kmpauth-google:lintFixRelease - Fix lint on the release variant
+kmpauth-uihelper:lintFixRelease - Fix lint on the release variant
+kmpnotifier:lintFixRelease - Fix lint on the release variant
+composeApp:lintReportDebug - Run lint on the debug variant
+kmpauth-core:lintReportDebug - Run lint on the debug variant
+kmpauth-firebase:lintReportDebug - Run lint on the debug variant
+kmpauth-google:lintReportDebug - Run lint on the debug variant
+kmpauth-uihelper:lintReportDebug - Run lint on the debug variant
+kmpnotifier:lintReportDebug - Run lint on the debug variant
+composeApp:lintReportRelease - Run lint on the release variant
+kmpauth-core:lintReportRelease - Run lint on the release variant
+kmpauth-firebase:lintReportRelease - Run lint on the release variant
+kmpauth-google:lintReportRelease - Run lint on the release variant
+kmpauth-uihelper:lintReportRelease - Run lint on the release variant
+kmpnotifier:lintReportRelease - Run lint on the release variant
+kmpauth-core:lintVitalAnalyzeDebug - Run lint analysis with only the fatal issues enabled on the debug variant
+kmpauth-firebase:lintVitalAnalyzeDebug - Run lint analysis with only the fatal issues enabled on the debug variant
+kmpauth-google:lintVitalAnalyzeDebug - Run lint analysis with only the fatal issues enabled on the debug variant
+kmpauth-uihelper:lintVitalAnalyzeDebug - Run lint analysis with only the fatal issues enabled on the debug variant
+kmpnotifier:lintVitalAnalyzeDebug - Run lint analysis with only the fatal issues enabled on the debug variant
+composeApp:lintVitalAnalyzeRelease - Run lint analysis with only the fatal issues enabled 
+kmpauth-core:lintVitalAnalyzeRelease - Run lint analysis with only the fatal issues enabled on the release variant
+kmpauth-firebase:lintVitalAnalyzeRelease - Run lint analysis with only the fatal issues enabled on the release variant
+kmpauth-google:lintVitalAnalyzeRelease - Run lint analysis with only the fatal issues enabled on the release variant
+kmpauth-uihelper:lintVitalAnalyzeRelease - Run lint analysis with only the fatal issues enabled on the release variant
+kmpnotifier:lintVitalAnalyzeRelease - Run lint analysis with only the fatal issues enabled on the release variant
+composeApp:lintVitalReportRelease - Run lint with only the fatal issues enabled on the release variant
+composeApp:makeApkFromBundleForDebug
+composeApp:makeApkFromBundleForRelease
+composeApp:mapDebugAndroidTestSourceSetPaths
+kmpauth-core:mapDebugAndroidTestSourceSetPaths
+kmpauth-firebase:mapDebugAndroidTestSourceSetPaths
+kmpauth-google:mapDebugAndroidTestSourceSetPaths
+kmpauth-uihelper:mapDebugAndroidTestSourceSetPaths
+kmpnotifier:mapDebugAndroidTestSourceSetPaths
+composeApp:mapDebugSourceSetPaths
+kmpauth-core:mapDebugSourceSetPaths
+kmpauth-firebase:mapDebugSourceSetPaths
+kmpauth-google:mapDebugSourceSetPaths
+kmpauth-uihelper:mapDebugSourceSetPaths
+kmpnotifier:mapDebugSourceSetPaths
+composeApp:mapReleaseSourceSetPaths
+kmpauth-core:mapReleaseSourceSetPaths
+kmpauth-firebase:mapReleaseSourceSetPaths
+kmpauth-google:mapReleaseSourceSetPaths
+kmpauth-uihelper:mapReleaseSourceSetPaths
+kmpnotifier:mapReleaseSourceSetPaths
+composeApp:mergeDebugAndroidTestAssets
+kmpauth-core:mergeDebugAndroidTestAssets
+kmpauth-firebase:mergeDebugAndroidTestAssets
+kmpauth-google:mergeDebugAndroidTestAssets
+kmpauth-uihelper:mergeDebugAndroidTestAssets
+kmpnotifier:mergeDebugAndroidTestAssets
+composeApp:mergeDebugAndroidTestGeneratedProguardFiles
+kmpauth-core:mergeDebugAndroidTestGeneratedProguardFiles
+kmpauth-firebase:mergeDebugAndroidTestGeneratedProguardFiles
+kmpauth-google:mergeDebugAndroidTestGeneratedProguardFiles
+kmpauth-uihelper:mergeDebugAndroidTestGeneratedProguardFiles
+kmpnotifier:mergeDebugAndroidTestGeneratedProguardFiles
+composeApp:mergeDebugAndroidTestJavaResource
+kmpauth-core:mergeDebugAndroidTestJavaResource
+kmpauth-firebase:mergeDebugAndroidTestJavaResource
+kmpauth-google:mergeDebugAndroidTestJavaResource
+kmpauth-uihelper:mergeDebugAndroidTestJavaResource
+kmpnotifier:mergeDebugAndroidTestJavaResource
+composeApp:mergeDebugAndroidTestJniLibFolders
+kmpauth-core:mergeDebugAndroidTestJniLibFolders
+kmpauth-firebase:mergeDebugAndroidTestJniLibFolders
+kmpauth-google:mergeDebugAndroidTestJniLibFolders
+kmpauth-uihelper:mergeDebugAndroidTestJniLibFolders
+kmpnotifier:mergeDebugAndroidTestJniLibFolders
+composeApp:mergeDebugAndroidTestNativeLibs
+kmpauth-core:mergeDebugAndroidTestNativeLibs
+kmpauth-firebase:mergeDebugAndroidTestNativeLibs
+kmpauth-google:mergeDebugAndroidTestNativeLibs
+kmpauth-uihelper:mergeDebugAndroidTestNativeLibs
+kmpnotifier:mergeDebugAndroidTestNativeLibs
+composeApp:mergeDebugAndroidTestResources
+kmpauth-core:mergeDebugAndroidTestResources
+kmpauth-firebase:mergeDebugAndroidTestResources
+kmpauth-google:mergeDebugAndroidTestResources
+kmpauth-uihelper:mergeDebugAndroidTestResources
+kmpnotifier:mergeDebugAndroidTestResources
+composeApp:mergeDebugAndroidTestShaders
+kmpauth-core:mergeDebugAndroidTestShaders
+kmpauth-firebase:mergeDebugAndroidTestShaders
+kmpauth-google:mergeDebugAndroidTestShaders
+kmpauth-uihelper:mergeDebugAndroidTestShaders
+kmpnotifier:mergeDebugAndroidTestShaders
+composeApp:mergeDebugArtProfile
+composeApp:mergeDebugAssets
+kmpauth-core:mergeDebugAssets
+kmpauth-firebase:mergeDebugAssets
+kmpauth-google:mergeDebugAssets
+kmpauth-uihelper:mergeDebugAssets
+kmpnotifier:mergeDebugAssets
+kmpauth-core:mergeDebugConsumerProguardFiles
+kmpauth-firebase:mergeDebugConsumerProguardFiles
+kmpauth-google:mergeDebugConsumerProguardFiles
+kmpauth-uihelper:mergeDebugConsumerProguardFiles
+kmpnotifier:mergeDebugConsumerProguardFiles
+composeApp:mergeDebugGeneratedProguardFiles
+kmpauth-core:mergeDebugGeneratedProguardFiles
+kmpauth-firebase:mergeDebugGeneratedProguardFiles
+kmpauth-google:mergeDebugGeneratedProguardFiles
+kmpauth-uihelper:mergeDebugGeneratedProguardFiles
+kmpnotifier:mergeDebugGeneratedProguardFiles
+composeApp:mergeDebugJavaResource
+kmpauth-core:mergeDebugJavaResource
+kmpauth-firebase:mergeDebugJavaResource
+kmpauth-google:mergeDebugJavaResource
+kmpauth-uihelper:mergeDebugJavaResource
+kmpnotifier:mergeDebugJavaResource
+composeApp:mergeDebugJniLibFolders
+kmpauth-core:mergeDebugJniLibFolders
+kmpauth-firebase:mergeDebugJniLibFolders
+kmpauth-google:mergeDebugJniLibFolders
+kmpauth-uihelper:mergeDebugJniLibFolders
+kmpnotifier:mergeDebugJniLibFolders
+composeApp:mergeDebugNativeDebugMetadata
+composeApp:mergeDebugNativeLibs
+kmpauth-core:mergeDebugNativeLibs
+kmpauth-firebase:mergeDebugNativeLibs
+kmpauth-google:mergeDebugNativeLibs
+kmpauth-uihelper:mergeDebugNativeLibs
+kmpnotifier:mergeDebugNativeLibs
+composeApp:mergeDebugResources
+kmpauth-core:mergeDebugResources
+kmpauth-firebase:mergeDebugResources
+kmpauth-google:mergeDebugResources
+kmpauth-uihelper:mergeDebugResources
+kmpnotifier:mergeDebugResources
+composeApp:mergeDebugShaders
+kmpauth-core:mergeDebugShaders
+kmpauth-firebase:mergeDebugShaders
+kmpauth-google:mergeDebugShaders
+kmpauth-uihelper:mergeDebugShaders
+kmpnotifier:mergeDebugShaders
+composeApp:mergeDebugStartupProfile
+composeApp:mergeDexRelease
+composeApp:mergeExtDexDebug
+composeApp:mergeExtDexDebugAndroidTest
+kmpauth-core:mergeExtDexDebugAndroidTest
+kmpauth-firebase:mergeExtDexDebugAndroidTest
+kmpauth-google:mergeExtDexDebugAndroidTest
+kmpauth-uihelper:mergeExtDexDebugAndroidTest
+kmpnotifier:mergeExtDexDebugAndroidTest
+composeApp:mergeExtDexRelease
+composeApp:mergeLibDexDebug
+composeApp:mergeLibDexDebugAndroidTest
+kmpauth-core:mergeLibDexDebugAndroidTest
+kmpauth-firebase:mergeLibDexDebugAndroidTest
+kmpauth-google:mergeLibDexDebugAndroidTest
+kmpauth-uihelper:mergeLibDexDebugAndroidTest
+kmpnotifier:mergeLibDexDebugAndroidTest
+composeApp:mergeProjectDexDebug
+composeApp:mergeProjectDexDebugAndroidTest
+kmpauth-core:mergeProjectDexDebugAndroidTest
+kmpauth-firebase:mergeProjectDexDebugAndroidTest
+kmpauth-google:mergeProjectDexDebugAndroidTest
+kmpauth-uihelper:mergeProjectDexDebugAndroidTest
+kmpnotifier:mergeProjectDexDebugAndroidTest
+composeApp:mergeReleaseArtProfile
+composeApp:mergeReleaseAssets
+kmpauth-core:mergeReleaseAssets
+kmpauth-firebase:mergeReleaseAssets
+kmpauth-google:mergeReleaseAssets
+kmpauth-uihelper:mergeReleaseAssets
+kmpnotifier:mergeReleaseAssets
+kmpauth-core:mergeReleaseConsumerProguardFiles
+kmpauth-firebase:mergeReleaseConsumerProguardFiles
+kmpauth-google:mergeReleaseConsumerProguardFiles
+kmpauth-uihelper:mergeReleaseConsumerProguardFiles
+kmpnotifier:mergeReleaseConsumerProguardFiles
+composeApp:mergeReleaseGeneratedProguardFiles
+kmpauth-core:mergeReleaseGeneratedProguardFiles
+kmpauth-firebase:mergeReleaseGeneratedProguardFiles
+kmpauth-google:mergeReleaseGeneratedProguardFiles
+kmpauth-uihelper:mergeReleaseGeneratedProguardFiles
+kmpnotifier:mergeReleaseGeneratedProguardFiles
+composeApp:mergeReleaseGlobalSynthetics
+composeApp:mergeReleaseJavaResource
+kmpauth-core:mergeReleaseJavaResource
+kmpauth-firebase:mergeReleaseJavaResource
+kmpauth-google:mergeReleaseJavaResource
+kmpauth-uihelper:mergeReleaseJavaResource
+kmpnotifier:mergeReleaseJavaResource
+composeApp:mergeReleaseJniLibFolders
+kmpauth-core:mergeReleaseJniLibFolders
+kmpauth-firebase:mergeReleaseJniLibFolders
+kmpauth-google:mergeReleaseJniLibFolders
+kmpauth-uihelper:mergeReleaseJniLibFolders
+kmpnotifier:mergeReleaseJniLibFolders
+composeApp:mergeReleaseNativeDebugMetadata
+composeApp:mergeReleaseNativeLibs
+kmpauth-core:mergeReleaseNativeLibs
+kmpauth-firebase:mergeReleaseNativeLibs
+kmpauth-google:mergeReleaseNativeLibs
+kmpauth-uihelper:mergeReleaseNativeLibs
+kmpnotifier:mergeReleaseNativeLibs
+composeApp:mergeReleaseResources
+kmpauth-core:mergeReleaseResources
+kmpauth-firebase:mergeReleaseResources
+kmpauth-google:mergeReleaseResources
+kmpauth-uihelper:mergeReleaseResources
+kmpnotifier:mergeReleaseResources
+composeApp:mergeReleaseShaders
+kmpauth-core:mergeReleaseShaders
+kmpauth-firebase:mergeReleaseShaders
+kmpauth-google:mergeReleaseShaders
+kmpauth-uihelper:mergeReleaseShaders
+kmpnotifier:mergeReleaseShaders
+composeApp:mergeReleaseStartupProfile
+composeApp:metadataAppleMainProcessResources - Processes file collection.
+kmpauth-core:metadataAppleMainProcessResources - Processes file collection.
+kmpauth-firebase:metadataAppleMainProcessResources - Processes file collection.
+kmpauth-google:metadataAppleMainProcessResources - Processes file collection.
+kmpauth-uihelper:metadataAppleMainProcessResources - Processes file collection.
+kmpnotifier:metadataAppleMainProcessResources - Processes file collection.
+composeApp:metadataCommonMainProcessResources - Processes file collection.
+kmpauth-core:metadataCommonMainProcessResources - Processes file collection.
+kmpauth-firebase:metadataCommonMainProcessResources - Processes file collection.
+kmpauth-google:metadataCommonMainProcessResources - Processes file collection.
+kmpauth-uihelper:metadataCommonMainProcessResources - Processes file collection.
+kmpnotifier:metadataCommonMainProcessResources - Processes file collection.
+composeApp:metadataIosMainProcessResources - Processes file collection.
+kmpauth-core:metadataIosMainProcessResources - Processes file collection.
+kmpauth-firebase:metadataIosMainProcessResources - Processes file collection.
+kmpauth-google:metadataIosMainProcessResources - Processes file collection.
+kmpauth-uihelper:metadataIosMainProcessResources - Processes file collection.
+kmpnotifier:metadataIosMainProcessResources - Processes file collection.
+composeApp:metadataNativeMainProcessResources - Processes file collection.
+kmpauth-core:metadataNativeMainProcessResources - Processes file collection.
+kmpauth-firebase:metadataNativeMainProcessResources - Processes file collection.
+kmpauth-google:metadataNativeMainProcessResources - Processes file collection.
+kmpauth-uihelper:metadataNativeMainProcessResources - Processes file collection.
+kmpnotifier:metadataNativeMainProcessResources - Processes file collection.
+composeApp:metadataProcessResources - Processes file collection.
+kmpauth-core:metadataProcessResources - Processes file collection.
+kmpauth-firebase:metadataProcessResources - Processes file collection.
+kmpauth-google:metadataProcessResources - Processes file collection.
+kmpauth-uihelper:metadataProcessResources - Processes file collection.
+kmpnotifier:metadataProcessResources - Processes file collection.
+model - Displays the configuration model of root project 'PuntoEttore'. [deprecated]
+composeApp:model - Displays the configuration model of project ':composeApp'. [deprecated]
+kmpauth-core:model - Displays the configuration model of project ':kmpauth-core'. [deprecated]
+kmpauth-firebase:model - Displays the configuration model of project ':kmpauth-firebase'. [deprecated]
+kmpauth-google:model - Displays the configuration model of project ':kmpauth-google'. [deprecated]
+kmpauth-uihelper:model - Displays the configuration model of project ':kmpauth-uihelper'. [deprecated]
+kmpnotifier:model - Displays the configuration model of project ':kmpnotifier'. [deprecated]
+composeApp:optimizeReleaseResources
+composeApp:packageDebug
+composeApp:packageDebugAndroidTest
+kmpauth-core:packageDebugAndroidTest
+kmpauth-firebase:packageDebugAndroidTest
+kmpauth-google:packageDebugAndroidTest
+kmpauth-uihelper:packageDebugAndroidTest
+kmpnotifier:packageDebugAndroidTest
+kmpauth-core:packageDebugAssets
+kmpauth-firebase:packageDebugAssets
+kmpauth-google:packageDebugAssets
+kmpauth-uihelper:packageDebugAssets
+kmpnotifier:packageDebugAssets
+composeApp:packageDebugBundle
+kmpauth-core:packageDebugRenderscript
+kmpauth-firebase:packageDebugRenderscript
+kmpauth-google:packageDebugRenderscript
+kmpauth-uihelper:packageDebugRenderscript
+kmpnotifier:packageDebugRenderscript
+composeApp:packageDebugResources
+kmpauth-core:packageDebugResources
+kmpauth-firebase:packageDebugResources
+kmpauth-google:packageDebugResources
+kmpauth-uihelper:packageDebugResources
+kmpnotifier:packageDebugResources
+composeApp:packageDebugUniversalApk
+packageJsonUmbrella
+composeApp:packageRelease
+kmpauth-core:packageReleaseAssets
+kmpauth-firebase:packageReleaseAssets
+kmpauth-google:packageReleaseAssets
+kmpauth-uihelper:packageReleaseAssets
+kmpnotifier:packageReleaseAssets
+composeApp:packageReleaseBundle
+kmpauth-core:packageReleaseRenderscript
+kmpauth-firebase:packageReleaseRenderscript
+kmpauth-google:packageReleaseRenderscript
+kmpauth-uihelper:packageReleaseRenderscript
+kmpnotifier:packageReleaseRenderscript
+composeApp:packageReleaseResources
+kmpauth-core:packageReleaseResources
+kmpauth-firebase:packageReleaseResources
+kmpauth-google:packageReleaseResources
+kmpauth-uihelper:packageReleaseResources
+kmpnotifier:packageReleaseResources
+composeApp:packageReleaseUniversalApk
+composeApp:parseDebugIntegrityConfig
+composeApp:parseDebugLocalResources
+kmpauth-core:parseDebugLocalResources
+kmpauth-firebase:parseDebugLocalResources
+kmpauth-google:parseDebugLocalResources
+kmpauth-uihelper:parseDebugLocalResources
+kmpnotifier:parseDebugLocalResources
+composeApp:parseReleaseIntegrityConfig
+composeApp:parseReleaseLocalResources
+kmpauth-core:parseReleaseLocalResources
+kmpauth-firebase:parseReleaseLocalResources
+kmpauth-google:parseReleaseLocalResources
+kmpauth-uihelper:parseReleaseLocalResources
+kmpnotifier:parseReleaseLocalResources
+kmpauth-core:podDebugIosFatFramework
+kmpauth-firebase:podDebugIosFatFramework
+kmpauth-google:podDebugIosFatFramework
+kmpauth-uihelper:podDebugIosFatFramework
+kmpnotifier:podDebugIosFatFramework
+kmpauth-core:podDebugIosSimulatorFatFramework
+kmpauth-firebase:podDebugIosSimulatorFatFramework
+kmpauth-google:podDebugIosSimulatorFatFramework
+kmpauth-uihelper:podDebugIosSimulatorFatFramework
+kmpnotifier:podDebugIosSimulatorFatFramework
+kmpauth-google:podGenIos - Сreates a synthetic Xcode project to retrieve CocoaPods dependencies
+kmpnotifier:podGenIos - Сreates a synthetic Xcode project to retrieve CocoaPods dependencies
+kmpauth-google:podInstallSyntheticIos - Invokes `pod install` for synthetic project
+kmpnotifier:podInstallSyntheticIos - Invokes `pod install` for synthetic project
+kmpauth-core:podReleaseIosFatFramework
+kmpauth-firebase:podReleaseIosFatFramework
+kmpauth-google:podReleaseIosFatFramework
+kmpauth-uihelper:podReleaseIosFatFramework
+kmpnotifier:podReleaseIosFatFramework
+kmpauth-core:podReleaseIosSimulatorFatFramework
+kmpauth-firebase:podReleaseIosSimulatorFatFramework
+kmpauth-google:podReleaseIosSimulatorFatFramework
+kmpauth-uihelper:podReleaseIosSimulatorFatFramework
+kmpnotifier:podReleaseIosSimulatorFatFramework
+kmpauth-core:podSpecDebug - Generates podspec for Debug XCFramework publishing
+kmpauth-firebase:podSpecDebug - Generates podspec for Debug XCFramework publishing
+kmpauth-google:podSpecDebug - Generates podspec for Debug XCFramework publishing
+kmpauth-uihelper:podSpecDebug - Generates podspec for Debug XCFramework publishing
+kmpnotifier:podSpecDebug - Generates podspec for Debug XCFramework publishing
+kmpauth-core:podSpecRelease - Generates podspec for Release XCFramework publishing
+kmpauth-firebase:podSpecRelease - Generates podspec for Release XCFramework publishing
+kmpauth-google:podSpecRelease - Generates podspec for Release XCFramework publishing
+kmpauth-uihelper:podSpecRelease - Generates podspec for Release XCFramework publishing
+kmpnotifier:podSpecRelease - Generates podspec for Release XCFramework publishing
+composeApp:preBuild
+kmpauth-core:preBuild
+kmpauth-firebase:preBuild
+kmpauth-google:preBuild
+kmpauth-uihelper:preBuild
+kmpnotifier:preBuild
+composeApp:preDebugAndroidTestBuild
+kmpauth-core:preDebugAndroidTestBuild
+kmpauth-firebase:preDebugAndroidTestBuild
+kmpauth-google:preDebugAndroidTestBuild
+kmpauth-uihelper:preDebugAndroidTestBuild
+kmpnotifier:preDebugAndroidTestBuild
+composeApp:preDebugBuild
+kmpauth-core:preDebugBuild
+kmpauth-firebase:preDebugBuild
+kmpauth-google:preDebugBuild
+kmpauth-uihelper:preDebugBuild
+kmpnotifier:preDebugBuild
+composeApp:preDebugUnitTestBuild
+kmpauth-core:preDebugUnitTestBuild
+kmpauth-firebase:preDebugUnitTestBuild
+kmpauth-google:preDebugUnitTestBuild
+kmpauth-uihelper:preDebugUnitTestBuild
+kmpnotifier:preDebugUnitTestBuild
+composeApp:prepareComposeResourcesTaskForAndroidDebug
+kmpauth-firebase:prepareComposeResourcesTaskForAndroidDebug
+kmpauth-google:prepareComposeResourcesTaskForAndroidDebug
+kmpauth-uihelper:prepareComposeResourcesTaskForAndroidDebug
+composeApp:prepareComposeResourcesTaskForAndroidInstrumentedTest
+kmpauth-firebase:prepareComposeResourcesTaskForAndroidInstrumentedTest
+kmpauth-google:prepareComposeResourcesTaskForAndroidInstrumentedTest
+kmpauth-uihelper:prepareComposeResourcesTaskForAndroidInstrumentedTest
+composeApp:prepareComposeResourcesTaskForAndroidInstrumentedTestDebug
+kmpauth-firebase:prepareComposeResourcesTaskForAndroidInstrumentedTestDebug
+kmpauth-google:prepareComposeResourcesTaskForAndroidInstrumentedTestDebug
+kmpauth-uihelper:prepareComposeResourcesTaskForAndroidInstrumentedTestDebug
+composeApp:prepareComposeResourcesTaskForAndroidMain
+kmpauth-firebase:prepareComposeResourcesTaskForAndroidMain
+kmpauth-google:prepareComposeResourcesTaskForAndroidMain
+kmpauth-uihelper:prepareComposeResourcesTaskForAndroidMain
+composeApp:prepareComposeResourcesTaskForAndroidRelease
+kmpauth-firebase:prepareComposeResourcesTaskForAndroidRelease
+kmpauth-google:prepareComposeResourcesTaskForAndroidRelease
+kmpauth-uihelper:prepareComposeResourcesTaskForAndroidRelease
+composeApp:prepareComposeResourcesTaskForAndroidUnitTest
+kmpauth-firebase:prepareComposeResourcesTaskForAndroidUnitTest
+kmpauth-google:prepareComposeResourcesTaskForAndroidUnitTest
+kmpauth-uihelper:prepareComposeResourcesTaskForAndroidUnitTest
+composeApp:prepareComposeResourcesTaskForAndroidUnitTestDebug
+kmpauth-firebase:prepareComposeResourcesTaskForAndroidUnitTestDebug
+kmpauth-google:prepareComposeResourcesTaskForAndroidUnitTestDebug
+kmpauth-uihelper:prepareComposeResourcesTaskForAndroidUnitTestDebug
+composeApp:prepareComposeResourcesTaskForAndroidUnitTestRelease
+kmpauth-firebase:prepareComposeResourcesTaskForAndroidUnitTestRelease
+kmpauth-google:prepareComposeResourcesTaskForAndroidUnitTestRelease
+kmpauth-uihelper:prepareComposeResourcesTaskForAndroidUnitTestRelease
+composeApp:prepareComposeResourcesTaskForAppleMain
+kmpauth-firebase:prepareComposeResourcesTaskForAppleMain
+kmpauth-google:prepareComposeResourcesTaskForAppleMain
+kmpauth-uihelper:prepareComposeResourcesTaskForAppleMain
+composeApp:prepareComposeResourcesTaskForAppleTest
+kmpauth-firebase:prepareComposeResourcesTaskForAppleTest
+kmpauth-google:prepareComposeResourcesTaskForAppleTest
+kmpauth-uihelper:prepareComposeResourcesTaskForAppleTest
+composeApp:prepareComposeResourcesTaskForCommonMain
+kmpauth-firebase:prepareComposeResourcesTaskForCommonMain
+kmpauth-google:prepareComposeResourcesTaskForCommonMain
+kmpauth-uihelper:prepareComposeResourcesTaskForCommonMain
+composeApp:prepareComposeResourcesTaskForCommonTest
+kmpauth-firebase:prepareComposeResourcesTaskForCommonTest
+kmpauth-google:prepareComposeResourcesTaskForCommonTest
+kmpauth-uihelper:prepareComposeResourcesTaskForCommonTest
+composeApp:prepareComposeResourcesTaskForIosArm64Main
+kmpauth-firebase:prepareComposeResourcesTaskForIosArm64Main
+kmpauth-google:prepareComposeResourcesTaskForIosArm64Main
+kmpauth-uihelper:prepareComposeResourcesTaskForIosArm64Main
+composeApp:prepareComposeResourcesTaskForIosArm64Test
+kmpauth-firebase:prepareComposeResourcesTaskForIosArm64Test
+kmpauth-google:prepareComposeResourcesTaskForIosArm64Test
+kmpauth-uihelper:prepareComposeResourcesTaskForIosArm64Test
+composeApp:prepareComposeResourcesTaskForIosMain
+kmpauth-firebase:prepareComposeResourcesTaskForIosMain
+kmpauth-google:prepareComposeResourcesTaskForIosMain
+kmpauth-uihelper:prepareComposeResourcesTaskForIosMain
+composeApp:prepareComposeResourcesTaskForIosSimulatorArm64Main
+kmpauth-firebase:prepareComposeResourcesTaskForIosSimulatorArm64Main
+kmpauth-google:prepareComposeResourcesTaskForIosSimulatorArm64Main
+kmpauth-uihelper:prepareComposeResourcesTaskForIosSimulatorArm64Main
+composeApp:prepareComposeResourcesTaskForIosSimulatorArm64Test
+kmpauth-firebase:prepareComposeResourcesTaskForIosSimulatorArm64Test
+kmpauth-google:prepareComposeResourcesTaskForIosSimulatorArm64Test
+kmpauth-uihelper:prepareComposeResourcesTaskForIosSimulatorArm64Test
+composeApp:prepareComposeResourcesTaskForIosTest
+kmpauth-firebase:prepareComposeResourcesTaskForIosTest
+kmpauth-google:prepareComposeResourcesTaskForIosTest
+kmpauth-uihelper:prepareComposeResourcesTaskForIosTest
+composeApp:prepareComposeResourcesTaskForIosX64Main
+kmpauth-firebase:prepareComposeResourcesTaskForIosX64Main
+kmpauth-google:prepareComposeResourcesTaskForIosX64Main
+kmpauth-uihelper:prepareComposeResourcesTaskForIosX64Main
+composeApp:prepareComposeResourcesTaskForIosX64Test
+kmpauth-firebase:prepareComposeResourcesTaskForIosX64Test
+kmpauth-google:prepareComposeResourcesTaskForIosX64Test
+kmpauth-uihelper:prepareComposeResourcesTaskForIosX64Test
+composeApp:prepareComposeResourcesTaskForNativeMain
+kmpauth-firebase:prepareComposeResourcesTaskForNativeMain
+kmpauth-google:prepareComposeResourcesTaskForNativeMain
+kmpauth-uihelper:prepareComposeResourcesTaskForNativeMain
+composeApp:prepareComposeResourcesTaskForNativeTest
+kmpauth-firebase:prepareComposeResourcesTaskForNativeTest
+kmpauth-google:prepareComposeResourcesTaskForNativeTest
+kmpauth-uihelper:prepareComposeResourcesTaskForNativeTest
+kmpauth-core:prepareDebugArtProfile
+kmpauth-firebase:prepareDebugArtProfile
+kmpauth-google:prepareDebugArtProfile
+kmpauth-uihelper:prepareDebugArtProfile
+kmpnotifier:prepareDebugArtProfile
+prepareKotlinBuildScriptModel
+prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+composeApp:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+kmpauth-core:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+kmpauth-firebase:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+kmpauth-google:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+kmpauth-uihelper:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+kmpnotifier:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+composeApp:prepareLintJarForPublish
+kmpauth-core:prepareLintJarForPublish
+kmpauth-firebase:prepareLintJarForPublish
+kmpauth-google:prepareLintJarForPublish
+kmpauth-uihelper:prepareLintJarForPublish
+kmpnotifier:prepareLintJarForPublish
+kmpauth-core:prepareReleaseArtProfile
+kmpauth-firebase:prepareReleaseArtProfile
+kmpauth-google:prepareReleaseArtProfile
+kmpauth-uihelper:prepareReleaseArtProfile
+kmpnotifier:prepareReleaseArtProfile
+composeApp:preReleaseBuild
+kmpauth-core:preReleaseBuild
+kmpauth-firebase:preReleaseBuild
+kmpauth-google:preReleaseBuild
+kmpauth-uihelper:preReleaseBuild
+kmpnotifier:preReleaseBuild
+composeApp:preReleaseUnitTestBuild
+kmpauth-core:preReleaseUnitTestBuild
+kmpauth-firebase:preReleaseUnitTestBuild
+kmpauth-google:preReleaseUnitTestBuild
+kmpauth-uihelper:preReleaseUnitTestBuild
+kmpnotifier:preReleaseUnitTestBuild
+composeApp:processApplicationManifestDebugForBundle
+composeApp:processApplicationManifestReleaseForBundle
+composeApp:processDebugAndroidTestJavaRes
+kmpauth-core:processDebugAndroidTestJavaRes
+kmpauth-firebase:processDebugAndroidTestJavaRes
+kmpauth-google:processDebugAndroidTestJavaRes
+kmpauth-uihelper:processDebugAndroidTestJavaRes
+kmpnotifier:processDebugAndroidTestJavaRes
+composeApp:processDebugAndroidTestManifest
+kmpauth-core:processDebugAndroidTestManifest
+kmpauth-firebase:processDebugAndroidTestManifest
+kmpauth-google:processDebugAndroidTestManifest
+kmpauth-uihelper:processDebugAndroidTestManifest
+kmpnotifier:processDebugAndroidTestManifest
+composeApp:processDebugAndroidTestResources
+kmpauth-core:processDebugAndroidTestResources
+kmpauth-firebase:processDebugAndroidTestResources
+kmpauth-google:processDebugAndroidTestResources
+kmpauth-uihelper:processDebugAndroidTestResources
+kmpnotifier:processDebugAndroidTestResources
+composeApp:processDebugGoogleServices
+composeApp:processDebugJavaRes
+kmpauth-core:processDebugJavaRes
+kmpauth-firebase:processDebugJavaRes
+kmpauth-google:processDebugJavaRes
+kmpauth-uihelper:processDebugJavaRes
+kmpnotifier:processDebugJavaRes
+composeApp:processDebugMainManifest
+composeApp:processDebugManifest
+kmpauth-core:processDebugManifest
+kmpauth-firebase:processDebugManifest
+kmpauth-google:processDebugManifest
+kmpauth-uihelper:processDebugManifest
+kmpnotifier:processDebugManifest
+composeApp:processDebugManifestForInstantApp
+composeApp:processDebugManifestForPackage
+composeApp:processDebugResources
+composeApp:processDebugUnitTestJavaRes
+kmpauth-core:processDebugUnitTestJavaRes
+kmpauth-firebase:processDebugUnitTestJavaRes
+kmpauth-google:processDebugUnitTestJavaRes
+kmpauth-uihelper:processDebugUnitTestJavaRes
+kmpnotifier:processDebugUnitTestJavaRes
+composeApp:processManifestDebugForFeature
+composeApp:processManifestReleaseForFeature
+composeApp:processReleaseGoogleServices
+composeApp:processReleaseJavaRes
+kmpauth-core:processReleaseJavaRes
+kmpauth-firebase:processReleaseJavaRes
+kmpauth-google:processReleaseJavaRes
+kmpauth-uihelper:processReleaseJavaRes
+kmpnotifier:processReleaseJavaRes
+composeApp:processReleaseMainManifest
+composeApp:processReleaseManifest
+kmpauth-core:processReleaseManifest
+kmpauth-firebase:processReleaseManifest
+kmpauth-google:processReleaseManifest
+kmpauth-uihelper:processReleaseManifest
+kmpnotifier:processReleaseManifest
+composeApp:processReleaseManifestForInstantApp
+composeApp:processReleaseManifestForPackage
+composeApp:processReleaseResources
+composeApp:processReleaseUnitTestJavaRes
+kmpauth-core:processReleaseUnitTestJavaRes
+kmpauth-firebase:processReleaseUnitTestJavaRes
+kmpauth-google:processReleaseUnitTestJavaRes
+kmpauth-uihelper:processReleaseUnitTestJavaRes
+kmpnotifier:processReleaseUnitTestJavaRes
+composeApp:produceDebugBundleIdeListingFile
+composeApp:produceReleaseBundleIdeListingFile
+composeApp:releaseAssetsCopyForAGP
+kmpauth-core:releaseAssetsCopyForAGP
+kmpauth-firebase:releaseAssetsCopyForAGP
+kmpauth-google:releaseAssetsCopyForAGP
+kmpauth-uihelper:releaseAssetsCopyForAGP
+kmpnotifier:releaseAssetsCopyForAGP
+composeApp:resolveConfigAttr
+kmpauth-core:resolveConfigAttr
+kmpauth-firebase:resolveConfigAttr
+kmpauth-google:resolveConfigAttr
+kmpauth-uihelper:resolveConfigAttr
+kmpnotifier:resolveConfigAttr
+composeApp:sdkReleaseDependencyData
+composeApp:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+kmpauth-core:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+kmpauth-firebase:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+kmpauth-google:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+kmpauth-uihelper:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+kmpnotifier:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+composeApp:signDebugBundle
+composeApp:signingConfigWriterDebug
+composeApp:signingConfigWriterDebugAndroidTest
+kmpauth-core:signingConfigWriterDebugAndroidTest
+kmpauth-firebase:signingConfigWriterDebugAndroidTest
+kmpauth-google:signingConfigWriterDebugAndroidTest
+kmpauth-uihelper:signingConfigWriterDebugAndroidTest
+kmpnotifier:signingConfigWriterDebugAndroidTest
+composeApp:signingConfigWriterRelease
+composeApp:signReleaseBundle
+composeApp:stripDebugAndroidTestDebugSymbols
+kmpauth-core:stripDebugAndroidTestDebugSymbols
+kmpauth-firebase:stripDebugAndroidTestDebugSymbols
+kmpauth-google:stripDebugAndroidTestDebugSymbols
+kmpauth-uihelper:stripDebugAndroidTestDebugSymbols
+kmpnotifier:stripDebugAndroidTestDebugSymbols
+composeApp:stripDebugDebugSymbols
+kmpauth-core:stripDebugDebugSymbols
+kmpauth-firebase:stripDebugDebugSymbols
+kmpauth-google:stripDebugDebugSymbols
+kmpauth-uihelper:stripDebugDebugSymbols
+kmpnotifier:stripDebugDebugSymbols
+composeApp:stripReleaseDebugSymbols
+kmpauth-core:stripReleaseDebugSymbols
+kmpauth-firebase:stripReleaseDebugSymbols
+kmpauth-google:stripReleaseDebugSymbols
+kmpauth-uihelper:stripReleaseDebugSymbols
+kmpnotifier:stripReleaseDebugSymbols
+composeApp:syncComposeResourcesForIos
+kmpauth-core:syncDebugLibJars
+kmpauth-firebase:syncDebugLibJars
+kmpauth-google:syncDebugLibJars
+kmpauth-uihelper:syncDebugLibJars
+kmpnotifier:syncDebugLibJars
+kmpauth-firebase:syncPodComposeResourcesForIos
+kmpauth-google:syncPodComposeResourcesForIos
+kmpauth-uihelper:syncPodComposeResourcesForIos
+kmpauth-core:syncReleaseLibJars
+kmpauth-firebase:syncReleaseLibJars
+kmpauth-google:syncReleaseLibJars
+kmpauth-uihelper:syncReleaseLibJars
+kmpnotifier:syncReleaseLibJars
+composeApp:transformAppleMainCInteropDependenciesMetadata
+kmpauth-core:transformAppleMainCInteropDependenciesMetadata
+kmpauth-firebase:transformAppleMainCInteropDependenciesMetadata
+kmpauth-google:transformAppleMainCInteropDependenciesMetadata
+kmpauth-uihelper:transformAppleMainCInteropDependenciesMetadata
+kmpnotifier:transformAppleMainCInteropDependenciesMetadata
+composeApp:transformAppleMainCInteropDependenciesMetadataForIde
+kmpauth-core:transformAppleMainCInteropDependenciesMetadataForIde
+kmpauth-firebase:transformAppleMainCInteropDependenciesMetadataForIde
+kmpauth-google:transformAppleMainCInteropDependenciesMetadataForIde
+kmpauth-uihelper:transformAppleMainCInteropDependenciesMetadataForIde
+kmpnotifier:transformAppleMainCInteropDependenciesMetadataForIde
+composeApp:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+kmpauth-core:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+kmpauth-firebase:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+kmpauth-google:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+kmpauth-uihelper:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+kmpnotifier:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+composeApp:transformAppleTestCInteropDependenciesMetadataForIde
+kmpauth-core:transformAppleTestCInteropDependenciesMetadataForIde
+kmpauth-firebase:transformAppleTestCInteropDependenciesMetadataForIde
+kmpauth-google:transformAppleTestCInteropDependenciesMetadataForIde
+kmpauth-uihelper:transformAppleTestCInteropDependenciesMetadataForIde
+kmpnotifier:transformAppleTestCInteropDependenciesMetadataForIde
+composeApp:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+kmpauth-core:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+kmpauth-firebase:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+kmpauth-google:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+kmpauth-uihelper:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+kmpnotifier:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+composeApp:transformDependenciesMetadata
+kmpauth-core:transformDependenciesMetadata
+kmpauth-firebase:transformDependenciesMetadata
+kmpauth-google:transformDependenciesMetadata
+kmpauth-uihelper:transformDependenciesMetadata
+kmpnotifier:transformDependenciesMetadata
+composeApp:transformIosMainCInteropDependenciesMetadata
+kmpauth-core:transformIosMainCInteropDependenciesMetadata
+kmpauth-firebase:transformIosMainCInteropDependenciesMetadata
+kmpauth-google:transformIosMainCInteropDependenciesMetadata
+kmpauth-uihelper:transformIosMainCInteropDependenciesMetadata
+kmpnotifier:transformIosMainCInteropDependenciesMetadata
+composeApp:transformIosMainCInteropDependenciesMetadataForIde
+kmpauth-core:transformIosMainCInteropDependenciesMetadataForIde
+kmpauth-firebase:transformIosMainCInteropDependenciesMetadataForIde
+kmpauth-google:transformIosMainCInteropDependenciesMetadataForIde
+kmpauth-uihelper:transformIosMainCInteropDependenciesMetadataForIde
+kmpnotifier:transformIosMainCInteropDependenciesMetadataForIde
+composeApp:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+kmpauth-core:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+kmpauth-firebase:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+kmpauth-google:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+kmpauth-uihelper:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+kmpnotifier:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+composeApp:transformIosTestCInteropDependenciesMetadataForIde
+kmpauth-core:transformIosTestCInteropDependenciesMetadataForIde
+kmpauth-firebase:transformIosTestCInteropDependenciesMetadataForIde
+kmpauth-google:transformIosTestCInteropDependenciesMetadataForIde
+kmpauth-uihelper:transformIosTestCInteropDependenciesMetadataForIde
+kmpnotifier:transformIosTestCInteropDependenciesMetadataForIde
+composeApp:transformNativeMainCInteropDependenciesMetadata
+kmpauth-core:transformNativeMainCInteropDependenciesMetadata
+kmpauth-firebase:transformNativeMainCInteropDependenciesMetadata
+kmpauth-google:transformNativeMainCInteropDependenciesMetadata
+kmpauth-uihelper:transformNativeMainCInteropDependenciesMetadata
+kmpnotifier:transformNativeMainCInteropDependenciesMetadata
+composeApp:transformNativeMainCInteropDependenciesMetadataForIde
+kmpauth-core:transformNativeMainCInteropDependenciesMetadataForIde
+kmpauth-firebase:transformNativeMainCInteropDependenciesMetadataForIde
+kmpauth-google:transformNativeMainCInteropDependenciesMetadataForIde
+kmpauth-uihelper:transformNativeMainCInteropDependenciesMetadataForIde
+kmpnotifier:transformNativeMainCInteropDependenciesMetadataForIde
+composeApp:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+kmpauth-core:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+kmpauth-firebase:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+kmpauth-google:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+kmpauth-uihelper:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+kmpnotifier:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+composeApp:transformNativeTestCInteropDependenciesMetadataForIde
+kmpauth-core:transformNativeTestCInteropDependenciesMetadataForIde
+kmpauth-firebase:transformNativeTestCInteropDependenciesMetadataForIde
+kmpauth-google:transformNativeTestCInteropDependenciesMetadataForIde
+kmpauth-uihelper:transformNativeTestCInteropDependenciesMetadataForIde
+kmpnotifier:transformNativeTestCInteropDependenciesMetadataForIde
+composeApp:updateLintBaselineDebug - Update the lint baseline using the debug variant
+kmpauth-core:updateLintBaselineDebug - Update the lint baseline using the debug variant
+kmpauth-firebase:updateLintBaselineDebug - Update the lint baseline using the debug variant
+kmpauth-google:updateLintBaselineDebug - Update the lint baseline using the debug variant
+kmpauth-uihelper:updateLintBaselineDebug - Update the lint baseline using the debug variant
+kmpnotifier:updateLintBaselineDebug - Update the lint baseline using the debug variant
+composeApp:updateLintBaselineRelease - Update the lint baseline using the release variant
+kmpauth-core:updateLintBaselineRelease - Update the lint baseline using the release variant
+kmpauth-firebase:updateLintBaselineRelease - Update the lint baseline using the release variant
+kmpauth-google:updateLintBaselineRelease - Update the lint baseline using the release variant
+kmpauth-uihelper:updateLintBaselineRelease - Update the lint baseline using the release variant
+kmpnotifier:updateLintBaselineRelease - Update the lint baseline using the release variant
+composeApp:validateSigningDebug
+composeApp:validateSigningDebugAndroidTest
+kmpauth-core:validateSigningDebugAndroidTest
+kmpauth-firebase:validateSigningDebugAndroidTest
+kmpauth-google:validateSigningDebugAndroidTest
+kmpauth-uihelper:validateSigningDebugAndroidTest
+kmpnotifier:validateSigningDebugAndroidTest
+composeApp:validateSigningRelease
+kmpauth-core:verifyReleaseResources
+kmpauth-firebase:verifyReleaseResources
+kmpauth-google:verifyReleaseResources
+kmpauth-uihelper:verifyReleaseResources
+kmpnotifier:verifyReleaseResources
+kmpnotifier:wasmJsProcessResources - Processes file collection.
+kmpnotifier:wasmJsPublicPackageJson
+kmpnotifier:wasmJsTestProcessResources - Processes file collection.
+kmpnotifier:wasmJsTestPublicPackageJson
+kmpnotifier:wasmJsTestTestDevelopmentExecutableCompileSync
+kmpnotifier:wasmJsTestTestDevelopmentExecutableValidateGeneratedByCompilerTypeScript
+kmpnotifier:wasmJsTestTestProductionExecutableCompileSync
+kmpnotifier:wasmJsTestTestProductionExecutableValidateGeneratedByCompilerTypeScript
+kmpauth-core:writeDebugAarMetadata
+kmpauth-firebase:writeDebugAarMetadata
+kmpauth-google:writeDebugAarMetadata
+kmpauth-uihelper:writeDebugAarMetadata
+kmpnotifier:writeDebugAarMetadata
+composeApp:writeDebugAndroidTestSigningConfigVersions
+kmpauth-core:writeDebugAndroidTestSigningConfigVersions
+kmpauth-firebase:writeDebugAndroidTestSigningConfigVersions
+kmpauth-google:writeDebugAndroidTestSigningConfigVersions
+kmpauth-uihelper:writeDebugAndroidTestSigningConfigVersions
+kmpnotifier:writeDebugAndroidTestSigningConfigVersions
+composeApp:writeDebugApplicationId
+composeApp:writeDebugAppMetadata
+kmpauth-core:writeDebugLintModelMetadata
+kmpauth-firebase:writeDebugLintModelMetadata
+kmpauth-google:writeDebugLintModelMetadata
+kmpauth-uihelper:writeDebugLintModelMetadata
+kmpnotifier:writeDebugLintModelMetadata
+composeApp:writeDebugModuleMetadata
+composeApp:writeDebugSigningConfigVersions
+kmpauth-core:writeReleaseAarMetadata
+kmpauth-firebase:writeReleaseAarMetadata
+kmpauth-google:writeReleaseAarMetadata
+kmpauth-uihelper:writeReleaseAarMetadata
+kmpnotifier:writeReleaseAarMetadata
+composeApp:writeReleaseApplicationId
+composeApp:writeReleaseAppMetadata
+kmpauth-core:writeReleaseLintModelMetadata
+kmpauth-firebase:writeReleaseLintModelMetadata
+kmpauth-google:writeReleaseLintModelMetadata
+kmpauth-uihelper:writeReleaseLintModelMetadata
+kmpnotifier:writeReleaseLintModelMetadata
+composeApp:writeReleaseModuleMetadata
+composeApp:writeReleaseSigningConfigVersions
+composeApp:xcodeVersion
+kmpauth-core:xcodeVersion
+kmpauth-firebase:xcodeVersion
+kmpauth-google:xcodeVersion
+kmpauth-uihelper:xcodeVersion
+kmpnotifier:xcodeVersion
+yarnKotlinClean - Clean unused local yarn version
+composeApp:zipApksForDebug
+composeApp:zipApksForRelease
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.

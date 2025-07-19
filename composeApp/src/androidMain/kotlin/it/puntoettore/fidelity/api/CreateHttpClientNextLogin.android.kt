@@ -30,9 +30,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 
-//In shared/androidMain
-// @OptIn(ExperimentalSerializationApi::class)
-actual fun createHttpClient(bookDatabase: BookDatabase): HttpClient = HttpClient(OkHttp) {
+actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = HttpClient(OkHttp) {
 
     val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 

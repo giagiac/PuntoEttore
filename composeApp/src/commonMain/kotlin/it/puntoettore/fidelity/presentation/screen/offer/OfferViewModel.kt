@@ -43,8 +43,8 @@ class OfferViewModel(
         viewModelScope.launch {
             println(censorClient.censorWords("Fuck"))
 
-            NotifierManager.getPushNotifier().getToken()
-                ?.let { apiDataClient.sendData(it) }
+//            NotifierManager.getPushNotifier().getToken()
+//                ?.let { apiDataClient.getAccess(it) }
 
             database.appSettingsDao().getAppSettings().collect { appSettings ->
                 if (appSettings != null) {
@@ -88,7 +88,7 @@ class OfferViewModel(
 
     fun sendData(token: String) {
         viewModelScope.launch {
-            apiDataClient.sendData(token)
+            //apiDataClient.getAccess(token)
         }
     }
 }

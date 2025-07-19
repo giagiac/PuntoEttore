@@ -50,8 +50,8 @@ class AboutViewModel(
 
             // val idToken = database.userDao().getUserById(1).idToken
 
-            NotifierManager.getPushNotifier().getToken()
-                ?.let { apiDataClient.sendData(it) }
+//            NotifierManager.getPushNotifier().getToken()
+//                ?.let { apiDataClient.getAccess(it) }
 
             database.appSettingsDao().getAppSettings().collect { appSettings ->
                 if (appSettings != null) {
@@ -82,7 +82,7 @@ class AboutViewModel(
 
     fun sendData(token: String) {
         viewModelScope.launch {
-            apiDataClient.sendData(token)
+            // apiDataClient.getAccess(token)
         }
     }
 }

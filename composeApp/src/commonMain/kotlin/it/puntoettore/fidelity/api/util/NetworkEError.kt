@@ -9,5 +9,6 @@ enum class NetworkEError : EError {
     PAYLOAD_TOO_LARGE,
     SERVER_ERROR,
     SERIALIZATION,
+    NOT_FOUND,
     UNKNOWN;
 }

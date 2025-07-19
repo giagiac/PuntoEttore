@@ -17,16 +17,15 @@ import it.puntoettore.fidelity.presentation.screen.about.AboutScreen
 import it.puntoettore.fidelity.presentation.screen.about.NotificationsScreen
 import it.puntoettore.fidelity.presentation.screen.account.AccountScreen
 import it.puntoettore.fidelity.presentation.screen.card.CardScreen
+import it.puntoettore.fidelity.presentation.screen.cardDetail.CardDetailScreen
 import it.puntoettore.fidelity.presentation.screen.details.DetailsScreen
 import it.puntoettore.fidelity.presentation.screen.login.LoginScreen
-import it.puntoettore.fidelity.presentation.screen.manage.ManageScreen
 import it.puntoettore.fidelity.presentation.screen.offer.OfferScreen
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.Json
 
 @Serializable
-data class MyModel(val alert:String)
+data class MyModel(val alert: String)
 
 @Composable
 fun SetupNavGraph(navController: NavHostController, startDestination: String) {
@@ -53,6 +52,7 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                         // Azione "Annulla" eseguita
                         println("Snackbar annullato")
                     }
+
                     SnackbarResult.Dismissed -> {
                         // Snackbar chiuso normalmente
                         println("Snackbar chiuso")
@@ -80,6 +80,7 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                         // Azione "Annulla" eseguita
                         println("Snackbar annullato")
                     }
+
                     SnackbarResult.Dismissed -> {
                         // Snackbar chiuso normalmente
                         println("Snackbar chiuso")
@@ -111,6 +112,16 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
         }
         composable(route = Screen.Card.route) {
             CardScreen(
+                onCreditiSelect = {
+                    if (it.codscontrino != null && it.matricola != null) {
+                        navController.navigate(
+                            Screen.CardDetail.passCodiceMatricola(
+                                it.codscontrino,
+                                it.matricola
+                            )
+                        )
+                    }
+                },
                 bottomBar = {
                     BottomBar(navController)
                 },
@@ -118,7 +129,7 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
             )
         }
         composable(route = Screen.Notifications.route) {
-            NotificationsScreen (
+            NotificationsScreen(
                 bottomBar = {
                     BottomBar(navController)
                 }
@@ -189,13 +200,6 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
             )
         ) {
             val id = it.arguments?.getInt(BOOK_ID_ARG) ?: -1
-            ManageScreen(
-                id = id,
-                onBackClick = { navController.navigateUp() },
-                bottomBar = {
-                    BottomBar(navController)
-                }
-            )
         }
         composable(
             route = Screen.Details.route,
@@ -214,6 +218,31 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                 onEditClick = {
                     navController.navigate(Screen.Details.passUrl(id))
                 },
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+        composable(
+            route = Screen.CardDetail.route,
+            arguments = listOf(
+                navArgument(
+                    name = CODICE_ARG
+                ) {
+                    type = NavType.StringType
+                    defaultValue = ""
+                },
+                navArgument(
+                    name = MATRICOLA_ARG
+                ) {
+                    type = NavType.StringType
+                    defaultValue = ""
+                }
+            )
+        ) {
+            val codice = it.arguments?.getString(CODICE_ARG) ?: ""
+            val matricola = it.arguments?.getString(MATRICOLA_ARG) ?: ""
+            CardDetailScreen(
+                codice = codice,
+                matricola = matricola,
                 onBackClick = { navController.navigateUp() }
             )
         }

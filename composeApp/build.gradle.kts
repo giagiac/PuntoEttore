@@ -82,6 +82,14 @@ kotlin {
 
             // qrcode
             implementation(libs.qr.kit)
+
+            // date
+            implementation(libs.kotlinx.datetime)
+
+            // new scaffolding for material Icons
+            implementation(compose.materialIconsExtended)
+
+            implementation(libs.napier)
         }
     }
 }
@@ -422,6 +430,7 @@ dependencies {
     add("kspIosX64", libs.room.compiler)
     add("kspIosArm64", libs.room.compiler)
     add("kspIosSimulatorArm64", libs.room.compiler)
+
 }
 
 compose.resources {

@@ -9,6 +9,7 @@ import androidx.room.Update
 import it.puntoettore.fidelity.domain.User
 import kotlinx.coroutines.flow.Flow
 
+
 @Dao
 interface UserDao {
     @Transaction
@@ -17,6 +18,10 @@ interface UserDao {
 
     @Update
     suspend fun updateUser(user: User)
+
+    // non funziona non ho capito perchè!!!
+    @Query("UPDATE user SET refreshToken = :refreshToken, accessToken = :accessToken WHERE _id = :id")
+    fun updateTokens(id: Int, refreshToken: String?, accessToken: String?) : Int
 
     @Transaction
     @Query("SELECT * FROM user WHERE _id = :userId")

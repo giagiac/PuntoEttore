@@ -5,7 +5,6 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mmk.kmpnotifier.notification.NotifierManager
 import it.puntoettore.fidelity.api.ApiDataClient
 import it.puntoettore.fidelity.api.InsultCensorClient
 import it.puntoettore.fidelity.data.BookDatabase
@@ -30,12 +29,23 @@ class HomeViewModel(
 
     init {
         viewModelScope.launch {
+            database.appSettingsDao().getAppSettings()
+                .collectLatest { appSetting ->
+                    appSetting?.let {
+                        database.userDao().getUserById(it._idUser).collectLatest { user ->
+                            user?.let {
+                                apiDataClient.setUid(it.uid)
+                            }
+                        }
+                    }
+                }
+
             println(censorClient.censorWords("Fuck"))
 
             // val idToken = database.userDao().getUserById(1).idToken
 
-            NotifierManager.getPushNotifier().getToken()
-                ?.let { apiDataClient.sendData(it) }
+//            NotifierManager.getPushNotifier().getToken()
+//                ?.let { apiDataClient.getAccess(it) }
 
             _sortedByFavorite.collectLatest { favorite ->
                 if (favorite) {
@@ -65,7 +75,7 @@ class HomeViewModel(
 
     fun sendData(token: String) {
         viewModelScope.launch {
-            apiDataClient.sendData(token)
+            // apiDataClient.getAccess(token)
         }
     }
 }

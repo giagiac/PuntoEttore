@@ -17,5 +17,8 @@ data class User(
     var photoURL: String?,
     val isAnonymous: Boolean,
     val isEmailVerified: Boolean,
-    val providerId: String
+    val providerId: String,
+
+    var accessToken : String?,
+    var refreshToken : String?,
 )
