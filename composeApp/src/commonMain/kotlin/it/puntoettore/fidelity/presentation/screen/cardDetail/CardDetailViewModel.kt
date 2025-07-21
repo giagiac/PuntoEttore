@@ -6,7 +6,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import it.puntoettore.fidelity.api.ApiDataClient
+import it.puntoettore.fidelity.api.ApiDataClientNextLogin
 import it.puntoettore.fidelity.api.datamodel.BillFidelity
+import it.puntoettore.fidelity.api.datamodel.CreditiFidelity
+import it.puntoettore.fidelity.api.datamodel.DatiFidelity
 import it.puntoettore.fidelity.api.datamodel.UserDetail
 import it.puntoettore.fidelity.api.util.onError
 import it.puntoettore.fidelity.api.util.onSuccess
@@ -14,11 +17,12 @@ import it.puntoettore.fidelity.data.BookDatabase
 import it.puntoettore.fidelity.domain.User
 import it.puntoettore.fidelity.util.RequestState
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 class CardDetailViewModel(
     private val database: BookDatabase,
-    private val apiDataClient: ApiDataClient
+    private val apiDataClientNextLogin: ApiDataClientNextLogin
 ) : ViewModel() {
 
     private var _userDetail: MutableState<RequestState<UserDetail>> =
@@ -32,54 +36,52 @@ class CardDetailViewModel(
         mutableStateOf(RequestState.Loading)
     val billFidelity: State<RequestState<BillFidelity>> = _billFidelity
 
+    private var _datiFidelity: MutableState<RequestState<DatiFidelity>> =
+        mutableStateOf(RequestState.Loading)
+    val datiFidelity: State<RequestState<DatiFidelity>> = _datiFidelity
+
     // TODO : portare in UI
     private var _error: MutableState<String?> = mutableStateOf(null)
     val error: State<String?> = _error
 
-    init {
+    fun getBillFidelity(matricola:String, codice:String) {
         viewModelScope.launch {
 
-            database.appSettingsDao().getAppSettings().collect { appSettings ->
-                if (appSettings != null) {
-                    database.userDao().getUserById(appSettings._idUser).collectLatest { user ->
-                        _user.value = user
-                        user?.let {
-                            apiDataClient.setUid(it.uid)
-
-                            it.accessToken?.let { accessToken ->
-                                apiDataClient.setAccessToken(
-                                    accessToken
-                                )
-                            }
-                            it.refreshToken?.let { refreshToken ->
-                                apiDataClient.setRefreshToken(
-                                    refreshToken
-                                )
-                            }
-                        }
-                    }
-                } else {
-                    _error.value = "Nessun utente trovato"
-                }
+            val appSettings = database.appSettingsDao().getAppSettings().first()
+            println("appSettings : $appSettings")
+            if (appSettings == null) {
+                _error.value = "Nessuna impostazione trovata"
+                return@launch
             }
-        }
-    }
+            _user.value = database.userDao().getUserById(appSettings._idUser).first()
 
-    fun fetchBillFidelity(codice: String?, matricola: String?) {
+            if (_user.value == null) {
+                _error.value = "Nessun utente trovato"
+                return@launch
+            }
+            if (_user.value?.uid == null) {
+                _error.value = "Nessun utente trovato"
+                return@launch
+            }
 
-        if(codice == null || matricola == null){
-            _billFidelity.value = RequestState.Error(message = "Codice o matricola non specificati")
-            return
-        }
+            _user.value?.uid?.let {
+                apiDataClientNextLogin.setUid(it)
+                apiDataClientNextLogin.getDatiFidelity()
+                    .onSuccess {
+                        _datiFidelity.value = RequestState.Success(it)
 
-        viewModelScope.launch {
-            apiDataClient.getBillFidelity(codice = codice, matricola = matricola).onSuccess { creditiFidelity ->
-                _billFidelity.value = RequestState.Success(
-                    data = creditiFidelity
-                )
-            }.onError { error ->
-                _billFidelity.value =
-                    RequestState.Error(message = error.toString())
+                        apiDataClientNextLogin.getBillFidelity(matricola = matricola, codice = codice)
+                            .onSuccess {
+                                _billFidelity.value = RequestState.Success(it)
+                            }
+                            .onError {
+                                _billFidelity.value = RequestState.Error(it.name)
+
+                            }
+                    }
+                    .onError {
+                        _datiFidelity.value = RequestState.Error(it.name)
+                    }
             }
         }
     }

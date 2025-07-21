@@ -25,7 +25,6 @@ import it.puntoettore.fidelity.domain.User
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
@@ -34,8 +33,8 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
 
     val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
-    var accessToken = "ACCESS_NOT_DEFINED"
-    var refreshToken = "REFRESH_NOT_DEFINED"
+    lateinit var accessToken : String
+    lateinit var refreshToken : String
 
     var idUser: Int? = null
     var user: User? = null
@@ -46,13 +45,12 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
         idUser?.let { idUserNotNull ->
             bookDatabase.userDao().getUserById(idUserNotNull).collect {
                 it?.let { _user ->
-                    Log.e("PRIMO CARICAMENTO", _user.refreshToken.toString())
+                    Log.d("CreateHttpClientNextLogin.android.kt", _user.refreshToken.toString())
                     accessToken = _user.accessToken.toString()
                     refreshToken = _user.refreshToken.toString()
                 }
             }
         }
-//        delay(5000) // Attendi 5 secondi
     }
 
     //Timeout plugin for timeouts
@@ -79,21 +77,6 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
     //We can configure the BASE_URL and also
     //the deafult headers by defaultRequest builder
     defaultRequest {
-//        val resu = scope.launch {
-//            val appSettings = bookDatabase.appSettingsDao().getAppSettings().first()
-//            idUser = appSettings?._idUser
-//            idUser?.let { idUserNotNull ->
-//                val u = bookDatabase.userDao().getUserById(idUserNotNull).first()
-//                u?.let { _user ->
-//                    user = _user
-//                    Log.e("PRIMO CARICAMENTO", _user.refreshToken.toString())
-//
-//                    return@launch header("custom-refresh-token", _user.refreshToken.toString())
-//                }
-//            }
-////        delay(5000) // Attendi 5 secondi
-//        }
-//        println(resu)
         header("Content-Type", "application/json")
         header("APP_VERSION", BuildConfig.APP_VERSION)
         header("BUILD_TIME", BuildConfig.BUILD_TIME)
@@ -128,18 +111,12 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
                 val tokens = response.body<AuthResponse>()
 
                 scope.launch {
-                    delay(5000)
-                    Log.e("SECONDO CARICAMENTO", tokens.refresh_token)
                     user?.let {
                         it.refreshToken = tokens.refresh_token
                         it.accessToken = tokens.access_token
-                        bookDatabase.userDao()
-                            .updateUser(user = it)
+                        bookDatabase.userDao().updateUser(user = it)
                     }
-                    idUser?.let { idUserNotNull ->
-                        val user = bookDatabase.userDao().getUserById(idUserNotNull).first()
-                        Log.e("TERZO CARICAMENTO", user.toString())
-                    }
+                    Log.d("CreateHttpClientNextLogin.android.kt", "Token refreshed")
                 }
 
                 BearerTokens(

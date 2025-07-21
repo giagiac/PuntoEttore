@@ -31,108 +31,11 @@ class ApiDataClientNextLogin(
 ) {
     private lateinit var uid: String
 
+    // impostato al primo caricamento in ViewModel
+    // serve perchè ciascuna chiamata richiede di specificare nuovamente uid
+    // anche se ricevabile da Token... logica Marco!
     fun setUid(_uid: String) {
         uid = _uid
-    }
-
-    suspend fun getAccess(uid: String): Result<AuthDetail, NetworkEError> {
-        val response = try {
-            httpClient.get(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=getAccess") {
-                contentType(ContentType.Application.Json)
-                // setBody(DataUser(token = uid))
-                headers {
-                    append("uid", uid)
-                }
-            }
-        } catch (e: UnresolvedAddressException) {
-            return Result.Error(NetworkEError.NO_INTERNET)
-        } catch (e: SerializationException) {
-            return Result.Error(NetworkEError.SERIALIZATION)
-        } catch (e: CancellationException) {
-            println("Coroutine Il job è stato annullato come previsto.")
-            throw e // Rilancia l'eccezione per completare l'annullamento
-        } catch (e: Exception) {
-            return Result.Error(NetworkEError.UNKNOWN)
-        }
-
-        return when (response.status.value) {
-            in 200..299 -> {
-                val body = response.body<AuthDetail>()
-                Result.Success(body)
-            }
-
-            401 -> Result.Error(NetworkEError.UNAUTHORIZED)
-            404 -> Result.Error(NetworkEError.NOT_FOUND)
-            409 -> Result.Error(NetworkEError.CONFLICT)
-            408 -> Result.Error(NetworkEError.REQUEST_TIMEOUT)
-            413 -> Result.Error(NetworkEError.PAYLOAD_TOO_LARGE)
-            in 500..599 -> Result.Error(NetworkEError.SERVER_ERROR)
-            else -> Result.Error(NetworkEError.UNKNOWN)
-        }
-    }
-
-//    suspend fun getRefresh(): Result<AuthDetail, NetworkEError> {
-//        val response = try {
-//            httpClient.get(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=getRefresh") {
-//                contentType(ContentType.Application.Json)
-//                headers {
-//                    append("refreshToken", refreshToken)
-//                }
-//            }
-//        } catch (e: UnresolvedAddressException) {
-//            return Result.Error(NetworkEError.NO_INTERNET)
-//        } catch (e: SerializationException) {
-//            return Result.Error(NetworkEError.SERIALIZATION)
-//        } catch (e: Exception) {
-//            return Result.Error(NetworkEError.NO_INTERNET)
-//        }
-//
-//        return when (response.status.value) {
-//            in 200..299 -> {
-//                val body = response.body<AuthDetail>()
-//                this.refreshToken = body.refresh_token
-//                Result.Success(body)
-//            }
-//
-//            401 -> Result.Error(NetworkEError.UNAUTHORIZED)
-//            409 -> Result.Error(NetworkEError.CONFLICT)
-//            408 -> Result.Error(NetworkEError.REQUEST_TIMEOUT)
-//            413 -> Result.Error(NetworkEError.PAYLOAD_TOO_LARGE)
-//            in 500..599 -> Result.Error(NetworkEError.SERVER_ERROR)
-//            else -> Result.Error(NetworkEError.UNKNOWN)
-//        }
-//    }
-
-    // TODO : sostituire con quella nuova (dove usata)
-    suspend fun getUserDetail(uid: String): Result<UserDetail, NetworkEError> {
-        val response = try {
-            httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=datiFidelity") {
-                contentType(ContentType.Application.Json)
-                setBody(DataUid(uid = uid))
-            }
-        } catch (e: UnresolvedAddressException) {
-            return Result.Error(NetworkEError.NO_INTERNET)
-        } catch (e: SerializationException) {
-            return Result.Error(NetworkEError.SERIALIZATION)
-        } catch (e: Exception) {
-            return Result.Error(NetworkEError.NO_INTERNET)
-        }
-
-        return when (response.status.value) {
-            in 200..299 -> {
-                val data = response.body<UserDetail>()
-                Result.Success(data)
-            }
-
-            401 -> {
-                return Result.Error(NetworkEError.UNAUTHORIZED)
-            }
-            409 -> Result.Error(NetworkEError.CONFLICT)
-            408 -> Result.Error(NetworkEError.REQUEST_TIMEOUT)
-            413 -> Result.Error(NetworkEError.PAYLOAD_TOO_LARGE)
-            in 500..599 -> Result.Error(NetworkEError.SERVER_ERROR)
-            else -> Result.Error(NetworkEError.UNKNOWN)
-        }
     }
 
     suspend fun getDatiFidelity(): Result<DatiFidelity, NetworkEError> {

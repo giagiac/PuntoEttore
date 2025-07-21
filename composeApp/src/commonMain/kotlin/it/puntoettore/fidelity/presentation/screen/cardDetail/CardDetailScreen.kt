@@ -26,7 +26,6 @@ import it.puntoettore.fidelity.Res
 import it.puntoettore.fidelity.card
 import it.puntoettore.fidelity.presentation.components.ErrorView
 import it.puntoettore.fidelity.presentation.components.LoadingView
-import it.puntoettore.fidelity.presentation.screen.component.CreditiFidelityView
 import it.puntoettore.fidelity.util.DisplayResult
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -42,7 +41,9 @@ fun CardDetailScreen(
     val listState = rememberLazyListState()
     val viewModel = koinViewModel<CardDetailViewModel>()
     val userDetail by viewModel.userDetail
-    val creditiFidelity by viewModel.billFidelity
+    val billFidelity by viewModel.billFidelity
+
+    viewModel.getBillFidelity(matricola = matricola, codice = codice)
 
     Scaffold(
         topBar = {
@@ -80,11 +81,10 @@ fun CardDetailScreen(
                     }
                 },
                 content = {
-                    creditiFidelity.DisplayResult(
+                    billFidelity.DisplayResult(
                         onLoading = { LoadingView() },
                         onError = { ErrorView(it) },
                         onSuccess = { data ->
-
                             if (!data.articoli.isNullOrEmpty()) {
                                 LazyColumn(
                                     modifier = Modifier
@@ -98,7 +98,8 @@ fun CardDetailScreen(
                                     items(
                                         items = data.articoli
                                     ) {
-                                        Text(text = it.descrizione!!,
+                                        Text(
+                                            text = it.descrizione!!,
                                             modifier = Modifier.padding(1.dp)
                                         )
                                     }

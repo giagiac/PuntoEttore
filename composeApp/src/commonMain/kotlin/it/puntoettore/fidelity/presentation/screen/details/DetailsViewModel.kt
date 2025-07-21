@@ -5,7 +5,6 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mmk.kmpnotifier.notification.NotifierManager
 import it.puntoettore.fidelity.api.ApiDataClient
 import it.puntoettore.fidelity.api.datamodel.Offers
 import it.puntoettore.fidelity.api.util.onError
@@ -44,13 +43,13 @@ class DetailsViewModel(
                         .getUserById(appSettings._idUser).collectLatest { user ->
                             _user.value = user
                             user?.let {
-                                apiDataClient.getOffers(user.uid).onSuccess { offers ->
-                                    _offers.value = RequestState.Success(
-                                        data = offers
-                                    )
-                                }.onError { error ->
-                                    RequestState.Error(message = error.toString())
-                                }
+//                                apiDataClient.getOffers(user.uid).onSuccess { offers ->
+//                                    _offers.value = RequestState.Success(
+//                                        data = offers
+//                                    )
+//                                }.onError { error ->
+//                                    RequestState.Error(message = error.toString())
+//                                }
                             }
                         }
                 } else {

@@ -53,14 +53,14 @@ class AccountViewModel(
                         .getUserById(appSettings._idUser).collectLatest { user ->
                             _user.value = user
                             user?.let {
-                                apiDataClient.getUserDetail(it.uid).onSuccess { userDetail ->
-                                    _userDetail.value = RequestState.Success(
-                                        data = userDetail
-                                    )
-                                }.onError { error ->
-                                    _userDetail.value =
-                                        RequestState.Error(message = error.toString())
-                                }
+//                                apiDataClient.getUserDetail(it.uid).onSuccess { userDetail ->
+//                                    _userDetail.value = RequestState.Success(
+//                                        data = userDetail
+//                                    )
+//                                }.onError { error ->
+//                                    _userDetail.value =
+//                                        RequestState.Error(message = error.toString())
+//                                }
                             }
 
                         }

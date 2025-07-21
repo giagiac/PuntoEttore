@@ -88,8 +88,6 @@ kotlin {
 
             // new scaffolding for material Icons
             implementation(compose.materialIconsExtended)
-
-            implementation(libs.napier)
         }
     }
 }

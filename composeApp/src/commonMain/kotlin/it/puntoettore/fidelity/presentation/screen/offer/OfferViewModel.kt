@@ -52,13 +52,13 @@ class OfferViewModel(
                         .getUserById(appSettings._idUser).collectLatest { user ->
                             _user.value = user
                             user?.let{
-                                apiDataClient.getOffers(user.uid).onSuccess { offers ->
-                                    _offers.value = RequestState.Success(
-                                        data = offers
-                                    )
-                                }.onError { error ->
-                                    _offers.value = RequestState.Error(message = error.toString())
-                                }
+//                                apiDataClient.getOffers(user.uid).onSuccess { offers ->
+//                                    _offers.value = RequestState.Success(
+//                                        data = offers
+//                                    )
+//                                }.onError { error ->
+//                                    _offers.value = RequestState.Error(message = error.toString())
+//                                }
                             }
                         }
                 } else {

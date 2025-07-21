@@ -1,31 +1,31 @@
 [versions]
-agp = "8.6.1"
-android-compileSdk = "35"
+agp = "8.5.2"
+android-compileSdk = "34"
 android-minSdk = "24"
-android-targetSdk = "35"
-androidx-activityCompose = "1.10.1"
-androidx-appcompat = "1.7.1"
-androidx-constraintlayout = "2.2.1"
-androidx-core-ktx = "1.16.0"
+android-targetSdk = "34"
+androidx-activityCompose = "1.3.0-alpha01"
+androidx-appcompat = "1.7.0"
+androidx-constraintlayout = "2.1.4"
+androidx-core-ktx = "1.13.1"
 androidx-espresso-core = "3.6.1"
-androidx-lifecycle = "2.8.4"
+androidx-lifecycle = "2.8.3"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
-compose-multiplatform = "1.8.0"
+compose-multiplatform = "1.7.0"
 junit = "4.13.2"
 kotlin = "2.0.21"
 androidx-startup-runtime = "1.2.0"
 firebase-messaging = "24.0.2"
-koin = "4.1.0"
-kotlinx-coroutine = "1.10.2"
+koin = "4.0.0"
+kotlinx-coroutine = "1.9.0"
 
-compose = "1.8.3"
+compose = "1.7.4"
 
 androidxCredential = "1.3.0"
 googleIdIdentity = "1.1.1"
-androidLegacyPlayServices = "21.3.0"
+androidLegacyPlayServices = "21.2.0"
 
-firebaseAuthKtx = "23.2.1"
+firebaseAuthKtx = "23.0.0"
 firebaseGitLiveAuth = "2.1.0"
 
 # ktor
@@ -35,7 +35,6 @@ ktor = "3.0.0"
 # GoogleService
 googleServices = "4.4.2"
 
-napier = "2.7.1"
 qrKit = "1.0.8"
 room = "2.7.0-alpha09"
 ksp = "2.0.21-1.0.25"
@@ -105,7 +104,6 @@ ktor-client-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
 compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation" }
 
 landscapist-coil3 = { module = "com.github.skydoves:landscapist-coil3", version.ref = "landscapist" }
-napier = { module = "io.github.aakira:napier", version.ref = "napier" }
 qr-kit = { module = "network.chaintech:qr-kit", version.ref = "qrKit" }
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }

@@ -59,14 +59,14 @@ class AboutViewModel(
                         .getUserById(appSettings._idUser).collectLatest { user ->
                             _user.value = user
                             user?.let {
-                                apiDataClient.getUserDetail(user.uid).onSuccess { userDetail ->
-                                    _userDetail.value = RequestState.Success(
-                                        data = userDetail
-                                    )
-                                }.onError { error ->
-                                    _userDetail.value =
-                                        RequestState.Error(message = error.toString())
-                                }
+//                                apiDataClient.getUserDetail(user.uid).onSuccess { userDetail ->
+//                                    _userDetail.value = RequestState.Success(
+//                                        data = userDetail
+//                                    )
+//                                }.onError { error ->
+//                                    _userDetail.value =
+//                                        RequestState.Error(message = error.toString())
+//                                }
                             }
                         }
                 } else {

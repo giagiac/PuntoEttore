@@ -102,7 +102,7 @@ public actual fun PhoneAuthContainer(
                         }
 
                         override fun onVerificationFailed(e: FirebaseException) {
-                            Log.e("MainActivity", "Verification failed", e)
+                            Log.d("PhoneAuthContainer.android.kt", "Verification failed", e)
                             errorSend = e.message
                         }
 
@@ -110,7 +110,7 @@ public actual fun PhoneAuthContainer(
                             verificationId: String,
                             token: PhoneAuthProvider.ForceResendingToken
                         ) {
-                            Log.d("MainActivity", "Code sent: $verificationId")
+                            Log.d("PhoneAuthContainer.android.kt", "Code sent: $verificationId")
                             resendToken = token
                             _verificationId = verificationId
                             verificationCodeEnabled = true

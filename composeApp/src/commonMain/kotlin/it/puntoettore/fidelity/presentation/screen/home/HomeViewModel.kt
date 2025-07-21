@@ -34,7 +34,7 @@ class HomeViewModel(
                     appSetting?.let {
                         database.userDao().getUserById(it._idUser).collectLatest { user ->
                             user?.let {
-                                apiDataClient.setUid(it.uid)
+                                // apiDataClient.setUid(it.uid)
                             }
                         }
                     }

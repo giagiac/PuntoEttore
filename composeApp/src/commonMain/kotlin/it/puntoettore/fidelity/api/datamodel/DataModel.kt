@@ -6,9 +6,6 @@ import kotlinx.serialization.Serializable
 data class CensoredText(val result: String)
 
 @Serializable
-data class DataUser(val token: String)
-
-@Serializable
 data class DataUid(val uid: String)
 
 @Serializable

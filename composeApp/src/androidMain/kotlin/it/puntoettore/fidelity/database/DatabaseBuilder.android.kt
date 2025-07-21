@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase
 import it.puntoettore.fidelity.data.BookDatabase
 
 fun getDatabaseBuilder(context: Context): RoomDatabase.Builder<BookDatabase> {
-    val dbFile = context.getDatabasePath("book.db")
+    val dbFile = context.getDatabasePath("fidelity.db")
     return Room.databaseBuilder(
         context = context,
         name = dbFile.absolutePath

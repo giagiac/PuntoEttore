@@ -1,7 +1,6 @@
 package it.puntoettore.fidelity.di
 
 import it.puntoettore.fidelity.data.getRoomDatabase
-import it.puntoettore.fidelity.database.getMieiDati
 import it.puntoettore.fidelity.presentation.screen.about.NotificationsViewModel
 import it.puntoettore.fidelity.presentation.screen.account.AccountViewModel
 import it.puntoettore.fidelity.presentation.screen.card.CardViewModel
@@ -25,20 +24,6 @@ class Pippo(val pluto:String){
 
 val sharedModule = module {
     single { getRoomDatabase(get()) }
-
-    //single { InsultCensorClient(httpClient = createHttpClient(get())) }
-
-    // single { createHttpClient(tokenProvider = get()) }
-//    factory<Pippo> {
-//        Pippo("PIPPOOOO")
-//    }
-//    single {
-//            p-> testMyAsyncToken(pippoProvider = p.get())
-//    }
-//    factory <Pippo> {
-//        getMieiDati(get())
-//    }
-
     viewModelOf(::LoginViewModel)
     viewModelOf(::CardViewModel)
     viewModelOf(::CardDetailViewModel)

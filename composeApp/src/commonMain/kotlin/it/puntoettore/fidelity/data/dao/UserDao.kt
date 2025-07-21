@@ -21,7 +21,7 @@ interface UserDao {
 
     // non funziona non ho capito perchè!!!
     @Query("UPDATE user SET refreshToken = :refreshToken, accessToken = :accessToken WHERE _id = :id")
-    fun updateTokens(id: Int, refreshToken: String?, accessToken: String?) : Int
+    suspend fun updateTokens(id: Int, refreshToken: String?, accessToken: String?) : Int
 
     @Transaction
     @Query("SELECT * FROM user WHERE _id = :userId")

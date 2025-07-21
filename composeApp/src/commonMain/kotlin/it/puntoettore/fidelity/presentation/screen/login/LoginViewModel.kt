@@ -47,6 +47,10 @@ class LoginViewModel(
 
                 errorSignin.value = null
 
+                // TODO :
+                // in tutti e due i casi registro l'id di firebase
+                // passo alla schermata Card (con il qrcode)
+                // N.B. l'utente dovrà fare logout e login dal profilo per ripartire (ammeno che non prevedo una logica diversa)
                 apiGetAccessToken({
                     insertUser({
                         loginSucced.value = true
@@ -60,7 +64,6 @@ class LoginViewModel(
                     errorSignin.value =
                         "Att.ne qualcosa è andato storto, potrai solo usare il qrcode per registrare i tuoi punti : ${it.name}"
                 }, firebaseUser)
-
             }
         } else {
             // signedInUserName = ""

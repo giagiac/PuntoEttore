@@ -14,8 +14,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -41,7 +39,6 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mmk.kmpnotifier.notification.NotifierManager
 import it.puntoettore.fidelity.Res
 import it.puntoettore.fidelity.api.datamodel.CreditiFidelity
@@ -63,12 +60,9 @@ fun CardScreen(
     snackbarHostState: SnackbarHostState,
 ) {
     val scope = rememberCoroutineScope()
-    val listState = rememberLazyListState()
     val viewModel = koinViewModel<CardViewModel>()
-    val userDetail by viewModel.userDetail
+    val datiFidelity by viewModel.datiFidelity
     val creditiFidelity by viewModel.creditiFidelity
-
-    val sortedByFavorite by viewModel.sortedByFavorite.collectAsStateWithLifecycle()
 
     var myPushNotificationToken by remember { mutableStateOf("") }
     LaunchedEffect(true) {
@@ -104,6 +98,7 @@ fun CardScreen(
         })
     }, bottomBar = bottomBar, content = { it ->
         Scaffold(modifier = Modifier.padding(it).padding(start = 8.dp, end = 8.dp), topBar = {
+            // prendo uid da user così sono sicuro di averlo sempre... quello dalla network potrei non averlo per le regole precedenti
             viewModel.user.value?.let {
                 Row(
                     horizontalArrangement = Arrangement.Center,
@@ -136,16 +131,6 @@ fun CardScreen(
             }
         }, content = {
             Column {
-                Button(onClick = { viewModel.loginData() }) {
-                    Text("ACCESS")
-                }
-                Button(onClick = { viewModel.sendData() }) {
-                    Text("TEST")
-                }
-                Button(onClick = { viewModel.invalidRefreshToken() }) {
-                    Text("INVALID")
-                }
-
                 creditiFidelity.DisplayResult(onLoading = { LoadingView() },
                     onError = { ErrorView(it) },
                     onSuccess = { data ->

@@ -1,36 +1,24 @@
 package it.puntoettore.fidelity.api
 
 import io.ktor.client.HttpClient
-import io.ktor.client.call.body
 import io.ktor.client.engine.darwin.Darwin
-import io.ktor.client.engine.darwin.DarwinClientEngineConfig
 import io.ktor.client.plugins.HttpTimeout
-import io.ktor.client.plugins.auth.Auth
-import io.ktor.client.plugins.auth.providers.BearerTokens
-import io.ktor.client.plugins.auth.providers.bearer
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.plugins.logging.DEFAULT
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
-import io.ktor.client.request.get
 import io.ktor.client.request.header
-import io.ktor.client.request.post
-import io.ktor.client.request.setBody
 import io.ktor.serialization.kotlinx.json.json
 import it.puntoettore.fidelity.custom.BuildConfig
 import it.puntoettore.fidelity.data.BookDatabase
-import it.puntoettore.fidelity.data.TokenProvider
 import kotlinx.serialization.ExperimentalSerializationApi
-import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 //In shared/androidMain
 @OptIn(ExperimentalSerializationApi::class)
-actual fun createHttpClientNextLogin(bookDatabase: BookDatabase):HttpClient = HttpClient(Darwin) {
-    val accessToken = "ACCESS_NOT_DEFINED"
-    val refreshToken = "REFRESH_NOT_DEFINED"
+actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = HttpClient(Darwin) {
 
     //Timeout plugin for timeouts
     install(HttpTimeout) {
