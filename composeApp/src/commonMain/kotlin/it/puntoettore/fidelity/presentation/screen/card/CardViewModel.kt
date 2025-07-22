@@ -35,6 +35,13 @@ class CardViewModel(
     private var _error: MutableState<String?> = mutableStateOf(null)
     val error: State<String?> = _error
 
+    private var _isFirstProgression: MutableState<Boolean> = mutableStateOf(true)
+    var isFirstProgression: State<Boolean> = _isFirstProgression
+
+    fun setFirstProgression(value: Boolean) {
+        _isFirstProgression.value = value
+    }
+
     init {
         viewModelScope.launch {
 

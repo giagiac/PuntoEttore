@@ -12,8 +12,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.paddingFromBaseline
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -47,11 +47,11 @@ import it.puntoettore.fidelity.Res
 import it.puntoettore.fidelity.api.datamodel.CreditiFidelity
 import it.puntoettore.fidelity.card
 import it.puntoettore.fidelity.presentation.components.ErrorView
-import it.puntoettore.fidelity.presentation.components.LabelValueRow
 import it.puntoettore.fidelity.presentation.components.LoadingView
 import it.puntoettore.fidelity.presentation.screen.component.CreditiFidelityView
 import it.puntoettore.fidelity.util.DisplayResult
 import kotlinx.coroutines.launch
+import kotlinx.datetime.Clock
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import qrgenerator.QRCodeImage
@@ -101,82 +101,140 @@ fun CardScreen(
             )
         })
     }, bottomBar = bottomBar, content = { it ->
-        Column(modifier = Modifier.padding(top = 65.dp)) {
-            viewModel.user.value?.let {
-                Column {
-                    Row(
-                        horizontalArrangement = Arrangement.Center,
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Card(elevation = CardDefaults.cardElevation(
-                            defaultElevation = 12.dp
-                        ),
-                            border = BorderStroke(1.dp, Color.Black),
-                            modifier = Modifier.padding(12.dp).drawBehind {
-                                rotate(rotationAnimation.value) {
-                                    drawCircle(brush, style = Stroke(50.dp.value))
-                                }
-                            }) {
-                            QRCodeImage(url = it.uid,
-                                contentScale = ContentScale.Fit,
-                                contentDescription = it.uid,
-                                modifier = Modifier.align(Alignment.CenterHorizontally).size(150.dp)
-                                    .padding(16.dp),
-                                onSuccess = { qrImage ->
-
-                                },
-                                onFailure = {
-                                    scope.launch {
-                                        // TODO: handle error
-                                    }
-                                })
-
-                        }
-                    }
-                }
-            }
+        Column(modifier = Modifier.padding(
+            top = it.calculateTopPadding(),
+            bottom = it.calculateBottomPadding()
+        )) {
             Box {
                 datiFidelity.DisplayResult(
                     onSuccess = { data ->
-                        Column(modifier = Modifier.align(Alignment.Center)) {
-                            LabelValueRow(
-                                label = "Nome : ",
-                                value = data.firstName,
-                                modifier = Modifier.paddingFromBaseline(8.dp)
-                            )
-                            LabelValueRow(
-                                label = "Punti totali : ",
-                                value = data.points.toString(),
-                                modifier = Modifier.paddingFromBaseline(8.dp)
-                            )
-                            LabelValueRow(
-                                label = "Fascia : ",
-                                value = data.fascia,
-                                modifier = Modifier.paddingFromBaseline(8.dp)
-                            )
-                        }
-                    })
-                creditiFidelity.DisplayResult(
-                    onLoading = { LoadingView() },
-                    onError = { ErrorView(it) },
-                    onSuccess = { data ->
-                        if (data.isNotEmpty()) {
-                            LazyColumn(
-                                modifier = Modifier.padding(all = 12.dp).padding(
-                                    top = it.calculateTopPadding(),
-                                    bottom = it.calculateBottomPadding()
-                                ), verticalArrangement = Arrangement.spacedBy(12.dp)
+                        Column(
+                            modifier = Modifier.align(Alignment.Center)
+                        ) {
+                            // Card custom con effetto rilievo
+                            Card(
+                                elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+                                shape = MaterialTheme.shapes.medium,
+                                border = BorderStroke(2.dp, MaterialTheme.colorScheme.outline),
+                                modifier = Modifier
+                                    .padding(start = 8.dp, end = 8.dp, top = 0.dp, bottom = 0.dp)
+                                    .fillMaxWidth()
                             ) {
-                                items(items = data, key = { it.data_inserimento!! }) {
-                                    CreditiFidelityView(
-                                        item = it,
-                                        onClick = { onCreditiSelect(it) })
+                                Row(
+                                    modifier = Modifier
+                                        .padding(16.dp)
+                                        .fillMaxWidth(),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    // Colonna sinistra: QRCode
+                                    Column(
+                                        modifier = Modifier.weight(1f),
+                                        horizontalAlignment = Alignment.CenterHorizontally
+                                    ) {
+                                        viewModel.user.value?.let {
+                                            Card(elevation = CardDefaults.cardElevation(
+                                                defaultElevation = 12.dp
+                                            ),
+                                                border = BorderStroke(1.dp, Color.Black),
+                                                modifier = Modifier.drawBehind {
+                                                    rotate(rotationAnimation.value) {
+                                                        drawCircle(
+                                                            brush,
+                                                            style = Stroke(50.dp.value)
+                                                        )
+                                                    }
+                                                }) {
+                                                QRCodeImage(url = it.uid,
+                                                    contentScale = ContentScale.Fit,
+                                                    contentDescription = it.uid,
+                                                    modifier = Modifier.align(Alignment.CenterHorizontally)
+                                                        .size(120.dp)
+                                                        .padding(8.dp),
+                                                    onSuccess = { qrImage -> },
+                                                    onFailure = {
+                                                        scope.launch {
+                                                            // TODO: handle error
+                                                        }
+                                                    })
+                                            }
+                                        }
+                                    }
+                                    // Colonna destra: Testi
+                                    Column(
+                                        modifier = Modifier.weight(2f).padding(start = 24.dp),
+                                        horizontalAlignment = Alignment.CenterHorizontally
+                                    ) {
+                                        // Riga 1: Nome
+                                        Text(
+                                            text = data.firstName,
+                                            style = MaterialTheme.typography.headlineSmall,
+                                            color = MaterialTheme.colorScheme.onSurface,
+                                            modifier = Modifier.padding(bottom = 8.dp)
+                                        )
+
+                                        // Riga 2: Punti con animazione custom
+                                        AnimatedPoints(
+                                            points = data.points,
+                                            viewModel.isFirstProgression.value,
+                                            onFinish = {
+                                                viewModel.setFirstProgression(false)
+                                            })
+
+                                        // Riga 3: Fascia con linea colorata
+                                        val fasciaColor = when (data.fascia.lowercase()) {
+                                            "platinum" -> Color(0xFFC0C0C0) // Platinum
+                                            "gold" -> Color(0xFFFFD700) // Gold
+                                            "silver" -> Color(0xFFB0B0B0) // Silver
+                                            else -> MaterialTheme.colorScheme.primary
+                                        }
+                                        Column(
+                                            modifier = Modifier.padding(top = 16.dp)
+                                        ) {
+                                            Text(
+                                                text = data.fascia,
+                                                style = MaterialTheme.typography.titleMedium,
+                                                color = fasciaColor,
+                                                modifier = Modifier.align(Alignment.CenterHorizontally)
+                                            )
+                                            // Linea colorata sotto il testo, altezza come il testo
+                                            Box(
+                                                modifier = Modifier
+                                                    .align(Alignment.CenterHorizontally)
+                                                    .padding(top = 2.dp)
+                                                    .fillMaxWidth(0.5f)
+                                                    .height(MaterialTheme.typography.titleMedium.fontSize.value.dp / 1.5f)
+                                                    .background(
+                                                        fasciaColor,
+                                                        shape = MaterialTheme.shapes.small
+                                                    )
+                                            )
+                                        }
+                                    }
                                 }
                             }
-                        } else {
-                            ErrorView()
+                            creditiFidelity.DisplayResult(
+                                onLoading = { LoadingView() },
+                                onError = { ErrorView(it) },
+                                onSuccess = { data ->
+                                    if (data.isNotEmpty()) {
+                                        LazyColumn(
+                                            modifier = Modifier.padding(
+                                                top = 8.dp,
+                                            ), verticalArrangement = Arrangement.spacedBy(12.dp)
+                                        ) {
+                                            items(items = data, key = { it.data_inserimento!! }) {
+                                                CreditiFidelityView(
+                                                    item = it,
+                                                    onClick = { onCreditiSelect(it) })
+                                            }
+                                        }
+                                    } else {
+                                        ErrorView()
+                                    }
+                                })
                         }
                     })
+
             }
             viewModel.error.value?.let { error ->
                 Row {
@@ -187,4 +245,60 @@ fun CardScreen(
             }
         }
     })
+}
+
+@Composable
+fun AnimatedPoints(points: Int, firstProgression: Boolean, onFinish: () -> Unit) {
+    var displayedPoints by remember { mutableStateOf(0) }
+    val totalDuration = 3000L
+    val lastSteps = 5
+    val lastStepDuration = 150L
+    val initialSteps = (points - lastSteps).coerceAtLeast(0)
+    val initialDuration = totalDuration - (lastSteps * lastStepDuration)
+
+    LaunchedEffect(points) {
+        if (firstProgression) {
+            val startTime = Clock.System.now().toEpochMilliseconds()
+            var finished = false
+            while (!finished) {
+                val elapsed = Clock.System.now().toEpochMilliseconds() - startTime
+                when {
+                    elapsed < initialDuration && initialSteps > 0 -> {
+                        // Fase iniziale: incremento rapido
+                        val progress = (elapsed.toFloat() / initialDuration)
+                        val current = (progress * initialSteps).toInt().coerceAtMost(initialSteps)
+                        if (displayedPoints != current) displayedPoints = current
+                    }
+
+                    elapsed < totalDuration -> {
+                        // Fase finale: ultimi 3 numeri, incremento lento
+                        val finaleElapsed = elapsed - initialDuration
+                        val finaleProgress =
+                            (finaleElapsed.toFloat() / (lastSteps * lastStepDuration))
+                        val current = (initialSteps + (finaleProgress * lastSteps)).toInt()
+                            .coerceAtMost(points)
+                        if (displayedPoints != current) displayedPoints = current
+                    }
+
+                    else -> {
+                        // Fine animazione
+                        displayedPoints = points
+                        finished = true
+                        onFinish()
+                    }
+                }
+                if (!finished) {
+                    kotlinx.coroutines.delay(16L) // Aggiorna ~60fps
+                }
+            }
+        } else {
+            displayedPoints = points
+        }
+    }
+
+    Text(
+        text = displayedPoints.toString(),
+        style = MaterialTheme.typography.headlineLarge,
+        color = MaterialTheme.colorScheme.primary
+    )
 }

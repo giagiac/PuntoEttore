@@ -126,11 +126,11 @@ fun CreditiFidelityView(
         .clip(RoundedCornerShape(size = 12.dp))
         .clickable { onClick() }
     ) {
-        Box(modifier = Modifier.size(120.dp)) {
+        Box(modifier = Modifier.size(80.dp)) {
             CoilImage(
                 modifier = Modifier
                     .clip(RoundedCornerShape(size = 12.dp))
-                    .size(120.dp)
+                    .size(80.dp)
                     .padding(5.dp),
                 imageModel = { /*item.matricola*/ "https://cdn-icons-png.flaticon.com/128/2374/2374851.png" },
                 imageOptions = ImageOptions(
