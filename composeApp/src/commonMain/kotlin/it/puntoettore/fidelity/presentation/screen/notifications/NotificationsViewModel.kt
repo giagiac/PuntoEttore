@@ -5,12 +5,9 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mmk.kmpnotifier.notification.NotifierManager
 import it.puntoettore.fidelity.api.ApiDataClient
 import it.puntoettore.fidelity.api.InsultCensorClient
 import it.puntoettore.fidelity.api.datamodel.UserDetail
-import it.puntoettore.fidelity.api.util.onError
-import it.puntoettore.fidelity.api.util.onSuccess
 import it.puntoettore.fidelity.data.BookDatabase
 import it.puntoettore.fidelity.domain.Book
 import it.puntoettore.fidelity.domain.User

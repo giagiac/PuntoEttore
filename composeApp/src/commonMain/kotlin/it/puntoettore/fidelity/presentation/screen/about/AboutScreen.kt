@@ -44,7 +44,7 @@ fun AboutScreen(
     bottomBar: @Composable () -> Unit,
 ) {
     val scope = rememberCoroutineScope()
-    val viewModel = koinViewModel<NotificationsViewModel>()
+    val viewModel = koinViewModel<AboutViewModel>()
     val userDetail by viewModel.userDetail
 
     Scaffold(

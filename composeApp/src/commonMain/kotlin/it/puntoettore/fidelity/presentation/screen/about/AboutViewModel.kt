@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mmk.kmpnotifier.notification.NotifierManager
 import it.puntoettore.fidelity.api.ApiDataClient
+import it.puntoettore.fidelity.api.ApiDataClientNextLogin
 import it.puntoettore.fidelity.api.InsultCensorClient
 import it.puntoettore.fidelity.api.datamodel.UserDetail
 import it.puntoettore.fidelity.api.util.onError
@@ -22,8 +23,7 @@ import kotlinx.coroutines.launch
 
 class AboutViewModel(
     private val database: BookDatabase,
-    private val censorClient: InsultCensorClient,
-    private val apiDataClient: ApiDataClient
+    private val apiDataClient: ApiDataClientNextLogin
 ) : ViewModel() {
     private var _sortedByFavorite = MutableStateFlow(false)
     val sortedByFavorite: StateFlow<Boolean> = _sortedByFavorite
@@ -46,7 +46,7 @@ class AboutViewModel(
 
     init {
         viewModelScope.launch {
-            println(censorClient.censorWords("Fuck"))
+            // println(censorClient.censorWords("Fuck"))
 
             // val idToken = database.userDao().getUserById(1).idToken
 

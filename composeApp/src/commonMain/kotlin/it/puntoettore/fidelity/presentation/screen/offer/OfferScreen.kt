@@ -75,43 +75,43 @@ fun OfferScreen(
         },
         bottomBar = bottomBar,
         content = {
-            userDetail.DisplayResult(
-                onLoading = { LoadingView() },
-                onError = { ErrorView(it) },
-                onSuccess = { data ->
-                    if (data.listOffers.isNotEmpty()) {
-                        Column(
-                            modifier = Modifier
-                                .padding(
-                                    top = it.calculateTopPadding(),
-                                    bottom = it.calculateBottomPadding()
-                                )
-                        ) {
-                            Row {
-                                LazyColumn(
-                                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                                ) {
-                                    items(
-                                        items = data.listOffers,
-                                        key = { it.id }
-                                    ) {
-                                        OfferView(
-                                            offer = it,
-                                            onClick = {
-                                                onOfferSelect(it.id)
-                                            }
-                                        )
-                                    }
-                                }
-                            }
-                        }
-
-
-                    } else {
-                        ErrorView()
-                    }
-                }
-            )
+//            userDetail.DisplayResult(
+//                onLoading = { LoadingView() },
+//                onError = { ErrorView(it) },
+//                onSuccess = { data ->
+//                    if (data.listOffers.isNotEmpty()) {
+//                        Column(
+//                            modifier = Modifier
+//                                .padding(
+//                                    top = it.calculateTopPadding(),
+//                                    bottom = it.calculateBottomPadding()
+//                                )
+//                        ) {
+//                            Row {
+//                                LazyColumn(
+//                                    verticalArrangement = Arrangement.spacedBy(12.dp)
+//                                ) {
+//                                    items(
+//                                        items = data.listOffers,
+//                                        key = { it.id }
+//                                    ) {
+//                                        OfferView(
+//                                            offer = it,
+//                                            onClick = {
+//                                                onOfferSelect(it.id)
+//                                            }
+//                                        )
+//                                    }
+//                                }
+//                            }
+//                        }
+//
+//
+//                    } else {
+//                        ErrorView()
+//                    }
+//                }
+//            )
         }
     )
 }

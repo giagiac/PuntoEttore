@@ -21,11 +21,8 @@ import it.puntoettore.fidelity.presentation.screen.cardDetail.CardDetailScreen
 import it.puntoettore.fidelity.presentation.screen.details.DetailsScreen
 import it.puntoettore.fidelity.presentation.screen.login.LoginScreen
 import it.puntoettore.fidelity.presentation.screen.offer.OfferScreen
+import it.puntoettore.fidelity.presentation.screen.ticket.TicketScreen
 import kotlinx.coroutines.launch
-import kotlinx.serialization.Serializable
-
-@Serializable
-data class MyModel(val alert: String)
 
 @Composable
 fun SetupNavGraph(navController: NavHostController, startDestination: String) {
@@ -140,9 +137,6 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                 bottomBar = {
                     BottomBar(navController)
                 },
-                onNotificationsSelect = {
-                    navController.navigate(Screen.Notifications.route)
-                },
                 onLogout = {
                     navController.navigate(Screen.Login.route)
                     {
@@ -150,11 +144,16 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                     }
                 },
                 onSupportConfirm = {
-                    navController.navigate(Screen.Login.route)
-                    {
-                        navController.navigate(Screen.Notifications.route)
-                    }
+                    navController.navigate(Screen.Ticket.route)
                 }
+            )
+        }
+        composable(route = Screen.Ticket.route) {
+            TicketScreen(
+                bottomBar = {
+                    BottomBar(navController)
+                },
+                onBackClick = { navController.navigateUp() }
             )
         }
         composable(route = Screen.Offer.route) {
@@ -181,19 +180,6 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                 }
             )
         }
-//        composable(route = Screen.Home.route) {
-//            CardScreen(
-//                onBookSelect = {
-//                    navController.navigate(Screen.Details.passId(it))
-//                },
-//                onCreateClick = {
-//                    navController.navigate(Screen.Manage.passId())
-//                },
-//                bottomBar = {
-//                    BottomBar(navController)
-//                }
-//            )
-//        }
         composable(
             route = Screen.Manage.route,
             arguments = listOf(

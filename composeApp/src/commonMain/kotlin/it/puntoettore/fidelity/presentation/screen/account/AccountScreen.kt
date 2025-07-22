@@ -34,7 +34,6 @@ import org.koin.compose.viewmodel.koinViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AccountScreen(
-    onNotificationsSelect: () -> Unit,
     bottomBar: @Composable () -> Unit,
     onLogout: () -> Unit,
     onSupportConfirm: () -> Unit

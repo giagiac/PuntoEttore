@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mmk.kmpnotifier.notification.NotifierManager
 import it.puntoettore.fidelity.api.ApiDataClient
+import it.puntoettore.fidelity.api.ApiDataClientNextLogin
 import it.puntoettore.fidelity.api.InsultCensorClient
 import it.puntoettore.fidelity.api.datamodel.Offers
 import it.puntoettore.fidelity.api.util.onError
@@ -21,8 +22,7 @@ import kotlinx.coroutines.launch
 
 class OfferViewModel(
     private val database: BookDatabase,
-    private val censorClient: InsultCensorClient,
-    private val apiDataClient: ApiDataClient
+    private val apiDataClient: ApiDataClientNextLogin
 ) : ViewModel() {
     private var _sortedByFavorite = MutableStateFlow(false)
     val sortedByFavorite: StateFlow<Boolean> = _sortedByFavorite
@@ -41,7 +41,7 @@ class OfferViewModel(
 
     init {
         viewModelScope.launch {
-            println(censorClient.censorWords("Fuck"))
+            // println(censorClient.censorWords("Fuck"))
 
 //            NotifierManager.getPushNotifier().getToken()
 //                ?.let { apiDataClient.getAccess(it) }

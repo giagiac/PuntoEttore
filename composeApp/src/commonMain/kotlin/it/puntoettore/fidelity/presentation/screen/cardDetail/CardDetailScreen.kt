@@ -33,7 +33,6 @@ import it.puntoettore.fidelity.presentation.components.LoadingView
 import it.puntoettore.fidelity.util.DisplayResult
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import kotlin.math.pow
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -163,9 +162,7 @@ fun CardDetailScreen(
                                 }
                                 // Riga totale
                                 item {
-                                    val totale = data.articoli.sumOf {
-                                        it.c_netto?.replace(",", ".")?.toDoubleOrNull() ?: 0.0
-                                    }
+                                    val totale = data.totale
                                     Row(
                                         modifier = Modifier
                                             .fillMaxWidth()
@@ -173,7 +170,7 @@ fun CardDetailScreen(
                                         horizontalArrangement = Arrangement.End
                                     ) {
                                         Text(
-                                            text = "TOTALE : ${totale.format(2)}",
+                                            text = "TOTALE : $totale",
                                             color = Color.Black,
                                             fontWeight = FontWeight.Bold,
                                             fontSize = 20.sp,
@@ -198,9 +195,4 @@ fun CardDetailScreen(
         })
 
     })
-}
-
-fun Double.format(digits: Int): String {
-    val factor = 10.0.pow(digits)
-    return (kotlin.math.round(this * factor) / factor).toString()
 }

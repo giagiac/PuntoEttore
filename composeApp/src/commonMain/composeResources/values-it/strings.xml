@@ -13,6 +13,7 @@
     <string name="date_of_birth">Data di nascita</string>
     <string name="detail">Scontrino</string>
     <string name="about">Chi siamo</string>
+    <string name="suport">Supporto</string>
 
     <string name="error_not_defined">Errore non definito</string>
     <!-- Connessine internet errors -->
