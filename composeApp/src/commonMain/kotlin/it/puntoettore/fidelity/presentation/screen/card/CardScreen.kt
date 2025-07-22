@@ -6,11 +6,14 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.paddingFromBaseline
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -44,6 +47,7 @@ import it.puntoettore.fidelity.Res
 import it.puntoettore.fidelity.api.datamodel.CreditiFidelity
 import it.puntoettore.fidelity.card
 import it.puntoettore.fidelity.presentation.components.ErrorView
+import it.puntoettore.fidelity.presentation.components.LabelValueRow
 import it.puntoettore.fidelity.presentation.components.LoadingView
 import it.puntoettore.fidelity.presentation.screen.component.CreditiFidelityView
 import it.puntoettore.fidelity.util.DisplayResult
@@ -97,41 +101,63 @@ fun CardScreen(
             )
         })
     }, bottomBar = bottomBar, content = { it ->
-        Scaffold(modifier = Modifier.padding(it).padding(start = 8.dp, end = 8.dp), topBar = {
-            // prendo uid da user così sono sicuro di averlo sempre... quello dalla network potrei non averlo per le regole precedenti
+        Column(modifier = Modifier.padding(top = 65.dp)) {
             viewModel.user.value?.let {
-                Row(
-                    horizontalArrangement = Arrangement.Center,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Card(elevation = CardDefaults.cardElevation(
-                        defaultElevation = 12.dp
-                    ),
-                        border = BorderStroke(1.dp, Color.Black),
-                        modifier = Modifier.padding(12.dp).drawBehind {
-                            rotate(rotationAnimation.value) {
-                                drawCircle(brush, style = Stroke(50.dp.value))
-                            }
-                        }) {
-                        QRCodeImage(url = it.uid,
-                            contentScale = ContentScale.Fit,
-                            contentDescription = it.uid,
-                            modifier = Modifier.align(Alignment.CenterHorizontally).size(150.dp)
-                                .padding(16.dp),
-                            onSuccess = { qrImage ->
-
-                            },
-                            onFailure = {
-                                scope.launch {
-                                    // TODO: handle error
+                Column {
+                    Row(
+                        horizontalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Card(elevation = CardDefaults.cardElevation(
+                            defaultElevation = 12.dp
+                        ),
+                            border = BorderStroke(1.dp, Color.Black),
+                            modifier = Modifier.padding(12.dp).drawBehind {
+                                rotate(rotationAnimation.value) {
+                                    drawCircle(brush, style = Stroke(50.dp.value))
                                 }
-                            })
+                            }) {
+                            QRCodeImage(url = it.uid,
+                                contentScale = ContentScale.Fit,
+                                contentDescription = it.uid,
+                                modifier = Modifier.align(Alignment.CenterHorizontally).size(150.dp)
+                                    .padding(16.dp),
+                                onSuccess = { qrImage ->
+
+                                },
+                                onFailure = {
+                                    scope.launch {
+                                        // TODO: handle error
+                                    }
+                                })
+
+                        }
                     }
                 }
             }
-        }, content = {
-            Column {
-                creditiFidelity.DisplayResult(onLoading = { LoadingView() },
+            Box {
+                datiFidelity.DisplayResult(
+                    onSuccess = { data ->
+                        Column(modifier = Modifier.align(Alignment.Center)) {
+                            LabelValueRow(
+                                label = "Nome : ",
+                                value = data.firstName,
+                                modifier = Modifier.paddingFromBaseline(8.dp)
+                            )
+                            LabelValueRow(
+                                label = "Punti totali : ",
+                                value = data.points.toString(),
+                                modifier = Modifier.paddingFromBaseline(8.dp)
+                            )
+                            LabelValueRow(
+                                label = "Fascia : ",
+                                value = data.fascia,
+                                modifier = Modifier.paddingFromBaseline(8.dp)
+                            )
+                        }
+                    })
+                creditiFidelity.DisplayResult(
+                    onLoading = { LoadingView() },
                     onError = { ErrorView(it) },
                     onSuccess = { data ->
                         if (data.isNotEmpty()) {
@@ -152,8 +178,6 @@ fun CardScreen(
                         }
                     })
             }
-
-        }, bottomBar = {
             viewModel.error.value?.let { error ->
                 Row {
                     Text(
@@ -161,7 +185,6 @@ fun CardScreen(
                     )
                 }
             }
-        })
-
+        }
     })
 }

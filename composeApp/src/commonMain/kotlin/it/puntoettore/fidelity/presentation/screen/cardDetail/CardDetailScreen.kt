@@ -24,7 +24,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import it.puntoettore.fidelity.Res
 import it.puntoettore.fidelity.card
+import it.puntoettore.fidelity.detail
 import it.puntoettore.fidelity.presentation.components.ErrorView
+import it.puntoettore.fidelity.presentation.components.LabelValueRow
 import it.puntoettore.fidelity.presentation.components.LoadingView
 import it.puntoettore.fidelity.util.DisplayResult
 import org.jetbrains.compose.resources.stringResource
@@ -33,9 +35,7 @@ import org.koin.compose.viewmodel.koinViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardDetailScreen(
-    codice: String,
-    matricola: String,
-    onBackClick: () -> Unit
+    codice: String, matricola: String, onBackClick: () -> Unit
 ) {
     val scope = rememberCoroutineScope()
     val listState = rememberLazyListState()
@@ -45,82 +45,69 @@ fun CardDetailScreen(
 
     viewModel.getBillFidelity(matricola = matricola, codice = codice)
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                actions = {
+    Scaffold(topBar = {
+        TopAppBar(actions = {
 
-                },
-                navigationIcon = {
-                    IconButton(onClick = onBackClick) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Default.ArrowBack,
-                            contentDescription = "Back arrow icon"
-                        )
-                    }
-                },
-                title = {
-                    Text(
-                        text = stringResource(Res.string.card),
-                        style = MaterialTheme.typography.headlineLarge
-                    )
-                }
+        }, navigationIcon = {
+            IconButton(onClick = onBackClick) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Default.ArrowBack,
+                    contentDescription = "Back arrow icon"
+                )
+            }
+        }, title = {
+            Text(
+                text = stringResource(Res.string.detail),
+                style = MaterialTheme.typography.headlineLarge
             )
-        },
-        content = { it ->
-            Scaffold(
-                modifier = Modifier.padding(it).padding(start = 8.dp, end = 8.dp),
-                topBar = {
-                    viewModel.user.value?.let {
-                        Row(
-                            horizontalArrangement = Arrangement.Center,
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
+        })
+    }, content = { it ->
+        Scaffold(modifier = Modifier.padding(it).padding(start = 8.dp, end = 8.dp), topBar = {
+            viewModel.user.value?.let {
+                Row(
+                    horizontalArrangement = Arrangement.Center, modifier = Modifier.fillMaxWidth()
+                ) {
 
-                        }
-                    }
-                },
-                content = {
-                    billFidelity.DisplayResult(
-                        onLoading = { LoadingView() },
-                        onError = { ErrorView(it) },
-                        onSuccess = { data ->
-                            if (!data.articoli.isNullOrEmpty()) {
-                                LazyColumn(
-                                    modifier = Modifier
-                                        .padding(all = 12.dp)
-                                        .padding(
-                                            top = it.calculateTopPadding(),
-                                            bottom = it.calculateBottomPadding()
-                                        ),
-                                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                                ) {
-                                    items(
-                                        items = data.articoli
-                                    ) {
-                                        Text(
-                                            text = it.descrizione!!,
-                                            modifier = Modifier.padding(1.dp)
-                                        )
-                                    }
-                                }
-                            } else {
-                                ErrorView()
+                }
+            }
+        }, content = {
+            billFidelity.DisplayResult(onLoading = { LoadingView() },
+                onError = { ErrorView(it) },
+                onSuccess = { data ->
+                    if (!data.articoli.isNullOrEmpty()) {
+                        LazyColumn(
+                            modifier = Modifier.padding(all = 12.dp).padding(
+                                top = it.calculateTopPadding(), bottom = it.calculateBottomPadding()
+                            ), verticalArrangement = Arrangement.spacedBy(12.dp)
+                        ) {
+                            items(
+                                items = data.articoli
+                            ) {
+                                LabelValueRow(
+                                    label = "Descrizione :", value = it.descrizione!!
+                                )
+                                LabelValueRow(label = "Q.tà :", value = it.qta.toString())
+                                LabelValueRow(
+                                    label = "Prezzo :", value = it.c_netto.toString()
+                                )
+                                LabelValueRow(
+                                    label = "Sconto :", value = it.sconto_finale.toString()
+                                )
                             }
                         }
-                    )
-                },
-                bottomBar = {
-                    viewModel.error.value?.let { error ->
-                        Row {
-                            Text(
-                                text = error,
-                                color = Color.Red
-                            )
-                        }
+                    } else {
+                        ErrorView()
                     }
+                })
+        }, bottomBar = {
+            viewModel.error.value?.let { error ->
+                Row {
+                    Text(
+                        text = error, color = Color.Red
+                    )
                 }
-            )
-
+            }
         })
+
+    })
 }

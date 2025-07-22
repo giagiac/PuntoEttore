@@ -32,7 +32,6 @@ class CardViewModel(
         mutableStateOf(RequestState.Loading)
     val creditiFidelity: State<RequestState<List<CreditiFidelity>>> = _creditiFidelity
 
-    // TODO : portare in UI
     private var _error: MutableState<String?> = mutableStateOf(null)
     val error: State<String?> = _error
 
@@ -52,7 +51,7 @@ class CardViewModel(
                 return@launch
             }
             if (_user.value?.uid == null) {
-                _error.value = "Nessun utente trovato"
+                _error.value = "Nessun uid trovato"
                 return@launch
             }
 
