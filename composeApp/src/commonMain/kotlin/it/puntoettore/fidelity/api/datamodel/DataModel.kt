@@ -21,6 +21,9 @@ data class Data<T>(val type: String = "xa_xApi", val attributes: T)
 data class AttributesBillFidelity(val uid: String, val codice: String, val matricola: String)
 
 @Serializable
+data class AttributesVecchioCliente(val uid: String, val oldId: String)
+
+@Serializable
 data class AuthDetail(
     val token_type: String,
     val expires_in: String,
@@ -48,6 +51,14 @@ data class CreditiFidelity(
 
 @Serializable
 data class BillFidelity(
+    val codice: String?,
+    val matricola: String?,
+    val totale: String?,
+    val articoli: List<Articolo>?
+)
+
+@Serializable
+data class ResponseVecchioCliente(
     val codice: String?,
     val matricola: String?,
     val totale: String?,

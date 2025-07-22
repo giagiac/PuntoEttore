@@ -67,6 +67,7 @@ fun CardScreen(
     val viewModel = koinViewModel<CardViewModel>()
     val datiFidelity by viewModel.datiFidelity
     val creditiFidelity by viewModel.creditiFidelity
+    val error by viewModel.error
 
     var myPushNotificationToken by remember { mutableStateOf("") }
     LaunchedEffect(true) {
@@ -101,10 +102,12 @@ fun CardScreen(
             )
         })
     }, bottomBar = bottomBar, content = { it ->
-        Column(modifier = Modifier.padding(
-            top = it.calculateTopPadding(),
-            bottom = it.calculateBottomPadding()
-        )) {
+        Column(
+            modifier = Modifier.padding(
+                top = it.calculateTopPadding(),
+                bottom = it.calculateBottomPadding()
+            )
+        ) {
             Box {
                 datiFidelity.DisplayResult(
                     onSuccess = { data ->
@@ -115,7 +118,7 @@ fun CardScreen(
                             Card(
                                 elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
                                 shape = MaterialTheme.shapes.medium,
-                                border = BorderStroke(2.dp, MaterialTheme.colorScheme.outline),
+                                border = BorderStroke(0.dp, MaterialTheme.colorScheme.outline),
                                 modifier = Modifier
                                     .padding(start = 8.dp, end = 8.dp, top = 0.dp, bottom = 0.dp)
                                     .fillMaxWidth()
@@ -236,11 +239,13 @@ fun CardScreen(
                     })
 
             }
-            viewModel.error.value?.let { error ->
+            error.let {
                 Row {
-                    Text(
-                        text = error, color = Color.Red
-                    )
+                    if (it != null) {
+                        Text(
+                            text = it, color = Color.Red
+                        )
+                    }
                 }
             }
         }

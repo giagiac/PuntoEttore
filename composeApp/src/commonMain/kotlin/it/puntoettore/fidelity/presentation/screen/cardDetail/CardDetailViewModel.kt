@@ -5,18 +5,14 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import it.puntoettore.fidelity.api.ApiDataClient
 import it.puntoettore.fidelity.api.ApiDataClientNextLogin
 import it.puntoettore.fidelity.api.datamodel.BillFidelity
-import it.puntoettore.fidelity.api.datamodel.CreditiFidelity
 import it.puntoettore.fidelity.api.datamodel.DatiFidelity
-import it.puntoettore.fidelity.api.datamodel.UserDetail
 import it.puntoettore.fidelity.api.util.onError
 import it.puntoettore.fidelity.api.util.onSuccess
 import it.puntoettore.fidelity.data.BookDatabase
 import it.puntoettore.fidelity.domain.User
 import it.puntoettore.fidelity.util.RequestState
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -24,10 +20,6 @@ class CardDetailViewModel(
     private val database: BookDatabase,
     private val apiDataClientNextLogin: ApiDataClientNextLogin
 ) : ViewModel() {
-
-    private var _userDetail: MutableState<RequestState<UserDetail>> =
-        mutableStateOf(RequestState.Loading)
-    val userDetail: State<RequestState<UserDetail>> = _userDetail
 
     private var _user: MutableState<User?> = mutableStateOf(null)
     val user: State<User?> = _user
@@ -66,11 +58,11 @@ class CardDetailViewModel(
 
             _user.value?.uid?.let {
                 apiDataClientNextLogin.setUid(it)
-                apiDataClientNextLogin.getDatiFidelity()
+                apiDataClientNextLogin.postDatiFidelity()
                     .onSuccess {
                         _datiFidelity.value = RequestState.Success(it)
 
-                        apiDataClientNextLogin.getBillFidelity(matricola = matricola, codice = codice)
+                        apiDataClientNextLogin.postBillFidelity(matricola = matricola, codice = codice)
                             .onSuccess {
                                 _billFidelity.value = RequestState.Success(it)
                             }

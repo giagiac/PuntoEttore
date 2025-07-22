@@ -1,5 +1,6 @@
 package it.puntoettore.fidelity.presentation.screen.component
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -121,43 +123,59 @@ fun CreditiFidelityView(
     item: CreditiFidelity,
     onClick: () -> Unit
 ) {
-    Row(modifier = Modifier
-        .fillMaxWidth()
-        .clip(RoundedCornerShape(size = 12.dp))
-        .clickable { onClick() }
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(16.dp))
+            .clickable { onClick() }
+            .padding(vertical = 4.dp, horizontal = 10.dp)
+            .then(Modifier),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Box(modifier = Modifier.size(80.dp)) {
+        // Icona a sinistra
+        Box(
+            modifier = Modifier
+                .size(58.dp)
+                .clip(RoundedCornerShape(12.dp))
+                .background(MaterialTheme.colorScheme.surfaceVariant)
+                .padding(4.dp),
+            contentAlignment = Alignment.Center
+        ) {
             CoilImage(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(size = 12.dp))
-                    .size(80.dp)
-                    .padding(5.dp),
+                modifier = Modifier.size(42.dp),
                 imageModel = { /*item.matricola*/ "https://cdn-icons-png.flaticon.com/128/2374/2374851.png" },
                 imageOptions = ImageOptions(
-                    contentScale = ContentScale.Crop,
+                    contentScale = ContentScale.Fit,
                     alignment = Alignment.Center
                 )
             )
         }
-        Spacer(modifier = Modifier.width(12.dp))
+        Spacer(modifier = Modifier.width(18.dp))
+        // Testo a destra
         Column(
-            modifier = Modifier.weight(3f).padding(vertical = 6.dp),
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .padding(end = 8.dp),
             verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.Start
+            horizontalAlignment = Alignment.End
         ) {
             TextView(
                 text = formatDynamicDate(item.data_inserimento),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                fontSize = MaterialTheme.typography.titleLarge.fontSize,
-                fontWeight = FontWeight.Thin
+                fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                fontWeight = FontWeight.Light,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
+            Spacer(modifier = Modifier.height(1.dp))
             TextView(
                 text = item.punteggio,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
-                fontSize = MaterialTheme.typography.titleLarge.fontSize * 2,
-                fontWeight = FontWeight.Medium
+                fontSize = MaterialTheme.typography.displaySmall.fontSize,
+                fontWeight = FontWeight.Light,
+                color = MaterialTheme.colorScheme.primary
             )
         }
     }

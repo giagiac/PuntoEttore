@@ -27,10 +27,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import it.puntoettore.fidelity.Res
-import it.puntoettore.fidelity.card
 import it.puntoettore.fidelity.detail
 import it.puntoettore.fidelity.presentation.components.ErrorView
-import it.puntoettore.fidelity.presentation.components.LabelValueRow
 import it.puntoettore.fidelity.presentation.components.LoadingView
 import it.puntoettore.fidelity.util.DisplayResult
 import org.jetbrains.compose.resources.stringResource
@@ -45,8 +43,10 @@ fun CardDetailScreen(
     val scope = rememberCoroutineScope()
     val listState = rememberLazyListState()
     val viewModel = koinViewModel<CardDetailViewModel>()
-    val userDetail by viewModel.userDetail
+
+    val user by viewModel.user
     val billFidelity by viewModel.billFidelity
+    val error by viewModel.error
 
     viewModel.getBillFidelity(matricola = matricola, codice = codice)
 
@@ -68,7 +68,7 @@ fun CardDetailScreen(
         })
     }, content = { it ->
         Scaffold(modifier = Modifier.padding(it).padding(start = 8.dp, end = 8.dp), topBar = {
-            viewModel.user.value?.let {
+            user?.let {
                 Row(
                     horizontalArrangement = Arrangement.Center, modifier = Modifier.fillMaxWidth()
                 ) {
@@ -98,7 +98,12 @@ fun CardDetailScreen(
                                         modifier = Modifier
                                             .fillMaxWidth()
                                             .background(Color.White)
-                                            .padding(start = 8.dp, end = 8.dp, top = 8.dp, bottom = 0.dp),
+                                            .padding(
+                                                start = 8.dp,
+                                                end = 8.dp,
+                                                top = 8.dp,
+                                                bottom = 0.dp
+                                            ),
                                         horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally
                                     ) {
                                         Text(
@@ -158,7 +163,9 @@ fun CardDetailScreen(
                                 }
                                 // Riga totale
                                 item {
-                                    val totale = data.articoli.sumOf { it.c_netto?.replace(",", ".")?.toDoubleOrNull() ?: 0.0 }
+                                    val totale = data.articoli.sumOf {
+                                        it.c_netto?.replace(",", ".")?.toDoubleOrNull() ?: 0.0
+                                    }
                                     Row(
                                         modifier = Modifier
                                             .fillMaxWidth()
@@ -181,7 +188,7 @@ fun CardDetailScreen(
                     }
                 })
         }, bottomBar = {
-            viewModel.error.value?.let { error ->
+            error?.let { error ->
                 Row {
                     Text(
                         text = error, color = Color.Red

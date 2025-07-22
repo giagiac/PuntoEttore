@@ -2,8 +2,6 @@ package it.puntoettore.fidelity.api
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
-import io.ktor.client.request.get
-import io.ktor.client.request.headers
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
@@ -11,20 +9,17 @@ import io.ktor.http.contentType
 import io.ktor.util.network.UnresolvedAddressException
 import it.puntoettore.fidelity.api.datamodel.Attributes
 import it.puntoettore.fidelity.api.datamodel.AttributesBillFidelity
-import it.puntoettore.fidelity.api.datamodel.AuthDetail
+import it.puntoettore.fidelity.api.datamodel.AttributesVecchioCliente
 import it.puntoettore.fidelity.api.datamodel.BillFidelity
 import it.puntoettore.fidelity.api.datamodel.CreditiFidelity
 import it.puntoettore.fidelity.api.datamodel.Data
-import it.puntoettore.fidelity.api.datamodel.DataUid
 import it.puntoettore.fidelity.api.datamodel.DataWrapper
 import it.puntoettore.fidelity.api.datamodel.DatiFidelity
-import it.puntoettore.fidelity.api.datamodel.Offers
-import it.puntoettore.fidelity.api.datamodel.UserDetail
+import it.puntoettore.fidelity.api.datamodel.ResponseVecchioCliente
 import it.puntoettore.fidelity.api.util.NetworkEError
 import it.puntoettore.fidelity.api.util.Result
 import it.puntoettore.fidelity.custom.BuildConfig
 import kotlinx.serialization.SerializationException
-import kotlin.coroutines.cancellation.CancellationException
 
 class ApiDataClientNextLogin(
     private val httpClient: HttpClient
@@ -38,7 +33,7 @@ class ApiDataClientNextLogin(
         uid = _uid
     }
 
-    suspend fun getDatiFidelity(): Result<DatiFidelity, NetworkEError> {
+    suspend fun postDatiFidelity(): Result<DatiFidelity, NetworkEError> {
         val response = try {
             httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=datiFidelity") {
                 contentType(ContentType.Application.Json)
@@ -73,7 +68,7 @@ class ApiDataClientNextLogin(
         }
     }
 
-    suspend fun getCreditiFidelity(): Result<List<CreditiFidelity>, NetworkEError> {
+    suspend fun postCreditiFidelity(): Result<List<CreditiFidelity>, NetworkEError> {
         val response = try {
             httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=creditiFidelity") {
                 contentType(ContentType.Application.Json)
@@ -110,7 +105,7 @@ class ApiDataClientNextLogin(
         }
     }
 
-    suspend fun getBillFidelity(codice:String, matricola: String): Result<BillFidelity, NetworkEError> {
+    suspend fun postBillFidelity(codice:String, matricola: String): Result<BillFidelity, NetworkEError> {
         val response = try {
             httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=billFidelity") {
                 contentType(ContentType.Application.Json)
@@ -146,11 +141,18 @@ class ApiDataClientNextLogin(
         }
     }
 
-    suspend fun getOffers(uid: String): Result<Offers, NetworkEError> {
+    suspend fun postVecchioCliente(oldId: String): Result<ResponseVecchioCliente, NetworkEError> {
         val response = try {
-            httpClient.post(urlString = "${BuildConfig.END_POINT}/offers") {
+            httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=vecchioCliente") {
                 contentType(ContentType.Application.Json)
-                setBody(DataUid(uid = uid))
+                setBody(
+                    DataWrapper(
+                        data = Data(
+                            type = "xa_xApi",
+                            attributes = AttributesVecchioCliente(uid = uid, oldId = oldId)
+                        )
+                    )
+                )
             }
         } catch (e: UnresolvedAddressException) {
             return Result.Error(NetworkEError.NO_INTERNET)
@@ -162,7 +164,7 @@ class ApiDataClientNextLogin(
 
         return when (response.status.value) {
             in 200..299 -> {
-                val data = response.body<Offers>()
+                val data = response.body<ResponseVecchioCliente>()
                 Result.Success(data)
             }
 

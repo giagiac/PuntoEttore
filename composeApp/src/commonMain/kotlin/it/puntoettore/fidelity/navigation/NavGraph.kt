@@ -148,6 +148,12 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                     {
                         navController.popBackStack(Screen.Account.route, true)
                     }
+                },
+                onSupportConfirm = {
+                    navController.navigate(Screen.Login.route)
+                    {
+                        navController.navigate(Screen.Notifications.route)
+                    }
                 }
             )
         }

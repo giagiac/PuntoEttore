@@ -64,11 +64,11 @@ class CardViewModel(
 
             _user.value?.uid?.let {
                 apiDataClientNextLogin.setUid(it)
-                apiDataClientNextLogin.getDatiFidelity()
+                apiDataClientNextLogin.postDatiFidelity()
                     .onSuccess {
                         _datiFidelity.value = RequestState.Success(it)
 
-                        apiDataClientNextLogin.getCreditiFidelity()
+                        apiDataClientNextLogin.postCreditiFidelity()
                             .onSuccess {
                                 _creditiFidelity.value = RequestState.Success(it)
                             }
