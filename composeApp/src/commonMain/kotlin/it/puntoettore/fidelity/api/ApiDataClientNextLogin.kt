@@ -9,14 +9,17 @@ import io.ktor.http.contentType
 import io.ktor.util.network.UnresolvedAddressException
 import it.puntoettore.fidelity.api.datamodel.Attributes
 import it.puntoettore.fidelity.api.datamodel.AttributesBillFidelity
+import it.puntoettore.fidelity.api.datamodel.AttributesTicket
 import it.puntoettore.fidelity.api.datamodel.AttributesVecchioCliente
 import it.puntoettore.fidelity.api.datamodel.BillFidelity
 import it.puntoettore.fidelity.api.datamodel.CreditiFidelity
 import it.puntoettore.fidelity.api.datamodel.Data
 import it.puntoettore.fidelity.api.datamodel.DataWrapper
 import it.puntoettore.fidelity.api.datamodel.DatiFidelity
+import it.puntoettore.fidelity.api.datamodel.ResponseGeneric
 import it.puntoettore.fidelity.api.datamodel.ResponseVecchioCliente
 import it.puntoettore.fidelity.api.util.NetworkEError
+import it.puntoettore.fidelity.api.util.NetworkError
 import it.puntoettore.fidelity.api.util.Result
 import it.puntoettore.fidelity.custom.BuildConfig
 import kotlinx.serialization.SerializationException
@@ -33,7 +36,7 @@ class ApiDataClientNextLogin(
         uid = _uid
     }
 
-    suspend fun postDatiFidelity(): Result<DatiFidelity, NetworkEError> {
+    suspend fun postDatiFidelity(): Result<DatiFidelity, NetworkError> {
         val response = try {
             httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=datiFidelity") {
                 contentType(ContentType.Application.Json)
@@ -46,11 +49,11 @@ class ApiDataClientNextLogin(
                 )
             }
         } catch (e: UnresolvedAddressException) {
-            return Result.Error(NetworkEError.NO_INTERNET)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
         } catch (e: SerializationException) {
-            return Result.Error(NetworkEError.SERIALIZATION)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.SERIALIZATION))
         } catch (e: Exception) {
-            return Result.Error(NetworkEError.NO_INTERNET)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
         }
 
         return when (response.status.value) {
@@ -59,16 +62,31 @@ class ApiDataClientNextLogin(
                 Result.Success(data)
             }
 
-            401 -> Result.Error(NetworkEError.UNAUTHORIZED)
-            409 -> Result.Error(NetworkEError.CONFLICT)
-            408 -> Result.Error(NetworkEError.REQUEST_TIMEOUT)
-            413 -> Result.Error(NetworkEError.PAYLOAD_TOO_LARGE)
-            in 500..599 -> Result.Error(NetworkEError.SERVER_ERROR)
-            else -> Result.Error(NetworkEError.UNKNOWN)
+            401 -> {
+                val data = response.body<ResponseGeneric>()
+                Result.Error(
+                    NetworkError(
+                        message = data.message ?: "",
+                        error = NetworkEError.UNAUTHORIZED
+                    )
+                )
+            }
+
+            409 -> Result.Error(NetworkError(message = "", error = NetworkEError.CONFLICT))
+            408 -> Result.Error(NetworkError(message = "", error = NetworkEError.REQUEST_TIMEOUT))
+            413 -> Result.Error(NetworkError(message = "", error = NetworkEError.PAYLOAD_TOO_LARGE))
+            in 500..599 -> Result.Error(
+                NetworkError(
+                    message = "",
+                    error = NetworkEError.SERVER_ERROR
+                )
+            )
+
+            else -> Result.Error(NetworkError(message = "", error = NetworkEError.UNKNOWN))
         }
     }
 
-    suspend fun postCreditiFidelity(): Result<List<CreditiFidelity>, NetworkEError> {
+    suspend fun postCreditiFidelity(): Result<List<CreditiFidelity>, NetworkError> {
         val response = try {
             httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=creditiFidelity") {
                 contentType(ContentType.Application.Json)
@@ -82,12 +100,11 @@ class ApiDataClientNextLogin(
                 )
             }
         } catch (e: UnresolvedAddressException) {
-            return Result.Error(NetworkEError.NO_INTERNET)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
         } catch (e: SerializationException) {
-            return Result.Error(NetworkEError.SERIALIZATION)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.SERIALIZATION))
         } catch (e: Exception) {
-            println("OK : FAIL ${e.message}")
-            return Result.Error(NetworkEError.NO_INTERNET)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
         }
 
         return when (response.status.value) {
@@ -96,16 +113,34 @@ class ApiDataClientNextLogin(
                 Result.Success(data)
             }
 
-            401 -> Result.Error(NetworkEError.UNAUTHORIZED)
-            409 -> Result.Error(NetworkEError.CONFLICT)
-            408 -> Result.Error(NetworkEError.REQUEST_TIMEOUT)
-            413 -> Result.Error(NetworkEError.PAYLOAD_TOO_LARGE)
-            in 500..599 -> Result.Error(NetworkEError.SERVER_ERROR)
-            else -> Result.Error(NetworkEError.UNKNOWN)
+            401 -> {
+                val data = response.body<ResponseGeneric>()
+                Result.Error(
+                    NetworkError(
+                        message = data.message ?: "",
+                        error = NetworkEError.UNAUTHORIZED
+                    )
+                )
+            }
+
+            409 -> Result.Error(NetworkError(message = "", error = NetworkEError.CONFLICT))
+            408 -> Result.Error(NetworkError(message = "", error = NetworkEError.REQUEST_TIMEOUT))
+            413 -> Result.Error(NetworkError(message = "", error = NetworkEError.PAYLOAD_TOO_LARGE))
+            in 500..599 -> Result.Error(
+                NetworkError(
+                    message = "",
+                    error = NetworkEError.SERVER_ERROR
+                )
+            )
+
+            else -> Result.Error(NetworkError(message = "", error = NetworkEError.UNKNOWN))
         }
     }
 
-    suspend fun postBillFidelity(codice:String, matricola: String): Result<BillFidelity, NetworkEError> {
+    suspend fun postBillFidelity(
+        codice: String,
+        matricola: String
+    ): Result<BillFidelity, NetworkError> {
         val response = try {
             httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=billFidelity") {
                 contentType(ContentType.Application.Json)
@@ -113,17 +148,21 @@ class ApiDataClientNextLogin(
                     DataWrapper(
                         data = Data(
                             type = "xa_xApi",
-                            attributes = AttributesBillFidelity(uid = uid, codice = codice, matricola = matricola)
+                            attributes = AttributesBillFidelity(
+                                uid = uid,
+                                codice = codice,
+                                matricola = matricola
+                            )
                         )
                     )
                 )
             }
         } catch (e: UnresolvedAddressException) {
-            return Result.Error(NetworkEError.NO_INTERNET)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
         } catch (e: SerializationException) {
-            return Result.Error(NetworkEError.SERIALIZATION)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.SERIALIZATION))
         } catch (e: Exception) {
-            return Result.Error(NetworkEError.NO_INTERNET)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
         }
 
         return when (response.status.value) {
@@ -132,16 +171,31 @@ class ApiDataClientNextLogin(
                 Result.Success(data)
             }
 
-            401 -> Result.Error(NetworkEError.UNAUTHORIZED)
-            409 -> Result.Error(NetworkEError.CONFLICT)
-            408 -> Result.Error(NetworkEError.REQUEST_TIMEOUT)
-            413 -> Result.Error(NetworkEError.PAYLOAD_TOO_LARGE)
-            in 500..599 -> Result.Error(NetworkEError.SERVER_ERROR)
-            else -> Result.Error(NetworkEError.UNKNOWN)
+            401 -> {
+                val data = response.body<ResponseGeneric>()
+                Result.Error(
+                    NetworkError(
+                        message = data.message ?: "",
+                        error = NetworkEError.UNAUTHORIZED
+                    )
+                )
+            }
+
+            409 -> Result.Error(NetworkError(message = "", error = NetworkEError.CONFLICT))
+            408 -> Result.Error(NetworkError(message = "", error = NetworkEError.REQUEST_TIMEOUT))
+            413 -> Result.Error(NetworkError(message = "", error = NetworkEError.PAYLOAD_TOO_LARGE))
+            in 500..599 -> Result.Error(
+                NetworkError(
+                    message = "",
+                    error = NetworkEError.SERVER_ERROR
+                )
+            )
+
+            else -> Result.Error(NetworkError(message = "", error = NetworkEError.UNKNOWN))
         }
     }
 
-    suspend fun postVecchioCliente(oldId: String): Result<ResponseVecchioCliente, NetworkEError> {
+    suspend fun postVecchioCliente(oldId: String): Result<ResponseVecchioCliente, NetworkError> {
         val response = try {
             httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=vecchioCliente") {
                 contentType(ContentType.Application.Json)
@@ -155,11 +209,11 @@ class ApiDataClientNextLogin(
                 )
             }
         } catch (e: UnresolvedAddressException) {
-            return Result.Error(NetworkEError.NO_INTERNET)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
         } catch (e: SerializationException) {
-            return Result.Error(NetworkEError.SERIALIZATION)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.SERIALIZATION))
         } catch (e: Exception) {
-            return Result.Error(NetworkEError.NO_INTERNET)
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
         }
 
         return when (response.status.value) {
@@ -168,12 +222,78 @@ class ApiDataClientNextLogin(
                 Result.Success(data)
             }
 
-            401 -> Result.Error(NetworkEError.UNAUTHORIZED)
-            409 -> Result.Error(NetworkEError.CONFLICT)
-            408 -> Result.Error(NetworkEError.REQUEST_TIMEOUT)
-            413 -> Result.Error(NetworkEError.PAYLOAD_TOO_LARGE)
-            in 500..599 -> Result.Error(NetworkEError.SERVER_ERROR)
-            else -> Result.Error(NetworkEError.UNKNOWN)
+            401 -> {
+                val data = response.body<ResponseGeneric>()
+                Result.Error(
+                    NetworkError(
+                        message = data.message ?: "",
+                        error = NetworkEError.UNAUTHORIZED
+                    )
+                )
+            }
+
+            409 -> Result.Error(NetworkError(message = "", error = NetworkEError.CONFLICT))
+            408 -> Result.Error(NetworkError(message = "", error = NetworkEError.REQUEST_TIMEOUT))
+            413 -> Result.Error(NetworkError(message = "", error = NetworkEError.PAYLOAD_TOO_LARGE))
+            in 500..599 -> Result.Error(
+                NetworkError(
+                    message = "",
+                    error = NetworkEError.SERVER_ERROR
+                )
+            )
+
+            else -> Result.Error(NetworkError(message = "", error = NetworkEError.UNKNOWN))
+        }
+    }
+
+    suspend fun postTicket(ticket: String): Result<ResponseGeneric, NetworkError> {
+        val response = try {
+            httpClient.post(urlString = "${BuildConfig.END_POINT}/index.php?entryPoint=newTicket") {
+                contentType(ContentType.Application.Json)
+                setBody(
+                    DataWrapper(
+                        data = Data(
+                            type = "xa_xApi",
+                            attributes = AttributesTicket(uid = uid, msg = ticket)
+                        )
+                    )
+                )
+            }
+        } catch (e: UnresolvedAddressException) {
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
+        } catch (e: SerializationException) {
+            return Result.Error(NetworkError(message = "", error = NetworkEError.SERIALIZATION))
+        } catch (e: Exception) {
+            return Result.Error(NetworkError(message = "", error = NetworkEError.NO_INTERNET))
+        }
+
+        return when (response.status.value) {
+            in 200..299 -> {
+                val data = response.body<ResponseGeneric>()
+                Result.Success(data)
+            }
+
+            401 -> {
+                val data = response.body<ResponseGeneric>()
+                Result.Error(
+                    NetworkError(
+                        message = data.message ?: "",
+                        error = NetworkEError.UNAUTHORIZED
+                    )
+                )
+            }
+
+            409 -> Result.Error(NetworkError(message = "", error = NetworkEError.CONFLICT))
+            408 -> Result.Error(NetworkError(message = "", error = NetworkEError.REQUEST_TIMEOUT))
+            413 -> Result.Error(NetworkError(message = "", error = NetworkEError.PAYLOAD_TOO_LARGE))
+            in 500..599 -> Result.Error(
+                NetworkError(
+                    message = "",
+                    error = NetworkEError.SERVER_ERROR
+                )
+            )
+
+            else -> Result.Error(NetworkError(message = "", error = NetworkEError.UNKNOWN))
         }
     }
 }

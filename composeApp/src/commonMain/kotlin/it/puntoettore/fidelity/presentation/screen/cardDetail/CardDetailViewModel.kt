@@ -67,12 +67,12 @@ class CardDetailViewModel(
                                 _billFidelity.value = RequestState.Success(it)
                             }
                             .onError {
-                                _billFidelity.value = RequestState.Error(it.name)
+                                _billFidelity.value = RequestState.Error(error = it.error, message = it.message)
 
                             }
                     }
                     .onError {
-                        _datiFidelity.value = RequestState.Error(it.name)
+                        _datiFidelity.value = RequestState.Error(error = it.error, message = it.message)
                     }
             }
         }

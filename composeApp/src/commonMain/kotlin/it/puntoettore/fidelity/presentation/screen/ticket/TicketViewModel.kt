@@ -5,11 +5,8 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dev.gitlive.firebase.Firebase
-import dev.gitlive.firebase.auth.auth
 import it.puntoettore.fidelity.api.ApiDataClientNextLogin
-import it.puntoettore.fidelity.api.datamodel.DatiFidelity
-import it.puntoettore.fidelity.api.datamodel.ResponseVecchioCliente
+import it.puntoettore.fidelity.api.datamodel.ResponseGeneric
 import it.puntoettore.fidelity.api.util.onError
 import it.puntoettore.fidelity.api.util.onSuccess
 import it.puntoettore.fidelity.data.BookDatabase
@@ -26,13 +23,9 @@ class TicketViewModel(
     private var _user: MutableState<User?> = mutableStateOf(null)
     val user: State<User?> = _user
 
-    private var _datiFidelity: MutableState<RequestState<DatiFidelity>> =
-        mutableStateOf(RequestState.Loading)
-    val datiFidelity: State<RequestState<DatiFidelity>> = _datiFidelity
-
-    private var _vecchioCliente: MutableState<RequestState<ResponseVecchioCliente>> =
+    private var _ticket: MutableState<RequestState<ResponseGeneric>> =
         mutableStateOf(RequestState.Idle)
-    val vecchioCliente: State<RequestState<ResponseVecchioCliente>> = _vecchioCliente
+    val ticket: State<RequestState<ResponseGeneric>> = _ticket
 
     private var _error: MutableState<String?> = mutableStateOf(null)
     val error: State<String?> = _error
@@ -59,39 +52,17 @@ class TicketViewModel(
 
             _user.value?.uid?.let {
                 apiDataClientNextLogin.setUid(it)
-                apiDataClientNextLogin.postDatiFidelity()
-                    .onSuccess {
-                        _datiFidelity.value = RequestState.Success(it)
-                    }
-                    .onError {
-                        _datiFidelity.value = RequestState.Error(it.name)
-                    }
             }
         }
     }
 
-    fun logout() {
+    fun postTicket(ticket: String) {
         viewModelScope.launch {
-            database.appSettingsDao().getAppSettings().collect { appSettings ->
-                if (appSettings != null) {
-                    database.userDao().deleteUserById(appSettings._idUser)
-                    database.appSettingsDao().deleteAppSettingsById()
-                    Firebase.auth.signOut()
-                    // NotifierManager.getPushNotifier().deleteMyToken()
-                }
-            }
-        }
-    }
-
-
-    fun postVecchioCliente(oldId: String) {
-        viewModelScope.launch {
-            apiDataClientNextLogin.postVecchioCliente(oldId = oldId).onSuccess {
-                _vecchioCliente.value = RequestState.Success(it)
+            apiDataClientNextLogin.postTicket(ticket = ticket).onSuccess {
+                _ticket.value = RequestState.Success(it)
             }.onError {
-                _vecchioCliente.value = RequestState.Error(it.name)
+                _ticket.value = RequestState.Error(error = it.error, message = it.message)
             }
         }
-
     }
 }

@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -15,9 +16,12 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -34,15 +38,17 @@ import org.koin.compose.viewmodel.koinViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TicketScreen(
-    bottomBar: @Composable () -> Unit, onBackClick: () -> Unit
+    bottomBar: @Composable () -> Unit, onBackClick: () -> Unit,
+    snackbarHostState: SnackbarHostState,
 ) {
     val scope = rememberCoroutineScope()
     val viewModel = koinViewModel<TicketViewModel>()
-    val datiFidelity by viewModel.datiFidelity
 
     var inputText by remember { mutableStateOf("") }
 
-    Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
+    Scaffold(snackbarHost = {
+        SnackbarHost(snackbarHostState)
+    }, modifier = Modifier.fillMaxSize(), topBar = {
         TopAppBar(title = {
             Text(
                 text = stringResource(Res.string.suport),
@@ -57,42 +63,52 @@ fun TicketScreen(
             }
         })
     }, bottomBar = bottomBar, content = { it ->
+        LaunchedEffect(viewModel.ticket.value) {
+            if (viewModel.ticket.value.isSuccess()) {
+                snackbarHostState.showSnackbar(
+                    viewModel.ticket.value.getSuccessData().message ?: ""
+                )
+            } else if(viewModel.ticket.value.isError()) {
+                snackbarHostState.showSnackbar(
+                    viewModel.ticket.value.getErrorMessage().error.name + " : " +
+                            viewModel.ticket.value.getErrorMessage().message
+                )
+            }
+        }
         Column(
             modifier = Modifier.verticalScroll(rememberScrollState()).padding(
                 top = it.calculateTopPadding(),
                 bottom = it.calculateBottomPadding(),
             ).padding(8.dp)
         ) {
-            viewModel.user.value?.let { user ->
-                Column(
-                    modifier = Modifier.fillMaxWidth()
-                        .padding(start = 8.dp, end = 8.dp, top = 8.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    OutlinedTextField(
-                        minLines = 4,
-                        maxLines = 10,
-                        singleLine = false,
-                        value = inputText,
-                        onValueChange = { newValue ->
-                            // Consenti solo lettere e numeri
-                            if (newValue.all { it.isLetterOrDigit() }) {
-                                inputText = newValue
-                            }
-                        },
-                        label = { Text("Scrivi...") },
-                        modifier = Modifier.fillMaxWidth(0.8f)
+            Column(
+                modifier = Modifier.fillMaxWidth()
+                    .padding(start = 8.dp, end = 8.dp, top = 8.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                OutlinedTextField(
+                    minLines = 4,
+                    maxLines = 10,
+                    singleLine = false,
+                    value = inputText,
+                    onValueChange = { newValue ->
+                        inputText = newValue
+                    },
+                    label = { Text("Scrivi...") },
+                    modifier = Modifier.fillMaxWidth(0.8f),
+                    keyboardOptions = KeyboardOptions(
+                        autoCorrectEnabled = false
                     )
-                    Button(
-                        onClick = {
-                            if (inputText.isNotEmpty()) {
-                                // Azione di conferma qui
-                                viewModel.postVecchioCliente(oldId = inputText.trim())
-                            }
-                        }, modifier = Modifier.padding(top = 8.dp)
-                    ) {
-                        Text("Invia")
-                    }
+                )
+                Button(
+                    onClick = {
+                        if (inputText.isNotEmpty()) {
+                            // Azione di conferma qui
+                            viewModel.postTicket(ticket = inputText)
+                        }
+                    }, modifier = Modifier.padding(top = 8.dp)
+                ) {
+                    Text("Invia")
                 }
             }
         }

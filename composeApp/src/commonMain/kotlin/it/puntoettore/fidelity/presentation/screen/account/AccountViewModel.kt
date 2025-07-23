@@ -64,7 +64,7 @@ class AccountViewModel(
                         _datiFidelity.value = RequestState.Success(it)
                     }
                     .onError {
-                        _datiFidelity.value = RequestState.Error(it.name)
+                        _datiFidelity.value = RequestState.Error(error = it.error, message = it.message)
                     }
             }
         }
@@ -89,7 +89,7 @@ class AccountViewModel(
             apiDataClientNextLogin.postVecchioCliente(oldId = oldId).onSuccess {
                 _vecchioCliente.value = RequestState.Success(it)
             }.onError {
-                _vecchioCliente.value = RequestState.Error(it.name)
+                _vecchioCliente.value = RequestState.Error(error = it.error, message = it.message)
             }
         }
 

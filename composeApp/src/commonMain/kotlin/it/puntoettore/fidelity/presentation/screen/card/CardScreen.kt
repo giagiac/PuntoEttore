@@ -103,6 +103,22 @@ fun CardScreen(
             )
         })
     }, bottomBar = bottomBar, content = { it ->
+        LaunchedEffect(datiFidelity) {
+            if(datiFidelity.isError()) {
+                snackbarHostState.showSnackbar(
+                    datiFidelity.getErrorMessage().error.name + " : " +
+                            datiFidelity.getErrorMessage().message
+                )
+            }
+        }
+        LaunchedEffect(creditiFidelity) {
+            if(creditiFidelity.isError()) {
+                snackbarHostState.showSnackbar(
+                    creditiFidelity.getErrorMessage().error.name + " : " +
+                            creditiFidelity.getErrorMessage().message
+                )
+            }
+        }
         Column(
             modifier = Modifier.padding(
                 top = it.calculateTopPadding(),
@@ -187,8 +203,9 @@ fun CardScreen(
                                             // Riga 3: Fascia con linea colorata
                                             val fasciaColor = when (data.fascia.lowercase()) {
                                                 "platinum" -> Color(0xFFC0C0C0) // Platinum
-                                                "gold" -> Color(0xFFFFD700) // Gold
+                                                "bronze" -> Color(0xFFFFD700) // Gold
                                                 "silver" -> Color(0xFFB0B0B0) // Silver
+                                                "gold" -> Color(0xFFD2B48C) // Bronze"
                                                 else -> MaterialTheme.colorScheme.primary
                                             }
                                             Column(

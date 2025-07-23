@@ -68,33 +68,33 @@ fun AboutScreen(
             ) {
                 var notificationId by remember { mutableStateOf(0) }
                 val notifier = remember { NotifierManager.getLocalNotifier() }
-                Button(onClick={
-
-                }){
-                    Text("GO NOTIF!!!")
-                }
-                Button(onClick={
-                    notificationId = Random.nextInt(0, Int.MAX_VALUE)
-                    notifier.notify(title = "Hello", "Messaggiooo")
-                }){
-                    Text("CLICK HERE!!!")
-                }
-                Button(onClick = {
-                    notificationId = Random.nextInt(0, Int.MAX_VALUE)
-                    //notifier.notify(title = "Hello", "Messaggiooo")
-                    notifier.notify {
-                        id = notificationId
-                        title = "Title from KMPNotifier"
-                        body = "Body message from KMPNotifier"
-                        payloadData = mapOf(
-                            Notifier.KEY_URL to "https://github.com/mirzemehdi/KMPNotifier/",
-                            "extraKey" to "randomValue"
-                        )
-                        image = NotificationImage.Url("https://github.com/user-attachments/assets/a0f38159-b31d-4a47-97a7-cc230e15d30b")
-                    }
-                }) {
-                    Text("Send Local Notification")
-                }
+//                Button(onClick={
+//
+//                }){
+//                    Text("GO NOTIF!!!")
+//                }
+//                Button(onClick={
+//                    notificationId = Random.nextInt(0, Int.MAX_VALUE)
+//                    notifier.notify(title = "Hello", "Messaggiooo")
+//                }){
+//                    Text("CLICK HERE!!!")
+//                }
+//                Button(onClick = {
+//                    notificationId = Random.nextInt(0, Int.MAX_VALUE)
+//                    //notifier.notify(title = "Hello", "Messaggiooo")
+//                    notifier.notify {
+//                        id = notificationId
+//                        title = "Title from KMPNotifier"
+//                        body = "Body message from KMPNotifier"
+//                        payloadData = mapOf(
+//                            Notifier.KEY_URL to "https://github.com/mirzemehdi/KMPNotifier/",
+//                            "extraKey" to "randomValue"
+//                        )
+//                        image = NotificationImage.Url("https://github.com/user-attachments/assets/a0f38159-b31d-4a47-97a7-cc230e15d30b")
+//                    }
+//                }) {
+//                    Text("Send Local Notification")
+//                }
                 Card(modifier = Modifier.fillMaxSize().padding(bottom = 8.dp)) {
                     Column(modifier = Modifier.padding(8.dp)) {
                         Text("Dove siamo", fontWeight = FontWeight.Bold, fontSize = 20.sp)
@@ -124,7 +124,7 @@ fun AboutScreen(
                 CoilImage(
                     modifier = Modifier
                         .fillMaxWidth(),
-                    imageModel = { "https://app.erroridiconiazione.com/public/map.png" },
+                    imageModel = { "https://puntoettore.it/wp-content/uploads/2021/12/ettore-campagna-2021-min.jpg" },
                     imageOptions = ImageOptions(
                         contentScale = ContentScale.Fit,
                         alignment = Alignment.Center,

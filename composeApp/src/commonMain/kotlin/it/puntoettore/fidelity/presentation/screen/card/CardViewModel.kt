@@ -69,16 +69,22 @@ class CardViewModel(
                         _datiFidelity.value = RequestState.Success(it)
 
                         apiDataClientNextLogin.postCreditiFidelity()
-                            .onSuccess {
-                                _creditiFidelity.value = RequestState.Success(it)
+                            .onSuccess { creditiList ->
+                                // Calcolo il massimo punteggio (convertendo le stringhe a Int, ignorando i null o non numerici)
+                                val maxPunteggio = creditiList.mapNotNull { it.punteggio?.toIntOrNull() }.maxOrNull() ?: 0
+                                val creditiConPercentuale = creditiList.map { credito ->
+                                    val punteggioInt = credito.punteggio?.toIntOrNull() ?: 0
+                                    val percentuale = if (maxPunteggio > 0) (punteggioInt * 100 / maxPunteggio) else 0
+                                    credito.copy(punteggioPercentuale = percentuale)
+                                }
+                                _creditiFidelity.value = RequestState.Success(creditiConPercentuale)
                             }
                             .onError {
-                                _creditiFidelity.value = RequestState.Error(it.name)
-
+                                _creditiFidelity.value = RequestState.Error(error = it.error, message = it.message)
                             }
                     }
                     .onError {
-                        _datiFidelity.value = RequestState.Error(it.name)
+                        _creditiFidelity.value = RequestState.Error(error = it.error, message = it.message)
                     }
             }
         }

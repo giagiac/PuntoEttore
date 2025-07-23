@@ -12,3 +12,5 @@ enum class NetworkEError : EError {
     NOT_FOUND,
     UNKNOWN;
 }
+
+class NetworkError(var error: NetworkEError, var message: String) : EError

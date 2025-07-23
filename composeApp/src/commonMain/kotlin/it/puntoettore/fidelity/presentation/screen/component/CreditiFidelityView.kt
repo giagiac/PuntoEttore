@@ -41,6 +41,11 @@ import kotlinx.datetime.minus
 import kotlinx.datetime.toInstant
 import kotlinx.datetime.toLocalDateTime
 import kotlin.time.Duration.Companion.minutes
+// --- AGGIUNTA: Barra graduata animata ---
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 
 // --- DEFINIZIONI PERSONALIZZATE PER L'ITALIANO ---
 val mesiItaliani = MonthNames(
@@ -135,15 +140,15 @@ fun CreditiFidelityView(
         // Icona a sinistra
         Box(
             modifier = Modifier
-                .size(58.dp)
+                .size(62.dp)
                 .clip(RoundedCornerShape(12.dp))
                 .background(MaterialTheme.colorScheme.surfaceVariant)
                 .padding(4.dp),
             contentAlignment = Alignment.Center
         ) {
             CoilImage(
-                modifier = Modifier.size(42.dp),
-                imageModel = { /*item.matricola*/ "https://cdn-icons-png.flaticon.com/128/2374/2374851.png" },
+                modifier = Modifier.size(44.dp),
+                imageModel = { /*item.matricola*/ "https://cdn-icons-png.flaticon.com/128/5024/5024479.png" },
                 imageOptions = ImageOptions(
                     contentScale = ContentScale.Fit,
                     alignment = Alignment.Center
@@ -177,6 +182,43 @@ fun CreditiFidelityView(
                 fontWeight = FontWeight.Light,
                 color = MaterialTheme.colorScheme.primary
             )
+            // Barra graduata animata, allineata a destra sotto il punteggio
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.End
+            ) {
+                val percentuale = (item.punteggioPercentuale ?: 0).coerceIn(0, 100)
+                AnimatedPercentBar(percentuale = percentuale)
+            }
         }
     }
 }
+
+@Composable
+fun AnimatedPercentBar(percentuale: Int) {
+    val barMaxWidth = 120.dp
+    val animatedWidth by animateDpAsState(targetValue = barMaxWidth * (percentuale / 100f), label = "barWidth")
+    val gradient = Brush.horizontalGradient(
+        colors = listOf(Color.Blue, Color.Red),
+        startX = Float.POSITIVE_INFINITY, // Inverte la direzione del gradiente
+        endX = 0f
+    )
+    Box(
+        modifier = Modifier
+            .padding(top = 2.dp, end = 0.dp)
+            .height(10.dp)
+            .width(barMaxWidth)
+            .clip(RoundedCornerShape(6.dp))
+            .background(Color(0x22000000)) // sfondo barra
+    ) {
+        Box(
+            modifier = Modifier
+                .height(10.dp)
+                .width(animatedWidth)
+                .align(Alignment.CenterEnd) // Allinea la barra a destra
+                .clip(RoundedCornerShape(6.dp))
+                .background(gradient)
+        )
+    }
+}
+// --- FINE AGGIUNTA ---

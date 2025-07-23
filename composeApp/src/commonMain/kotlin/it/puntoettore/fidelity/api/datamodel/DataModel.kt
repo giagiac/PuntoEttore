@@ -1,5 +1,6 @@
 package it.puntoettore.fidelity.api.datamodel
 
+import it.puntoettore.fidelity.api.util.NetworkEError
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -24,6 +25,9 @@ data class AttributesBillFidelity(val uid: String, val codice: String, val matri
 data class AttributesVecchioCliente(val uid: String, val oldId: String)
 
 @Serializable
+data class AttributesTicket(val uid: String, val msg: String)
+
+@Serializable
 data class AuthDetail(
     val token_type: String,
     val expires_in: String,
@@ -46,7 +50,10 @@ data class CreditiFidelity(
     val codscontrino: String?,
     val matricola: String?,
     val data_inserimento: String?,
-    val punteggio: String?
+    val punteggio: String?,
+
+    // non fa parte delle api
+    val punteggioPercentuale: Int?
 )
 
 @Serializable
@@ -59,10 +66,14 @@ data class BillFidelity(
 
 @Serializable
 data class ResponseVecchioCliente(
-    val codice: String?,
-    val matricola: String?,
-    val totale: String?,
-    val articoli: List<Articolo>?
+    val message: String?
+)
+
+@Serializable
+data class ResponseGeneric(
+    val message: String?,
+    // Att.ne non proviene dall'api
+    val error: NetworkEError?
 )
 
 @Serializable

@@ -145,7 +145,8 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                 },
                 onSupportConfirm = {
                     navController.navigate(Screen.Ticket.route)
-                }
+                },
+                snackbarHostState = snackbarHostState
             )
         }
         composable(route = Screen.Ticket.route) {
@@ -153,7 +154,8 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                 bottomBar = {
                     BottomBar(navController)
                 },
-                onBackClick = { navController.navigateUp() }
+                onBackClick = { navController.navigateUp() },
+                snackbarHostState = snackbarHostState
             )
         }
         composable(route = Screen.Offer.route) {
@@ -235,7 +237,8 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
             CardDetailScreen(
                 codice = codice,
                 matricola = matricola,
-                onBackClick = { navController.navigateUp() }
+                onBackClick = { navController.navigateUp() },
+                snackbarHostState = snackbarHostState
             )
         }
     }
