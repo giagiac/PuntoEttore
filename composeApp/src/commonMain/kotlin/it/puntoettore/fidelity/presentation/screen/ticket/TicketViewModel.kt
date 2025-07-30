@@ -12,6 +12,7 @@ import it.puntoettore.fidelity.api.util.onSuccess
 import it.puntoettore.fidelity.data.BookDatabase
 import it.puntoettore.fidelity.domain.User
 import it.puntoettore.fidelity.util.RequestState
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -48,10 +49,6 @@ class TicketViewModel(
             if (_user.value?.uid == null) {
                 _error.value = "Nessun uid trovato"
                 return@launch
-            }
-
-            _user.value?.uid?.let {
-                apiDataClientNextLogin.setUid(it)
             }
         }
     }

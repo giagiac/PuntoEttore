@@ -55,7 +55,7 @@ public actual fun PhoneAuthContainer(
     val focusManager = LocalFocusManager.current
 
     Column {
-        PhoneNumbers(enabled = phoneNumberEnabled, getPhoneNumber = { phone ->
+        PhoneNumbers(phoneNumberEnabled = phoneNumberEnabled, getPhoneNumber = { phone ->
             phoneNumber = phone
         })
         Text(text = errorSend ?: "", color = Color.Red)

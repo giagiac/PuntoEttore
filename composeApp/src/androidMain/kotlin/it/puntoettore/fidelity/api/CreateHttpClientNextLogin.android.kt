@@ -14,10 +14,8 @@ import io.ktor.client.plugins.logging.ANDROID
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
-import io.ktor.client.request.HttpSendPipeline
 import io.ktor.client.request.get
 import io.ktor.client.request.header
-import io.ktor.http.headers
 import io.ktor.serialization.kotlinx.json.json
 import it.puntoettore.fidelity.custom.BuildConfig
 import it.puntoettore.fidelity.data.BookDatabase
@@ -33,21 +31,29 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
 
     val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
-    lateinit var accessToken : String
-    lateinit var refreshToken : String
+    lateinit var accessToken: String
+    lateinit var refreshToken: String
 
-    var idUser: Int? = null
-    var user: User? = null
+    lateinit var user: User
 
     scope.launch {
-        val appSettings = bookDatabase.appSettingsDao().getAppSettings().first()
-        idUser = appSettings?._idUser
-        idUser?.let { idUserNotNull ->
-            bookDatabase.userDao().getUserById(idUserNotNull).collect {
-                it?.let { _user ->
-                    Log.d("CreateHttpClientNextLogin.android.kt", _user.refreshToken.toString())
-                    accessToken = _user.accessToken.toString()
-                    refreshToken = _user.refreshToken.toString()
+        bookDatabase.appSettingsDao().getAppSettings().collect {
+
+            accessToken = ""
+            refreshToken = ""
+
+            val idUser = it?._idUser
+            idUser?.let { idUserNotNull ->
+                val _user = bookDatabase.userDao().getUserById(idUserNotNull).first()
+
+                _user?.let { userNotNull ->
+                    user = userNotNull
+                    Log.d(
+                        "CreateHttpClientNextLogin.android.kt",
+                        userNotNull.refreshToken.toString()
+                    )
+                    accessToken = userNotNull.accessToken.toString()
+                    refreshToken = userNotNull.refreshToken.toString()
                 }
             }
         }
@@ -65,15 +71,15 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
             level = LogLevel.ALL
         }
     }
-    install("RefreshToken") {
-        sendPipeline.intercept(HttpSendPipeline.Before) {
-            println("Bearer $accessToken")
-            headers {
-                append("custom-refresh-token", "Bearer $refreshToken")
-            }
-            proceed()
-        }
-    }
+//    install("RefreshToken") {
+//        sendPipeline.intercept(HttpSendPipeline.Before) {
+//            println("Bearer $accessToken")
+//            headers {
+//                append("Authorization", "Bearer $refreshToken")
+//            }
+//            proceed()
+//        }
+//    }
     //We can configure the BASE_URL and also
     //the deafult headers by defaultRequest builder
     defaultRequest {
@@ -105,13 +111,14 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
                 val response =
                     client.get("${BuildConfig.END_POINT}/index.php?entryPoint=getRefresh") {
                         header("refresh-token", refreshToken)
+                        // header("uid", user.uid)
                     }
 
                 // Estrai i nuovi token dalla risposta
                 val tokens = response.body<AuthResponse>()
 
                 scope.launch {
-                    user?.let {
+                    user.let {
                         it.refreshToken = tokens.refresh_token
                         it.accessToken = tokens.access_token
                         bookDatabase.userDao().updateUser(user = it)

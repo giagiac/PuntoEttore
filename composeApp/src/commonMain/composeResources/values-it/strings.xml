@@ -2,6 +2,7 @@
     <string name="title_login">Benvenuto</string>
     <string name="card">.ETTORE</string>
     <string name="account">Utente</string>
+    <string name="account_edit">Modifica Account</string>
     <string name="offers">Offerte</string>
     <string name="name">Nome</string>
     <string name="hello">Ciao</string>

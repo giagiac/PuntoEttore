@@ -7,25 +7,24 @@ import kotlinx.serialization.Serializable
 data class CensoredText(val result: String)
 
 @Serializable
-data class DataUid(val uid: String)
+data class DataWrapper<T>(val data: DataObj<T>)
 
 @Serializable
-data class DataWrapper<T>(val data: Data<T>)
+data class DataObj<T>(val type: String = "xa_xApi", val attributes: T)
 
 @Serializable
-data class Attributes(val uid: String)
+data class AttributesBillFidelity(val codice: String, val matricola: String)
 
 @Serializable
-data class Data<T>(val type: String = "xa_xApi", val attributes: T)
+data class AttributesVecchioCliente(val oldId: String)
 
 @Serializable
-data class AttributesBillFidelity(val uid: String, val codice: String, val matricola: String)
+data class AttributesTicket(val msg: String)
 
 @Serializable
-data class AttributesVecchioCliente(val uid: String, val oldId: String)
-
+data class AttributesUpdAnagFidelity(val type: String, val data: AttributesUpdAnagFidelitySub)
 @Serializable
-data class AttributesTicket(val uid: String, val msg: String)
+data class AttributesUpdAnagFidelitySub(val displayName: String, val phone: String, val data_nascita: String)
 
 @Serializable
 data class AuthDetail(
@@ -70,6 +69,11 @@ data class ResponseVecchioCliente(
 )
 
 @Serializable
+data class ResponseUptAnagFidelity(
+    val operazione: String
+)
+
+@Serializable
 data class ResponseGeneric(
     val message: String?,
     // Att.ne non proviene dall'api
@@ -86,12 +90,16 @@ data class Articolo(
 )
 
 @Serializable
-data class DatiFidelity(
-    val uid: String,
+data class DatiFidelityResponse(
     val firstName: String,
     val allineata: String,
     val points: Int,
-    val fascia: String
+    val fascia: String,
+    // ---------- new fields
+    val vecchio_cliente: String?,
+    val oldId: String?,
+    val phone: String?,
+    val dataNascita: String?
 )
 
 @Serializable

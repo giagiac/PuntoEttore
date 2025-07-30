@@ -16,6 +16,7 @@ import com.mmk.kmpnotifier.notification.PayloadData
 import it.puntoettore.fidelity.presentation.screen.about.AboutScreen
 import it.puntoettore.fidelity.presentation.screen.about.NotificationsScreen
 import it.puntoettore.fidelity.presentation.screen.account.AccountScreen
+import it.puntoettore.fidelity.presentation.screen.accountEdit.AccountEditScreen
 import it.puntoettore.fidelity.presentation.screen.card.CardScreen
 import it.puntoettore.fidelity.presentation.screen.cardDetail.CardDetailScreen
 import it.puntoettore.fidelity.presentation.screen.details.DetailsScreen
@@ -146,6 +147,18 @@ fun SetupNavGraph(navController: NavHostController, startDestination: String) {
                 onSupportConfirm = {
                     navController.navigate(Screen.Ticket.route)
                 },
+                snackbarHostState = snackbarHostState,
+                onEditClick = {
+                    navController.navigate(Screen.AccountEdit.route)
+                }
+            )
+        }
+        composable(
+            route = Screen.AccountEdit.route,
+        ) {
+            AccountEditScreen(
+                bottomBar = { BottomBar(navController) },
+                onBackClick = { navController.navigateUp() },
                 snackbarHostState = snackbarHostState
             )
         }

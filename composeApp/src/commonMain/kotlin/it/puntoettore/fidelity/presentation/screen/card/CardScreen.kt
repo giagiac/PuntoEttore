@@ -65,7 +65,7 @@ fun CardScreen(
 ) {
     val scope = rememberCoroutineScope()
     val viewModel = koinViewModel<CardViewModel>()
-    val datiFidelity by viewModel.datiFidelity
+    val datiFidelity by viewModel.datiFidelityResponse
     val creditiFidelity by viewModel.creditiFidelity
     val user by viewModel.user
     val error by viewModel.error
@@ -104,25 +104,22 @@ fun CardScreen(
         })
     }, bottomBar = bottomBar, content = { it ->
         LaunchedEffect(datiFidelity) {
-            if(datiFidelity.isError()) {
+            if (datiFidelity.isError()) {
                 snackbarHostState.showSnackbar(
-                    datiFidelity.getErrorMessage().error.name + " : " +
-                            datiFidelity.getErrorMessage().message
+                    datiFidelity.getErrorMessage().error.name + " : " + datiFidelity.getErrorMessage().message
                 )
             }
         }
         LaunchedEffect(creditiFidelity) {
-            if(creditiFidelity.isError()) {
+            if (creditiFidelity.isError()) {
                 snackbarHostState.showSnackbar(
-                    creditiFidelity.getErrorMessage().error.name + " : " +
-                            creditiFidelity.getErrorMessage().message
+                    creditiFidelity.getErrorMessage().error.name + " : " + creditiFidelity.getErrorMessage().message
                 )
             }
         }
         Column(
             modifier = Modifier.padding(
-                top = it.calculateTopPadding(),
-                bottom = it.calculateBottomPadding()
+                top = it.calculateTopPadding(), bottom = it.calculateBottomPadding()
             )
         ) {
             Box {
@@ -134,14 +131,15 @@ fun CardScreen(
                         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
                         shape = MaterialTheme.shapes.medium,
                         border = BorderStroke(0.dp, MaterialTheme.colorScheme.outline),
-                        modifier = Modifier
-                            .padding(start = 8.dp, end = 8.dp, top = 0.dp, bottom = 0.dp)
-                            .fillMaxWidth()
+                        modifier = Modifier.padding(
+                            start = 8.dp,
+                            end = 8.dp,
+                            top = 0.dp,
+                            bottom = 0.dp
+                        ).fillMaxWidth()
                     ) {
                         Row(
-                            modifier = Modifier
-                                .padding(16.dp)
-                                .fillMaxWidth(),
+                            modifier = Modifier.padding(16.dp).fillMaxWidth(),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             // Colonna sinistra: QRCode
@@ -156,8 +154,7 @@ fun CardScreen(
                                     modifier = Modifier.drawBehind {
                                         rotate(rotationAnimation.value) {
                                             drawCircle(
-                                                brush,
-                                                style = Stroke(50.dp.value)
+                                                brush, style = Stroke(50.dp.value)
                                             )
                                         }
                                     }) {
@@ -166,8 +163,7 @@ fun CardScreen(
                                             contentScale = ContentScale.Fit,
                                             contentDescription = it.uid,
                                             modifier = Modifier.align(Alignment.CenterHorizontally)
-                                                .size(120.dp)
-                                                .padding(8.dp),
+                                                .size(120.dp).padding(8.dp),
                                             onSuccess = { qrImage -> },
                                             onFailure = {
                                                 scope.launch {
@@ -181,81 +177,70 @@ fun CardScreen(
                                 modifier = Modifier.weight(2f).padding(start = 24.dp),
                                 horizontalAlignment = Alignment.CenterHorizontally
                             ) {
-                                datiFidelity.DisplayResult(
-                                    onSuccess = { data ->
-                                        Column(
-                                            horizontalAlignment = Alignment.CenterHorizontally
-                                        ) {
-                                            // Riga 1: Nome
-                                            Text(
-                                                text = data.firstName,
-                                                style = MaterialTheme.typography.headlineSmall,
-                                                color = MaterialTheme.colorScheme.onSurface,
-                                                modifier = Modifier.padding(bottom = 8.dp)
-                                            )
-                                            // Riga 2: Punti con animazione custom
-                                            AnimatedPoints(
-                                                points = data.points,
-                                                viewModel.isFirstProgression.value,
-                                                onFinish = {
-                                                    viewModel.setFirstProgression(false)
-                                                })
-                                            // Riga 3: Fascia con linea colorata
-                                            val fasciaColor = when (data.fascia.lowercase()) {
-                                                "platinum" -> Color(0xFFC0C0C0) // Platinum
-                                                "bronze" -> Color(0xFFFFD700) // Gold
-                                                "silver" -> Color(0xFFB0B0B0) // Silver
-                                                "gold" -> Color(0xFFD2B48C) // Bronze"
-                                                else -> MaterialTheme.colorScheme.primary
-                                            }
-                                            Column(
-                                                modifier = Modifier.padding(top = 16.dp)
-                                            ) {
-                                                Text(
-                                                    text = data.fascia,
-                                                    style = MaterialTheme.typography.titleMedium,
-                                                    color = fasciaColor,
-                                                    modifier = Modifier.align(Alignment.CenterHorizontally)
-                                                )
-                                                // Linea colorata sotto il testo, altezza come il testo
-                                                Box(
-                                                    modifier = Modifier
-                                                        .align(Alignment.CenterHorizontally)
-                                                        .padding(top = 2.dp)
-                                                        .fillMaxWidth(0.5f)
-                                                        .height(MaterialTheme.typography.titleMedium.fontSize.value.dp / 1.5f)
-                                                        .background(
-                                                            fasciaColor,
-                                                            shape = MaterialTheme.shapes.small
-                                                        )
-                                                )
-                                            }
+                                datiFidelity.DisplayResult(onSuccess = { data ->
+                                    Column(
+                                        horizontalAlignment = Alignment.CenterHorizontally
+                                    ) {
+                                        // Riga 1: Nome
+                                        Text(
+                                            text = data.firstName,
+                                            style = MaterialTheme.typography.headlineSmall,
+                                            color = MaterialTheme.colorScheme.onSurface,
+                                            modifier = Modifier.padding(bottom = 8.dp)
+                                        )
+                                        // Riga 2: Punti con animazione custom
+                                        AnimatedPoints(points = data.points,
+                                            viewModel.isFirstProgression.value,
+                                            onFinish = {
+                                                viewModel.setFirstProgression(false)
+                                            })
+                                        // Riga 3: Fascia con linea colorata
+                                        val fasciaColor = when (data.fascia.lowercase()) {
+                                            "platinum" -> Color(0xFFC0C0C0) // Platinum
+                                            "bronze" -> Color(0xFFFFD700) // Gold
+                                            "silver" -> Color(0xFFB0B0B0) // Silver
+                                            "gold" -> Color(0xFFD2B48C) // Bronze"
+                                            else -> MaterialTheme.colorScheme.primary
                                         }
-                                    })
+                                        Column(
+                                            modifier = Modifier.padding(top = 16.dp)
+                                        ) {
+                                            Text(
+                                                text = data.fascia,
+                                                style = MaterialTheme.typography.titleMedium,
+                                                color = fasciaColor,
+                                                modifier = Modifier.align(Alignment.CenterHorizontally)
+                                            )
+                                            // Linea colorata sotto il testo, altezza come il testo
+                                            Box(
+                                                modifier = Modifier.align(Alignment.CenterHorizontally)
+                                                    .padding(top = 2.dp).fillMaxWidth(0.5f)
+                                                    .height(MaterialTheme.typography.titleMedium.fontSize.value.dp / 1.5f)
+                                                    .background(
+                                                        fasciaColor,
+                                                        shape = MaterialTheme.shapes.small
+                                                    )
+                                            )
+                                        }
+                                    }
+                                })
                                 // Colonna destra: Testi
                             }
                         }
                     }
-                    creditiFidelity.DisplayResult(
-                        onLoading = { LoadingView() },
-                        onError = { ErrorView(it) },
-                        onSuccess = { data ->
-                            if (data.isNotEmpty()) {
-                                LazyColumn(
-                                    modifier = Modifier.padding(
-                                        top = 8.dp,
-                                    ), verticalArrangement = Arrangement.spacedBy(12.dp)
-                                ) {
-                                    items(items = data, key = { it.data_inserimento!! }) {
-                                        CreditiFidelityView(
-                                            item = it,
-                                            onClick = { onCreditiSelect(it) })
-                                    }
-                                }
-                            } else {
-                                ErrorView()
+                    creditiFidelity.DisplayResult(onLoading = { LoadingView() }, onError = {
+                        ErrorView(it)
+                    }, onSuccess = { data ->
+                        LazyColumn(
+                            modifier = Modifier.padding(
+                                top = 8.dp,
+                            ), verticalArrangement = Arrangement.spacedBy(12.dp)
+                        ) {
+                            items(items = data, key = { it.data_inserimento!! }) {
+                                CreditiFidelityView(item = it, onClick = { onCreditiSelect(it) })
                             }
-                        })
+                        }
+                    })
                 }
             }
             error.let {

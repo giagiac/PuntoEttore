@@ -3,6 +3,7 @@
     <string translatable="false" name="url_endpoint">http://localhost</string>
     <string name="card">.ETTORE</string>
     <string name="account">Account</string>
+    <string name="account_edit">Account Edit</string>
     <string name="offers">Offer</string>
     <string name="name">Name</string>
     <string name="hello">Ciao</string>

@@ -95,12 +95,12 @@ kotlin {
 android {
 
     signingConfigs {
-        getByName("debug") {
+        create("production") {
             val keystoreProperties = Properties()
             println("BEGIN")
-            println("import signin debug keys")
+            println("import signin release keys")
             val keystorePropertiesFile =
-                rootProject.file("../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/keystore-debug.properties")
+                rootProject.file("../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/keystore-release.properties")
             keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
             println(keystoreProperties["storeFile"] as String)
@@ -108,13 +108,39 @@ android {
             storePassword = keystoreProperties["storePassword"] as String
             keyAlias = keystoreProperties["keyAlias"] as String
             keyPassword = keystoreProperties["keyPassword"] as String
+
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/composeApp/src/production/release/google-services.json")
+                into(project.rootDir.absolutePath + "/composeApp/src/production/release")
+                println("Copy google-services.json to ComposeApp to ${project.rootDir.absolutePath}/composeApp/src/production/release")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/composeApp/src/production/debug/google-services.json")
+                into(project.rootDir.absolutePath + "/composeApp/src/production/debug")
+                println("Copy google-services.json to ComposeApp to ${project.rootDir.absolutePath}/composeApp/src/production/debug")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/GoogleService-Info.plist")
+                into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/Info.plist")
+                into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/ExportOptions.plist")
+                into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+            }
         }
-        create("release") {
+        create("internal") {
             val keystoreProperties = Properties()
             println("BEGIN")
-            println("import signin release keys")
+            println("import signin debug keys")
             val keystorePropertiesFile =
-                rootProject.file("../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/keystore-release.properties")
+                rootProject.file("../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/keystore-debug.properties")
             keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
             println(keystoreProperties["storeFile"] as String)
@@ -141,124 +167,52 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
-//    flavorDimensions += listOf("paid_status", "theme")
-//    productFlavors {
-//        create("free") {
-//            dimension = "paid_status"
-//            applicationId = "it.puntoettore.fidelity"
-//            minSdk = libs.versions.android.minSdk.get().toInt()
-//            targetSdk = libs.versions.android.targetSdk.get().toInt()
-//            versionCode = 1
-//            versionName = "1.0"
-//            signingConfig = signingConfigs.getByName("debug")
-//        }
-//        create("paid") {
-//            dimension = "paid_status"
-//            applicationId = "it.puntoettore.fidelity"
-//            minSdk = libs.versions.android.minSdk.get().toInt()
-//            targetSdk = libs.versions.android.targetSdk.get().toInt()
-//            versionCode = 1
-//            versionName = "1.0"
-//            signingConfig = signingConfigs.getByName("debug")
-//        }
-//
-//        create("green") {
-//            dimension = "theme"
-//            applicationId = "it.puntoettore.fidelity"
-//            minSdk = libs.versions.android.minSdk.get().toInt()
-//            targetSdk = libs.versions.android.targetSdk.get().toInt()
-//            versionCode = 1
-//            versionName = "1.0"
-//            signingConfig = signingConfigs.getByName("debug")
-//        }
-//        create("red") {
-//            dimension = "theme"
-//            applicationId = "it.puntoettore.fidelity"
-//            minSdk = libs.versions.android.minSdk.get().toInt()
-//            targetSdk = libs.versions.android.targetSdk.get().toInt()
-//            versionCode = 1
-//            versionName = "1.0"
-//            signingConfig = signingConfigs.getByName("debug")
-//        }
-//    }
+
+    // 1. Definisci la dimensione
+    flavorDimensions += "version"
+
+    // Aggiungi questo blocco
+    productFlavors {
+        create("internal") {
+            dimension = "version"
+            // Configurazione specifica per la versione "internal"
+            applicationIdSuffix = ".test"
+            versionNameSuffix = "-TEST"
+            signingConfig = signingConfigs.getByName("internal")
+            resValue("string", "app_name", "** Punto Ettore Fidelity Test **")
+        }
+        create("production") {
+            dimension = "version"
+            // Configurazione specifica per la versione "production"
+            applicationIdSuffix = ".prod"
+            versionNameSuffix = "-PROD"
+            signingConfig = signingConfigs.getByName("production")
+            resValue("string", "app_name", "Punto Ettore Fidelity")
+        }
+    }
 
     buildTypes {
         debug {
             isDebuggable = true
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("debug")
-            // applicationIdSuffix = ".test"
-            resValue("string", "app_name", "** Punto Ettore Fidelity Test **")
-            applicationIdSuffix = ".test"
-            versionNameSuffix = "-DEBUG"
         }
         release {
             isDebuggable = false
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("release")
-            // applicationIdSuffix = ".test"
-            resValue("string", "app_name", "Punto Ettore Fidelity")
-            applicationIdSuffix = ".prod"
-            versionNameSuffix = "-PROD"
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
 
     defaultConfig {
-//        applicationId = if (gradle.startParameter.taskNames.any { it.contains("Release") }) {
-//            "it.puntoettore.fidelity.prod"
-//        } else {
-//            "it.puntoettore.fidelity.test"
-//        }
 
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
-        signingConfig = if (gradle.startParameter.taskNames.any { it.contains("Release") }) {
-            signingConfigs.getByName("release")
-        } else {
-            signingConfigs.getByName("debug")
-        }
-
-//        if (gradle.startParameter.taskNames.any { it.contains("Release") }) {
-//            copy {
-//                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/composeApp/google-services.json")
-//                into(project.rootDir.absolutePath + "/composeApp")
-//                // rename("google-services.json", "google-services.json")
-//                println("Copy Release to ComposeApp " + project.rootDir.absolutePath)
-//            }
-//            copy {
-//                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/GoogleService-Info.plist")
-//                into(project.rootDir.absolutePath + "/iosApp/iosApp")
-//                println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-//            }
-//            copy {
-//                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/Info.plist")
-//                into(project.rootDir.absolutePath + "/iosApp/iosApp")
-//                println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-//            }
-//        } else {
-//            copy {
-//                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/composeApp/google-services.json")
-//                into(project.rootDir.absolutePath + "/composeApp")
-//                // rename("google-services.json", "google-services.json")
-//                println("Copy Debug to ComposeApp " + project.rootDir.absolutePath)
-//            }
-//            copy {
-//                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/GoogleService-Info.plist")
-//                into(project.rootDir.absolutePath + "/iosApp/iosApp")
-//                println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-//            }
-//            copy {
-//                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/Info.plist")
-//                into(project.rootDir.absolutePath + "/iosApp/iosApp")
-//                println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-//            }
-//        }
+        versionCode = 13
+        versionName = "13"
     }
     dependencies {
         debugImplementation(libs.compose.ui.tooling)
@@ -279,11 +233,6 @@ android {
 }
 
 buildConfig {
-    // className("BuildConfig")   // forces the class name. Defaults to 'BuildConfig'
-    // packageName("${project.group}")  // forces the package. Defaults to '${project.group}'
-    // root
-    // buildConfigField("APP_NAME", project.name)
-
     useJavaOutput()
     useKotlinOutput()                               // forces the outputType to 'kotlin', generating an `object`
     useKotlinOutput {
@@ -291,60 +240,15 @@ buildConfig {
     }    // forces the outputType to 'kotlin', generating top-level declarations
     useKotlinOutput { internalVisibility = true }   // adds `internal` modifier to all declarations
 
-    if (gradle.startParameter.taskNames.any { it.contains("Debug") }) {
-        // Definisci le proprietà per la variante debug
-
-        copy {
-            from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/composeApp/google-services.json")
-            into(project.rootDir.absolutePath + "/composeApp")
-            // rename("google-services.json", "google-services.json")
-            println("Copy Debug to ComposeApp " + project.rootDir.absolutePath)
-        }
-        copy {
-            from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/GoogleService-Info.plist")
-            into(project.rootDir.absolutePath + "/iosApp/iosApp")
-            println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-        }
-        copy {
-            from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/Info.plist")
-            into(project.rootDir.absolutePath + "/iosApp/iosApp")
-            println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-        }
-        copy {
-            from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/ExportOptions.plist")
-            into(project.rootDir.absolutePath + "/iosApp/iosApp")
-            println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-        }
-    } else if (gradle.startParameter.taskNames.any { it.contains("Release") }) {
-
-        copy {
-            from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/composeApp/google-services.json")
-            into(project.rootDir.absolutePath + "/composeApp")
-            // rename("google-services.json", "google-services.json")
-            println("Copy Release to ComposeApp " + project.rootDir.absolutePath)
-        }
-        copy {
-            from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/GoogleService-Info.plist")
-            into(project.rootDir.absolutePath + "/iosApp/iosApp")
-            println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-        }
-        copy {
-            from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/Info.plist")
-            into(project.rootDir.absolutePath + "/iosApp/iosApp")
-            println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-        }
-        copy {
-            from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/ExportOptions.plist")
-            into(project.rootDir.absolutePath + "/iosApp/iosApp")
-            println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
-        }
-    }
 
     // creazioni variabili da usare a codice per tipo BUILD
     forClass(packageName = "${android.namespace}.custom", className = "BuildConfig") {
-        if (gradle.startParameter.taskNames.any { it.contains("Release") }) {
+        println("NOME BUILD -> " + gradle.startParameter.taskNames)
+        if (gradle.startParameter.taskNames.any {
+                it.contains("ProductionRelease")
+            }) {
             // Definisci le proprietà per la variante release
-            println("SEI IN RELEASE")
+            println("ProductionRelease")
             buildConfigField("IS_DEBUG", false)
             val keystoreProperties = Properties()
             val keystorePropertiesFile =
@@ -363,16 +267,39 @@ buildConfig {
             buildConfigField("STRING_LIST", arrayOf("a", "b", "c"))
             buildConfigField("MAP", mapOf("a" to 1, "b" to 2))
 
-        } else if (gradle.startParameter.taskNames.any { it.contains("Debug") }) {
-            println("SEI IN DEBUG")
-            buildConfigField("IS_DEBUG", true)
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/composeApp/src/production/release/google-services.json")
+                into(project.rootDir.absolutePath + "/composeApp/src/production/release")
+                println("Copy google-services.json to ComposeApp to ${project.rootDir.absolutePath}/composeApp/src/production/release")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/GoogleService-Info.plist")
+                into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/Info.plist")
+                into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/ExportOptions.plist")
+                into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+            }
+
+        } else if (gradle.startParameter.taskNames.any {
+                it.contains("ProductionDebug")
+            }) {
+            // Definisci le proprietà per la variante release
+            println("ProductionDebug")
+            buildConfigField("IS_DEBUG", false)
             val keystoreProperties = Properties()
             val keystorePropertiesFile =
-                rootProject.file("../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/keystore-debug.properties")
+                rootProject.file("../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/keystore-release.properties")
             keystoreProperties.load(FileInputStream(keystorePropertiesFile))
             buildConfigField("END_POINT", keystoreProperties["endpoint"] as String)
             buildConfigField("SERVER_ID", keystoreProperties["serverId"] as String)
-
             // forClass(className = "BuildConfig") {
             // buildConfigField("APP_NAME", project.name)
             buildConfigField("APP_VERSION", provider { "\"${project.version}\"" })
@@ -383,39 +310,121 @@ buildConfig {
             buildConfigField("MAGIC_NUMBERS", intArrayOf(1, 2, 3, 4))
             buildConfigField("STRING_LIST", arrayOf("a", "b", "c"))
             buildConfigField("MAP", mapOf("a" to 1, "b" to 2))
-//        buildConfigField("FILE", File("aFile"))
-//        buildConfigField("URI", uri("https://example.io"))
-        }
+
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/composeApp/src/production/debug/google-services.json")
+                into(project.rootDir.absolutePath + "/composeApp/src/production/debug")
+                println("Copy google-services.json to ComposeApp to ${project.rootDir.absolutePath}/composeApp/src/production/debug")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/GoogleService-Info.plist")
+                into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/Info.plist")
+                into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+            }
+            copy {
+                from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesProd/iosApp/iosApp/ExportOptions.plist")
+                into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+            }
+
+        } else
+            if (gradle.startParameter.taskNames.any {
+                    it.contains("InternalRelease")
+                }) {
+
+                // Definisci le proprietà per la variante release
+                println("InternalRelease")
+                buildConfigField("IS_DEBUG", false)
+                val keystoreProperties = Properties()
+                val keystorePropertiesFile =
+                    rootProject.file("../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/keystore-debug.properties")
+                keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+                buildConfigField("END_POINT", keystoreProperties["endpoint"] as String)
+                buildConfigField("SERVER_ID", keystoreProperties["serverId"] as String)
+                // forClass(className = "BuildConfig") {
+                // buildConfigField("APP_NAME", project.name)
+                buildConfigField("APP_VERSION", provider { "\"${project.version}\"" })
+                buildConfigField("APP_SECRET", "Z3JhZGxlLWphdmEtYnVpbGRjb25maWctcGx1Z2lu")
+                buildConfigField<String>("OPTIONAL", null)
+                buildConfigField("BUILD_TIME", System.currentTimeMillis())
+                buildConfigField("FEATURE_ENABLED", true)
+                buildConfigField("MAGIC_NUMBERS", intArrayOf(1, 2, 3, 4))
+                buildConfigField("STRING_LIST", arrayOf("a", "b", "c"))
+                buildConfigField("MAP", mapOf("a" to 1, "b" to 2))
+
+                copy {
+                    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/composeApp/src/internal/release/google-services.json")
+                    into(project.rootDir.absolutePath + "/composeApp/src/internal/release")
+                    println("Copy google-services.json to ComposeApp to ${project.rootDir.absolutePath}/composeApp/src/internal/release")
+                }
+                copy {
+                    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/GoogleService-Info.plist")
+                    into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                    println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+                }
+                copy {
+                    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/Info.plist")
+                    into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                    println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+                }
+                copy {
+                    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/ExportOptions.plist")
+                    into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                    println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+                }
+
+            } else if (gradle.startParameter.taskNames.any { it.contains("InternalDebug") }) {
+                println("InternalDebug")
+                buildConfigField("IS_DEBUG", true)
+                val keystoreProperties = Properties()
+                val keystorePropertiesFile =
+                    rootProject.file("../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/keystore-debug.properties")
+                keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+                buildConfigField("END_POINT", keystoreProperties["endpoint"] as String)
+                buildConfigField("SERVER_ID", keystoreProperties["serverId"] as String)
+
+                // forClass(className = "BuildConfig") {
+                // buildConfigField("APP_NAME", project.name)
+                buildConfigField("APP_VERSION", provider { "\"${project.version}\"" })
+                buildConfigField("APP_SECRET", "Z3JhZGxlLWphdmEtYnVpbGRjb25maWctcGx1Z2lu")
+                buildConfigField<String>("OPTIONAL", null)
+                buildConfigField("BUILD_TIME", System.currentTimeMillis())
+                buildConfigField("FEATURE_ENABLED", true)
+                buildConfigField("MAGIC_NUMBERS", intArrayOf(1, 2, 3, 4))
+                buildConfigField("STRING_LIST", arrayOf("a", "b", "c"))
+                buildConfigField("MAP", mapOf("a" to 1, "b" to 2))
+                // buildConfigField("FILE", File("aFile"))
+                // buildConfigField("URI", uri("https://example.io"))
+
+                copy {
+                    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/composeApp/src/internal/debug/google-services.json")
+                    into(project.rootDir.absolutePath + "/composeApp/src/internal/debug")
+                    println("Copy google-services.json to ComposeApp to ${project.rootDir.absolutePath}/composeApp/src/internal/debug")
+                }
+                copy {
+                    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/GoogleService-Info.plist")
+                    into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                    println("Copy GoogleService-Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+                }
+                copy {
+                    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/Info.plist")
+                    into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                    println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+                }
+                copy {
+                    from(project.rootDir.absolutePath + "/../PuntoEttoreExtraFiles/PuntoEttoreExtraFilesTest/iosApp/iosApp/ExportOptions.plist")
+                    into(project.rootDir.absolutePath + "/iosApp/iosApp")
+                    println("Copy Info.plist to ${project.rootDir.absolutePath}/iosApp/iosApp")
+                }
+            }
     }
 
     println("SEI IN ROOT")
-
-//    this.sourceSets.getByName("iosMain") {
-//
-//        className("BuildConfig")   // forces the class name. Defaults to 'BuildConfig'
-//        packageName("${project.group}")  // forces the package. Defaults to '${project.group}'
-//        // root
-//        // buildConfigField("APP_NAME", project.name)
-//        forClass(packageName = "${android.namespace}", className = "BuildConfig") {
-//            // buildConfigField("APP_NAME", project.name)
-//            buildConfigField("APP_VERSION", provider { "\"${project.version}\"" })
-//            buildConfigField("APP_SECRET", "Z3JhZGxlLWphdmEtYnVpbGRjb25maWctcGx1Z2lu")
-//            buildConfigField<String>("OPTIONAL", null)
-//            buildConfigField("BUILD_TIME", System.currentTimeMillis())
-//            buildConfigField("FEATURE_ENABLED", true)
-//            buildConfigField("MAGIC_NUMBERS", intArrayOf(1, 2, 3, 4))
-//            buildConfigField("STRING_LIST", arrayOf("a", "b", "c"))
-//            buildConfigField("MAP", mapOf("a" to 1, "b" to 2))
-//            buildConfigField("FILE", File("aFile"))
-//            buildConfigField("URI", uri("https://example.io"))
-//            buildConfigField("END_POINT", keystoreProperties["endpoint"] as String)
-////            buildConfigField(
-////                "com.github.gmazzo.buildconfig.demos.kts.SomeData",
-////                "DATA",
-////                "SomeData(\"a\", 1)"
-////            )
-//        }
-//    }
 }
 
 room {

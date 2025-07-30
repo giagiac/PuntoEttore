@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import it.puntoettore.fidelity.api.ApiDataClientNextLogin
 import it.puntoettore.fidelity.api.datamodel.BillFidelity
-import it.puntoettore.fidelity.api.datamodel.DatiFidelity
+import it.puntoettore.fidelity.api.datamodel.DatiFidelityResponse
 import it.puntoettore.fidelity.api.util.onError
 import it.puntoettore.fidelity.api.util.onSuccess
 import it.puntoettore.fidelity.data.BookDatabase
@@ -28,9 +28,9 @@ class CardDetailViewModel(
         mutableStateOf(RequestState.Loading)
     val billFidelity: State<RequestState<BillFidelity>> = _billFidelity
 
-    private var _datiFidelity: MutableState<RequestState<DatiFidelity>> =
+    private var _datiFidelityResponse: MutableState<RequestState<DatiFidelityResponse>> =
         mutableStateOf(RequestState.Loading)
-    val datiFidelity: State<RequestState<DatiFidelity>> = _datiFidelity
+    val datiFidelityResponse: State<RequestState<DatiFidelityResponse>> = _datiFidelityResponse
 
     // TODO : portare in UI
     private var _error: MutableState<String?> = mutableStateOf(null)
@@ -57,10 +57,9 @@ class CardDetailViewModel(
             }
 
             _user.value?.uid?.let {
-                apiDataClientNextLogin.setUid(it)
                 apiDataClientNextLogin.postDatiFidelity()
                     .onSuccess {
-                        _datiFidelity.value = RequestState.Success(it)
+                        _datiFidelityResponse.value = RequestState.Success(it)
 
                         apiDataClientNextLogin.postBillFidelity(matricola = matricola, codice = codice)
                             .onSuccess {
@@ -72,7 +71,7 @@ class CardDetailViewModel(
                             }
                     }
                     .onError {
-                        _datiFidelity.value = RequestState.Error(error = it.error, message = it.message)
+                        _datiFidelityResponse.value = RequestState.Error(error = it.error, message = it.message)
                     }
             }
         }

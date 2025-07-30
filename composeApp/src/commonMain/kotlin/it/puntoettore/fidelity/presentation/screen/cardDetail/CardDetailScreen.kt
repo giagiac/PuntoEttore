@@ -50,7 +50,7 @@ fun CardDetailScreen(
 
     val user by viewModel.user
     val billFidelity by viewModel.billFidelity
-    val datiFidelity by viewModel.datiFidelity
+    val datiFidelity by viewModel.datiFidelityResponse
     val error by viewModel.error
 
     viewModel.getBillFidelity(matricola = matricola, codice = codice)

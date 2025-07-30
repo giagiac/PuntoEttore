@@ -72,6 +72,18 @@ android {
     buildFeatures {
         buildConfig = true
     }
+
+    // 1. Definisci la dimensione
+    flavorDimensions += "version"
+
+    productFlavors {
+        create("internal") {
+            dimension = "version"
+        }
+        create("production") {
+            dimension = "version"
+        }
+    }
 }
 
 dependencies {

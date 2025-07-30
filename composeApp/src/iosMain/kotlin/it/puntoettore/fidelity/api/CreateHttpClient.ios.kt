@@ -17,7 +17,6 @@ import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 
 //In shared/androidMain
-@OptIn(ExperimentalSerializationApi::class)
 actual fun createHttpClient(bookDatabase: BookDatabase): HttpClient = HttpClient(Darwin) {
 
     //Timeout plugin for timeouts
@@ -36,11 +35,9 @@ actual fun createHttpClient(bookDatabase: BookDatabase): HttpClient = HttpClient
     //the deafult headers by defaultRequest builder
     defaultRequest {
         header("Content-Type", "application/json")
-        // header("Authorization", "Bearer ${accessToken}")
         header("APP_VERSION", BuildConfig.APP_VERSION)
         header("BUILD_TIME", BuildConfig.BUILD_TIME)
         header("FEATURE_ENABLED", BuildConfig.FEATURE_ENABLED)
-        // url("https://api.openai.com/v1/")
     }
     //ContentNegotiation plugin for negotiationing media types between the client and server
     install(ContentNegotiation) {
@@ -51,48 +48,4 @@ actual fun createHttpClient(bookDatabase: BookDatabase): HttpClient = HttpClient
             explicitNulls = false
         })
     }
-    // Aggiungi l'autenticazione con token e refresh token
-//    install(Auth) {
-//        bearer {
-//            // Carica il token iniziale
-//            loadTokens {
-//                BearerTokens(
-//                    accessToken = accessToken, refreshToken = refreshToken
-//                )
-//            }
-//
-//            // Definisci come aggiornare i token
-//            refreshTokens {
-//                // Esegui una richiesta al tuo endpoint di autenticazione
-//                // usando il refresh token.
-//
-//                val response =
-//                    client.get("${BuildConfig.END_POINT}/index.php?entryPoint=getRefresh") {
-//                        header("refresh-token", refreshToken)
-////                        setBody(
-////                            // Invia il refresh token nel body della richiesta
-////                            RefreshRequest(refreshToken = refreshToken)
-////                        )
-//                    }
-//
-//                // Estrai i nuovi token dalla risposta
-//                val tokens = response.body<AuthResponse>()
-//
-//                // Aggiorna i token nella struttura Auth
-//                // accessToken = tokens.accessToken
-//                // refreshToken = tokens.refreshToken
-//
-//                // Restituisci i nuovi token a Ktor
-//                BearerTokens(
-//                    accessToken = tokens.access_token,
-//                    refreshToken = tokens.refresh_token,
-//                )
-//            }
-//
-//            // Configura l'header di autorizzazione
-//            sendWithoutRequest { request ->
-//                request.url.toString().contains("${BuildConfig.END_POINT}/index.php?entryPoint=getAccess")
-//            }
-//        }
-//    }
 }

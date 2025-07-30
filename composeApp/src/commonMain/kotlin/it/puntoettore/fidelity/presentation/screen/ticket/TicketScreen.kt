@@ -32,6 +32,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import it.puntoettore.fidelity.Res
 import it.puntoettore.fidelity.suport
+import kotlinx.coroutines.delay
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -68,6 +69,8 @@ fun TicketScreen(
                 snackbarHostState.showSnackbar(
                     viewModel.ticket.value.getSuccessData().message ?: ""
                 )
+                delay(500)
+                onBackClick()
             } else if(viewModel.ticket.value.isError()) {
                 snackbarHostState.showSnackbar(
                     viewModel.ticket.value.getErrorMessage().error.name + " : " +

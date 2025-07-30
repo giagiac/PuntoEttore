@@ -78,16 +78,18 @@ fun LoginScreen(
                         modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp)
                             .focusRequester(focusRequester)
                     ) {
-                        Row {
-                            Text(
-                                text = BuildConfig.SERVER_ID,
-                                style = MaterialTheme.typography.displayMedium,
-                                fontStyle = FontStyle.Italic,
-                                textAlign = TextAlign.Center,
-                                modifier = Modifier.fillMaxWidth().padding(bottom = 14.dp),
-                                fontSize = 50.sp,
-                                color = Color.White
-                            )
+                        if(BuildConfig.IS_DEBUG) {
+                            Row {
+                                Text(
+                                    text = BuildConfig.SERVER_ID,
+                                    style = MaterialTheme.typography.displayMedium,
+                                    fontStyle = FontStyle.Italic,
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier.fillMaxWidth().padding(bottom = 14.dp),
+                                    fontSize = 28.sp,
+                                    color = Color.White
+                                )
+                            }
                         }
                         Row {
                             Text(

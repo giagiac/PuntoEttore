@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.auth
 import it.puntoettore.fidelity.api.ApiDataClientNextLogin
-import it.puntoettore.fidelity.api.datamodel.DatiFidelity
+import it.puntoettore.fidelity.api.datamodel.DatiFidelityResponse
 import it.puntoettore.fidelity.api.datamodel.ResponseVecchioCliente
 import it.puntoettore.fidelity.api.util.onError
 import it.puntoettore.fidelity.api.util.onSuccess
@@ -26,9 +26,9 @@ class AccountViewModel(
     private var _user: MutableState<User?> = mutableStateOf(null)
     val user: State<User?> = _user
 
-    private var _datiFidelity: MutableState<RequestState<DatiFidelity>> =
+    private var _datiFidelityResponse: MutableState<RequestState<DatiFidelityResponse>> =
         mutableStateOf(RequestState.Loading)
-    val datiFidelity: State<RequestState<DatiFidelity>> = _datiFidelity
+    val datiFidelityResponse: State<RequestState<DatiFidelityResponse>> = _datiFidelityResponse
 
     private var _vecchioCliente: MutableState<RequestState<ResponseVecchioCliente>> =
         mutableStateOf(RequestState.Idle)
@@ -58,13 +58,12 @@ class AccountViewModel(
             }
 
             _user.value?.uid?.let {
-                apiDataClientNextLogin.setUid(it)
                 apiDataClientNextLogin.postDatiFidelity()
                     .onSuccess {
-                        _datiFidelity.value = RequestState.Success(it)
+                        _datiFidelityResponse.value = RequestState.Success(it)
                     }
                     .onError {
-                        _datiFidelity.value = RequestState.Error(error = it.error, message = it.message)
+                        _datiFidelityResponse.value = RequestState.Error(error = it.error, message = it.message)
                     }
             }
         }
@@ -76,6 +75,7 @@ class AccountViewModel(
                 if (appSettings != null) {
                     database.userDao().deleteUserById(appSettings._idUser)
                     database.appSettingsDao().deleteAppSettingsById()
+                    apiDataClientNextLogin.close()
                     Firebase.auth.signOut()
                     // NotifierManager.getPushNotifier().deleteMyToken()
                 }

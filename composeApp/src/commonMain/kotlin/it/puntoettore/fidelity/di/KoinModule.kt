@@ -3,6 +3,7 @@ package it.puntoettore.fidelity.di
 import it.puntoettore.fidelity.data.getRoomDatabase
 import it.puntoettore.fidelity.presentation.screen.about.NotificationsViewModel
 import it.puntoettore.fidelity.presentation.screen.account.AccountViewModel
+import it.puntoettore.fidelity.presentation.screen.accountEdit.AccountEditViewModel
 import it.puntoettore.fidelity.presentation.screen.ticket.TicketViewModel
 import it.puntoettore.fidelity.presentation.screen.card.CardViewModel
 import it.puntoettore.fidelity.presentation.screen.cardDetail.CardDetailViewModel
@@ -27,6 +28,7 @@ val sharedModule = module {
     viewModelOf(::NotificationsViewModel)
     viewModelOf(::TicketViewModel)
     viewModelOf(::AccountViewModel)
+    viewModelOf(::AccountEditViewModel)
     viewModelOf(::DetailsViewModel)
     viewModelOf(::OfferViewModel)
     viewModelOf(::AboutViewModel)

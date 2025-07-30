@@ -5,9 +5,10 @@ import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -83,11 +84,20 @@ public actual fun PhoneAuthContainer(
 //        }
 //    }
 
-    Column {
-        PhoneNumbers(enabled = phoneNumberEnabled, getPhoneNumber = { phone ->
+    Column(
+        modifier = Modifier
+            .verticalScroll(rememberScrollState())
+            .fillMaxWidth()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        PhoneNumbers(phoneNumberEnabled = phoneNumberEnabled, getPhoneNumber = { phone ->
             phoneNumber = phone
         })
-        Text(text = errorSend ?: "", color = Color.Red)
+        if (!errorSend.isNullOrEmpty()) {
+            Text(text = errorSend ?: "", color = Color.Red, modifier = Modifier.padding(vertical = 8.dp))
+        }
         phoneNumber?.let { phone ->
             phoneNumberEnabled = false
             if (_verificationId == null && errorSend == null) {
@@ -120,50 +130,57 @@ public actual fun PhoneAuthContainer(
                 PhoneAuthProvider.verifyPhoneNumber(options)
             }
             if (_verificationId != null && errorSend == null) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    OutlinedTextField(
-                        value = _verificationCode,
-                        onValueChange = { _verificationCode = it },
-                        label = {
-                            Text("Inserisci il codice di 6 cifre inviato a $phone")
-                        },
-                        modifier = Modifier.weight(0.7f),
-                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                        enabled = verificationCodeEnabled,
-                        textStyle = TextStyle(fontSize = 24.sp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp)) // Spazio tra TextField e Button
-                    Button(enabled = verificationCodeEnabled,
-                        shape = ButtonDefaults.shape,
-                        modifier = Modifier.weight(0.3f).align(Alignment.Bottom),
-                        onClick = {
-                            verificationCodeEnabled = false
-                            val credential =
-                                PhoneAuthProvider.getCredential(
-                                    _verificationId!!,
-                                    _verificationCode
-                                )
-                            auth.signInWithCredential(credential).addOnCompleteListener { task ->
-                                if (task.isSuccessful) {
-                                    val user = task.result?.user
-                                    if (user != null) {
-                                        println("Authentication succeeded for user: ${user.phoneNumber}")
-                                        onResult.invoke(Result.success(dev.gitlive.firebase.Firebase.auth.currentUser))
-                                    } else {
-                                        throw Exception("User is null")
-                                    }
+                Text(
+                    text = "Inserisci il codice di 6 cifre inviato a $phone",
+                    style = TextStyle(fontSize = 16.sp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 8.dp)
+                        .align(Alignment.CenterHorizontally)
+                )
+                OutlinedTextField(
+                    value = _verificationCode,
+                    onValueChange = { _verificationCode = it },
+                    label = {
+                        Text("Codice OTP ricevuto")
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 8.dp),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                    enabled = verificationCodeEnabled,
+                    textStyle = TextStyle(fontSize = 24.sp, letterSpacing = 8.sp),
+                    singleLine = true
+                )
+                Button(
+                    enabled = verificationCodeEnabled,
+                    shape = ButtonDefaults.shape,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 16.dp, start = 8.dp, end = 8.dp),
+                    onClick = {
+                        verificationCodeEnabled = false
+                        val credential =
+                            PhoneAuthProvider.getCredential(
+                                _verificationId!!,
+                                _verificationCode
+                            )
+                        auth.signInWithCredential(credential).addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                val user = task.result?.user
+                                if (user != null) {
+                                    println("Authentication succeeded for user: ${user.phoneNumber}")
+                                    onResult.invoke(Result.success(dev.gitlive.firebase.Firebase.auth.currentUser))
                                 } else {
-                                    task.exception ?: throw Exception("Authentication failed")
+                                    throw Exception("User is null")
                                 }
+                            } else {
+                                task.exception ?: throw Exception("Authentication failed")
                             }
-
-                        }) {
-                        Text(text = "Conferma")
+                        }
                     }
+                ) {
+                    Text(text = "Conferma")
                 }
             }
         }

@@ -28,3 +28,7 @@ iosApp/iosApp/ExportOptionsAdHoc.plist
 *.p8
 *.p12
 /installCertificareAndCompile.sh
+/composeApp/src/internal/debug/google-services.json
+/composeApp/src/internal/release/google-services.json
+/composeApp/src/production/debug/google-services.json
+/composeApp/src/production/release/google-services.json

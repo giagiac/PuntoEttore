@@ -2,15 +2,20 @@ package it.puntoettore.fidelity.presentation.screen.account
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -18,6 +23,7 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -28,10 +34,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import it.puntoettore.fidelity.Res
 import it.puntoettore.fidelity.account
+import it.puntoettore.fidelity.presentation.components.LabelValueRow
 import it.puntoettore.fidelity.util.DisplayResult
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import androidx.compose.runtime.LaunchedEffect
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -40,10 +46,11 @@ fun AccountScreen(
     onLogout: () -> Unit,
     onSupportConfirm: () -> Unit,
     snackbarHostState: SnackbarHostState,
+    onEditClick: () -> Unit // nuova callback
 ) {
     val scope = rememberCoroutineScope()
     val viewModel = koinViewModel<AccountViewModel>()
-    val datiFidelity by viewModel.datiFidelity
+    val datiFidelity by viewModel.datiFidelityResponse
 
     var inputText by remember { mutableStateOf("") }
 
@@ -66,6 +73,20 @@ fun AccountScreen(
                     text = stringResource(Res.string.account),
                     style = MaterialTheme.typography.headlineLarge
                 )
+            }, actions = {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = "Modifica", // o il testo che preferisci
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(end = 4.dp)
+                    )
+                    IconButton(onClick = { onEditClick() }) {
+                        Icon(
+                            imageVector = Icons.Filled.Edit,
+                            contentDescription = "Modifica",
+                        )
+                    }
+                }
             })
         },
         bottomBar = bottomBar,
@@ -87,6 +108,29 @@ fun AccountScreen(
                             modifier = Modifier.padding(4.dp).fillMaxWidth(),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
+                            Card(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                            ) {
+//                                datiFidelity.DisplayResult(onSuccess = {
+//                                    // Campo di testo input e bottone di conferma
+//                                    Column(
+//                                        modifier = Modifier.fillMaxWidth()
+//                                            .padding(start = 8.dp, end = 8.dp, top = 8.dp)
+//                                    ) {
+//                                        LabelValueRow(
+//                                            label = "Telefono : ",
+//                                            it.phone ?: "Nessun numero di telefono presente"
+//                                        )
+//                                        LabelValueRow(
+//                                            label = "Data di nascita : ",
+//                                            it.dataNascita ?: "Nessuna data di nascita presente"
+//                                        )
+//                                    }
+//                                }, onError = {
+//                                    ErrorView(it)
+//                                })
+                            }
                             UserCard(user = user)
                             Button(
                                 onClick = {
@@ -99,7 +143,8 @@ fun AccountScreen(
                         }
                     }
                     Column(
-                        modifier = Modifier.fillMaxWidth().padding(start = 8.dp, end = 8.dp, top = 8.dp),
+                        modifier = Modifier.fillMaxWidth()
+                            .padding(start = 8.dp, end = 8.dp, top = 8.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
@@ -112,14 +157,13 @@ fun AccountScreen(
                         }
                     }
                     datiFidelity.DisplayResult(onSuccess = {
-                        if (it.allineata == "1") {
-                            // Campo di testo input e bottone di conferma
-
-                            Column(
-                                modifier = Modifier.fillMaxWidth()
-                                    .padding(start = 8.dp, end = 8.dp, top = 8.dp),
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
+                        // Campo di testo input e bottone di conferma
+                        Column(
+                            modifier = Modifier.fillMaxWidth()
+                                .padding(start = 8.dp, end = 8.dp, top = 8.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            if (it.vecchio_cliente != "1") {
                                 Text("Se ce l'hai, inserisci il tuo vecchio codice della tessera fisica per passare il credito sulla nuova fidelity card")
                                 OutlinedTextField(
                                     value = inputText,
@@ -142,6 +186,11 @@ fun AccountScreen(
                                 ) {
                                     Text("Conferma")
                                 }
+                            } else {
+                                LabelValueRow(
+                                    label = "Codice card precedente : ",
+                                    it.oldId ?: "Nessun vecchio codice presente"
+                                )
                             }
                         }
                     })

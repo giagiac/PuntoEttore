@@ -67,5 +67,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    // 1. Definisci la dimensione
+    flavorDimensions += "version"
+
+    productFlavors {
+        create("internal") {
+            dimension = "version"
+        }
+        create("production") {
+            dimension = "version"
+        }
+    }
 }
 
