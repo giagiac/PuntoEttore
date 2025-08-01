@@ -4,6 +4,7 @@ import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.darwin.Darwin
 import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.plugins.api.createClientPlugin
 import io.ktor.client.plugins.auth.providers.bearer
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
@@ -17,40 +18,60 @@ import io.ktor.http.headers
 import io.ktor.serialization.kotlinx.json.json
 import it.puntoettore.fidelity.custom.BuildConfig
 import it.puntoettore.fidelity.data.BookDatabase
-import kotlinx.serialization.ExperimentalSerializationApi
-import kotlinx.serialization.json.Json
+import it.puntoettore.fidelity.domain.User
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.json.Json
 
 //In shared/androidMain
 @OptIn(ExperimentalSerializationApi::class)
 actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = HttpClient(Darwin) {
 
     // Scope per operazioni asincrone (iOS/Native)
-    val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+    val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
-    var accessToken: String = ""
-    var refreshToken: String = ""
-    var idUser: Int? = null
-    var user: it.puntoettore.fidelity.domain.User? = null
+    lateinit var accessToken: String
+    lateinit var refreshToken: String
+
+    lateinit var user: User
 
     scope.launch {
-        val appSettings = bookDatabase.appSettingsDao().getAppSettings().firstOrNull()
-        idUser = appSettings?._idUser
-        idUser?.let { idUserNotNull ->
-            bookDatabase.userDao().getUserById(idUserNotNull).collect {
-                it?.let { _user ->
-                    // println("CreateHttpClientNextLogin.ios.kt: " + _user.refreshToken.toString())
-                    accessToken = _user.accessToken.toString()
-                    refreshToken = _user.refreshToken.toString()
-                    user = _user
+        bookDatabase.appSettingsDao().getAppSettings().collect {
+
+            accessToken = ""
+            refreshToken = ""
+
+            val idUser = it?._idUser
+            idUser?.let { idUserNotNull ->
+                val _user = bookDatabase.userDao().getUserById(idUserNotNull).first()
+
+                _user?.let { userNotNull ->
+                    user = userNotNull
+                    accessToken = userNotNull.accessToken.toString()
+                    refreshToken = userNotNull.refreshToken.toString()
                 }
             }
         }
     }
+
+    val CustomHeadersPlugin = createClientPlugin("CustomHeadersPlugin") {
+        // L'hook onRequest è il posto giusto per modificare la richiesta prima che venga inviata
+        onRequest { request, _ ->
+            request.headers.apply {
+                user?.let {
+                    append("TOKEN_NOTIFICATION_PUSH", it.notifierToken)
+                }
+            }
+        }
+    }
+
+    install(CustomHeadersPlugin)
 
     //Timeout plugin for timeouts
     install(HttpTimeout) {
@@ -95,7 +116,10 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
         bearer {
             // Carica il token iniziale
             loadTokens {
-                io.ktor.client.plugins.auth.providers.BearerTokens(accessToken = accessToken, refreshToken = "Bearer $refreshToken")
+                io.ktor.client.plugins.auth.providers.BearerTokens(
+                    accessToken = accessToken,
+                    refreshToken = "Bearer $refreshToken"
+                )
             }
             // Definisci come aggiornare i token
             refreshTokens {
@@ -121,7 +145,8 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
             }
             // Configura l'header di autorizzazione
             sendWithoutRequest { request ->
-                !request.url.toString().contains("${BuildConfig.END_POINT}/index.php?entryPoint=getAccess")
+                !request.url.toString()
+                    .contains("${BuildConfig.END_POINT}/index.php?entryPoint=getAccess")
             }
         }
     }

@@ -4,7 +4,9 @@ import android.util.Log
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.okhttp.OkHttp
+import io.ktor.client.plugins.DefaultRequest
 import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.plugins.api.createClientPlugin
 import io.ktor.client.plugins.auth.Auth
 import io.ktor.client.plugins.auth.providers.BearerTokens
 import io.ktor.client.plugins.auth.providers.bearer
@@ -16,9 +18,11 @@ import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.request.get
 import io.ktor.client.request.header
+import io.ktor.http.headers
 import io.ktor.serialization.kotlinx.json.json
 import it.puntoettore.fidelity.custom.BuildConfig
 import it.puntoettore.fidelity.data.BookDatabase
+import it.puntoettore.fidelity.di.client
 import it.puntoettore.fidelity.domain.User
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -48,16 +52,25 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
 
                 _user?.let { userNotNull ->
                     user = userNotNull
-                    Log.d(
-                        "CreateHttpClientNextLogin.android.kt",
-                        userNotNull.refreshToken.toString()
-                    )
                     accessToken = userNotNull.accessToken.toString()
                     refreshToken = userNotNull.refreshToken.toString()
                 }
             }
         }
     }
+
+    val CustomHeadersPlugin = createClientPlugin("CustomHeadersPlugin") {
+        // L'hook onRequest è il posto giusto per modificare la richiesta prima che venga inviata
+        onRequest { request, _ ->
+            request.headers.apply {
+                user.let {
+                    append("TOKEN_NOTIFICATION_PUSH", it.notifierToken)
+                }
+            }
+        }
+    }
+
+    install(CustomHeadersPlugin)
 
     //Timeout plugin for timeouts
     install(HttpTimeout) {
@@ -71,19 +84,11 @@ actual fun createHttpClientNextLogin(bookDatabase: BookDatabase): HttpClient = H
             level = LogLevel.ALL
         }
     }
-//    install("RefreshToken") {
-//        sendPipeline.intercept(HttpSendPipeline.Before) {
-//            println("Bearer $accessToken")
-//            headers {
-//                append("Authorization", "Bearer $refreshToken")
-//            }
-//            proceed()
-//        }
-//    }
+
     //We can configure the BASE_URL and also
     //the deafult headers by defaultRequest builder
     defaultRequest {
-        header("Content-Type", "application/json")
+        // header("Content-Type", "application/json")
         header("APP_VERSION", BuildConfig.APP_VERSION)
         header("BUILD_TIME", BuildConfig.BUILD_TIME)
         header("FEATURE_ENABLED", BuildConfig.FEATURE_ENABLED)

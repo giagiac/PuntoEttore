@@ -5,9 +5,7 @@ import com.google.firebase.messaging.RemoteMessage
 import com.mmk.kmpnotifier.Constants
 import com.mmk.kmpnotifier.extensions.shouldShowNotification
 import com.mmk.kmpnotifier.notification.Notifier
-import com.mmk.kmpnotifier.notification.NotifierManager
 import com.mmk.kmpnotifier.notification.NotifierManagerImpl
-import com.mmk.kmpnotifier.notification.configuration.NotificationPlatformConfiguration
 
 internal class MyFirebaseMessagingService : FirebaseMessagingService() {
 

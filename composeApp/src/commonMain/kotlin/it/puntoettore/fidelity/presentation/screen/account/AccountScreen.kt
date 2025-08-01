@@ -51,6 +51,7 @@ fun AccountScreen(
     val scope = rememberCoroutineScope()
     val viewModel = koinViewModel<AccountViewModel>()
     val datiFidelity by viewModel.datiFidelityResponse
+    val vecchioCliente by viewModel.vecchioCliente
 
     var inputText by remember { mutableStateOf("") }
 
@@ -60,6 +61,12 @@ fun AccountScreen(
             snackbarHostState.showSnackbar(
                 datiFidelity.getErrorMessage().error.name + " : " +
                         datiFidelity.getErrorMessage().message
+            )
+        }
+        if(vecchioCliente.isError()){
+            snackbarHostState.showSnackbar(
+                vecchioCliente.getErrorMessage().error.name + " : " +
+                        vecchioCliente.getErrorMessage().message
             )
         }
     }

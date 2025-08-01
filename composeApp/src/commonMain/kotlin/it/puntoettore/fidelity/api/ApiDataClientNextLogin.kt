@@ -24,7 +24,6 @@ import it.puntoettore.fidelity.api.util.NetworkEError
 import it.puntoettore.fidelity.api.util.NetworkError
 import it.puntoettore.fidelity.api.util.Result
 import it.puntoettore.fidelity.custom.BuildConfig
-import it.puntoettore.fidelity.di.sharedModule
 import it.puntoettore.fidelity.di.targetModule
 import kotlinx.serialization.SerializationException
 import org.koin.core.context.loadKoinModules

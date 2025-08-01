@@ -34,6 +34,7 @@ import com.mmk.kmpauth.firebase.google.GoogleButtonUiContainerFirebase
 import com.mmk.kmpauth.firebase.phone.PhoneAuthContainer
 import com.mmk.kmpauth.uihelper.apple.AppleSignInButton
 import com.mmk.kmpauth.uihelper.google.GoogleSignInButton
+import com.mmk.kmpnotifier.notification.NotifierManager
 import it.puntoettore.fidelity.Res
 import it.puntoettore.fidelity.custom.BuildConfig
 import it.puntoettore.fidelity.logo

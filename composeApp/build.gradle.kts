@@ -197,7 +197,7 @@ android {
             isMinifyEnabled = false
         }
         release {
-            isDebuggable = false
+            isDebuggable = true
             isMinifyEnabled = false
         }
     }
@@ -240,6 +240,24 @@ buildConfig {
     }    // forces the outputType to 'kotlin', generating top-level declarations
     useKotlinOutput { internalVisibility = true }   // adds `internal` modifier to all declarations
 
+    // Fai in modo che il task di Compose dipenda dal tuo
+    tasks.named("embedAndSignAppleFrameworkForXcode") {
+        println("NOME BUILD da IOS-> " + gradle.startParameter.taskNames)
+        if (gradle.startParameter.taskNames.any {
+                it.contains("Release")
+            }) {
+            // PRODUZIONE
+            // TODO : verificare che i certificati caricati e .list siano corretti
+            //dependsOn(tasks.named("ProductionRelease"))
+        } else if (gradle.startParameter.taskNames.any {
+                it.contains("Debug")
+            }) {
+            // DEBUG
+            // TODO : verificare che i certificati caricati e .list siano corretti
+            //dependsOn(tasks.named("InternalRelease"))
+        }
+
+    }
 
     // creazioni variabili da usare a codice per tipo BUILD
     forClass(packageName = "${android.namespace}.custom", className = "BuildConfig") {
